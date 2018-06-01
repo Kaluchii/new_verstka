@@ -1,0 +1,1 @@
+svn info --xml > version.xml

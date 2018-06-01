@@ -1,0 +1,164 @@
+.prolongation-info {
+  position: relative;
+  text-align: center;
+  border-top: 1px dashed #bfbfbf;
+  margin-top: 20px;
+
+  &__text{
+    display: none;
+  }
+
+  &__link {
+    color: #666666;
+    font-size: 14px;
+    display: inline-block;
+    margin: 10px 0;
+    letter-spacing: .01em;
+
+    &:hover{
+      cursor: pointer;
+      color: @link-hover-color;
+    }
+  }
+
+  &.open{
+    .prolongation-info__text{
+      display: block;
+      background: #f5eedb;
+      position: absolute;
+      margin: 0 10px;
+      padding: 15px 20px;
+      z-index: 1000000;
+      top: -105px;
+      text-align: center;
+      color: #333333;
+      line-height: 1.5;
+      width: 300px;
+      left: ~'calc(50% - 160px)';
+      box-sizing: border-box;
+      border-radius: 3px;
+    }
+
+    .prolongation-info__text:after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -10px;
+      width: 0;
+      height: 0;
+      border-top: solid 10px #f5eedb;
+      border-left: solid 10px transparent;
+      border-right: solid 10px transparent;
+    }
+
+    .prolongation-info__link {
+      z-index: 1000000;
+      background: none;
+      color: #ffffff;
+      position: relative;
+    }
+
+  }
+}
+
+.where-promocode{
+  position: absolute;
+  bottom: 2px;
+  font-size: 16px;
+
+  &__container{
+    position: relative;
+    text-align: center;
+  }
+
+  &__text-wrap{
+    display: none;
+  }
+
+  &__text{}
+
+  &__link{
+    color: #666666;
+    font-size: 14px;
+    display: inline-block;
+    margin: 10px 0;
+    letter-spacing: .01em;
+
+    &:hover{
+      cursor: pointer;
+      color: @link-hover-color;
+    }
+  }
+
+  &__socials{
+    margin-top: 13px;
+  }
+
+  &__social-item{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+
+    &+&{
+      margin-left: 11px;
+    }
+
+    &--vk{
+      background: url("/images/vk-promo.svg") no-repeat center;
+    }
+
+    &--fb{
+      background: url("/images/fb-promo.svg") no-repeat center;
+    }
+
+    &--inst{
+      background: url("/images/inst-promo.svg") no-repeat center;
+    }
+  }
+
+  &.open{
+    .where-promocode{
+      &__text-wrap{
+        display: block;
+        background: #f5eedb;
+        position: absolute;
+        margin: 0 10px;
+        padding: 15px 20px;
+        z-index: 1000000;
+        top: -161px;
+        width: 300px;
+        left: ~'calc(50% - 160px)';
+        box-sizing: border-box;
+        text-align: center;
+        border-radius: 3px;
+      }
+
+      &__text{
+        margin: 0;
+        color: #333333;
+        line-height: 1.5;
+      }
+
+      &__text:after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -10px;
+        width: 0;
+        height: 0;
+        border-top: solid 10px #f5eedb;
+        border-left: solid 10px transparent;
+        border-right: solid 10px transparent;
+      }
+
+      &__link {
+        z-index: 1000000;
+        background: none;
+        color: #ffffff;
+        position: relative;
+      }
+    }
+  }
+}

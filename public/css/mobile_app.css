@@ -1,0 +1,25 @@
+@media all and (max-width: 786px){
+    .how-work,
+    .block-reviews,
+    .block-dialog,
+    .share-block,
+    .footer,
+    .seotext,
+    .consumer-protection{
+        display: none;
+    }
+    .social-link{
+        margin-bottom: 20px;
+    }
+}
+.header--fixed{
+    position: fixed;
+    max-width: 100%;
+    top: 0;
+    width: 100%;
+    left: 0;
+    background: #d4f1d4;
+}
+.wrapper--app{
+    margin-top: 55px;
+}
