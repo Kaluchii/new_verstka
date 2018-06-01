@@ -11,7 +11,7 @@ gulp.task('dev', function () {
     browserSync.init({
         browser: ["google-chrome"/*, "firefox"*/],
         proxy:{
-            target: "http://127.0.0.1:8000/"
+            target: "http://dopoverstka/"
         },
         notify: false,
         reloadDelay: 1000,
