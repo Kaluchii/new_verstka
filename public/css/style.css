@@ -7984,6 +7984,100 @@ p.credit-info__title {
 .documents-block__doc-item:not(:last-child) {
   margin-bottom: 8px;
 }
+/*!
+ * 
+ *         SimpleBar.js - v2.6.1
+ *         Scrollbars, simpler.
+ *         https://grsmto.github.io/simplebar/
+ *         
+ *         Made by Adrien Grsmto from a fork by Jonathan Nicol
+ *         Under MIT License
+ *       
+ */
+[data-simplebar] {
+  position: relative;
+  z-index: 0;
+  overflow: hidden!important;
+  max-height: inherit;
+  -webkit-overflow-scrolling: touch;
+  /* Trigger native scrolling for mobile, if not supported, plugin is used. */
+}
+[data-simplebar="init"] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.simplebar-scroll-content {
+  overflow-x: hidden!important;
+  overflow-y: scroll;
+  min-width: 100%!important;
+  max-height: inherit!important;
+  -webkit-box-sizing: content-box !important;
+  box-sizing: content-box !important;
+}
+.simplebar-content {
+  overflow-y: hidden!important;
+  overflow-x: scroll;
+  -webkit-box-sizing: border-box !important;
+  box-sizing: border-box !important;
+  min-height: 100%!important;
+}
+.simplebar-track {
+  z-index: 1;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 10px;
+  background-color: #eeeeee;
+}
+.simplebar-scrollbar {
+  position: absolute;
+  right: 0;
+  width: 10px;
+  min-height: 10px;
+}
+.simplebar-scrollbar:before {
+  position: absolute;
+  content: "";
+  background: black;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear;
+}
+.simplebar-track:hover .simplebar-scrollbar:before,
+.simplebar-track .simplebar-scrollbar.visible:before {
+  /* When hovered, remove all transitions from drag handle */
+  opacity: 0.5;
+  -webkit-transition: opacity 0 linear;
+  transition: opacity 0 linear;
+}
+.simplebar-track.vertical {
+  top: 0;
+}
+.simplebar-track.vertical .simplebar-scrollbar:before {
+  top: 0;
+  bottom: 0;
+}
+.simplebar-track.horizontal {
+  left: 0;
+  width: auto;
+  height: 11px;
+}
+.simplebar-track.horizontal .simplebar-scrollbar:before {
+  height: 100%;
+  left: 2px;
+  right: 2px;
+}
+.horizontal.simplebar-track .simplebar-scrollbar {
+  right: auto;
+  top: 2px;
+  height: 7px;
+  min-height: 0;
+  min-width: 10px;
+  width: auto;
+}
 .knowledge {
   position: fixed;
   right: 10%;
@@ -8004,9 +8098,15 @@ p.credit-info__title {
 }
 .knowledge__main-container {
   position: relative;
+  height: 301px;
   font-size: 16px;
   background-color: #ffffff;
   color: #666666;
+  -webkit-transition: height .3s;
+  transition: height .3s;
+}
+.knowledge__main-container--big {
+  height: 450px;
 }
 .knowledge__search-wrap {
   border-bottom: 2px solid #666666;
@@ -8022,8 +8122,18 @@ p.credit-info__title {
   -webkit-box-shadow: none !important;
           box-shadow: none !important;
 }
+.knowledge__search:focus + .knowledge__search-icon {
+  opacity: 1;
+}
 .knowledge__search-icon {
+  position: absolute;
+  top: 16px;
+  right: 11px;
+  height: 17px;
+  width: 17px;
+  background: url("/images/knowledge_lens.png") no-repeat center;
   pointer-events: none;
+  opacity: .6;
 }
 .knowledge__cat-item {
   position: relative;
@@ -8044,9 +8154,18 @@ p.credit-info__title {
 }
 .knowledge__cat-item::after {
   content: "";
+  position: absolute;
+  top: 18px;
+  right: 15px;
+  height: 13px;
+  width: 8px;
+  background: url("/images/knowledge_arrow.png") no-repeat center;
 }
 .knowledge__cat-item:last-child {
   border-bottom: none;
+}
+.knowledge__cat-item:hover {
+  background-color: #f6efdc;
 }
 .knowledge__cat-item-text {
   padding: 17px 0 16px 50px;
@@ -8057,7 +8176,7 @@ p.credit-info__title {
   top: 52px;
   left: 100%;
   width: 100%;
-  height: calc(100% - 52px);
+  height: calc(100% - 112px);
   overflow: auto;
   background-color: #ffffff;
   -webkit-transition: left .3s;
@@ -8067,7 +8186,7 @@ p.credit-info__title {
   left: 0;
 }
 .knowledge__questions-item {
-  padding: 10px;
+  padding: 10px 20px 10px 10px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   line-height: 1.2;
@@ -8077,9 +8196,59 @@ p.credit-info__title {
 .knowledge__questions-item:last-child {
   border-bottom: none;
 }
+.knowledge__questions-item:hover {
+  background-color: #f6efdc;
+}
+.knowledge__answer {
+  position: absolute;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  left: 100%;
+  height: calc(100% - 60px);
+  width: 100%;
+  background-color: #ffffff;
+  -webkit-transition: left .3s;
+  transition: left .3s;
+}
+.knowledge__answer--display {
+  left: 0;
+}
+.knowledge__answer-title {
+  padding: 10px;
+  border-bottom: 2px solid #666666;
+  font-weight: bold;
+  color: #333333;
+}
+.knowledge__answer-text-wrap {
+  overflow: auto;
+}
+.knowledge__answer-text {
+  padding: 0 20px 0 10px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.knowledge__answer-text p {
+  margin: 25px 0;
+}
+.knowledge__answer-text p:first-child {
+  margin-top: 15px;
+}
 .knowledge__back-btn-wrap {
   position: absolute;
   width: 100%;
+  left: 100%;
+  bottom: 0;
+  -webkit-transition: left .3s;
+  transition: left .3s;
+}
+.knowledge__back-btn-wrap--display {
+  left: 0;
 }
 .knowledge__back-btn {
   padding: 22px 0;
