@@ -8030,6 +8030,9 @@ p.credit-info__title {
   width: 10px;
   background-color: #eeeeee;
 }
+.simplebar-track[style*="hidden"] .simplebar-scrollbar {
+  visibility: hidden !important;
+}
 .simplebar-scrollbar {
   position: absolute;
   right: 0;
@@ -8171,7 +8174,7 @@ p.credit-info__title {
   padding: 17px 0 16px 50px;
   line-height: 1;
 }
-.knowledge__questions-list {
+.knowledge__questions-list-wrap {
   position: absolute;
   top: 52px;
   left: 100%;
@@ -8182,7 +8185,7 @@ p.credit-info__title {
   -webkit-transition: left .3s;
   transition: left .3s;
 }
-.knowledge__questions-list--display {
+.knowledge__questions-list-wrap--display {
   left: 0;
 }
 .knowledge__questions-item {
@@ -8227,8 +8230,10 @@ p.credit-info__title {
 }
 .knowledge__answer-text-wrap {
   overflow: auto;
+  height: 100%;
 }
 .knowledge__answer-text {
+  height: 100%;
   padding: 0 20px 0 10px;
   font-size: 16px;
   line-height: 1.5;

@@ -105,7 +105,7 @@
     line-height: 1;
   }
 
-  &__questions-list{
+  &__questions-list-wrap{
     position: absolute;
     top: 52px;
     left: 100%;
@@ -118,6 +118,9 @@
     &--display{
       left: 0;
     }
+  }
+
+  &__questions-list{
   }
 
   &__questions-item{
@@ -161,9 +164,11 @@
 
   &__answer-text-wrap{
     overflow: auto;
+    height: 100%;
   }
 
   &__answer-text{
+    height: 100%;
     padding: 0 20px 0 10px;
     font-size: 16px;
     line-height: 1.5;
