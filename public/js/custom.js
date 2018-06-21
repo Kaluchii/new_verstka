@@ -38,9 +38,10 @@ $(document).ready(function(){
       $('.js_knowledge_answer').removeClass('knowledge__answer--display');
       $('.js_knowledge_back').removeClass('_step2');
     } else {
-      $(this).removeClass('knowledge__back-btn-wrap--display');
-      $('.js_knowledge_questions_pos').removeClass('knowledge__questions-list-wrap--display');
-      $('.js_knowledge_container').removeClass('knowledge__main-container--big');
+      $(this).removeClass('knowledge__back-btn-wrap--display knowledge__back-btn-wrap--display-instantly');
+      $('.js_knowledge_questions_pos').removeClass('knowledge__questions-list-wrap--display knowledge__questions-list-wrap--display-instantly');
+      $('.js_knowledge_container').removeClass('knowledge__main-container--big knowledge__main-container--search');
+      $('#knowledge-search').val('');
       $('.js_knowledge_head').text('База знаний');
     }
   });
@@ -52,6 +53,44 @@ $(document).ready(function(){
         '<div class="knowledge__cat-item js_knowledge_cat" data-cat-id="' + i + '">\n' +
             '<div class="knowledge__cat-item-text">' + item.name + '</div>\n' +
         '</div>');
+    });
+  }
+
+  $('#knowledge-search').on('change keydown keyup paste', function () {
+    var searchKey = $(this).val();
+    if (searchKey.length > 2) {
+      $('.js_knowledge_questions_pos').addClass('knowledge__questions-list-wrap--display-instantly');
+      $('.js_knowledge_container').addClass('knowledge__main-container--big knowledge__main-container--search');
+      $('.js_knowledge_back').addClass('knowledge__back-btn-wrap--display-instantly');
+      $('.js_knowledge_head').text('Поиск');
+      $('.js_knowledge_questions').empty();
+      searchAnswer(searchKey);
+    } else {
+      if ($('.js_knowledge_container').hasClass('knowledge__main-container--search')) {
+        $('.js_knowledge_questions_pos').removeClass('knowledge__questions-list-wrap--display knowledge__questions-list-wrap--display-instantly');
+        $('.js_knowledge_container').removeClass('knowledge__main-container--big knowledge__main-container--search');
+        $('.js_knowledge_back').removeClass('knowledge__back-btn-wrap--display knowledge__back-btn-wrap--display-instantly');
+        $('.js_knowledge_head').text('База знаний');
+      }
+    }
+  });
+  
+  function searchAnswer(key) {
+    var keyPos,
+        questionText,
+        selectText;
+    knowledge.forEach(function (catItem, catIndex) {
+      var catId = catIndex;
+      catItem['questions'].forEach(function (item, i) {
+        keyPos = item.name.toLowerCase().indexOf(key.toLowerCase());
+        if (~keyPos) {
+          selectText = '<span class="knowledge__search-text">' + key + '</span>';
+          questionText = item.name.substring(0, keyPos) + selectText + item.name.slice(keyPos + key.length, 0)
+          $('.js_knowledge_questions').append(
+            '<div class="knowledge__questions-item js_knowledge_get_answer" data-cat-id="' + catId +
+            '" data-question-id="' + i + '">' + questionText + '</div>');
+        }
+      });
     });
   }
 

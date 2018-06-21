@@ -8117,7 +8117,7 @@ p.credit-info__title {
 .knowledge__search {
   width: 100%;
   height: 50px !important;
-  padding: 0 10px !important;
+  padding: 0 30px 0 10px !important;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border: none !important;
@@ -8137,6 +8137,9 @@ p.credit-info__title {
   background: url("/images/knowledge_lens.png") no-repeat center;
   pointer-events: none;
   opacity: .6;
+}
+.knowledge__search-text {
+  background-color: #ffd800;
 }
 .knowledge__cat-item {
   position: relative;
@@ -8187,6 +8190,11 @@ p.credit-info__title {
 }
 .knowledge__questions-list-wrap--display {
   left: 0;
+}
+.knowledge__questions-list-wrap--display-instantly {
+  left: 0;
+  -webkit-transition: none;
+  transition: none;
 }
 .knowledge__questions-item {
   padding: 10px 20px 10px 10px;
@@ -8254,6 +8262,11 @@ p.credit-info__title {
 }
 .knowledge__back-btn-wrap--display {
   left: 0;
+}
+.knowledge__back-btn-wrap--display-instantly {
+  left: 0;
+  -webkit-transition: none;
+  transition: none;
 }
 .knowledge__back-btn {
   padding: 22px 0;

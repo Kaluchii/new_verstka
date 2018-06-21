@@ -38,7 +38,7 @@
   &__search{
     width: 100%;
     height: 50px !important;
-    padding: 0 10px !important;
+    padding: 0 30px 0 10px !important;
     box-sizing: border-box;
     border: none !important;
     border-radius: 0 !important;
@@ -58,6 +58,10 @@
     background: url("/images/knowledge_lens.png") no-repeat center;
     pointer-events: none;
     opacity: .6;
+  }
+  
+  &__search-text{
+    background-color: #ffd800;
   }
 
   &__list-wrap{}
@@ -117,6 +121,11 @@
 
     &--display{
       left: 0;
+    }
+
+    &--display-instantly{
+      left: 0;
+      transition: none;
     }
   }
 
@@ -191,6 +200,11 @@
 
     &--display{
       left: 0;
+    }
+
+    &--display-instantly{
+      left: 0;
+      transition: none;
     }
   }
 
