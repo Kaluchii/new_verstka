@@ -8085,8 +8085,49 @@ p.credit-info__title {
   position: fixed;
   right: 10%;
   bottom: 10%;
-  width: 300px;
+  width: 60px;
+  height: 60px;
   overflow: hidden;
+  border-radius: 30px;
+  -webkit-transition: height .2s;
+  transition: height .2s;
+}
+.knowledge.is-close {
+  -webkit-transition: width 0.2s 0.2s, height 0.2s, border-radius 0.2s 0.4s;
+  transition: width 0.2s 0.2s, height 0.2s, border-radius 0.2s 0.4s;
+}
+.knowledge.is-open {
+  width: 300px;
+  height: 411px;
+  border-radius: 0;
+  -webkit-transition: width 0.2s 0.2s, height 0.2s 0.4s, border-radius 0.2s;
+  transition: width 0.2s 0.2s, height 0.2s 0.4s, border-radius 0.2s;
+}
+.knowledge.is-open.knowledge--open-cats {
+  -webkit-transition: height .2s;
+  transition: height .2s;
+}
+.knowledge.is-open .knowledge__container {
+  right: 0;
+  bottom: 0;
+  -webkit-transition: right .2s .2s, bottom .2s .4s;
+  transition: right .2s .2s, bottom .2s .4s;
+}
+.knowledge.is-open-questions {
+  height: 561px;
+  -webkit-transition: height .2s;
+  transition: height .2s;
+}
+.knowledge.is-open-questions .knowledge__main-container {
+  height: 450px;
+}
+.knowledge__container {
+  position: relative;
+  right: 240px;
+  bottom: 351px;
+  width: 300px;
+  -webkit-transition: right .2s .2s, bottom .2s;
+  transition: right .2s .2s, bottom .2s;
 }
 .knowledge__header {
   padding: 15px 0;
@@ -8105,11 +8146,8 @@ p.credit-info__title {
   font-size: 16px;
   background-color: #ffffff;
   color: #666666;
-  -webkit-transition: height .3s;
-  transition: height .3s;
-}
-.knowledge__main-container--big {
-  height: 450px;
+  -webkit-transition: height .2s;
+  transition: height .2s;
 }
 .knowledge__search-wrap {
   border-bottom: 2px solid #666666;
@@ -8276,6 +8314,10 @@ p.credit-info__title {
   color: #ffffff;
   text-align: center;
   cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .knowledge__footer {
   position: relative;
@@ -8329,6 +8371,10 @@ p.credit-info__title {
   margin-left: 15px;
   background-color: #339933;
   cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .knowledge__btn-text {
   font-size: 36px;

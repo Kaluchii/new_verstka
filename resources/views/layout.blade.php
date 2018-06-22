@@ -17,43 +17,45 @@
 @yield('scripts')
 
 
-<div class="knowledge">
-    <div class="knowledge__header">
-        <div class="knowledge__header-text js_knowledge_head">База знаний</div>
-    </div>
-    <div class="knowledge__main-container js_knowledge_container">
-        <div class="knowledge__search-wrap">
-            <input type="text" id="knowledge-search" class="knowledge__search" placeholder="Что ищете?">
-            <label for="knowledge-search" class="knowledge__search-icon"></label>
+<div class="knowledge js_knowledge_base is-close">
+    <div class="knowledge__container">
+        <div class="knowledge__header">
+            <div class="knowledge__header-text js_knowledge_head">База знаний</div>
         </div>
-        <div class="knowledge__list-wrap">
-            <div class="knowledge__cat-list js_knowledge_cat_list"></div>
-            <div class="knowledge__questions-list-wrap js_knowledge_questions_pos" data-simplebar data-simplebar-auto-hide="false">
-                <div class="knowledge__questions-list js_knowledge_questions"></div>
+        <div class="knowledge__main-container js_knowledge_container">
+            <div class="knowledge__search-wrap">
+                <input type="text" id="knowledge-search" class="knowledge__search" placeholder="Что ищете?">
+                <label for="knowledge-search" class="knowledge__search-icon"></label>
+            </div>
+            <div class="knowledge__list-wrap">
+                <div class="knowledge__cat-list js_knowledge_cat_list"></div>
+                <div class="knowledge__questions-list-wrap js_knowledge_questions_pos" data-simplebar data-simplebar-auto-hide="false">
+                    <div class="knowledge__questions-list js_knowledge_questions"></div>
+                </div>
+            </div>
+            <div class="knowledge__answer js_knowledge_answer">
+                <div class="knowledge__answer-title js_knowledge_answer_title">На какую сумму можно оформить займ?</div>
+                <div class="knowledge__answer-text-wrap" data-simplebar data-simplebar-auto-hide="false">
+                    <div class="knowledge__answer-text js_knowledge_answer_text"></div>
+                </div>
+            </div>
+            <div class="knowledge__back-btn-wrap js_knowledge_back">
+                <div class="knowledge__back-btn">Вернуться назад</div>
             </div>
         </div>
-        <div class="knowledge__answer js_knowledge_answer">
-            <div class="knowledge__answer-title js_knowledge_answer_title">На какую сумму можно оформить займ?</div>
-            <div class="knowledge__answer-text-wrap" data-simplebar data-simplebar-auto-hide="false">
-                <div class="knowledge__answer-text js_knowledge_answer_text"></div>
+        <div class="knowledge__footer">
+            <div class="knowledge__footer-text-wrap">
+                <div class="knowledge__footer-question">Задать вопрос</div>
+                <div class="knowledge__footer-work-time">с 9 до 18:00</div>
             </div>
-        </div>
-        <div class="knowledge__back-btn-wrap js_knowledge_back">
-            <div class="knowledge__back-btn">Вернуться назад</div>
-        </div>
-    </div>
-    <div class="knowledge__footer">
-        <div class="knowledge__footer-text-wrap">
-            <div class="knowledge__footer-question">Задать вопрос</div>
-            <div class="knowledge__footer-work-time">с 9 до 18:00</div>
-        </div>
-        <div class="knowledge__footer-soc-wrap">
-            <a href="#" class="knowledge__soc"></a>
-            <a href="#" class="knowledge__soc"></a>
-            <a href="#" class="knowledge__soc"></a>
-        </div>
-        <div class="knowledge__btn js_knowledge_toggle">
-            <div class="knowledge__btn-text">?</div>
+            <div class="knowledge__footer-soc-wrap">
+                <a href="#" class="knowledge__soc"></a>
+                <a href="#" class="knowledge__soc"></a>
+                <a href="#" class="knowledge__soc"></a>
+            </div>
+            <div class="knowledge__btn js_knowledge_toggle">
+                <div class="knowledge__btn-text">?</div>
+            </div>
         </div>
     </div>
 </div>
