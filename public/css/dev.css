@@ -8248,6 +8248,12 @@ p.credit-info__title {
 .knowledge__questions-item:hover {
   background-color: #f6efdc;
 }
+.knowledge__questions-item--empty {
+  cursor: default;
+}
+.knowledge__questions-item--empty:hover {
+  background-color: transparent;
+}
 .knowledge__answer {
   position: absolute;
   top: 0;
