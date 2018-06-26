@@ -1,0 +1,318 @@
+.selecter {
+  display: block;
+  margin: 0;
+  position: relative;
+  white-space: nowrap;
+  width: 240px;
+  z-index: 1;
+}
+
+.selecter:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+.selecter, .selecter * {
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+}
+
+.selecter, .selecter *, .selecter *:before, .selecter *:after {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.selecter-element {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  z-index: -1;
+}
+
+.selecter-element, .selecter-element:focus {
+  outline: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.no-opacity .selecter-element {
+  left: -999999px;
+}
+
+.selecter-selected {
+  background: #ffffff;
+  border: 1px solid #999;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  cursor: pointer;
+  display: block;
+  height: 35px;
+  margin: 0;
+  overflow: hidden;
+  padding: 0px 15px 0px 9px;
+  position: relative;
+  text-overflow: clip;
+  z-index: 2;
+  line-height: 32px;
+  box-shadow: 1px 1px 1px 0 #ddd inset;
+  -moz-box-shadow: 1px 1px 1px 0 #ddd inset;
+  -webkit-box-shadow: 1px 1px 1px 0 #ddd inset;
+}
+
+.focus.open .selecter-selected {
+  border-color: #ffcc00;
+  box-shadow: 0 0 7px 0 rgba(255, 204, 0, 0.8);
+  -webkit-box-shadow: 0 0 7px 0 rgba(255, 204, 0, 0.8);
+  -moz-box-shadow: 0 0 7px 0 rgba(255, 204, 0, 0.8);
+}
+
+.selecter-selected:after {
+  background-image: url("/images/down-arrow.svg");
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 15px 10px;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 20px;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 32px;
+}
+
+.focus.open .selecter-selected:after {
+  background-image: url("/images/down-arrow-focus.svg");
+}
+
+.disabled .selecter-selected:after {
+  background-image: url("/images/select-arrow-disable.png");
+  background-color: transparent;
+}
+
+.no-touch .selecter-selected:hover {
+  color: #333333;
+}
+
+.no-touch .selecter.disabled .selecter-selected:hover {
+  color: #cccccc;
+}
+
+.selecter-options, .ui-autocomplete {
+  background-color: #fff;
+  border: 1px solid #ffcc00;
+  border-radius: 3px;
+  -webki-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-box-shadow: 0 0 7px 0 rgba(255, 204, 0, 0.8);
+  -moz-box-shadow: 0 0 7px 0 rgba(255, 204, 0, 0.8);
+  box-shadow: 0 0 7px 0 rgba(255, 204, 0, 0.8);
+  display: none;
+  left: 0;
+  margin: 5px 0 0;
+  max-height: 260px;
+  min-width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: absolute;
+  top: 100%;
+  width: auto;
+  z-index: 999;
+}
+
+.selecter-options.scroller {
+  position: absolute;
+}
+
+.no-opacity .selecter-options {
+  width: auto;
+}
+
+.selecter-group {
+  border-bottom: 1px solid #cccccc;
+  color: #999999;
+  display: block;
+  font-size: 11px;
+  padding: 10px 15px;
+  text-transform: uppercase;
+}
+
+.selecter-item, .ui-autocomplete li {
+  background: #fff;
+  cursor: pointer;
+  display: block;
+  margin: 0;
+  overflow: hidden;
+  padding: 0px 10px 0px;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: auto;
+  height: 29px;
+  line-height: 27px;
+}
+
+.selecter-item.placeholder {
+  display: none;
+}
+
+.selecter-item.selected {
+  background: #ffe57f;
+}
+
+.selecter-item.disabled {
+  color: #999999;
+  cursor: default;
+}
+
+.selecter-item:first-child, .ui-autocomplete li:first-child {
+  border-radius: 0;
+}
+
+.selecter-item:last-child, .ui-autocomplete li:last-child {
+  border-bottom: 0;
+  border-radius: 0 0 2px 2px;
+}
+
+.no-touch .selecter-item:hover, .no-touch .selecter-item.selected:hover, .ui-autocomplete li:hover {
+  color: #333333;
+  background-color: #cccccc;
+}
+
+.selecter-item.disabled,
+.no-touch .selecter-item.disabled:hover {
+  color: #cccccc;
+  background-color: #ffffff;
+}
+
+.selecter.open {
+  z-index: 10000;
+}
+
+.selecter.open .selecter-selected {
+  z-index: 51;
+}
+
+.selecter.cover .selecter-options {
+  border-width: 1px;
+  top: 0;
+  border-radius: 3px;
+}
+
+.selecter.cover .selecter-options .selecter-item.first {
+  border-radius: 3px 3px 0 0;
+}
+
+.selecter.cover.open .selecter-selected {
+  z-index: 49;
+  border-radius: 3px 3px 0 0;
+}
+
+.selecter.bottom .selecter-options {
+  top: auto;
+  bottom: 100%;
+  border-width: 1px 1px 0;
+}
+
+.selecter.bottom .selecter-item:last-child {
+  border: none;
+}
+
+.selecter.bottom.open .selecter-selected {
+  border-radius: 0 0 3px 3px;
+}
+
+.selecter.bottom.open .selecter-options {
+  border-radius: 3px 3px 0 0;
+}
+
+.selecter.bottom .cover .selecter-options {
+  top: auto;
+  bottom: 0;
+}
+
+.selecter.bottom .cover.open .selecter-selected {
+  border-radius: 3px;
+}
+
+.selecter.bottom .cover.open .selecter-options {
+  border-radius: 3px;
+}
+
+.selecter.multiple .selecter-options {
+  width: 100%;
+  position: static;
+  border-width: 1px;
+  display: block;
+  border-radius: 3px;
+  box-shadow: none;
+}
+
+.selecter.disabled .selecter-selected {
+  background: #ffffff;
+  border-color: #cccccc;
+  color: #cccccc;
+  cursor: no-drop;
+}
+
+.selecter.disabled .selecter-options {
+  background: #ffffff;
+  border-color: #cccccc;
+}
+
+.selecter.disabled .selecter-group, .selecter.disabled .selecter-item {
+  border-color: #cccccc;
+  color: #cccccc;
+  cursor: default;
+}
+
+.selecter.disabled .selecter-item.selected,
+.no-touch .selecter.disabled .selecter-item.selected:hover {
+  background: #fafafa;
+}
+
+.selecter.disabled .selecter-item,
+.no-touch .selecter.disabled .selecter-item:hover {
+  color: #cccccc;
+  background-color: #ffffff;
+}
+
+.selecter-options.scroller {
+  overflow: hidden;
+}
+
+.selecter-options.scroller .scroller-content {
+  max-height: 260px;
+  padding: 0;
+}
+
+@media screen and (max-width: 740px) {
+  .selecter {
+    max-width: 40%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .selecter {
+    max-width: 100%;
+  }
+}
+
+.selecter-item:hover, .ui-autocomplete li:hover, .ui-autocomplete li.sld-preferred {
+  background: #feeac2;
+}
+
+.middle .selecter {
+  width: 190px;
+}
+
+.big .selecter {
+  width: 300px;
+}

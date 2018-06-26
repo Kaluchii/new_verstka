@@ -25,7 +25,7 @@ gulp.task('dev', function () {
             }
         ]
     });
-    gulp.watch( '../public/css/dev/**/*.less', ['style']);
+    gulp.watch( '../public/source/dev/**/*.less', ['style']);
 });
 
 function convert(string) {
