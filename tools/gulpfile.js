@@ -25,7 +25,7 @@ gulp.task('dev', function () {
             }
         ]
     });
-    gulp.watch( '../public/source/dev/**/*.less', ['style']);
+    gulp.watch( '../public/source/less/**/*.less', ['style']);
 });
 
 function convert(string) {
@@ -34,7 +34,7 @@ function convert(string) {
 
 
 gulp.task('style', function () {
-   return gulp.src('../public/css/dev/*.less')
+   return gulp.src('../public/source/less/*.less')
        .pipe(plumber())
        .pipe(less())
        .pipe(autoprefixer())
