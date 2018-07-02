@@ -6,7 +6,7 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 html {
-  line-height: 1.15;
+  line-height: 1.2;
   /* 1 */
   -webkit-text-size-adjust: 100%;
   /* 2 */
@@ -25,7 +25,7 @@ body {
  */
 h1 {
   font-size: 2em;
-  margin: 0.67em 0;
+  margin: 0;
 }
 /* Grouping content
    ========================================================================== */
@@ -52,6 +52,9 @@ pre {
   font-size: 1em;
   /* 2 */
 }
+p {
+  margin: 0;
+}
 /* Text-level semantics
    ========================================================================== */
 /**
@@ -59,6 +62,7 @@ pre {
  */
 a {
   background-color: transparent;
+  text-decoration: none;
 }
 /**
  * 1. Remove the bottom border in Chrome 57-
@@ -138,7 +142,7 @@ textarea {
   /* 1 */
   font-size: 100%;
   /* 1 */
-  line-height: 1.15;
+  line-height: 1.2;
   /* 1 */
   margin: 0;
   /* 2 */
@@ -193,7 +197,7 @@ button:-moz-focusring,
  * Correct the padding in Firefox.
  */
 fieldset {
-  padding: 0.35em 0.75em 0.625em;
+  padding: 0;
 }
 /**
  * 1. Correct the text wrapping in Edge and IE.
@@ -300,4 +304,127 @@ template {
  */
 [hidden] {
   display: none;
+}
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto-Regular'), local('Roboto Regular'), url('../fonts/Roboto/Roboto.woff2') format('woff2'), url('../fonts/Roboto/Roboto.woff') format('woff'), url('../fonts/Roboto/Roboto.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto-Medium'), local('Roboto Medium'), url('../fonts/Roboto/RobotoMedium.woff2') format('woff2'), url('../fonts/Roboto/RobotoMedium.woff') format('woff'), url('../fonts/Roboto/RobotoMedium.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto-Bold'), local('Roboto Bold'), url('../fonts/Roboto/RobotoBold.woff2') format('woff2'), url('../fonts/Roboto/RobotoBold.woff') format('woff'), url('../fonts/Roboto/RobotoBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+/* Old Variables (for compare)
+@background-color: #aed8ae;
+
+
+@link-color: #339933;
+@link-border: #c1e0c1;
+
+@link-hover-color: #ff9900;
+@link-hover-border: #ff9900;
+
+
+@error-color: #c00;
+@success-color: #009900;
+
+
+@button-1-color: #ffd800;
+@button-1-color-hover: #ffcc00;
+
+@button-2-color: #fddd9e;
+@button-2-color-hover: #fddd9e;
+
+
+@background-notify-2: #f4efdd;
+@background-notify: #ece3c5;*/
+/*.link(@color, @hover, @border_h){
+  color: @color;
+  &:hover{
+    cursor: pointer;
+    background: -moz-linear-gradient(to left, @border_h, @border_h 100%);
+    background: -ms-linear-gradient(to left, @border_h, @border_h 100%);
+    background: -o-linear-gradient(to left, @border_h, @border_h 100%);
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(@border_h), to(@border_h));
+    background: -webkit-linear-gradient(to left, @border_h, @border_h 100%);
+    background: linear-gradient(to left, @border_h, @border_h 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
+    background-position: 0 100%;
+    background-size: 10px 1px;
+    background-repeat: repeat-x;
+    color: @hover;
+  }
+  &:focus{
+    outline: none;
+    background: -moz-linear-gradient(to left, @border_h, @border_h 100%);
+    background: -ms-linear-gradient(to left, @border_h, @border_h 100%);
+    background: -o-linear-gradient(to left, @border_h, @border_h 100%);
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(@border_h), to(@border_h));
+    background: -webkit-linear-gradient(to left, @border_h, @border_h 100%);
+    background: linear-gradient(to left, @border_h, @border_h 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
+    background-position: 0 100%;
+    background-size: 10px 1px;
+    background-repeat: repeat-x;
+    color: @hover;
+  }
+}*/
+html {
+  font-family: "Roboto", sans-serif;
+}
+.main-wrapper {
+  background-color: #d4f1d4;
+}
+.link {
+  color: #009247;
+  background: -webkit-gradient(linear, right top, left top, from(#009247), to(#009247));
+  background: linear-gradient(to left, #009247, #009247 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
+  background-position: 0 100%;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+}
+.link:hover {
+  cursor: pointer;
+  background: -webkit-gradient(linear, right top, left top, from(#ff9900), to(#ff9900));
+  background: linear-gradient(to left, #ff9900, #ff9900 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
+  background-position: 0 100%;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+  color: #ff9900;
+}
+.link:focus {
+  outline: none;
+  background: -webkit-gradient(linear, right top, left top, from(#ff9900), to(#ff9900));
+  background: linear-gradient(to left, #ff9900, #ff9900 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
+  background-position: 0 100%;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+  color: #ff9900;
+}
+.personal-area__container {
+  max-width: 940px;
+  margin: 0 auto;
+  background-color: #ffffff;
+}
+.personal-area__title {
+  font-size: 48px;
+  font-weight: bold;
 }

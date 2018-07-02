@@ -13,9 +13,9 @@
         </div>
         <div class="personal-area__menu menu">
             <ul class="menu__list">
-                <li class="menu__item"><a href="#" class="menu__link is-active">Личные данные</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">История займов</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">Смена пароля</a></li>
+                <li class="menu__item"><a href="#" class="menu__link link is-active">Личные данные</a></li>
+                <li class="menu__item"><a href="#" class="menu__link link">История займов</a></li>
+                <li class="menu__item"><a href="#" class="menu__link link">Смена пароля</a></li>
             </ul>
         </div>
         <h1 class="personal-area__title">Личные данные</h1>
@@ -26,52 +26,46 @@
                     <a href="#" class="info-block__btn button">Изменить</a>
                 </div>
             </div>
-            <div class="info-block__table">
-                <div class="info-block__row">
-                    <div class="info-block__data-item">
-                        <div class="info-block__data-item-name">Фамилия</div>
-                        <div class="info-block__data-item-value">Длиннофамилиев</div>
-                    </div>
-                    <div class="info-block__data-item">
-                        <div class="info-block__data-item-name">Имя</div>
-                        <div class="info-block__data-item-value">Иннокентий</div>
-                    </div>
-                    <div class="info-block__data-item">
-                        <div class="info-block__data-item-name">Отчество</div>
-                        <div class="info-block__data-item-value">Сергеевич</div>
-                    </div>
+            <div class="info-block__data-list">
+                <div class="info-block__data-item">
+                    <div class="info-block__data-item-name">Фамилия</div>
+                    <div class="info-block__data-item-value">Длиннофамилиев</div>
                 </div>
-                <div class="info-block__row">
-                    <div class="info-block__data-item">
-                        <div class="info-block__data-item-name">Семейное положение</div>
-                        <div class="info-block__data-item-value">Мужской</div>
-                    </div>
-                    <div class="info-block__data-item">
-                        <div class="info-block__data-item-name">Количество детей</div>
-                        <div class="info-block__data-item-value">3</div>
-                    </div>
-                    <div class="info-block__data-item">
-                        <div class="info-block__data-item-name">ИИН</div>
-                        <div class="info-block__data-item-value">000 000 000 000</div>
-                    </div>
+                <div class="info-block__data-item">
+                    <div class="info-block__data-item-name">Имя</div>
+                    <div class="info-block__data-item-value">Иннокентий</div>
                 </div>
-                <div class="info-block__row">
-                    <div class="info-block__data-item">
-                        <div class="info-block__data-item-name">№ удостоверения личности</div>
-                        <div class="info-block__data-item-value">000 000 000</div>
-                    </div>
-                    <div class="info-block__data-item">
-                        <div class="info-block__data-item-name">Кем выдано</div>
-                        <div class="info-block__data-item-value">МВД РК</div>
-                    </div>
-                    <div class="info-block__data-item">
-                        <div class="info-block__data-item-name">Дата выдачи</div>
-                        <div class="info-block__data-item-value">20.08.1984</div>
-                    </div>
-                    <div class="info-block__data-item">
-                        <div class="info-block__data-item-name">Срок действия</div>
-                        <div class="info-block__data-item-value">20.08.1984</div>
-                    </div>
+                <div class="info-block__data-item">
+                    <div class="info-block__data-item-name">Отчество</div>
+                    <div class="info-block__data-item-value">Сергеевич</div>
+                </div>
+                <div class="info-block__data-item">
+                    <div class="info-block__data-item-name">Семейное положение</div>
+                    <div class="info-block__data-item-value">Мужской</div>
+                </div>
+                <div class="info-block__data-item">
+                    <div class="info-block__data-item-name">Количество детей</div>
+                    <div class="info-block__data-item-value">3</div>
+                </div>
+                <div class="info-block__data-item">
+                    <div class="info-block__data-item-name">ИИН</div>
+                    <div class="info-block__data-item-value">000 000 000 000</div>
+                </div>
+                <div class="info-block__data-item">
+                    <div class="info-block__data-item-name">№ удостоверения личности</div>
+                    <div class="info-block__data-item-value">000 000 000</div>
+                </div>
+                <div class="info-block__data-item">
+                    <div class="info-block__data-item-name">Кем выдано</div>
+                    <div class="info-block__data-item-value">МВД РК</div>
+                </div>
+                <div class="info-block__data-item">
+                    <div class="info-block__data-item-name">Дата выдачи</div>
+                    <div class="info-block__data-item-value">20.08.1984</div>
+                </div>
+                <div class="info-block__data-item">
+                    <div class="info-block__data-item-name">Срок действия</div>
+                    <div class="info-block__data-item-value">20.08.1984</div>
                 </div>
             </div>
         </div>
@@ -82,16 +76,14 @@
                     <a href="#" class="info-block__btn button">Изменить</a>
                 </div>
             </div>
-            <div class="info-block__table">
-                <div class="info-block__row">
-                    <div class="info-block__data-item">
-                        <div class="info-block__data-item-name">Эл. почта</div>
-                        <div class="info-block__data-item-value">vitrety@yandex.ru</div>
-                    </div>
-                    <div class="info-block__data-item">
-                        <div class="info-block__data-item-name">Мобильный телефон</div>
-                        <div class="info-block__data-item-value">+7 707 3**-**-18</div>
-                    </div>
+            <div class="info-block__data-list">
+                <div class="info-block__data-item">
+                    <div class="info-block__data-item-name">Эл. почта</div>
+                    <div class="info-block__data-item-value">vitrety@yandex.ru</div>
+                </div>
+                <div class="info-block__data-item">
+                    <div class="info-block__data-item-name">Мобильный телефон</div>
+                    <div class="info-block__data-item-value">+7 707 3**-**-18</div>
                 </div>
             </div>
         </div>
@@ -102,11 +94,9 @@
                     <a href="#" class="info-block__btn button">Изменить</a>
                 </div>
             </div>
-            <div class="info-block__table">
-                <div class="info-block__row">
-                    <div class="info-block__data-item">
-                        <div class="info-block__data-item-value">г.Алматы, ул. Ауэзова, д. 48, кв.8</div>
-                    </div>
+            <div class="info-block__data-list">
+                <div class="info-block__data-item">
+                    <div class="info-block__data-item-value">г.Алматы, ул. Ауэзова, д. 48, кв.8</div>
                 </div>
             </div>
         </div>
@@ -117,11 +107,9 @@
                     <a href="#" class="info-block__btn button">Изменить</a>
                 </div>
             </div>
-            <div class="info-block__table">
-                <div class="info-block__row">
-                    <div class="info-block__data-item">
-                        <div class="info-block__data-item-value">г.Алматы, ул. Ауэзова, д. 48, кв.8</div>
-                    </div>
+            <div class="info-block__data-list">
+                <div class="info-block__data-item">
+                    <div class="info-block__data-item-value">г.Алматы, ул. Ауэзова, д. 48, кв.8</div>
                 </div>
             </div>
         </div>
@@ -132,18 +120,16 @@
                     <a href="#" class="info-block__btn button">Изменить</a>
                 </div>
             </div>
-            <div class="info-block__table">
-                <div class="info-block__row">
-                    <div class="info-block__data-item">
-                        <div class="info-block__data-item-name">Друг</div>
-                        <div class="info-block__data-item-value">Носов Олег</div>
-                        <div class="info-block__data-item-value">+7 777 123-45-67</div>
-                    </div>
-                    <div class="info-block__data-item">
-                        <div class="info-block__data-item-name">Родственник</div>
-                        <div class="info-block__data-item-value">Родственник</div>
-                        <div class="info-block__data-item-value">+7 777 123-45-67</div>
-                    </div>
+            <div class="info-block__data-list">
+                <div class="info-block__data-item">
+                    <div class="info-block__data-item-name">Друг</div>
+                    <div class="info-block__data-item-value">Носов Олег</div>
+                    <div class="info-block__data-item-value">+7 777 123-45-67</div>
+                </div>
+                <div class="info-block__data-item">
+                    <div class="info-block__data-item-name">Родственник</div>
+                    <div class="info-block__data-item-value">Родственник</div>
+                    <div class="info-block__data-item-value">+7 777 123-45-67</div>
                 </div>
             </div>
         </div>
@@ -154,30 +140,26 @@
                     <a href="#" class="info-block__btn button">Изменить</a>
                 </div>
             </div>
-            <div class="info-block__table">
-                <div class="info-block__row">
-                    <div class="info-block__data-item">
-                        <div class="info-block__data-item-name">Занятость</div>
-                        <div class="info-block__data-item-value">Работник сферы услуг (продавец)</div>
-                    </div>
-                    <div class="info-block__data-item">
-                        <div class="info-block__data-item-name">Место работы</div>
-                        <div class="info-block__data-item-value">Рога и копыта</div>
-                    </div>
-                    <div class="info-block__data-item">
-                        <div class="info-block__data-item-name">Должность</div>
-                        <div class="info-block__data-item-value">Менеджер по ППЦ СКА</div>
-                    </div>
+            <div class="info-block__data-list">
+                <div class="info-block__data-item">
+                    <div class="info-block__data-item-name">Занятость</div>
+                    <div class="info-block__data-item-value">Работник сферы услуг (продавец)</div>
                 </div>
-                <div class="info-block__row">
-                    <div class="info-block__data-item">
-                        <div class="info-block__data-item-name">Ежемесячный доход в тенге</div>
-                        <div class="info-block__data-item-value">150000</div>
-                    </div>
-                    <div class="info-block__data-item">
-                        <div class="info-block__data-item-name">Рабочий телефон</div>
-                        <div class="info-block__data-item-value">150000</div>
-                    </div>
+                <div class="info-block__data-item">
+                    <div class="info-block__data-item-name">Место работы</div>
+                    <div class="info-block__data-item-value">Рога и копыта</div>
+                </div>
+                <div class="info-block__data-item">
+                    <div class="info-block__data-item-name">Должность</div>
+                    <div class="info-block__data-item-value">Менеджер по ППЦ СКА</div>
+                </div>
+                <div class="info-block__data-item">
+                    <div class="info-block__data-item-name">Ежемесячный доход в тенге</div>
+                    <div class="info-block__data-item-value">150000</div>
+                </div>
+                <div class="info-block__data-item">
+                    <div class="info-block__data-item-name">Рабочий телефон</div>
+                    <div class="info-block__data-item-value">150000</div>
                 </div>
             </div>
         </div>

@@ -11,7 +11,9 @@
 </head>
 <body>
 
-@yield('content')
+<div class="main-wrapper">
+    @yield('content')
+</div>
 
 @include('scripts')
 @yield('scripts')
