@@ -56,10 +56,22 @@
     font-size: 20px;
   }
 }
+@media all and (max-width: 700px) {
+  .available-loan {
+    background-size: 124px 59px;
+  }
+}
+@media all and (max-width: 600px) {
+  .available-loan {
+    background-position: 100% 40px;
+  }
+}
 @media all and (max-width: 540px) {
   .available-loan {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    background-position: bottom right;
+    background-size: 172px 82px;
   }
   .available-loan__text-wrap {
     width: 100%;
@@ -67,6 +79,11 @@
   }
   .available-loan__btn-wrap {
     margin-top: 15px;
+  }
+}
+@media all and (max-width: 460px) {
+  .available-loan {
+    background-size: 124px 59px;
   }
 }
 @media all and (max-width: 840px) {

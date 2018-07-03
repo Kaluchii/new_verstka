@@ -486,7 +486,7 @@ html {
       -ms-flex-align: center;
           align-items: center;
   padding: 20px 40px;
-  background-color: #f6efdc;
+  background: url("/img/available-loan_money.png") no-repeat 65% 100%, #f6efdc;
 }
 .available-loan__text-wrap {
   font-size: 24px;
