@@ -460,6 +460,7 @@ html {
 .personal-area__container {
   max-width: 940px;
   margin: 0 auto;
+  padding-bottom: 40px;
   background-color: #ffffff;
 }
 .personal-area__title {
