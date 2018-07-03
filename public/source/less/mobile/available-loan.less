@@ -1,0 +1,28 @@
+@media all and (max-width: 840px){
+  .available-loan{
+    padding: 20px @hor-indent-s;
+  }
+}
+
+@media all and (max-width: 768px){
+  .available-loan{
+    &__text-wrap{
+      font-size: @font-size-4;
+    }
+  }
+}
+
+@media all and (max-width: 540px){
+  .available-loan{
+    flex-wrap: wrap;
+
+    &__text-wrap{
+      width: 100%;
+      font-size: 16px;
+    }
+
+    &__btn-wrap{
+      margin-top: 15px;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+@media all and (max-width: 800px){
+  .info-block{
+    &__data-item{
+      width: 50%;
+
+      &--full{
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 768px){
+  .info-block{
+    &__title{
+      font-size: @font-size-3;
+    }
+  }
+}
+
+@media all and (max-width: 540px){
+  .info-block{
+    &__data-item{
+      width: 100%;
+    }
+  }
+}
+
+@media all and (max-width: 460px){
+  .info-block{
+    &__top{
+      flex-wrap: wrap;
+    }
+
+    &__title{
+      width: 100%;
+    }
+
+    &__btn-wrap{
+      margin-top: 15px;
+    }
+  }
+}

@@ -10,9 +10,18 @@
   &__menu{}
 
   &__title{
-    font-size: 48px;
-    font-weight: bold;
+    padding: 0 @hor-indent;
+    font-size: @font-size-1;
+    line-height: @lh-for-big;
+    font-weight: 800;
+    color: @c-title;
   }
 
-  &__info-block{}
+  &__info-block{
+    margin: 20px @hor-indent 0;
+
+    & + &{
+      margin-top: 27px;
+    }
+  }
 }

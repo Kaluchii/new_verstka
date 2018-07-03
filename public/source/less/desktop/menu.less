@@ -1,1 +1,30 @@
-.menu{}
+.menu{
+  padding: 40px @hor-indent 30px;
+
+  &__list{
+    display: flex;
+  }
+
+  &__item{
+    padding: 5px 8px;
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 800;
+
+    &.is-active{
+      background-color: #efe4bf;
+      border-radius: @border-radius;
+
+      .menu__link{
+        color: @c-title;
+        background: none;
+      }
+    }
+
+    & + &{
+      margin-left: 15px;
+    }
+  }
+
+  &__link{}
+}
