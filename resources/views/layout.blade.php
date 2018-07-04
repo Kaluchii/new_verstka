@@ -10,8 +10,10 @@
     @yield('styles')
 </head>
 <body>
+@include('header')
 
 <div class="main-wrapper">
+    @yield('header')
     @yield('content')
 </div>
 

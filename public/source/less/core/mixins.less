@@ -43,7 +43,8 @@
   background-size: 10px 1px;
   background-repeat: repeat-x;
 
-  &:hover{
+  &:hover, &:focus{
+    outline: none;
     cursor: pointer;
     background: -moz-linear-gradient(to left, @border_h, @border_h 100%);
     background: -ms-linear-gradient(to left, @border_h, @border_h 100%);
@@ -57,17 +58,33 @@
     background-repeat: repeat-x;
     color: @hover;
   }
-  &:focus{
+}
+
+.dotted-link(@color, @border, @hover, @border_h){
+  color: @color;
+  background: -moz-linear-gradient(to left, @border 50%, transparent 50%);
+  background: -ms-linear-gradient(to left, @border 50%, transparent 50%);
+  background: -o-linear-gradient(to left, @border 50%, transparent 50%);
+  background: -webkit-gradient(linear, 0 0, 100% 0, from(@border), to(transparent));
+  background: -webkit-linear-gradient(to left, @border 50%, transparent 50%);
+  background: linear-gradient(to left, @border 50%, transparent 50%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='transparent', GradientType=0);
+  background-position: 0 100%;
+  background-size: 2px 1px;
+  background-repeat: repeat-x;
+
+  &:hover, &:focus{
     outline: none;
-    background: -moz-linear-gradient(to left, @border_h, @border_h 100%);
-    background: -ms-linear-gradient(to left, @border_h, @border_h 100%);
-    background: -o-linear-gradient(to left, @border_h, @border_h 100%);
+    cursor: pointer;
+    background: -moz-linear-gradient(to left, @border_h 50%, transparent 50%);
+    background: -ms-linear-gradient(to left, @border_h 50%, transparent 50%);
+    background: -o-linear-gradient(to left, @border_h 50%, transparent 50%);
     background: -webkit-gradient(linear, 0 0, 100% 0, from(@border_h), to(@border_h));
-    background: -webkit-linear-gradient(to left, @border_h, @border_h 100%);
-    background: linear-gradient(to left, @border_h, @border_h 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
+    background: -webkit-linear-gradient(to left, @border_h 50%, transparent 50%);
+    background: linear-gradient(to left, @border_h 50%, transparent 50%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='transparent', GradientType=0);
     background-position: 0 100%;
-    background-size: 10px 1px;
+    background-size: 2px 1px;
     background-repeat: repeat-x;
     color: @hover;
   }
