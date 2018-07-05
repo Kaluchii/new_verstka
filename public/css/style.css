@@ -395,6 +395,17 @@ html {
 .main-wrapper {
   background-color: #d4f1d4;
 }
+.stop-body-scroll {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+}
+.text-highlight {
+  padding: 0 3px;
+  font-weight: 800;
+  background: #ffd800;
+  color: #333333;
+}
 .link {
   color: #009247;
   background: -webkit-gradient(linear, right top, left top, from(#009247), to(#009247));
@@ -512,9 +523,77 @@ html {
 .button__text {
   white-space: nowrap;
 }
+.header {
+  background: url("/img/header_pattern.png") repeat-x 0 13px, #ffffff;
+}
+.header__desktop {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 940px;
+  padding: 54px 0 20px;
+}
+.header__mobile {
+  display: none;
+}
+.header__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
 .header__logo {
+  margin-top: 1px;
   width: 227px;
   height: 31px;
+}
+.header__tag-wrap {
+  margin-top: 9px;
+}
+.header__tag {
+  font-size: 16px;
+  color: #666666;
+}
+.header__phone {
+  position: relative;
+  font-size: 24px;
+  color: #666666;
+}
+.header__phone::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -12px;
+  height: 16px;
+  width: 16px;
+  background-image: url(/img/header_phone.png);
+}
+.header__navigation {
+  margin-top: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.header__menu-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.header__menu-item + .header__menu-item {
+  margin-left: 40px;
+}
+.header__menu-link {
+  font-weight: 600;
+}
+.header__pa-link {
+  font-weight: 600;
+}
+.personal-area {
+  padding-top: 20px;
 }
 .personal-area__container {
   max-width: 940px;

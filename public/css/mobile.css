@@ -23,6 +23,356 @@
 @background-notify-2: #f4efdd;
 @background-notify: #ece3c5;*/
 @media all and (max-width: 1024px) {
+  .header {
+    background: #d4f1d4;
+  }
+  .header__desktop {
+    display: none;
+  }
+  .header__mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .header--fixed {
+    height: 50px;
+  }
+  .header--fixed .header-mobile {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    left: 0;
+  }
+  .header-mobile {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background: #d4f1d4;
+  }
+  .header-mobile__hamburger {
+    opacity: 1;
+  }
+  .header-mobile__hamburger.hamburger--open {
+    opacity: 0;
+    -webkit-transition: 0.5s ease opacity;
+    transition: 0.5s ease opacity;
+  }
+  .header-mobile__hamburger-wrap {
+    display: inline-block;
+    vertical-align: top;
+    max-width: 82px;
+    min-width: 82px;
+    min-height: 50px;
+    width: 100%;
+  }
+  .header-mobile__logo-wrap {
+    margin-top: 2px;
+    font-size: 0;
+  }
+  .header-mobile__logo {
+    max-width: 160px;
+    width: 100%;
+  }
+  .header-mobile__login-wrap {
+    width: 82px;
+    height: 50px;
+    line-height: 1;
+  }
+  .header-mobile__lk {
+    margin-left: auto;
+    display: block;
+    width: 50px;
+    height: 50px;
+    padding: 10px 13px;
+    background: url("/img/mobile-header_user.svg") no-repeat center / 30px;
+  }
+  .header-mobile__login-button {
+    margin-top: 10px;
+    display: inline-block;
+    padding: 8px 10px;
+    font-size: 14px;
+    border-radius: 4px;
+    background: #aed8ae;
+    color: #333333;
+  }
+  .header-mobile__menu-wrap {
+    position: relative;
+  }
+  .header-mobile__fade-block {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 80;
+    display: none;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+  }
+}
+@media screen and (max-width: 420px) {
+  .header-mobile__hamburger-wrap {
+    min-width: 72px;
+    max-width: 72px;
+  }
+  .header-mobile__logo-wrap {
+    margin-top: 0;
+  }
+  .header-mobile__login-wrap {
+    width: 72px;
+  }
+  .header-mobile__login-button {
+    font-size: 12px;
+    padding: 7px 10px;
+    margin-top: 12px;
+    margin-right: 10px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .header-mobile__logo {
+    max-width: 140px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 90;
+    -webkit-transform: translateX(-350px);
+            transform: translateX(-350px);
+    width: 100%;
+    max-width: 350px;
+    height: 100vh;
+    max-height: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding-bottom: 70px;
+    overflow-y: auto;
+    background: #333333;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+  }
+  .mobile-menu__header {
+    padding-bottom: 25px;
+    background: url("/img/mob-menu_money.png") no-repeat right bottom;
+  }
+  .mobile-menu__header--empty {
+    padding-bottom: 0;
+    background: none;
+  }
+  .mobile-menu__header--no-money {
+    background: none;
+  }
+  .mobile-menu__hamburger {
+    opacity: 0;
+  }
+  .mobile-menu--show {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  .mobile-menu--show .mobile-menu__hamburger {
+    opacity: 1;
+    -webkit-transition: 1.5s ease opacity;
+    transition: 1.5s ease opacity;
+  }
+  .mobile-menu__menu-wrap {
+    margin: 0;
+    padding: 0;
+  }
+  .mobile-menu__item {
+    background: #009247;
+  }
+  .mobile-menu__item:not(:first-child) {
+    border-top: 1px solid #006d35;
+  }
+  .mobile-menu__item.mobile-menu__item--active {
+    border-top: 1px solid #004b21;
+  }
+  .mobile-menu__item--active {
+    background: #004b21;
+  }
+  .mobile-menu__item--active + .mobile-menu__item {
+    border-top: 1px solid #004b21;
+  }
+  .mobile-menu__item--relative {
+    position: relative;
+  }
+  .mobile-menu__link {
+    display: block;
+    padding: 8px 0 8px 15px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #ffffff;
+  }
+  .mobile-menu__link--bold {
+    font-weight: bold;
+  }
+  .mobile-menu__sale-in-app {
+    padding: 10px 30px;
+    font-size: 0;
+    background: #262626;
+  }
+  .mobile-menu__sale-text {
+    margin: 0;
+    display: inline-block;
+    max-width: 45%;
+    padding-top: 5px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    vertical-align: top;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #ffffff;
+  }
+  .mobile-menu__sale-text .text-highlight {
+    color: #333333;
+  }
+  .mobile-menu__app-link {
+    display: inline-block;
+    width: 100%;
+    max-width: 55%;
+    text-align: right;
+  }
+  .mobile-menu__sale-img {
+    display: inline-block;
+    max-width: 100%;
+  }
+  .mobile-menu__call-center-wrap {
+    width: 100%;
+    padding: 20px 30px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    text-align: center;
+  }
+  .mobile-menu__call-center-title {
+    display: inline-block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+  .mobile-menu__call-center-button {
+    position: relative;
+    display: block;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 15px 5px 15px 30px;
+    background: #009247;
+    font-size: 20px;
+    line-height: 1;
+    border-radius: 5px;
+    color: #ffffff;
+  }
+  .mobile-menu__call-center-button:before {
+    content: '';
+    position: absolute;
+    top: 11px;
+    left: 10px;
+    width: 30px;
+    height: 30px;
+    background: #006d35 url(/img/mobile-header_phone-white.svg) no-repeat center center;
+    background-size: 20px 20px;
+    border-radius: 50%;
+  }
+  .mobile-menu__available-amount {
+    margin: 10px 0 0 15px;
+    font-size: 16px;
+    color: #ffffff;
+  }
+  .mobile-menu__available-amount-bold {
+    color: #ffffff;
+    font-weight: bold;
+  }
+  .mobile-menu__logout-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 14px 15px;
+    font-size: 12px;
+    line-height: 1;
+    color: #66cc66;
+    text-transform: uppercase;
+  }
+  .mobile-menu__issue-wrap {
+    margin: 10px 0 0 15px;
+  }
+  .mobile-menu__issue-btn.enter-btn {
+    display: inline-block;
+    padding-top: 11px;
+    padding-bottom: 11px;
+  }
+  .mobile-menu__right-protection {
+    font-size: 16px;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .mobile-menu {
+    max-width: 310px;
+  }
+  .mobile-menu__sale-in-app {
+    padding: 10px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .hamburger {
+    position: relative;
+    z-index: 100;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+  }
+  .hamburger--open .hamburger__item--top {
+    top: 24px;
+    left: 15px;
+    background: #ffffff;
+    -webkit-transform: rotateZ(225deg);
+            transform: rotateZ(225deg);
+  }
+  .hamburger--open .hamburger__item--middle {
+    opacity: 0;
+  }
+  .hamburger--open .hamburger__item--bottom {
+    top: 24px;
+    left: 15px;
+    background: #ffffff;
+    -webkit-transform: rotateZ(-225deg);
+    transform: rotateZ(-225deg);
+  }
+  .hamburger__item {
+    position: absolute;
+    margin: 0 0 5px;
+    display: block;
+    height: 3px;
+    width: 24px;
+    background: #3c3c3b;
+    border-radius: 4px;
+    -webkit-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
+  }
+  .hamburger__item--top {
+    top: 16px;
+    left: 13px;
+  }
+  .hamburger__item--middle {
+    top: 23px;
+    left: 13px;
+  }
+  .hamburger__item--bottom {
+    top: 30px;
+    left: 13px;
+  }
+}
+@media all and (max-width: 1024px) {
   .personal-area__menu {
     display: none;
   }
@@ -39,6 +389,9 @@
   }
 }
 @media all and (max-width: 768px) {
+  .personal-area {
+    padding-top: 0;
+  }
   .personal-area__title {
     font-size: 32px;
   }

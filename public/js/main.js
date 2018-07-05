@@ -83,7 +83,7 @@ function createPopupForgotPass(msg){
 function toggleMenu(){
   $('.js-menu-button').toggleClass('hamburger--open');
   $('.js-mobile-menu').toggleClass('mobile-menu--show');
-  $('.js-menu-fade').fadeToggle();
+  $('.js-menu-fade').fadeToggle(300);
   $('body, html').toggleClass('stop-body-scroll')
 }
 

@@ -1,32 +1,80 @@
 .header{
-  &__container{}
+  background: url("/img/header_pattern.png") repeat-x 0 13px, #ffffff;
 
-  &__top{}
+  &__desktop{
+    margin: 0 auto;
+    width: 100%;
+    max-width: @s-max-w;
+    padding: 54px 0 20px;
+  }
+
+  &__mobile{
+    display: none;
+  }
+
+  &__top{
+    display: flex;
+    justify-content: space-between;
+  }
 
   &__home-link{}
 
   &__logo{
+    margin-top: 1px;
     width: 227px;
     height: 31px;
   }
 
-  &__tag-wrap{}
+  &__tag-wrap{
+    margin-top: 9px;
+  }
 
-  &__tag{}
+  &__tag{
+    font-size: 16px;
+    color: @c-text;
+  }
 
   &__phone-wrap{}
 
-  &__phone{}
+  &__phone{
+    position: relative;
+    font-size: 24px;
+    color: @c-text;
 
-  &__navigation{}
+    &::before{
+      content: "";
+      position: absolute;
+      top: -4px;
+      left: -12px;
+      height: 16px;
+      width: 16px;
+      background-image: url(/img/header_phone.png);
+    }
+  }
 
-  &__menu-list{}
+  &__navigation{
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+  }
 
-  &__menu-item{}
+  &__menu-list{
+    display: flex;
+  }
 
-  &__menu-link{}
+  &__menu-item{
+    & + &{
+      margin-left: 40px;
+    }
+  }
+
+  &__menu-link{
+    font-weight: 600;
+  }
 
   &__pa-link-wrap{}
 
-  &__pa-link{}
+  &__pa-link{
+    font-weight: 600;
+  }
 }

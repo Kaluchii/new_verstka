@@ -1,0 +1,214 @@
+@media screen and (max-width: 1024px){
+  .mobile-menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 90;
+    transform: translateX(-350px);
+    width: 100%;
+    max-width: 350px;
+    height: 100vh;
+    max-height: 100%;
+    box-sizing: border-box;
+    padding-bottom: 70px;
+    overflow-y: auto;
+    background: #333333;
+    transition: 0.3s ease;
+
+    &__header{
+      padding-bottom: 25px;
+      background: url("/img/mob-menu_money.png") no-repeat right bottom;
+
+      &--empty{
+        padding-bottom: 0;
+        background: none;
+      }
+
+      &--no-money{
+        background: none;
+      }
+    }
+
+    &__hamburger{
+      opacity: 0;
+    }
+
+    &--show{
+      transform: translateX(0px);
+
+      .mobile-menu__hamburger{
+        opacity: 1;
+        transition: 1.5s ease opacity;
+      }
+    }
+
+    &__menu-wrap{
+      margin: 0;
+      padding: 0;
+    }
+
+    &__item{
+      background: #009247;
+
+      &:not(:first-child){
+        border-top: 1px solid #006d35;
+      }
+
+      &.mobile-menu__item--active{
+        border-top: 1px solid #004b21;
+      }
+
+      &--active{
+        background: #004b21;
+
+        & + .mobile-menu__item{
+          border-top: 1px solid #004b21;
+        }
+      }
+
+      &--relative{
+        position: relative;
+      }
+    }
+
+    &__link{
+      display: block;
+      padding: 8px 0 8px 15px;
+      font-size: 16px;
+      line-height: 1.5;
+      color: #ffffff;
+
+      &--bold{
+        font-weight: bold;
+      }
+
+      &--icon{
+      }
+
+      &--icon-face{
+      }
+    }
+
+    &__sale-in-app{
+      padding: 10px 30px;
+      font-size: 0;
+      background: #262626;
+    }
+
+    &__sale-text{
+      margin: 0;
+      display: inline-block;
+      max-width: 45%;
+      padding-top: 5px;
+      box-sizing: border-box;
+      vertical-align: top;
+      font-size: 14px;
+      line-height: 1.5;
+      color: #ffffff;
+
+      .text-highlight{
+        color: #333333;
+      }
+    }
+
+    &__app-link{
+      display: inline-block;
+      width: 100%;
+      max-width: 55%;
+      text-align: right;
+    }
+
+    &__sale-img{
+      display: inline-block;
+      max-width: 100%;
+    }
+
+    &__call-center-wrap{
+      width: 100%;
+      padding: 20px 30px;
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+    &__call-center-title{
+      display: inline-block;
+      margin-bottom: 5px;
+      font-size: 14px;
+      text-transform: uppercase;
+      color: #ffffff;
+    }
+
+    &__call-center-button{
+      position: relative;
+      display: block;
+      box-sizing: border-box;
+      padding: 15px 5px 15px 30px;
+      background: #009247;
+      font-size: 20px;
+      line-height: 1;
+      border-radius: 5px;
+      color: #ffffff;
+
+      &:before{
+        content: '';
+        position: absolute;
+        top: 11px;
+        left: 10px;
+        width: 30px;
+        height: 30px;
+        background: #006d35 url(/img/mobile-header_phone-white.svg) no-repeat center center;
+        background-size: 20px 20px;
+        border-radius: 50%;
+      }
+    }
+
+    &__available-amount{
+      margin: 10px 0 0 15px;
+      font-size: 16px;
+      color: #ffffff;
+    }
+
+    &__available-amount-bold{
+      color: #ffffff;
+      font-weight: bold;
+    }
+
+    &__logout-btn{
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 14px 15px;
+      font-size: 12px;
+      line-height: 1;
+      color: #66cc66;
+      text-transform: uppercase;
+    }
+
+    &__issue-wrap{
+      margin: 10px 0 0 15px;
+    }
+
+    &__issue-btn{
+      &.enter-btn{
+        display: inline-block;
+        padding-top: 11px;
+        padding-bottom: 11px;
+      }
+    }
+
+    &__right-protection{
+      font-size: 16px;
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 768px){
+  .mobile-menu{
+    max-width: 310px;
+
+    &__sale-in-app{
+      padding: 10px;
+    }
+  }
+}

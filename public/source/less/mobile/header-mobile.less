@@ -1,0 +1,121 @@
+@media screen and (max-width: 1024px){
+  .header--fixed{
+    height: 50px;
+
+    .header-mobile{
+      position: fixed;
+      width: 100%;
+      top: 0;
+      box-sizing: border-box;
+      left: 0;
+    }
+  }
+
+  .header-mobile{
+    justify-content: space-between;
+    align-items: center;
+    background: @c-bg;
+
+    &__hamburger{
+      opacity: 1;
+
+      &.hamburger--open{
+        opacity: 0;
+        transition: 0.5s ease opacity;
+      }
+    }
+
+    &__hamburger-wrap{
+      display: inline-block;
+      vertical-align: top;
+      max-width: 82px;
+      min-width: 82px;
+      min-height: 50px;
+      width: 100%;
+    }
+
+    &__logo-wrap{
+      margin-top: 2px;
+      font-size: 0;
+    }
+
+    &__logo{
+      max-width: 160px;
+      width: 100%;
+    }
+
+    &__login-wrap{
+      width: 82px;
+      height: 50px;
+      line-height: 1;
+    }
+
+    &__lk{
+      margin-left: auto;
+      display: block;
+      width: 50px;
+      height: 50px;
+      padding: 10px 13px;
+      background: url("/img/mobile-header_user.svg") no-repeat center / 30px;
+    }
+
+    &__login-button{
+      margin-top: 10px;
+      display: inline-block;
+      padding: 8px 10px;
+      font-size: 14px;
+      border-radius: 4px;
+      background: #aed8ae;
+      color: @c-main-black;
+    }
+
+    &__menu-wrap{
+      position: relative;
+    }
+
+    &__fade-block{
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 80;
+      display: none;
+      width: 100%;
+      height: 100%;
+      max-width: 100%;
+      max-height: 100%;
+      background: rgba(0, 0, 0, 0.75);
+    }
+  }
+}
+
+@media screen and (max-width: 420px){
+  .header-mobile{
+    &__hamburger-wrap{
+      min-width: 72px;
+      max-width: 72px;
+    }
+
+    &__logo-wrap{
+      margin-top: 0;
+    }
+
+    &__login-wrap{
+      width: 72px;
+    }
+
+    &__login-button{
+      font-size: 12px;
+      padding: 7px 10px;
+      margin-top: 12px;
+      margin-right: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 360px){
+  .header-mobile{
+    &__logo{
+      max-width: 140px;
+    }
+  }
+}

@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('lk.settings');
 });
+
+Route::get('/', function () {
+    return view('lk.under_consideration');
+});

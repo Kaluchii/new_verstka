@@ -8,9 +8,9 @@
 
     <script src="/libs/jquery.maskedinput.min.js"></script>
     <script src="/libs/mailcheck.min.js"></script>
-    <script src="/js/reg_member_contacts.js"></script>
+    <script src="/js/reg_member_contacts.js"></script>--}}
 
-    <script src="/js/main.js"></script>--}}
+    <script src="/js/main.js"></script>
 
 
     <script src="/js/simplebar.js"></script>
