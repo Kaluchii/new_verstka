@@ -1,0 +1,43 @@
+@media all and (max-width: 840px){
+  .big-info{
+    padding: 15px 15px 10px;
+  }
+}
+
+@media all and (max-width: 768px){
+  .big-info{
+    &__item{
+      & + &{
+        margin-left: 60px;
+      }
+    }
+
+    &__name{
+      font-size: @fz-4;
+    }
+
+    &__value{
+      margin-top: 10px;
+      font-size: @fz-2;
+    }
+  }
+}
+
+@media all and (max-width: 540px){
+  .big-info{
+    &__item{
+      & + &{
+        margin-left: 40px;
+      }
+    }
+
+    &__name{
+      font-size: 16px;
+    }
+
+    &__value{
+      margin-top: 10px;
+      font-size: 16px;
+    }
+  }
+}

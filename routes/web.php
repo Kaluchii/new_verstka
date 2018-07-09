@@ -15,6 +15,6 @@ Route::get('/', function () {
     return view('lk.settings');
 });
 
-Route::get('/', function () {
+Route::get('/under_consideration', function () {
     return view('lk.under_consideration');
 });

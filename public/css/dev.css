@@ -392,7 +392,18 @@ ol {
 html {
   font-family: "Roboto", sans-serif;
 }
-.main-wrapper {
+.page-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 100vh;
   background-color: #d4f1d4;
 }
 .stop-body-scroll {
@@ -608,6 +619,40 @@ html {
   font-weight: 800;
   color: #333333;
 }
+.personal-area__small-title {
+  padding: 0 40px;
+  font-size: 32px;
+  line-height: 1.2;
+  color: #333333;
+}
+.personal-area__minor-text {
+  margin-top: 10px;
+  padding: 0 40px;
+  font-size: 16px;
+  color: #999999;
+}
+.personal-area__big-info {
+  margin: 25px 40px 0;
+}
+.personal-area__work-time {
+  margin: 30px 40px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.personal-area__work-time-img {
+  height: 46px;
+  width: 27.5px;
+  margin: 2px 0 0 25px;
+}
+.personal-area__work-time-text {
+  margin-left: 25px;
+  max-width: 340px;
+  font-size: 16px;
+  letter-spacing: .02em;
+  font-weight: 800;
+  color: #333333;
+}
 .personal-area__info-block {
   margin: 20px 40px 0;
 }
@@ -639,6 +684,30 @@ html {
   margin-top: 5px;
   color: #333333;
 }
+.big-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px 25px 15px;
+  border-radius: 5px;
+  background-color: #f6efdc;
+}
+.big-info__item {
+  line-height: 1;
+}
+.big-info__item + .big-info__item {
+  margin-left: 60px;
+}
+.big-info__name {
+  font-size: 24px;
+  color: #333333;
+}
+.big-info__value {
+  margin-top: 15px;
+  font-size: 48px;
+  font-weight: 800;
+  color: #333333;
+}
 .menu {
   padding: 40px 40px 30px;
 }
@@ -660,6 +729,9 @@ html {
 .menu__item.is-active .menu__link {
   color: #333333;
   background: none;
+}
+.menu__item:first-child:not(.is-active) {
+  margin-left: -7px;
 }
 .menu__item + .menu__item {
   margin-left: 15px;
@@ -1063,12 +1135,30 @@ html {
     display: none;
   }
   .personal-area__title {
-    margin-top: 35px;
+    padding-top: 35px;
+  }
+  .personal-area__small-title {
+    padding-top: 35px;
   }
 }
 @media all and (max-width: 840px) {
   .personal-area__title {
+    padding: 35px 20px 0;
+  }
+  .personal-area__small-title {
+    padding: 35px 20px 0;
+  }
+  .personal-area__minor-text {
     padding: 0 20px;
+  }
+  .personal-area__big-info {
+    margin: 25px 20px 0;
+  }
+  .personal-area__work-time {
+    margin: 30px 20px 0;
+  }
+  .personal-area__work-time-img {
+    margin: 0;
   }
   .personal-area__info-block {
     margin: 20px 20px 0;
@@ -1081,8 +1171,35 @@ html {
   .personal-area__title {
     font-size: 32px;
   }
+  .personal-area__small-title {
+    font-size: 24px;
+  }
   .personal-area__info-block {
     margin-top: 10px;
+  }
+}
+@media all and (max-width: 540px) {
+  .personal-area__small-title {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .personal-area__minor-text {
+    margin-top: 15px;
+    font-size: 14px;
+  }
+  .personal-area__big-info {
+    margin-top: 20px;
+  }
+  .personal-area__work-time {
+    margin-top: 25px;
+  }
+  .personal-area__work-time-img {
+    margin-top: 5px;
+  }
+}
+@media all and (max-width: 340px) {
+  .personal-area__small-title {
+    font-size: 18px;
   }
 }
 @media all and (max-width: 840px) {
@@ -1123,6 +1240,35 @@ html {
 @media all and (max-width: 460px) {
   .available-loan {
     background-size: 124px 59px;
+  }
+}
+@media all and (max-width: 840px) {
+  .big-info {
+    padding: 15px 15px 10px;
+  }
+}
+@media all and (max-width: 768px) {
+  .big-info__item + .big-info__item {
+    margin-left: 60px;
+  }
+  .big-info__name {
+    font-size: 20px;
+  }
+  .big-info__value {
+    margin-top: 10px;
+    font-size: 32px;
+  }
+}
+@media all and (max-width: 540px) {
+  .big-info__item + .big-info__item {
+    margin-left: 40px;
+  }
+  .big-info__name {
+    font-size: 16px;
+  }
+  .big-info__value {
+    margin-top: 10px;
+    font-size: 16px;
   }
 }
 @media all and (max-width: 840px) {

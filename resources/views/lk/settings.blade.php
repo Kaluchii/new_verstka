@@ -18,7 +18,7 @@
                 <li class="menu__item"><a href="#" class="menu__link link">Смена пароля</a></li>
             </ul>
         </div>
-        <h1 class="personal-area__title">Личные данные</h1>
+        <div class="personal-area__title">Личные данные</div>
         <div class="personal-area__info-block info-block">
             <div class="info-block__top">
                 <p class="info-block__title">Паспортные данные</p>

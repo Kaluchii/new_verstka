@@ -4,8 +4,14 @@ html{
   font-family: "Roboto", sans-serif;
 }
 
-.main-wrapper{
+.page-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
   background-color: @c-bg;
+
+  &__header-and-content{}
 }
 
 .stop-body-scroll{
@@ -16,7 +22,7 @@ html{
 
 .text-highlight {
   padding: 0 3px;
-  font-weight: 800;
+  font-weight: @fw-bold;
   background: #ffd800;
   color: @c-main-black;
 }

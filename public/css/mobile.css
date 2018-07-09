@@ -377,12 +377,30 @@
     display: none;
   }
   .personal-area__title {
-    margin-top: 35px;
+    padding-top: 35px;
+  }
+  .personal-area__small-title {
+    padding-top: 35px;
   }
 }
 @media all and (max-width: 840px) {
   .personal-area__title {
+    padding: 35px 20px 0;
+  }
+  .personal-area__small-title {
+    padding: 35px 20px 0;
+  }
+  .personal-area__minor-text {
     padding: 0 20px;
+  }
+  .personal-area__big-info {
+    margin: 25px 20px 0;
+  }
+  .personal-area__work-time {
+    margin: 30px 20px 0;
+  }
+  .personal-area__work-time-img {
+    margin: 0;
   }
   .personal-area__info-block {
     margin: 20px 20px 0;
@@ -395,8 +413,35 @@
   .personal-area__title {
     font-size: 32px;
   }
+  .personal-area__small-title {
+    font-size: 24px;
+  }
   .personal-area__info-block {
     margin-top: 10px;
+  }
+}
+@media all and (max-width: 540px) {
+  .personal-area__small-title {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .personal-area__minor-text {
+    margin-top: 15px;
+    font-size: 14px;
+  }
+  .personal-area__big-info {
+    margin-top: 20px;
+  }
+  .personal-area__work-time {
+    margin-top: 25px;
+  }
+  .personal-area__work-time-img {
+    margin-top: 5px;
+  }
+}
+@media all and (max-width: 340px) {
+  .personal-area__small-title {
+    font-size: 18px;
   }
 }
 @media all and (max-width: 840px) {
@@ -437,6 +482,35 @@
 @media all and (max-width: 460px) {
   .available-loan {
     background-size: 124px 59px;
+  }
+}
+@media all and (max-width: 840px) {
+  .big-info {
+    padding: 15px 15px 10px;
+  }
+}
+@media all and (max-width: 768px) {
+  .big-info__item + .big-info__item {
+    margin-left: 60px;
+  }
+  .big-info__name {
+    font-size: 20px;
+  }
+  .big-info__value {
+    margin-top: 10px;
+    font-size: 32px;
+  }
+}
+@media all and (max-width: 540px) {
+  .big-info__item + .big-info__item {
+    margin-left: 40px;
+  }
+  .big-info__name {
+    font-size: 16px;
+  }
+  .big-info__value {
+    margin-top: 10px;
+    font-size: 16px;
   }
 }
 @media all and (max-width: 840px) {

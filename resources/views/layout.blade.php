@@ -12,9 +12,11 @@
 <body>
 @include('header')
 
-<div class="main-wrapper">
-    @yield('header')
-    @yield('content')
+<div class="page-wrapper">
+    <div class="page-wrapper__header-and-content">
+        @yield('header')
+        @yield('content')
+    </div>
 </div>
 
 @include('scripts')
