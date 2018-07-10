@@ -18,3 +18,7 @@ Route::get('/', function () {
 Route::get('/under_consideration', function () {
     return view('lk.under_consideration');
 });
+
+Route::get('/loan_active', function () {
+    return view('lk.loan_active');
+});

@@ -10,8 +10,7 @@
                     <li class="menu__item"><a href="#" class="menu__link link">Смена пароля</a></li>
                 </ul>
             </div>
-            <div class="personal-area__small-title">Ваша заявка на рассмотрении.<br>
-                Менеджер свяжется с вами в ближайшее время.</div>
+            <div class="personal-area__small-title">Заявка на рассмотрении</div>
             <p class="personal-area__minor-text">Статус заявки обновлен в 10:40, 03.03.2018</p>
             <div class="personal-area__big-info big-info">
                 <div class="big-info__item">

@@ -73,7 +73,7 @@
                     <!--{* История займов | Смена пароля *}-->
                     <!--{if $logined}-->
                     <li class="mobile-menu__item mobile-menu__item--relative <!--{if $active == 3}--> mobile-menu__item--active<!--{/if}-->">
-                        <a href="/member/" class="mobile-menu__link mobile-menu__link--icon mobile-menu__link--icon-face" title="<!--{$full_name}-->" ><!--{$short_name}--></a>
+                        <a href="/member/" class="mobile-menu__link mobile-menu__link--icon mobile-menu__link--icon-face" title="<!--{$full_name}-->" >Василий Займович<!--{$short_name}--></a>
                         <a href="/index.php?c=member&m=logout" class="mobile-menu__logout-btn">Выйти</a>
                     </li>
 

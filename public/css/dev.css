@@ -358,37 +358,6 @@ ol {
   font-weight: 800;
   font-style: normal;
 }
-/*.link(@color, @hover, @border_h){
-  color: @color;
-  &:hover{
-    cursor: pointer;
-    background: -moz-linear-gradient(to left, @border_h, @border_h 100%);
-    background: -ms-linear-gradient(to left, @border_h, @border_h 100%);
-    background: -o-linear-gradient(to left, @border_h, @border_h 100%);
-    background: -webkit-gradient(linear, 0 0, 100% 0, from(@border_h), to(@border_h));
-    background: -webkit-linear-gradient(to left, @border_h, @border_h 100%);
-    background: linear-gradient(to left, @border_h, @border_h 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
-    background-position: 0 100%;
-    background-size: 10px 1px;
-    background-repeat: repeat-x;
-    color: @hover;
-  }
-  &:focus{
-    outline: none;
-    background: -moz-linear-gradient(to left, @border_h, @border_h 100%);
-    background: -ms-linear-gradient(to left, @border_h, @border_h 100%);
-    background: -o-linear-gradient(to left, @border_h, @border_h 100%);
-    background: -webkit-gradient(linear, 0 0, 100% 0, from(@border_h), to(@border_h));
-    background: -webkit-linear-gradient(to left, @border_h, @border_h 100%);
-    background: linear-gradient(to left, @border_h, @border_h 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
-    background-position: 0 100%;
-    background-size: 10px 1px;
-    background-repeat: repeat-x;
-    color: @hover;
-  }
-}*/
 html {
   font-family: "Roboto", sans-serif;
 }
@@ -419,86 +388,50 @@ html {
 }
 .link {
   color: #009247;
-  background: -webkit-gradient(linear, right top, left top, from(#009247), to(#009247));
-  background: linear-gradient(to left, #009247, #009247 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
-  background-position: 0 100%;
-  background-size: 10px 1px;
-  background-repeat: repeat-x;
+  background: -webkit-gradient(linear, left top, right top, from(#009247), to(#009247)) repeat-x 0 100% / 10px 1px;
+  background: linear-gradient(to right, #009247, #009247 100%) repeat-x 0 100% / 10px 1px;
 }
 .link:hover,
 .link:focus {
-  outline: none;
   cursor: pointer;
-  background: -webkit-gradient(linear, right top, left top, from(#ff9900), to(#ff9900));
-  background: linear-gradient(to left, #ff9900, #ff9900 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
-  background-position: 0 100%;
-  background-size: 10px 1px;
-  background-repeat: repeat-x;
+  background: -webkit-gradient(linear, left top, right top, from(#ff9900), to(#ff9900)) repeat-x 0 100% / 10px 1px;
+  background: linear-gradient(to right, #ff9900, #ff9900 100%) repeat-x 0 100% / 10px 1px;
   color: #ff9900;
 }
 .link-local {
   color: #009247;
-  background: -webkit-gradient(linear, right top, left top, color-stop(50%, #009247), color-stop(50%, transparent));
-  background: linear-gradient(to left, #009247 50%, transparent 50%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='transparent', GradientType=0);
-  background-position: 0 100%;
-  background-size: 2px 1px;
-  background-repeat: repeat-x;
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #009247), color-stop(50%, transparent)) repeat-x 0 100% / 2px 1px;
+  background: linear-gradient(to right, #009247 50%, transparent 50%) repeat-x 0 100% / 2px 1px;
 }
 .link-local:hover,
 .link-local:focus {
-  outline: none;
   cursor: pointer;
-  background: -webkit-gradient(linear, right top, left top, color-stop(50%, #ff9900), color-stop(50%, transparent));
-  background: linear-gradient(to left, #ff9900 50%, transparent 50%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='transparent', GradientType=0);
-  background-position: 0 100%;
-  background-size: 2px 1px;
-  background-repeat: repeat-x;
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #ff9900), color-stop(50%, transparent)) repeat-x 0 100% / 2px 1px;
+  background: linear-gradient(to right, #ff9900 50%, transparent 50%) repeat-x 0 100% / 2px 1px;
   color: #ff9900;
 }
 .link-black {
   color: #333333;
-  background: -webkit-gradient(linear, right top, left top, from(#333333), to(#333333));
-  background: linear-gradient(to left, #333333, #333333 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
-  background-position: 0 100%;
-  background-size: 10px 1px;
-  background-repeat: repeat-x;
+  background: -webkit-gradient(linear, left top, right top, from(#333333), to(#333333)) repeat-x 0 100% / 10px 1px;
+  background: linear-gradient(to right, #333333, #333333 100%) repeat-x 0 100% / 10px 1px;
 }
 .link-black:hover,
 .link-black:focus {
-  outline: none;
   cursor: pointer;
-  background: -webkit-gradient(linear, right top, left top, from(#ff9900), to(#ff9900));
-  background: linear-gradient(to left, #ff9900, #ff9900 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
-  background-position: 0 100%;
-  background-size: 10px 1px;
-  background-repeat: repeat-x;
+  background: -webkit-gradient(linear, left top, right top, from(#ff9900), to(#ff9900)) repeat-x 0 100% / 10px 1px;
+  background: linear-gradient(to right, #ff9900, #ff9900 100%) repeat-x 0 100% / 10px 1px;
   color: #ff9900;
 }
 .link-black-local {
   color: #333333;
-  background: -webkit-gradient(linear, right top, left top, color-stop(50%, #333333), color-stop(50%, transparent));
-  background: linear-gradient(to left, #333333 50%, transparent 50%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='transparent', GradientType=0);
-  background-position: 0 100%;
-  background-size: 2px 1px;
-  background-repeat: repeat-x;
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #333333), color-stop(50%, transparent)) repeat-x 0 100% / 2px 1px;
+  background: linear-gradient(to right, #333333 50%, transparent 50%) repeat-x 0 100% / 2px 1px;
 }
 .link-black-local:hover,
 .link-black-local:focus {
-  outline: none;
   cursor: pointer;
-  background: -webkit-gradient(linear, right top, left top, color-stop(50%, #ff9900), color-stop(50%, transparent));
-  background: linear-gradient(to left, #ff9900 50%, transparent 50%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='transparent', GradientType=0);
-  background-position: 0 100%;
-  background-size: 2px 1px;
-  background-repeat: repeat-x;
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #ff9900), color-stop(50%, transparent)) repeat-x 0 100% / 2px 1px;
+  background: linear-gradient(to right, #ff9900 50%, transparent 50%) repeat-x 0 100% / 2px 1px;
   color: #ff9900;
 }
 .button {
@@ -623,6 +556,7 @@ html {
   padding: 0 40px;
   font-size: 32px;
   line-height: 1.2;
+  font-weight: 800;
   color: #333333;
 }
 .personal-area__minor-text {
@@ -738,7 +672,8 @@ html {
 }
 .info-block {
   padding-top: 20px;
-  border-top: 1px solid #cccccc;
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #cccccc), color-stop(50%, transparent)) repeat-x 0 0 / 6px 1px;
+  background: linear-gradient(to right, #cccccc 50%, transparent 50%) repeat-x 0 0 / 6px 1px;
 }
 .info-block__top {
   display: -webkit-box;
@@ -773,12 +708,33 @@ html {
 .info-block__data-item--small {
   width: 16.66666%;
 }
+.info-block__data-item--big {
+  width: 66.66666%;
+}
 .info-block__data-item-name {
   color: #333333;
   font-weight: 800;
 }
 .info-block__data-item-value {
   color: #666666;
+}
+.info-block__row-list {
+  margin-top: 15px;
+}
+.info-block__row-item {
+  padding-left: 9px;
+  position: relative;
+}
+.info-block__row-item::before {
+  content: '•';
+  position: absolute;
+  top: 5px;
+  left: 0;
+  font-size: 12px;
+  line-height: 1;
+}
+.info-block__row-item + .info-block__row-item {
+  margin-top: 8px;
 }
 @media all and (max-width: 1024px) {
   .header {
@@ -1179,10 +1135,6 @@ html {
   }
 }
 @media all and (max-width: 540px) {
-  .personal-area__small-title {
-    font-size: 20px;
-    font-weight: 600;
-  }
   .personal-area__minor-text {
     margin-top: 15px;
     font-size: 14px;
@@ -1195,11 +1147,6 @@ html {
   }
   .personal-area__work-time-img {
     margin-top: 5px;
-  }
-}
-@media all and (max-width: 340px) {
-  .personal-area__small-title {
-    font-size: 18px;
   }
 }
 @media all and (max-width: 840px) {
