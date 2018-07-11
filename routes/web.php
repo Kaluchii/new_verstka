@@ -22,3 +22,8 @@ Route::get('/under_consideration', function () {
 Route::get('/loan_active', function () {
     return view('lk.loan_active');
 });
+
+
+Route::get('/restruct', function () {
+    return view('lk.restruct');
+});

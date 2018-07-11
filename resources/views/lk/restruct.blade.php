@@ -10,28 +10,10 @@
                     <li class="menu__item"><a href="#" class="menu__link link">Смена пароля</a></li>
                 </ul>
             </div>
-            <div class="personal-area__small-title">Ваш займ <span class="personal-area__title-select personal-area__title-select--active">активен</span></div>
-            <div class="personal-area__big-info big-info">
-                <div class="big-info__item">
-                    <div class="big-info__name">Задолженность</div>
-                    <div class="big-info__value">15 200 тг</div>
-                </div>
-                <div class="big-info__item">
-                    <div class="big-info__name">Дата возврата</div>
-                    <div class="big-info__value">до 15 августа</div>
-                </div>
-            </div>
-            <div class="personal-area__btn-with-descr btn-with-descr">
-                <div class="btn-with-descr__btn-wrap">
-                    <a href="#" class="btn-with-descr__btn button button--yellow button--big-in-small"><span class="button__text">Погасить займ</span></a>
-                </div>
-                <p class="btn-with-descr__text">Оплата банковской картой или через терминалы оплат</p>
-            </div>
-            <div class="personal-area__btn-with-descr btn-with-descr">
-                <div class="btn-with-descr__btn-wrap">
-                    <a href="#" class="btn-with-descr__btn button button--yellow button--big-in-small"><span class="button__text">Продлить займ</span></a>
-                </div>
-                <p class="btn-with-descr__text">Продление до 30 дней доступно, пока займ не просрочен.</p>
+            <div class="personal-area__small-title">Ваш займ реструктуризирован</div>
+            <p class="personal-area__text">Возникла просрочка, начисляется пеня. Сначала оплачивается пеня, затем задолженность.</p>
+            <div class="personal-area__btn-wrap">
+                <a href="#" class="personal-area__btn button button--yellow button--big-in-small"><span class="button__text">Оплатить ежемесячный платеж</span></a>
             </div>
             <div class="personal-area__info-block info-block">
                 <div class="info-block__top">
@@ -67,17 +49,6 @@
                         <div class="data-list__item-value">15 августа 2017</div>
                     </div>
                 </div>
-            </div>
-            <div class="personal-area__info-block info-block">
-                <div class="info-block__top">
-                    <p class="info-block__title">Документация</p>
-                </div>
-                <ul class="info-block__row-list row-list">
-                    <li class="row-list__item"><a href="#" class="row-list__link link">Договор займа</a></li>
-                    <li class="row-list__item"><a href="#" class="row-list__link link">Дополнительное соглашение на продление займа от 01.01.2018</a></li>
-                    <li class="row-list__item"><a href="#" class="row-list__link link">Дополнительное соглашение на продление займа от 05.01.2018</a></li>
-                    <li class="row-list__item"><a href="#" class="row-list__link link">Дополнительное соглашение на реструктуризацию займа от 30.01.2018</a></li>
-                </ul>
             </div>
         </div>
     </div>

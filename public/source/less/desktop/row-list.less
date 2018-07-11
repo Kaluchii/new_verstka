@@ -1,0 +1,21 @@
+.row-list{
+  &__item{
+    padding-left: 9px;
+    position: relative;
+
+    &::before{
+      content: '•';
+      position: absolute;
+      top: 5px;
+      left: 0;
+      font-size: 12px;
+      line-height: 1;
+    }
+
+    & + &{
+      margin-top: 8px;
+    }
+  }
+
+  &__link{}
+}

@@ -130,7 +130,7 @@
                     <a href="tel:+77273505033" class="mobile-menu__call-center-button">+7 (727) 350-50-33</a>
                 </div>
                 <div class="mobile-menu__right-protection">
-                    <a href="/consumer-rights-protection.html" class="mobile-menu__right-protection-link link <!--{if $active_page == 'consumer-rights-protection'}--> is-active <!--{/if}-->">Защита прав потребителей</a>
+                    <a href="/consumer-rights-protection.html" class="mobile-menu__right-protection-link link-on-dark <!--{if $active_page == 'consumer-rights-protection'}--> is-active <!--{/if}-->">Защита прав потребителей</a>
                 </div>
             </div>
         </div>

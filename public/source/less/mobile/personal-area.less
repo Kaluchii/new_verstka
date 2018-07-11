@@ -32,6 +32,10 @@
       margin: 25px @hor-indent-s 0;
     }
 
+    &__btn-with-descr{
+      margin: 30px @hor-indent-s 0;
+    }
+
     &__work-time{
       margin: 30px @hor-indent-s 0;
     }
@@ -59,6 +63,16 @@
       //letter-spacing: -0.01em;
     }
 
+    &__title-select{
+      margin-left: -3px;
+      padding: 0 4px 1px;
+      line-height: 1;
+    }
+
+    &__btn-with-descr{
+      margin-top: 25px;
+    }
+
     &__info-block{
       margin-top: 10px;
     }
@@ -82,6 +96,16 @@
 
     &__work-time-img{
       margin-top: 5px;
+    }
+  }
+}
+
+@media all and (max-width: 425px){
+  .personal-area{
+    &__btn-with-descr{
+      & + .personal-area__info-block{
+        margin-top: 20px;
+      }
     }
   }
 }
