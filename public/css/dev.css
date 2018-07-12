@@ -1413,7 +1413,7 @@ html {
 }
 @media screen and (max-width: 768px) {
   .payment-status__list {
-    margin: -10px -10px 0;
+    margin: -10px -10px -5px;
   }
   .payment-status__item {
     margin: 10px;
