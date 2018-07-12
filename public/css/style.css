@@ -386,6 +386,9 @@ html {
   background: #ffd800;
   color: #333333;
 }
+.bold {
+  font-weight: 800;
+}
 .link {
   color: #009247;
   background: -webkit-gradient(linear, left top, right top, from(#bfe4d1), to(#bfe4d1)) repeat-x 0 100% / 10px 1px;
@@ -580,17 +583,21 @@ html {
   font-weight: 800;
   color: #333333;
 }
+.personal-area__small-title + .personal-area__text {
+  margin-top: 20px;
+}
 .personal-area__text {
-  margin-top: 10px;
-  padding: 0 40px;
+  margin: 10px 40px 0;
   font-size: 16px;
   color: #666666;
 }
 .personal-area__minor-text {
-  margin-top: 10px;
-  padding: 0 40px;
+  margin: 10px 40px 0;
   font-size: 16px;
   color: #999999;
+}
+.personal-area__btn-wrap {
+  margin: 15px 40px 0;
 }
 .personal-area__big-info {
   margin: 25px 40px 0;
@@ -771,6 +778,35 @@ html {
 }
 .data-list__item-value {
   color: #666666;
+}
+.payment-status__list {
+  margin: -27.5px -13.75px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.payment-status__item {
+  margin: 27.5px 13.75px 0;
+  width: 150px;
+  height: 200px;
+  padding: 15px;
+  border-radius: 5px;
+  background: url("/img/payment-status_wait.png") no-repeat 50% 115px, #f6efdc;
+  text-align: center;
+}
+.payment-status__item--paid {
+  background-image: url("/img/payment-status_paid.png");
+}
+.payment-status__item--overdue {
+  background-image: url("/img/payment-status_overdue.png");
+  background-color: #ffcccc;
+}
+.payment-status__text {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333333;
 }
 .row-list__item {
   padding-left: 9px;

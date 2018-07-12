@@ -43,23 +43,26 @@
     line-height: @lh-for-big;
     font-weight: @fw-bold;
     color: @c-main-black;
+
+    & + .personal-area__text{
+      margin-top: 20px;
+    }
   }
 
   &__text{
-    margin-top: 10px;
-    padding: 0 @hor-indent;
+    margin: 10px @hor-indent 0;
     font-size: 16px;
     color: @c-text;
   }
 
   &__minor-text{
-    margin-top: 10px;
-    padding: 0 @hor-indent;
+    margin: 10px @hor-indent 0;
     font-size: 16px;
     color: @c-minor-text;
   }
 
   &__btn-wrap{
+    margin: 15px @hor-indent 0;
   }
 
   &__btn{}

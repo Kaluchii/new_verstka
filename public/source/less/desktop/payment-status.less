@@ -1,0 +1,32 @@
+.payment-status{
+  &__list{
+    margin: -27.5px -13.75px 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item{
+    margin: 27.5px 13.75px 0;
+    width: 150px;
+    height: 200px;
+    padding: 15px;
+    border-radius: @border-radius-big;
+    background: url("/img/payment-status_wait.png") no-repeat 50% 115px, @c-info-bg;
+    text-align: center;
+
+    &--paid{
+      background-image: url("/img/payment-status_paid.png");
+    }
+
+    &--overdue{
+      background-image: url("/img/payment-status_overdue.png");
+      background-color: #ffcccc;
+    }
+  }
+
+  &__text{
+    font-size: 16px;
+    line-height: 1.5;
+    color: @c-main-black;
+  }
+}

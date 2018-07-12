@@ -19,6 +19,36 @@
                 <div class="info-block__top">
                     <p class="info-block__title">Информация по займу</p>
                 </div>
+                <div class="info-block__payment-status payment-status">
+                    <ul class="payment-status__list">
+                        <li class="payment-status__item payment-status__item--paid">
+                            <p class="payment-status__text">До 9 февраля <br> Оплачено <br> <span class="bold">24 000 тг</span></p>
+                        </li>
+                        <li class="payment-status__item payment-status__item--paid">
+                            <p class="payment-status__text">Пеня за просрочку <br> <span class="bold">2 000 тг</span></p>
+                        </li>
+                        <li class="payment-status__item payment-status__item--overdue">
+                            <p class="payment-status__text">Пеня за просрочку <br> <span class="bold">2 000 тг</span></p>
+                        </li>
+                        <li class="payment-status__item">
+                            <p class="payment-status__text">До 9 марта <br> <span class="bold">24 000 тг</span></p>
+                        </li>
+                        <li class="payment-status__item">
+                            <p class="payment-status__text">До 9 апреля <br> <span class="bold">24 000 тг</span></p>
+                        </li>
+                        <li class="payment-status__item">
+                            <p class="payment-status__text">До 9 мая <br> <span class="bold">24 000 тг</span></p>
+                        </li>
+                        <li class="payment-status__item">
+                            <p class="payment-status__text">До 9 июня <br> <span class="bold">24 000 тг</span></p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="personal-area__info-block info-block">
+                <div class="info-block__top">
+                    <p class="info-block__title">Информация по займу</p>
+                </div>
                 <div class="info-block__data-list data-list">
                     <div class="data-list__item data-list__item--first-elements">
                         <div class="data-list__item-name">Займ выдан</div>
