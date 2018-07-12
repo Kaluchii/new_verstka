@@ -604,3 +604,19 @@
             order: -1;
   }
 }
+@media screen and (max-width: 768px) {
+  .payment-status__list {
+    margin: -10px -10px 0;
+  }
+  .payment-status__item {
+    margin: 10px;
+    width: 130px;
+    height: 170px;
+    padding: 18px 10px;
+    background-size: 52px;
+    background-position: 50% 95px;
+  }
+  .payment-status__text {
+    font-size: 14px;
+  }
+}

@@ -17,7 +17,7 @@
             </div>
             <div class="personal-area__info-block info-block">
                 <div class="info-block__top">
-                    <p class="info-block__title">Информация по займу</p>
+                    <p class="info-block__title">График платежей</p>
                 </div>
                 <div class="info-block__payment-status payment-status">
                     <ul class="payment-status__list">

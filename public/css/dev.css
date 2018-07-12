@@ -599,6 +599,9 @@ html {
 .personal-area__btn-wrap {
   margin: 15px 40px 0;
 }
+.personal-area__btn-wrap + .personal-area__info-block {
+  margin-top: 30px;
+}
 .personal-area__big-info {
   margin: 25px 40px 0;
 }
@@ -747,6 +750,9 @@ html {
 .info-block__btn-wrap {
   margin-left: auto;
 }
+.info-block__payment-status {
+  margin-top: 15px;
+}
 .info-block__row-list {
   margin-top: 15px;
 }
@@ -780,7 +786,7 @@ html {
   color: #666666;
 }
 .payment-status__list {
-  margin: -27.5px -13.75px 0;
+  margin: -13.75px -13.75px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -788,10 +794,10 @@ html {
       flex-wrap: wrap;
 }
 .payment-status__item {
-  margin: 27.5px 13.75px 0;
+  margin: 13.75px;
   width: 150px;
   height: 200px;
-  padding: 15px;
+  padding: 18px 15px;
   border-radius: 5px;
   background: url("/img/payment-status_wait.png") no-repeat 50% 115px, #f6efdc;
   text-align: center;
@@ -1403,5 +1409,21 @@ html {
     -webkit-box-ordinal-group: 0;
         -ms-flex-order: -1;
             order: -1;
+  }
+}
+@media screen and (max-width: 768px) {
+  .payment-status__list {
+    margin: -10px -10px 0;
+  }
+  .payment-status__item {
+    margin: 10px;
+    width: 130px;
+    height: 170px;
+    padding: 18px 10px;
+    background-size: 52px;
+    background-position: 50% 95px;
+  }
+  .payment-status__text {
+    font-size: 14px;
   }
 }
