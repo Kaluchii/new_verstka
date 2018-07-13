@@ -639,6 +639,9 @@ html {
 .personal-area__info-block + .personal-area__info-block {
   margin-top: 27px;
 }
+.personal-area__history-loans {
+  margin: 20px 40px 0;
+}
 .available-loan {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -828,4 +831,35 @@ html {
 }
 .row-list__item + .row-list__item {
   margin-top: 8px;
+}
+.history-loans__row {
+  margin-top: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 16px;
+  color: #666666;
+}
+.history-loans__row:first-child {
+  padding-bottom: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333333;
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #cccccc), color-stop(50%, transparent)) repeat-x 0 100% / 6px 1px;
+  background: linear-gradient(to right, #cccccc 50%, transparent 50%) repeat-x 0 100% / 6px 1px;
+}
+.history-loans__row:nth-child(2) {
+  margin-top: 20px;
+}
+.history-loans__col {
+  width: 200px;
+}
+.history-loans__col:nth-child(2) {
+  width: 145px;
+}
+.history-loans__col:nth-child(3) {
+  width: 75px;
+}
+.history-loans__link {
+  font-weight: 800;
 }

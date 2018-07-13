@@ -23,7 +23,14 @@ Route::get('/loan_active', function () {
     return view('lk.loan_active');
 });
 
+Route::get('/loan_overdue', function () {
+    return view('lk.loan_overdue');
+});
 
 Route::get('/restruct', function () {
     return view('lk.restruct');
+});
+
+Route::get('/loan_history', function () {
+    return view('lk.loan_history');
 });

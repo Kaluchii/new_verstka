@@ -417,6 +417,9 @@
   .personal-area__info-block {
     margin: 20px 20px 0;
   }
+  .personal-area__history-loans {
+    margin: 20px 20px 0;
+  }
 }
 @media all and (max-width: 768px) {
   .personal-area {
@@ -618,5 +621,29 @@
   }
   .payment-status__text {
     font-size: 14px;
+  }
+}
+@media all and (max-width: 470px) {
+  .history-loans__row {
+    margin-top: 7px;
+    font-size: 14px;
+  }
+  .history-loans__row:first-child {
+    font-size: 14px;
+  }
+  .history-loans__row:nth-child(2) {
+    margin-top: 10px;
+  }
+  .history-loans__col {
+    width: 130px;
+  }
+  .history-loans__col:nth-child(2) {
+    width: 80px;
+  }
+  .history-loans__col:nth-child(3) {
+    width: 65px;
+  }
+  .history-loans__hide-on-small {
+    display: none;
   }
 }
