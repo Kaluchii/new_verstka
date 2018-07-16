@@ -1,0 +1,25 @@
+.form-with-info{
+  display: flex;
+
+  &__form{
+    flex-shrink: 0;
+  }
+
+  &__info{
+    margin-top: 24px;
+    margin-left: auto;
+    max-width: 490px;
+    padding:  25px 75px 20px 30px;
+    border: 1px solid @c-border;
+    border-radius: @border-radius-big;
+    background-color: @c-alarm;
+  }
+
+  &__text{
+    color: @c-main-black;
+
+    & + &{
+      margin-top: 23px;
+    }
+  }
+}

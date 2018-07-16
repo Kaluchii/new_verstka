@@ -8,10 +8,15 @@
   color: @c-main-black;
   cursor: pointer;
   border-radius: @border-radius;
+  user-select: none;
 
   &--yellow{
     background-color: @c-yellow;
     border: 1px solid @c-border;
+
+    &:hover{
+      background-color: #ffd77c;
+    }
   }
 
   &--grey{
@@ -24,6 +29,12 @@
     background: -ms-linear-gradient(top, #ffffff 0%, #ebebeb 100%);
     background: linear-gradient(to bottom, #ffffff 0%, #ebebeb 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ebebeb', GradientType=0 );
+  }
+
+  &.is-disabled, &:disabled{
+    background-color: #999999;
+    border-color: #656565;
+    cursor: not-allowed;
   }
 
   &--big-in-small{}

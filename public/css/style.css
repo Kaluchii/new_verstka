@@ -463,10 +463,17 @@ html {
   color: #333333;
   cursor: pointer;
   border-radius: 3px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .button--yellow {
   background-color: #ffcb65;
   border: 1px solid #cb9933;
+}
+.button--yellow:hover {
+  background-color: #ffd77c;
 }
 .button--grey {
   border: 1px solid #999999;
@@ -476,9 +483,70 @@ html {
   background: linear-gradient(to bottom, #ffffff 0%, #ebebeb 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ebebeb', GradientType=0);
 }
+.button.is-disabled,
+.button:disabled {
+  background-color: #999999;
+  border-color: #656565;
+  cursor: not-allowed;
+}
 .button__text {
   margin: 0 auto;
   white-space: nowrap;
+}
+.field {
+  position: relative;
+}
+.field.has-error .field__input {
+  border-color: #cb0000;
+  background-color: #ffcbcb;
+}
+.field.has-error .field__alert {
+  display: block;
+}
+.field.is-filled .field__alert {
+  display: block;
+}
+.field__name {
+  margin-bottom: 5px;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #333333;
+}
+.field__input {
+  height: 40px;
+  width: 100%;
+  padding: 0 10px;
+  font-size: 16px;
+  border: 1px solid #999999;
+  border-radius: 3px;
+  color: #333333;
+}
+.field__input::-webkit-input-placeholder {
+  color: #999999;
+}
+.field__input:-ms-input-placeholder {
+  color: #999999;
+}
+.field__input::-ms-input-placeholder {
+  color: #999999;
+}
+.field__input::placeholder {
+  color: #999999;
+}
+.field__alert {
+  display: none;
+  position: absolute;
+  top: calc(100% + 2px);
+  right: 0;
+  z-index: 1;
+  padding: 0 3px;
+  font-size: 12px;
+  border: 1px solid #cb9933;
+  border-radius: 2px;
+  text-align: right;
+  background-color: #ffe5af;
+  color: #333333;
 }
 .header {
   background: url("/img/header_pattern.png") repeat-x 0 13px, #ffffff;
@@ -640,6 +708,9 @@ html {
   margin-top: 27px;
 }
 .personal-area__history-loans {
+  margin: 20px 40px 0;
+}
+.personal-area__form-with-info {
   margin: 20px 40px 0;
 }
 .available-loan {
@@ -862,4 +933,35 @@ html {
 }
 .history-loans__link {
   font-weight: 800;
+}
+.form-with-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.form-with-info__form {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+.form-with-info__info {
+  margin-top: 24px;
+  margin-left: auto;
+  max-width: 490px;
+  padding: 25px 75px 20px 30px;
+  border: 1px solid #cb9933;
+  border-radius: 5px;
+  background-color: #ffe5af;
+}
+.form-with-info__text {
+  color: #333333;
+}
+.form-with-info__text + .form-with-info__text {
+  margin-top: 23px;
+}
+.col-form {
+  max-width: 280px;
+  width: 100%;
+}
+.col-form__row + .col-form__row {
+  margin-top: 20px;
 }

@@ -34,3 +34,7 @@ Route::get('/restruct', function () {
 Route::get('/loan_history', function () {
     return view('lk.loan_history');
 });
+
+Route::get('/change_pass', function () {
+    return view('lk.change_pass');
+});
