@@ -15,19 +15,28 @@
                 <div class="form-with-info__form col-form">
                     <div class="col-form__row field">
                         <div class="field__name">Текущий пароль</div>
-                        <input type="text" class="field__input input" placeholder="текущий пароль" tabindex="1">
-                        <div class="field__alert">Пароль неверный</div>
+                        <div class="field__input-wrap">
+                            <input type="text" class="field__input input" placeholder="текущий пароль" tabindex="1">
+                            <div class="field__alert">Пароль неверный</div>
+                        </div>
                     </div>
-                    <div class="col-form__row field has-error">
+                    <div class="col-form__row field">
                         <div class="field__name">Новый пароль</div>
-                        <input type="text" class="field__input input" tabindex="2">
-                        <div class="field__alert">Пароль должен быть не короче 8 символов, содержать заглавные буквы и цифры</div>
-                        <div class="field__show-pass"></div>
+                        <div class="field__input-wrap">
+                            <input type="text" class="field__input input" tabindex="2">
+                            <div class="field__alert">Пароль должен быть не короче 8 символов, содержать заглавные буквы и цифры</div>
+                            <div class="field__show-pass"></div>
+                        </div>
                     </div>
                     <div class="col-form__row field">
                         <div class="field__name">Новый пароль еще раз</div>
-                        <input type="text" class="field__input input" tabindex="3">
-                        <div class="field__alert">Пароли не совпадают</div>
+                        <div class="field__input-wrap">
+                            <input type="text" disabled placeholder="Повторите пароль" class="field__input input" tabindex="3">
+                            <div class="field__alert">Пароли не совпадают</div>
+                        </div>
+                    </div>
+                    <div class="col-form__row">
+                        <button class="col-form__btn button button--yellow button--big-in-small"><span class="button__text">Сменить пароль</span></button>
                     </div>
                 </div>
                 <div class="form-with-info__info">

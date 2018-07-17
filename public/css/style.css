@@ -450,9 +450,9 @@ html {
   color: #ffe476;
 }
 .button {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -493,12 +493,74 @@ html {
   margin: 0 auto;
   white-space: nowrap;
 }
-.field {
-  position: relative;
+.input {
+  height: 40px;
+  width: 100%;
+  padding: 0 10px;
+  font-size: 16px;
+  border: 1px solid #999999;
+  border-radius: 3px;
+  color: #333333;
+  -webkit-box-shadow: inset 1px 1px 3px -1px rgba(0, 0, 0, 0.35);
+          box-shadow: inset 1px 1px 3px -1px rgba(0, 0, 0, 0.35);
 }
-.field.has-error .field__input {
+.input:hover {
+  border-color: #cb9933;
+}
+.input:focus {
+  border-color: #cb9933;
+  -webkit-box-shadow: 0 0 7px rgba(203, 153, 51, 0.75);
+          box-shadow: 0 0 7px rgba(203, 153, 51, 0.75);
+}
+.input::-webkit-input-placeholder {
+  color: #999999;
+}
+.input:-ms-input-placeholder {
+  color: #999999;
+}
+.input::-ms-input-placeholder {
+  color: #999999;
+}
+.input::placeholder {
+  color: #999999;
+}
+.input:disabled {
+  border-color: #999999;
+  background-color: #cbcbcb;
+  cursor: not-allowed;
+}
+.input:disabled::-webkit-input-placeholder {
+  color: #666666;
+}
+.input:disabled:-ms-input-placeholder {
+  color: #666666;
+}
+.input:disabled::-ms-input-placeholder {
+  color: #666666;
+}
+.input:disabled::placeholder {
+  color: #666666;
+}
+.has-error .input {
   border-color: #cb0000;
   background-color: #ffcbcb;
+}
+.has-error .input:focus {
+  border-color: #cb0000;
+  -webkit-box-shadow: 0 0 7px rgba(153, 0, 0, 0.5);
+          box-shadow: 0 0 7px rgba(153, 0, 0, 0.5);
+}
+.is-right .input {
+  border-color: #009147;
+  background-color: #cbffcb;
+}
+.is-right .input:focus {
+  border-color: #009147;
+  -webkit-box-shadow: 0 0 7px rgba(0, 153, 51, 0.5);
+          box-shadow: 0 0 7px rgba(0, 153, 51, 0.5);
+}
+.field__input-wrap {
+  position: relative;
 }
 .field.has-error .field__alert {
   display: block;
@@ -512,27 +574,6 @@ html {
   font-weight: 800;
   line-height: 1.2;
   color: #333333;
-}
-.field__input {
-  height: 40px;
-  width: 100%;
-  padding: 0 10px;
-  font-size: 16px;
-  border: 1px solid #999999;
-  border-radius: 3px;
-  color: #333333;
-}
-.field__input::-webkit-input-placeholder {
-  color: #999999;
-}
-.field__input:-ms-input-placeholder {
-  color: #999999;
-}
-.field__input::-ms-input-placeholder {
-  color: #999999;
-}
-.field__input::placeholder {
-  color: #999999;
 }
 .field__alert {
   display: none;
@@ -665,6 +706,9 @@ html {
   color: #999999;
 }
 .personal-area__btn-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin: 15px 40px 0;
 }
 .personal-area__btn-wrap + .personal-area__info-block {
@@ -913,8 +957,7 @@ html {
 }
 .history-loans__row:first-child {
   padding-bottom: 10px;
-  font-size: 18px;
-  font-weight: 600;
+  font-weight: 800;
   color: #333333;
   background: -webkit-gradient(linear, left top, right top, color-stop(50%, #cccccc), color-stop(50%, transparent)) repeat-x 0 100% / 6px 1px;
   background: linear-gradient(to right, #cccccc 50%, transparent 50%) repeat-x 0 100% / 6px 1px;
@@ -934,12 +977,26 @@ html {
 .history-loans__link {
   font-weight: 800;
 }
+.col-form {
+  max-width: 280px;
+  width: 100%;
+}
+.col-form__row + .col-form__row {
+  margin-top: 20px;
+}
+.col-form__btn {
+  margin-left: auto;
+}
 .form-with-info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 .form-with-info__form {
+  width: 47.5%;
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
@@ -948,6 +1005,7 @@ html {
   margin-left: auto;
   max-width: 490px;
   padding: 25px 75px 20px 30px;
+  font-size: 16px;
   border: 1px solid #cb9933;
   border-radius: 5px;
   background-color: #ffe5af;
@@ -957,11 +1015,4 @@ html {
 }
 .form-with-info__text + .form-with-info__text {
   margin-top: 23px;
-}
-.col-form {
-  max-width: 280px;
-  width: 100%;
-}
-.col-form__row + .col-form__row {
-  margin-top: 20px;
 }

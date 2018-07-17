@@ -306,6 +306,9 @@
     text-transform: uppercase;
   }
   .mobile-menu__issue-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     margin: 10px 0 0 15px;
   }
   .mobile-menu__issue-btn.enter-btn {
@@ -648,5 +651,51 @@
   }
   .history-loans__hide-on-small {
     display: none;
+  }
+}
+@media all and (max-width: 425px) {
+  .col-form {
+    max-width: 385px;
+  }
+  .col-form__row + .col-form__row {
+    margin-top: 15px;
+  }
+}
+@media all and (max-width: 900px) {
+  .form-with-info__info {
+    margin-left: 50px;
+    padding: 25px;
+  }
+}
+@media all and (max-width: 670px) {
+  .form-with-info__info {
+    margin-left: 5%;
+    width: 47.5%;
+    padding: 10px 15px;
+  }
+}
+@media all and (max-width: 580px) {
+  .form-with-info__info {
+    font-size: 14px;
+  }
+  .form-with-info__text + .form-with-info__text {
+    margin-top: 13px;
+  }
+}
+@media all and (max-width: 425px) {
+  .form-with-info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .form-with-info__form {
+    margin-top: 30px;
+    width: 100%;
+  }
+  .form-with-info__info {
+    margin-top: 5px;
+    margin-left: 0;
+    width: 100%;
   }
 }

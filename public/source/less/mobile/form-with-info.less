@@ -1,0 +1,49 @@
+@media all and (max-width: 900px){
+  .form-with-info{
+    &__info{
+      margin-left: 50px;
+      padding:  25px;
+    }
+  }
+}
+
+@media all and (max-width: 670px){
+  .form-with-info{
+    &__info{
+      margin-left: 5%;
+      width: 47.5%;
+      padding: 10px 15px;
+    }
+  }
+}
+
+@media all and (max-width: 580px){
+  .form-with-info{
+    &__info{
+      font-size: 14px;
+    }
+
+    &__text{
+      & + &{
+        margin-top: 13px;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 425px){
+  .form-with-info{
+    flex-direction: column-reverse;
+
+    &__form{
+      margin-top: 30px;
+      width: 100%;
+    }
+
+    &__info{
+      margin-top: 5px;
+      margin-left: 0;
+      width: 100%;
+    }
+  }
+}

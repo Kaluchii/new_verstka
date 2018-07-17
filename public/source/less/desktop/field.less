@@ -1,13 +1,10 @@
 .field{
-  position: relative;
+  &__input-wrap{
+    position: relative;
+  }
 
   &.has-error{
     .field{
-      &__input{
-        border-color: @c-error;
-        background-color: @c-error-bg;
-      }
-
       &__alert{
         display: block;
       }
@@ -22,6 +19,10 @@
     }
   }
 
+  &.is-right{}
+
+  &.is-disabled{}
+
   &__name{
     margin-bottom: 5px;
     font-size: 16px;
@@ -30,19 +31,7 @@
     color: @c-main-black;
   }
 
-  &__input{
-    height: 40px;
-    width: 100%;
-    padding: 0 10px;
-    font-size: 16px;
-    border: 1px solid #999999;
-    border-radius: @border-radius;
-    color: @c-main-black;
-
-    &::placeholder{
-      color: @c-minor-text;
-    }
-  }
+  &__input{}
 
   &__alert{
     display: none;
