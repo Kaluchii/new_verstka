@@ -38,3 +38,7 @@ Route::get('/loan_history', function () {
 Route::get('/change_pass', function () {
     return view('lk.change_pass');
 });
+
+Route::get('/personal_data', function () {
+    return view('lk.personal_data_input');
+});

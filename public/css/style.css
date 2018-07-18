@@ -671,6 +671,10 @@ html {
   font-weight: 800;
   color: #333333;
 }
+.personal-area__title--loan-steps {
+  padding: 35px 40px 0;
+  text-align: center;
+}
 .personal-area__title-select {
   margin-left: -5px;
   display: inline-block;
