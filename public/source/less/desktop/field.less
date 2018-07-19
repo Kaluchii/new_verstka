@@ -1,6 +1,28 @@
 .field{
+  max-width: 280px;
+
+  &--middle{
+    max-width: 230px;
+  }
+
+  &--small{
+    max-width: 120px;
+  }
+
   &__input-wrap{
     position: relative;
+
+    &::after{
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 5px;
+      transform: translateY(-50%);
+    }
+
+    &--calendar{
+      &::after{}
+    }
   }
 
   &.has-error{
@@ -46,6 +68,14 @@
     text-align: right;
     background-color: @c-alarm;
     color: @c-main-black;
+  }
+
+  &__action{
+    position: absolute;
+    bottom: 47px;
+    right: 0;
+    font-size: 14px;
+    line-height: 1;
   }
 
   &__show-pass{}

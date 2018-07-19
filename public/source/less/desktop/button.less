@@ -15,7 +15,7 @@
     background-color: @c-yellow;
     border: 1px solid @c-border;
 
-    &:hover{
+    &:hover, &:focus{
       background-color: #ffd77c;
     }
   }
@@ -23,13 +23,11 @@
   &--grey{
     border: 1px solid #999999;
     background: #ffffff;
-    background: -moz-linear-gradient(top, #ffffff 0%, #ebebeb 100%);
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, #ffffff), color-stop(100%, #ebebeb));
-    background: -webkit-linear-gradient(top, #ffffff 0%, #ebebeb 100%);
-    background: -o-linear-gradient(top, #ffffff 0%, #ebebeb 100%);
-    background: -ms-linear-gradient(top, #ffffff 0%, #ebebeb 100%);
-    background: linear-gradient(to bottom, #ffffff 0%, #ebebeb 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ebebeb', GradientType=0 );
+    box-shadow: @inner-gradient, @default-shadow;
+
+    &:hover, &:focus{
+      border-color: @c-border;
+    }
   }
 
   &.is-disabled, &:disabled{

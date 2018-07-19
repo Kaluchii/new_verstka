@@ -33,10 +33,11 @@
                         <div class="field__input-wrap">
                             <input type="text" disabled placeholder="Повторите пароль" class="field__input input" tabindex="3">
                             <div class="field__alert">Пароли не совпадают</div>
+                            <div class="field__show-pass"></div>
                         </div>
                     </div>
                     <div class="col-form__row">
-                        <button class="col-form__btn button button--yellow button--big-in-small"><span class="button__text">Сменить пароль</span></button>
+                        <button class="col-form__btn button button--yellow button--big-in-small" tabindex="4"><span class="button__text">Сменить пароль</span></button>
                     </div>
                 </div>
                 <div class="form-with-info__info">

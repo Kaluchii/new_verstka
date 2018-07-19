@@ -1,0 +1,22 @@
+.fields-list{
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item-wrap{
+    margin-top: 20px;
+    width: 33.33333%;
+    display: flex;
+  }
+
+  &__item{
+    max-width: 230px;
+
+    &--small{
+      max-width: 120px;
+    }
+
+    & + &{
+      margin-left: 20px;
+    }
+  }
+}

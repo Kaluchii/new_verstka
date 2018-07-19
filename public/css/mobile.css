@@ -613,6 +613,11 @@
             order: -1;
   }
 }
+@media all and (max-width: 425px) {
+  .fields-list__item {
+    max-width: 385px;
+  }
+}
 @media screen and (max-width: 768px) {
   .payment-status__list {
     margin: -10px -10px -5px;

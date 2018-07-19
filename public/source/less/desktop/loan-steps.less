@@ -1,0 +1,53 @@
+.loan-steps{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 45px;
+
+  &__item{
+    position: relative;
+    height: 40px;
+    width: 40px;
+    border: 2px solid @c-main-green;
+    border-radius: 50%;
+    background-color: @c-main-green;
+    font-size: 14px;
+    color: @c-minor-text;
+
+    & + &{
+      margin-left: 130px;
+
+      &::before{
+        content: '';
+        position: absolute;
+        top: ~'calc(50% - 1px)';
+        left: -132px;
+        width: 130px;
+        height: 2px;
+        background-color: @c-main-green;
+        pointer-events: none;
+      }
+    }
+
+    &--current{
+      color: @c-main-black;
+      background-color: #d4f1d4;
+
+      & ~ .loan-steps__item{
+        border-color: #d4f1d4;
+        background-color: #d4f1d4;
+
+        &::before{
+          background-color: #d4f1d4;
+        }
+      }
+    }
+  }
+
+  &__item-name{
+    white-space: nowrap;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
