@@ -2,16 +2,19 @@
 @section('content')
     <div class="personal-area">
         <div class="personal-area__container">
-            <div class="personal-area__title personal-area__title--loan-steps">Получить 35 000 тг до 12 августа</div>
+            <div class="personal-area__title personal-area__title--loan-steps">Получить <span class="nowrap">35 000 тг</span> <span class="nowrap">до 12 августа</span></div>
             <div class="personal-area__loan-steps loan-steps">
                 <div class="loan-steps__item">
-                    <div class="loan-steps__item-name">Телефон и почта</div>
+                    <span class="loan-steps__item-num">1</span>
+                    <span class="loan-steps__item-name">Телефон и почта</span>
                 </div>
                 <div class="loan-steps__item loan-steps__item--current">
-                    <div class="loan-steps__item-name">Личные данные</div>
+                    <span class="loan-steps__item-num">2</span>
+                    <span class="loan-steps__item-name">Личные данные</span>
                 </div>
                 <div class="loan-steps__item">
-                    <div class="loan-steps__item-name">Способ получения</div>
+                    <span class="loan-steps__item-num">3</span>
+                    <span class="loan-steps__item-name">Способ получения</span>
                 </div>
             </div>
             <div class="personal-area__info-block info-block">
@@ -251,7 +254,7 @@
                         </div>
                     </div>
                     <div class="fields-list__item-wrap">
-                        <div class="fields-list__item field">
+                        <div class="fields-list__item fields-list__item--full field">
                             <div class="field__name">Кем приходится</div>
                             <div class="field__input-wrap">
                                 <div class="field__radio-switchers radio-switchers">
@@ -291,7 +294,7 @@
                         </div>
                     </div>
                     <div class="fields-list__item-wrap">
-                        <div class="fields-list__item field">
+                        <div class="fields-list__item fields-list__item--full field">
                             <div class="field__name">Кем приходится</div>
                             <div class="field__input-wrap">
                                 <div class="field__radio-switchers radio-switchers">
@@ -365,6 +368,17 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="personal-area__info-block info-block">
+                <div class="info-block__top">
+                    <p class="info-block__title">7. Согласия и обязательства</p>
+                </div>
+                <ul class="info-block__row-list row-list">
+                    <li class="row-list__item">Я согласен с <a href="#" class="row-list__link link">Офертой на предоставление срочного денежного займа</a></li>
+                    <li class="row-list__item">Я согласен с <a href="#" class="row-list__link link">условиями использования аналогов собственноручной подписи</a></li>
+                    <li class="row-list__item">Я согласен с <a href="#" class="row-list__link link">условиями сбора и обработки персональных данных</a></li>
+                    <li class="row-list__item">Я согласен с <a href="#" class="row-list__link link">условиями предоставления информации обо мне в кредитные бюро</a></li>
+                </ul>
             </div>
         </div>
     </div>

@@ -53,6 +53,16 @@
     font-weight: @fw-bold;
     color: @c-main-black;
 
+    &--center{
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    &--border-top{
+      padding-top: 25px;
+      .dashed-upline(#cccccc);
+    }
+
     & + .personal-area__text{
       margin-top: 20px;
     }
@@ -131,5 +141,15 @@
 
   &__form-with-info{
     margin: 20px @hor-indent 0;
+  }
+
+  &__form{
+    margin: 20px auto 0;
+    max-width: 280px;
+  }
+
+  &__clarification{
+    margin: 30px auto 0;
+    max-width: 520px;
   }
 }

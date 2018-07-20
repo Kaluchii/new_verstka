@@ -39,6 +39,10 @@ Route::get('/change_pass', function () {
     return view('lk.change_pass');
 });
 
-Route::get('/personal_data', function () {
-    return view('lk.personal_data_input');
+Route::get('/give_loan_1', function () {
+    return view('lk.give_loan_1');
+});
+
+Route::get('/give_loan_2', function () {
+    return view('lk.give_loan_2');
 });

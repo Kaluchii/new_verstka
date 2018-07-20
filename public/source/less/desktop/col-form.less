@@ -1,14 +1,22 @@
 .col-form{
-  max-width: 280px;
-  width: 100%;
-
   &__row{
     & + &{
       margin-top: 20px;
     }
+
+    &--btn-text{
+      display: flex;
+    }
+
+    &--with-clarification{}
   }
 
   &__btn{
     margin-left: auto;
+  }
+
+  &__text{
+    font-size: 14px;
+    color: @c-text;
   }
 }

@@ -40,12 +40,12 @@
                         <button class="col-form__btn button button--yellow button--big-in-small" tabindex="4"><span class="button__text">Сменить пароль</span></button>
                     </div>
                 </div>
-                <div class="form-with-info__info">
-                    <p class="form-with-info__text">
+                <div class="form-with-info__info alarm-info">
+                    <p class="alarm-info__text">
                         <span class="bold">Важно!</span> <br>
                         Надежный пароль убережет вас от мошенников и займов, оформленных на вас без вашего согласия.
                     </p>
-                    <p class="form-with-info__text">
+                    <p class="alarm-info__text">
                         Пароль должен содержать не менее 8 символов, включать цифры и заглавные буквы.
                     </p>
                 </div>

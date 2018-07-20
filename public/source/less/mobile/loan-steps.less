@@ -1,0 +1,38 @@
+@media screen and (max-width: 768px){
+  .loan-steps{
+    &__item{
+      height: 30px;
+      width: 30px;
+      font-size: 12px;
+      border-width: 1px;
+
+      & + &{
+        margin-left: 60px;
+
+        &::before{
+          top: 50%;
+          left: -61px;
+          width: 60px;
+          height: 1px;
+        }
+      }
+    }
+
+    &__item-num{
+      font-size: 14px;
+    }
+
+    &__item-name{
+      top: 35px;
+      max-width: 70px;
+      line-height: 1.2;
+      white-space: initial;
+    }
+  }
+}
+
+@media screen and (max-width: 425px){
+  .loan-steps{
+    padding-bottom: 40px;
+  }
+}

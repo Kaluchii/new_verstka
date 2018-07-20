@@ -76,6 +76,11 @@
 
     &__small-title{
       font-size: @fz-3;
+
+      &--center{
+        margin-top: 10px;
+        padding-top: 20px;
+      }
     }
 
     &__title-select{
@@ -90,6 +95,15 @@
 
     &__info-block{
       margin-top: 10px;
+    }
+  }
+}
+
+@media all and (max-width: 560px){
+  .personal-area{
+    &__clarification{
+      margin: 20px 20px 0;
+      max-width: 520px;
     }
   }
 }
@@ -121,6 +135,11 @@
       & + .personal-area__info-block{
         margin-top: 20px;
       }
+    }
+
+    &__form{
+      margin: 20px 20px 0;
+      max-width: 385px;
     }
   }
 }
