@@ -13,14 +13,15 @@
   &__menu{}
 
   &__title{
-    padding: 0 @hor-indent;
+    margin: 0 @hor-indent;
     font-size: @fz-1;
     line-height: @lh-for-big;
     font-weight: @fw-bold;
     color: @c-main-black;
 
     &--loan-steps{
-      padding: 35px 40px 0;
+      margin: 0 40px;
+      padding-top: 35px;
       text-align: center;
     }
   }
@@ -47,7 +48,7 @@
   }
 
   &__small-title{
-    padding: 0 @hor-indent;
+    margin: 0 @hor-indent;
     font-size: @fz-2;
     line-height: @lh-for-big;
     font-weight: @fw-bold;
@@ -151,5 +152,9 @@
   &__clarification{
     margin: 30px auto 0;
     max-width: 520px;
+  }
+
+  &__obtaining-methods{
+    margin-top: 20px;
   }
 }

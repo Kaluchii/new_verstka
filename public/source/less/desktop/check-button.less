@@ -1,0 +1,33 @@
+.check-button{
+  //display: inline-flex;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  width: 100%;
+  font-size: 16px;
+  line-height: 1;
+  border: 1px solid #999999;
+  border-radius: @border-radius;
+  background: #ffffff;
+  color: @c-main-black;
+  box-shadow: @inner-gradient, @default-shadow;
+  user-select: none;
+  cursor: pointer;
+
+  &:hover, &:focus{
+    border-color: @c-border;
+  }
+
+  &.is-active{
+    border-color: @c-border;
+    background: #efe3bf;
+    box-shadow: inset 0 2px 4px rgba(203, 153, 101, 0.75), 0 0;
+  }
+
+  &__text{
+    margin: 0 auto;
+    font-weight: 800;
+    white-space: nowrap;
+    color: @c-main-black;
+  }
+}

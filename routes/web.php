@@ -46,3 +46,12 @@ Route::get('/give_loan_1', function () {
 Route::get('/give_loan_2', function () {
     return view('lk.give_loan_2');
 });
+
+Route::get('/give_loan_3', function () {
+    return view('lk.give_loan_3');
+});
+
+
+Route::get('/test', function () {
+    return view('test');
+});
