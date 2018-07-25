@@ -34,6 +34,50 @@
                     </li>
                 </ul>
             </div>
+            <div class="personal-area__tabs obtaining-method-tabs">
+                <div class="obtaining-method-tabs__tab">
+                    <div class="obtaining-method-tabs__title">На банковскую карту</div>
+                </div>
+                <div class="obtaining-method-tabs__tab">
+                    <div class="obtaining-method-tabs__title">На счет в банке</div>
+                    <p class="obtaining-method-tabs__clarification">Указанный счет должен быть открыт на имя заявителя. В случае одобрения, мы отправим деньги в течение 15 минут и сообщим по SMS.</p>
+                    <div class="obtaining-method-tabs__2-cols">
+                        <div class="obtaining-method-tabs__col">
+                            <div class="obtaining-method-tabs__field obtaining-method-tabs__field--iban field">
+                                <div class="field__name">Ваш 20-ти значный IBAN <span class="normal">(номер счета)</span></div>
+                                <div class="field__input-wrap">
+                                    <input type="text" class="field__input input" placeholder="KZ00 0000 0000 0000 0000" tabindex="">
+                                    <div class="field__alert"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="obtaining-method-tabs__col">
+                            <div class="obtaining-method-tabs__field field">
+                                <div class="field__name">Как узнать IBAN-номер счета</div>
+                                <div class="field__input-wrap">
+                                    <input type="text" class="field__input input" placeholder="KZ00 0000 0000 0000 0000" tabindex="">
+                                    <div class="field__alert"></div>
+                                </div>
+                            </div>
+                            <div class="obtaining-method-tabs__iban-info text-block text-block--big-lh">
+                                <ol>
+                                    <li>Через отделение банка, предоставив уд. личности;</li>
+                                    <li>Через колл центр;</li>
+                                    <li>В договоре. Номер договора и есть IBAN-счет;</li>
+                                    <li>В конверте с PIN-кодом карты.</li>
+                                </ol>
+                                <p><span class="bold">Телефоны КаспиБанка</span></p>
+                                <p>Колл центр 8-800-080-18-00</p>
+                                <p>С мобильного 9999</p>
+                                <p>С городского +7 (727) 258-59-65</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="obtaining-method-tabs__btn-wrap">
+                        <button class="obtaining-method-tabs__btn button button--yellow button--big-in-small">Завершить оформление</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 @endsection

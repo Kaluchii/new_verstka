@@ -3,6 +3,13 @@
   line-height: 1;
 
   &__item{
+    &:hover, &:focus{
+      .radio-switchers__button{
+        z-index: 1;
+        border-color: @c-border;
+      }
+    }
+
     &:first-child{
       .radio-switchers__button{
         border-top-left-radius: 3px;

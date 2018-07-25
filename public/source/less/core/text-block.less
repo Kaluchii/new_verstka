@@ -1,0 +1,39 @@
+.text-block{
+  color: @c-main-black;
+
+  &--big-lh{
+    line-height: 2;
+  }
+
+  h1, h2, h3, h4, h5, h6{}
+
+  p{}
+
+  ol{
+    margin-left: 18px;
+    line-height: 1.5;
+    list-style-type: decimal;
+
+    li{
+      & + &{
+        margin-top: 3px;
+      }
+    }
+  }
+
+  ul{
+    margin-left: 18px;
+    line-height: 1.5;
+    list-style-type: disc;
+
+    li{
+      & + &{
+        margin-top: 3px;
+      }
+    }
+  }
+
+  a{}
+
+  strong, b{}
+}

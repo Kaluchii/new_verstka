@@ -1,0 +1,55 @@
+.obtaining-method-tabs{
+  &__tab{
+    margin: 30px @hor-indent 0;
+  }
+
+  &__title{
+    margin: 0 @hor-indent;
+    font-size: @fz-2;
+    line-height: @lh-for-big;
+    font-weight: @fw-bold;
+    color: @c-main-black;
+    text-align: center;
+  }
+
+  &__clarification{
+    max-width: 610px;
+    margin: 30px auto 0;
+    font-size: 16px;
+    text-align: center;
+    color: @c-main-black;
+  }
+
+  &__2-cols{
+    margin-top: 35px;
+    display: flex;
+  }
+
+  &__col{
+    width: 50%;
+
+    & + &{
+      margin-left: 50px;
+    }
+  }
+
+  &__field{
+    max-width: 300px;
+
+    &--iban{
+      margin-left: auto;
+    }
+  }
+
+  &__iban-info{
+    margin-top: 15px;
+  }
+
+  &__btn-wrap{
+    margin-top: 20px;
+  }
+
+  &__btn{
+    margin: 0 auto;
+  }
+}

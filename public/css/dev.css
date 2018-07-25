@@ -390,8 +390,33 @@ html {
 .bold {
   font-weight: 800;
 }
+.normal {
+  font-weight: 400;
+}
 .nowrap {
   white-space: nowrap;
+}
+.text-block {
+  color: #333333;
+}
+.text-block--big-lh {
+  line-height: 2;
+}
+.text-block ol {
+  margin-left: 18px;
+  line-height: 1.5;
+  list-style-type: decimal;
+}
+.text-block ol li + .text-block ol li {
+  margin-top: 3px;
+}
+.text-block ul {
+  margin-left: 18px;
+  line-height: 1.5;
+  list-style-type: disc;
+}
+.text-block ul li + .text-block ul li {
+  margin-top: 3px;
 }
 .link {
   color: #009247;
@@ -611,6 +636,11 @@ html {
   display: flex;
   line-height: 1;
 }
+.radio-switchers__item:hover .radio-switchers__button,
+.radio-switchers__item:focus .radio-switchers__button {
+  z-index: 1;
+  border-color: #cb9933;
+}
 .radio-switchers__item:first-child .radio-switchers__button {
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
@@ -787,11 +817,11 @@ html {
   display: -ms-flexbox;
   display: flex;
 }
+.header__menu-item {
+  font-weight: 800;
+}
 .header__menu-item + .header__menu-item {
   margin-left: 40px;
-}
-.header__menu-link {
-  font-weight: 600;
 }
 .header__pa-link-wrap {
   margin-left: auto;
@@ -1164,6 +1194,51 @@ html {
   line-height: 1;
   text-align: center;
   color: #666666;
+}
+.obtaining-method-tabs__tab {
+  margin: 30px 40px 0;
+}
+.obtaining-method-tabs__title {
+  margin: 0 40px;
+  font-size: 32px;
+  line-height: 1.2;
+  font-weight: 800;
+  color: #333333;
+  text-align: center;
+}
+.obtaining-method-tabs__clarification {
+  max-width: 610px;
+  margin: 30px auto 0;
+  font-size: 16px;
+  text-align: center;
+  color: #333333;
+}
+.obtaining-method-tabs__2-cols {
+  margin-top: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.obtaining-method-tabs__col {
+  width: 50%;
+}
+.obtaining-method-tabs__col + .obtaining-method-tabs__col {
+  margin-left: 50px;
+}
+.obtaining-method-tabs__field {
+  max-width: 300px;
+}
+.obtaining-method-tabs__field--iban {
+  margin-left: auto;
+}
+.obtaining-method-tabs__iban-info {
+  margin-top: 15px;
+}
+.obtaining-method-tabs__btn-wrap {
+  margin-top: 20px;
+}
+.obtaining-method-tabs__btn {
+  margin: 0 auto;
 }
 .data-list {
   display: -webkit-box;

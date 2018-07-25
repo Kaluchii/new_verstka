@@ -14,7 +14,7 @@
             </div>
             <nav class="header__navigation">
                 <ul class="header__menu-list">
-                    <li class="header__menu-item"><a href="#" class="header__menu-link link-black">Взять займ</a></li>
+                    <li class="header__menu-item"><a href="/loan_overdue" class="header__menu-link link-black">Ваш займ</a></li>
                     <li class="header__menu-item"><a href="#" class="header__menu-link link-black">Как оформить займ</a></li>
                     <li class="header__menu-item"><a href="#" class="header__menu-link link-black">Как погасить займ</a></li>
                     <li class="header__menu-item"><a href="#" class="header__menu-link link-black">Как продлить займ</a></li>
