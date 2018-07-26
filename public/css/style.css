@@ -396,7 +396,13 @@ html {
 .nowrap {
   white-space: nowrap;
 }
+@media all and (max-width: 768px) {
+  .tablet-hide {
+    display: none;
+  }
+}
 .text-block {
+  font-size: 16px;
   color: #333333;
 }
 .text-block--big-lh {
@@ -407,16 +413,30 @@ html {
   line-height: 1.5;
   list-style-type: decimal;
 }
-.text-block ol li + .text-block ol li {
-  margin-top: 3px;
-}
 .text-block ul {
   margin-left: 18px;
   line-height: 1.5;
   list-style-type: disc;
 }
-.text-block ul li + .text-block ul li {
-  margin-top: 3px;
+.text-block li {
+  margin: 8px 0;
+}
+@media all and (max-width: 425px) {
+  .text-block {
+    font-size: 14px;
+  }
+  .text-block ol {
+    margin-left: 18px;
+    list-style-type: decimal;
+  }
+  .text-block ul {
+    margin-left: 18px;
+    line-height: 1.5;
+    list-style-type: disc;
+  }
+  .text-block li {
+    margin: 8px 0;
+  }
 }
 .link {
   color: #009247;
@@ -1159,14 +1179,13 @@ html {
   content: '';
   position: absolute;
   top: 100%;
-  left: calc(50% - 9px);
+  left: calc(50% - 18px);
   border-top: 18px solid #f6efdc;
   border-right: 18px solid transparent;
   border-bottom: 18px solid transparent;
   border-left: 18px solid transparent;
 }
 .obtaining-methods__title {
-  margin: 0 40px;
   font-size: 32px;
   line-height: 1.2;
   font-weight: 800;
@@ -1174,7 +1193,7 @@ html {
   text-align: center;
 }
 .obtaining-methods__list {
-  margin-top: 20px;
+  margin-top: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1183,38 +1202,41 @@ html {
           justify-content: center;
 }
 .obtaining-methods__item {
-  width: 200px;
+  width: 230px;
 }
 .obtaining-methods__item + .obtaining-methods__item {
   margin-left: 20px;
 }
 .obtaining-methods__clarification {
-  margin-top: 5px;
+  margin-top: 10px;
   font-size: 12px;
   line-height: 1;
   text-align: center;
   color: #666666;
 }
 .obtaining-method-tabs__tab {
-  margin: 30px 40px 0;
+  display: none;
+  margin: 35px 40px 0;
+}
+.obtaining-method-tabs__tab.is-active {
+  display: block;
 }
 .obtaining-method-tabs__title {
-  margin: 0 40px;
-  font-size: 32px;
+  font-size: 24px;
   line-height: 1.2;
   font-weight: 800;
   color: #333333;
   text-align: center;
 }
 .obtaining-method-tabs__clarification {
-  max-width: 610px;
-  margin: 30px auto 0;
+  max-width: 620px;
+  margin: 20px auto 0;
   font-size: 16px;
   text-align: center;
   color: #333333;
 }
 .obtaining-method-tabs__2-cols {
-  margin-top: 35px;
+  margin-top: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1231,11 +1253,21 @@ html {
 .obtaining-method-tabs__field--iban {
   margin-left: auto;
 }
+.obtaining-method-tabs__info-title {
+  font-size: 16px;
+  color: #333333;
+  font-weight: 800;
+}
 .obtaining-method-tabs__iban-info {
-  margin-top: 15px;
+  margin-top: 25px;
+}
+.obtaining-method-tabs__popup-link-wrap {
+  margin: 15px 20px 0 auto;
+  max-width: 280px;
+  font-size: 16px;
 }
 .obtaining-method-tabs__btn-wrap {
-  margin-top: 20px;
+  margin-top: 30px;
 }
 .obtaining-method-tabs__btn {
   margin: 0 auto;

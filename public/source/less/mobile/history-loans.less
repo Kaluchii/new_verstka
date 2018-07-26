@@ -2,11 +2,6 @@
   .history-loans{
     &__row{
       margin-top: 7px;
-      font-size: 14px;
-
-      &:first-child{
-        font-size: 14px;
-      }
 
       &:nth-child(2){
         margin-top: 10px;
@@ -14,19 +9,31 @@
     }
 
     &__col{
-      width: 130px;
+      width: 46.5%;
 
       &:nth-child(2){
-        width: 80px;
+        width: 28.5%;
       }
 
       &:nth-child(3){
-        width: 65px;
+        width: 25%;
       }
     }
 
     &__hide-on-small{
       display: none;
+    }
+  }
+}
+
+@media all and (max-width: 425px){
+  .history-loans{
+    &__row{
+      font-size: 14px;
+
+      &:first-child{
+        font-size: 14px;
+      }
     }
   }
 }

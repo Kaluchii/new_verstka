@@ -675,6 +675,97 @@
     margin-left: 0;
   }
 }
+@media all and (max-width: 768px) {
+  .obtaining-methods {
+    padding: 15px 20px 20px;
+  }
+  .obtaining-methods__title {
+    font-size: 24px;
+  }
+  .obtaining-methods__list {
+    margin-top: 15px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .obtaining-methods__item + .obtaining-methods__item {
+    margin-top: 15px;
+    margin-left: 0;
+  }
+}
+@media all and (max-width: 425px) {
+  .obtaining-methods__item {
+    width: 100%;
+  }
+  .obtaining-methods__item + .obtaining-methods__item {
+    margin-top: 15px;
+    margin-left: 0;
+  }
+}
+@media all and (max-width: 840px) {
+  .obtaining-method-tabs__tab {
+    margin: 30px 20px 0;
+  }
+}
+@media all and (max-width: 768px) {
+  .obtaining-method-tabs__2-cols {
+    margin-left: calc(50% - 150px);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .obtaining-method-tabs__col {
+    width: auto;
+  }
+  .obtaining-method-tabs__col + .obtaining-method-tabs__col {
+    margin-top: 25px;
+    margin-left: 0;
+  }
+  .obtaining-method-tabs__field--iban {
+    margin-left: 0;
+  }
+  .obtaining-method-tabs__popup-link-wrap {
+    margin-left: 0;
+    font-size: 14px;
+  }
+}
+@media all and (max-width: 425px) {
+  .obtaining-method-tabs__title {
+    text-align: left;
+  }
+  .obtaining-method-tabs__clarification {
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: left;
+  }
+  .obtaining-method-tabs__2-cols {
+    margin-top: 20px;
+    margin-left: 0;
+  }
+  .obtaining-method-tabs__col {
+    width: 100%;
+  }
+  .obtaining-method-tabs__col + .obtaining-method-tabs__col {
+    margin-top: 20px;
+  }
+  .obtaining-method-tabs__field {
+    max-width: 100%;
+  }
+  .obtaining-method-tabs__info-title {
+    font-size: 14px;
+  }
+  .obtaining-method-tabs__iban-info {
+    margin-top: 15px;
+  }
+  .obtaining-method-tabs__popup-link-wrap {
+    font-size: 12px;
+  }
+}
 @media all and (max-width: 800px) {
   .data-list__item {
     width: 50%;
@@ -733,25 +824,29 @@
 @media all and (max-width: 470px) {
   .history-loans__row {
     margin-top: 7px;
-    font-size: 14px;
-  }
-  .history-loans__row:first-child {
-    font-size: 14px;
   }
   .history-loans__row:nth-child(2) {
     margin-top: 10px;
   }
   .history-loans__col {
-    width: 130px;
+    width: 46.5%;
   }
   .history-loans__col:nth-child(2) {
-    width: 80px;
+    width: 28.5%;
   }
   .history-loans__col:nth-child(3) {
-    width: 65px;
+    width: 25%;
   }
   .history-loans__hide-on-small {
     display: none;
+  }
+}
+@media all and (max-width: 425px) {
+  .history-loans__row {
+    font-size: 14px;
+  }
+  .history-loans__row:first-child {
+    font-size: 14px;
   }
 }
 @media all and (max-width: 425px) {
