@@ -35,7 +35,7 @@
                 </ul>
             </div>
             <div class="personal-area__tabs obtaining-method-tabs">
-                <div class="obtaining-method-tabs__tab">
+                <div class="obtaining-method-tabs__tab is-active">
                     <div class="obtaining-method-tabs__title">На банковскую карту</div>
 
                     <div class="obtaining-method-tabs__processing-img-wrap">
@@ -89,7 +89,7 @@
                     </div>
                 </div>
 
-                <div class="obtaining-method-tabs__tab is-active">
+                <div class="obtaining-method-tabs__tab">
                     <div class="obtaining-method-tabs__title">В отделении «Казпочты»</div>
                     <p class="obtaining-method-tabs__clarification">Указанный счет должен быть открыт на имя заявителя. В случае одобрения, мы отправим деньги в течение 15 минут и сообщим по SMS. Получить займ можно в любом отделении «Казпочты» по всему Казахстану.</p>
                     <div class="obtaining-method-tabs__2-cols">
