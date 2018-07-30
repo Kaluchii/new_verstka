@@ -734,6 +734,15 @@
     font-size: 14px;
   }
 }
+@media all and (max-width: 700px) {
+  .obtaining-method-tabs__processing-img-wrap {
+    padding-top: 30px;
+  }
+  .obtaining-method-tabs__protects-list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
 @media all and (max-width: 425px) {
   .obtaining-method-tabs__title {
     text-align: left;
@@ -764,6 +773,9 @@
   }
   .obtaining-method-tabs__popup-link-wrap {
     font-size: 12px;
+  }
+  .obtaining-method-tabs__data-protect {
+    font-size: 14px;
   }
 }
 @media all and (max-width: 800px) {

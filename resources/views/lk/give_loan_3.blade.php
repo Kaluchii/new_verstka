@@ -39,12 +39,21 @@
                     <div class="obtaining-method-tabs__title">На банковскую карту</div>
 
                     <div class="obtaining-method-tabs__processing-img-wrap">
-                        <img src="#" alt="" class="obtaining-method-tabs__processing-img">
+                        <img src="/img/processing.png" alt="" class="obtaining-method-tabs__processing-img">
                     </div>
                     <p class="obtaining-method-tabs__data-protect"> Реквизиты Вашей карты используются только во время операции и передаются в Visa/MasterCard по защищенному каналу. Данные Вашей карты хранятся в зашифрованном виде и не могут быть переданы третьему лицу.</p>
                     <ul class="obtaining-method-tabs__protects-list">
                         <li class="obtaining-method-tabs__protects-item">
-                            <img src="#" alt="" class="obtaining-method-tabs__protect-logo">
+                            <img src="/img/logo-pci.png" alt="" class="obtaining-method-tabs__protect-logo">
+                        </li>
+                        <li class="obtaining-method-tabs__protects-item">
+                            <img src="/img/logo-mastercard.png" alt="" class="obtaining-method-tabs__protect-logo">
+                        </li>
+                        <li class="obtaining-method-tabs__protects-item">
+                            <img src="/img/logo-visa.png" alt="" class="obtaining-method-tabs__protect-logo">
+                        </li>
+                        <li class="obtaining-method-tabs__protects-item">
+                            <img src="/img/logo-trustwave.png" alt="" class="obtaining-method-tabs__protect-logo">
                         </li>
                     </ul>
                 </div>
