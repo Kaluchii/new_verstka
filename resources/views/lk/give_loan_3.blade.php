@@ -37,25 +37,17 @@
             <div class="personal-area__tabs obtaining-method-tabs">
                 <div class="obtaining-method-tabs__tab is-active">
                     <div class="obtaining-method-tabs__title">На банковскую карту</div>
+                    <p class="obtaining-method-tabs__list-title">Обратите внимание</p>
+                    <ol class="obtaining-method-tabs__card-requirements row-list row-list--text row-list--ordered">
+                        <li class="row-list__item">Карта не должна быть для получения пенсий, стипендий или пособий;</li>
+                        <li class="row-list__item">На карте нужно не менее 100 тг. Они временно блокируются при подключении карты;</li>
+                        <li class="row-list__item">Карта должна быть открыта для интернет-оплат (можно активировать позвонив в банк); </li>
+                        <li class="row-list__item">Карта должна принадлежать вам, на ней должно быть ваше имя.</li>
+                    </ol>
 
-                    <div class="obtaining-method-tabs__processing-img-wrap">
-                        <img src="/img/processing.png" alt="" class="obtaining-method-tabs__processing-img">
+                    <div class="obtaining-method-tabs__iframe iframe">
+                        <iframe class="iframe__area" src="/iframe"></iframe>
                     </div>
-                    <p class="obtaining-method-tabs__data-protect"> Реквизиты Вашей карты используются только во время операции и передаются в Visa/MasterCard по защищенному каналу. Данные Вашей карты хранятся в зашифрованном виде и не могут быть переданы третьему лицу.</p>
-                    <ul class="obtaining-method-tabs__protects-list">
-                        <li class="obtaining-method-tabs__protects-item">
-                            <img src="/img/logo-pci.png" alt="" class="obtaining-method-tabs__protect-logo">
-                        </li>
-                        <li class="obtaining-method-tabs__protects-item">
-                            <img src="/img/logo-mastercard.png" alt="" class="obtaining-method-tabs__protect-logo">
-                        </li>
-                        <li class="obtaining-method-tabs__protects-item">
-                            <img src="/img/logo-visa.png" alt="" class="obtaining-method-tabs__protect-logo">
-                        </li>
-                        <li class="obtaining-method-tabs__protects-item">
-                            <img src="/img/logo-trustwave.png" alt="" class="obtaining-method-tabs__protect-logo">
-                        </li>
-                    </ul>
                 </div>
 
                 <div class="obtaining-method-tabs__tab">

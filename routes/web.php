@@ -51,6 +51,11 @@ Route::get('/give_loan_3', function () {
     return view('lk.give_loan_3');
 });
 
+Route::get('/iframe', function () {
+    return view('card.card_confirm');
+});
+
+
 
 Route::get('/test', function () {
     return view('test');

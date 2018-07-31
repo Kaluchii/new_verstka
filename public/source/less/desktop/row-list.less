@@ -1,17 +1,28 @@
 .row-list{
+  font-size: 16px;
+  color: @c-text;
+
+  &--ordered{
+    counter-reset: list;
+
+    .row-list__item{
+      &::before{
+        counter-increment: list;
+        content: counter(list) ".";
+        font-size: inherit;
+      }
+    }
+  }
+
+  &--text{}
+
   &__item{
     position: relative;
-    padding-left: 9px;
-    font-size: 16px;
-    color: @c-text;
 
     &::before{
       content: '•';
-      position: absolute;
-      top: 5px;
-      left: 0;
+      padding-right: 5px;
       font-size: 12px;
-      line-height: 1;
     }
 
     & + &{

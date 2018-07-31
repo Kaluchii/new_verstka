@@ -1,0 +1,41 @@
+.button{
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding: 0 15px;
+  font-size: 16px;
+  line-height: 1;
+  border: 1px solid @c-border;
+  border-radius: @border-radius;
+  background-color: @c-yellow;
+  color: @c-main-black;
+  user-select: none;
+  cursor: pointer;
+
+  &:hover, &:focus{
+    background-color: #ffd77c;
+  }
+
+  &.is-disabled, &:disabled{
+    background-color: #999999;
+    border-color: #656565;
+    cursor: not-allowed;
+  }
+
+  &--big-in-small{}
+
+  &__text{
+    margin: 0 auto;
+    white-space: nowrap;
+  }
+}
+
+
+@media all and (max-width: 425px){
+  .button{
+    &--big-in-small{
+      width: 425px;
+      max-width: 100%;
+    }
+  }
+}

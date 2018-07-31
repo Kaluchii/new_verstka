@@ -1,27 +1,3 @@
-/* Old Variables (for compare)
-@background-color: #aed8ae;
-
-
-@link-color: #339933;
-@link-border: #c1e0c1;
-
-@link-hover-color: #ff9900;
-@link-hover-border: #ff9900;
-
-
-@error-color: #c00;
-@success-color: #009900;
-
-
-@button-1-color: #ffd800;
-@button-1-color-hover: #ffcc00;
-
-@button-2-color: #fddd9e;
-@button-2-color-hover: #fddd9e;
-
-
-@background-notify-2: #f4efdd;
-@background-notify: #ece3c5;*/
 @media all and (max-width: 425px) {
   .button--big-in-small {
     width: 425px;
@@ -60,6 +36,11 @@
 }
 @media all and (max-width: 580px) {
   .clarification {
+    font-size: 14px;
+  }
+}
+@media all and (max-width: 425px) {
+  .row-list--text {
     font-size: 14px;
   }
 }
@@ -734,15 +715,6 @@
     font-size: 14px;
   }
 }
-@media all and (max-width: 700px) {
-  .obtaining-method-tabs__processing-img-wrap {
-    padding-top: 30px;
-  }
-  .obtaining-method-tabs__protects-list {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-}
 @media all and (max-width: 425px) {
   .obtaining-method-tabs__title {
     text-align: left;
@@ -774,7 +746,8 @@
   .obtaining-method-tabs__popup-link-wrap {
     font-size: 12px;
   }
-  .obtaining-method-tabs__data-protect {
+  .obtaining-method-tabs__list-title {
+    margin-top: 10px;
     font-size: 14px;
   }
 }
