@@ -1,1 +1,154 @@
-.card{}
+.card{
+  width: 440px;
+  line-height: 1;
+  color: @c-main-black;
+
+  &__side-name{
+    font-size: 24px;
+    font-weight: @fw-bold;
+
+    &--back{
+      padding-right: 68px;
+      text-align: right;
+    }
+  }
+
+  &__surface{
+    margin-top: 17px;
+    height: 300px;
+    width: 100%;
+    padding: 37px 50px 0 40px;
+    background: url("/img/card/payment_systems.png") no-repeat ~'calc(100% - 50px)' 120px, @c-info-bg;
+    border-radius: 10px;
+
+    &--back{
+      padding-top: 139px;
+      padding-right: 40px;
+      background: url("/img/card/signature.png") no-repeat 24px 156px, linear-gradient(to bottom, rgba(232,225,204,1) 0, rgba(232,225,204,1) 40px, rgba(208,199,171,1) 40px, rgba(208,199,171,1) 100px, rgba(232,225,204,1) 100px, rgba(232,225,204,1) 100%);
+    }
+  }
+
+  &__row{
+    & + &{
+      margin-top: 14px;
+    }
+  }
+
+  &__row-name{
+    position: relative;
+    font-size: 16px;
+    font-weight: @fw-bold;
+
+    &--cvv{
+      text-align: right;
+    }
+  }
+
+  &__fields-wrap{
+    position: relative;
+    margin-top: 7px;
+    display: flex;
+
+    &--term{
+      margin-left: 52px;
+    }
+
+    &--cvv{
+      justify-content: flex-end;
+    }
+  }
+
+  &__field{
+    height: 40px;
+    width: 80px;
+    padding: 0 10px;
+    font-size: 24px;
+    border: 1px solid #999999;
+    border-radius: @border-radius;
+    color: @c-main-black;
+    box-shadow: inset 1px 1px 3px -1px rgba(0, 0, 0, 0.35);
+
+    & + &{
+      margin-left: 10px;
+    }
+
+    &:hover{
+      border-color: @c-border;
+    }
+
+    &:focus{
+      border-color: @c-border;
+      box-shadow: 0 0 7px rgba(203, 153, 51, 0.75);
+    }
+
+    &::placeholder{
+      color: @c-minor-text;
+    }
+
+    &--big{
+      width: 100%;
+    }
+  }
+
+  &__row-thru{
+    position: absolute;
+    top: 26px;
+    left: 0;
+    width: 40px;
+    font-size: 14px;
+    line-height: 1.225;
+    font-weight: @fw-norm;
+    color: @c-text;
+  }
+
+  &__row-cvv{
+    position: absolute;
+    width: 35px;
+    top: 26px;
+    right: 97px;
+    font-size: 14px;
+    line-height: 1.225;
+    font-weight: @fw-norm;
+    color: @c-text;
+  }
+
+  &__row-cvv-space{}
+
+  &__row-cvv-delimiter{
+    display: none;
+  }
+
+  &__select{
+    height: 40px;
+    width: 80px;
+    padding: 0 7px;
+    font-size: 24px;
+    border: 1px solid #999999;
+    border-radius: @border-radius;
+    background-color: #ffffff;
+    color: @c-main-black;
+    box-shadow: @default-shadow;
+
+    &:hover{
+      border-color: @c-border;
+    }
+
+    &:focus{
+      border-color: @c-border;
+      box-shadow: 0 0 7px rgba(203, 153, 51, 0.75);
+    }
+
+    & + &{
+      margin-left: 10px;
+    }
+
+    option{
+      font-size: 20px;
+    }
+  }
+
+  &__field-error-hint{
+    display: none;
+    position: absolute;
+  }
+}

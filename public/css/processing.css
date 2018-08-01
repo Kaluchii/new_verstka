@@ -334,8 +334,22 @@ ol {
   font-weight: 800;
   font-style: normal;
 }
+.processing__card-sides {
+  position: relative;
+  margin: 0 auto;
+  max-width: 710px;
+}
+.processing__front-side {
+  position: relative;
+  z-index: 1;
+}
+.processing__back-side {
+  position: absolute;
+  top: 50px;
+  right: 0;
+}
 .processing__btn-wrap {
-  margin-top: 30px;
+  margin-top: 90px;
 }
 .processing__btn {
   margin: 0 auto;
@@ -422,6 +436,148 @@ ol {
     width: 425px;
     max-width: 100%;
   }
+}
+.card {
+  width: 440px;
+  line-height: 1;
+  color: #333333;
+}
+.card__side-name {
+  font-size: 24px;
+  font-weight: 800;
+}
+.card__side-name--back {
+  padding-right: 68px;
+  text-align: right;
+}
+.card__surface {
+  margin-top: 17px;
+  height: 300px;
+  width: 100%;
+  padding: 37px 50px 0 40px;
+  background: url("/img/card/payment_systems.png") no-repeat calc(100% - 50px) 120px, #f6efdc;
+  border-radius: 10px;
+}
+.card__surface--back {
+  padding-top: 139px;
+  padding-right: 40px;
+  background: url("/img/card/signature.png") no-repeat 24px 156px, linear-gradient(to bottom, #e8e1cc 0, #e8e1cc 40px, #d0c7ab 40px, #d0c7ab 100px, #e8e1cc 100px, #e8e1cc 100%);
+}
+.card__row + .card__row {
+  margin-top: 14px;
+}
+.card__row-name {
+  position: relative;
+  font-size: 16px;
+  font-weight: 800;
+}
+.card__row-name--cvv {
+  text-align: right;
+}
+.card__fields-wrap {
+  position: relative;
+  margin-top: 7px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.card__fields-wrap--term {
+  margin-left: 52px;
+}
+.card__fields-wrap--cvv {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.card__field {
+  height: 40px;
+  width: 80px;
+  padding: 0 10px;
+  font-size: 24px;
+  border: 1px solid #999999;
+  border-radius: 3px;
+  color: #333333;
+  -webkit-box-shadow: inset 1px 1px 3px -1px rgba(0, 0, 0, 0.35);
+          box-shadow: inset 1px 1px 3px -1px rgba(0, 0, 0, 0.35);
+}
+.card__field + .card__field {
+  margin-left: 10px;
+}
+.card__field:hover {
+  border-color: #cb9933;
+}
+.card__field:focus {
+  border-color: #cb9933;
+  -webkit-box-shadow: 0 0 7px rgba(203, 153, 51, 0.75);
+          box-shadow: 0 0 7px rgba(203, 153, 51, 0.75);
+}
+.card__field::-webkit-input-placeholder {
+  color: #999999;
+}
+.card__field:-ms-input-placeholder {
+  color: #999999;
+}
+.card__field::-ms-input-placeholder {
+  color: #999999;
+}
+.card__field::placeholder {
+  color: #999999;
+}
+.card__field--big {
+  width: 100%;
+}
+.card__row-thru {
+  position: absolute;
+  top: 26px;
+  left: 0;
+  width: 40px;
+  font-size: 14px;
+  line-height: 1.225;
+  font-weight: 400;
+  color: #666666;
+}
+.card__row-cvv {
+  position: absolute;
+  width: 35px;
+  top: 26px;
+  right: 97px;
+  font-size: 14px;
+  line-height: 1.225;
+  font-weight: 400;
+  color: #666666;
+}
+.card__row-cvv-delimiter {
+  display: none;
+}
+.card__select {
+  height: 40px;
+  width: 80px;
+  padding: 0 7px;
+  font-size: 24px;
+  border: 1px solid #999999;
+  border-radius: 3px;
+  background-color: #ffffff;
+  color: #333333;
+  -webkit-box-shadow: 0 1px 3px rgba(51, 51, 51, 0.35);
+          box-shadow: 0 1px 3px rgba(51, 51, 51, 0.35);
+}
+.card__select:hover {
+  border-color: #cb9933;
+}
+.card__select:focus {
+  border-color: #cb9933;
+  -webkit-box-shadow: 0 0 7px rgba(203, 153, 51, 0.75);
+          box-shadow: 0 0 7px rgba(203, 153, 51, 0.75);
+}
+.card__select + .card__select {
+  margin-left: 10px;
+}
+.card__select option {
+  font-size: 20px;
+}
+.card__field-error-hint {
+  display: none;
+  position: absolute;
 }
 html {
   font-family: "Roboto", sans-serif;

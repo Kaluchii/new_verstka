@@ -10,48 +10,50 @@
 </head>
 <body>
 <div class="processing">
-    <div class="processing__front-side card">
-        <div class="card__side-name">Лицевая сторона</div>
-        <div class="card__surface">
-            <div class="card__row">
-                <div class="card__row-name">Номер карты</div>
-                <div class="card__fields-wrap">
-                    <input type="text" autocomplete="off" class="card__field" maxlength="4" id="number_1">
-                    <input type="text" autocomplete="off" class="card__field" maxlength="4" id="number_2">
-                    <input type="text" autocomplete="off" class="card__field" maxlength="4" id="number_3">
-                    <input type="text" autocomplete="off" class="card__field" maxlength="4" id="number_4">
+    <div class="processing__card-sides">
+        <div class="processing__front-side card">
+            <div class="card__side-name">Лицевая сторона</div>
+            <div class="card__surface">
+                <div class="card__row">
+                    <div class="card__row-name">Номер карты</div>
+                    <div class="card__fields-wrap">
+                        <input type="text" autocomplete="off" class="card__field" maxlength="4" id="number_1" placeholder="0000">
+                        <input type="text" autocomplete="off" class="card__field" maxlength="4" id="number_2" placeholder="0000">
+                        <input type="text" autocomplete="off" class="card__field" maxlength="4" id="number_3" placeholder="0000">
+                        <input type="text" autocomplete="off" class="card__field" maxlength="4" id="number_4" placeholder="0000">
+                    </div>
                 </div>
-            </div>
-            <div class="card__row">
-                <div class="card__row-name">Срок действия карты <span class="card__thru">VALID THRU</span></div>
-                <div class="card__fields-wrap card__fields-wrap--term">
-                    <select autocomplete="off" class="card__select" id="exp_month" name="exp_month">
-                        <option>01</option><option>02</option><option>03</option><option>04</option><option>05</option><option>06</option>
-                        <option>07</option><option>08</option><option>09</option><option>10</option><option>11</option><option>12</option>
-                    </select>
-                    <select autocomplete="off" class="card__select" id="exp_year" name="exp_year">
-                        <option>2016</option><option>2017</option><option>2018</option><option>2019</option><option>2020</option><option>2021</option><option>2022</option>
-                    </select>
+                <div class="card__row">
+                    <div class="card__row-name">Срок действия карты <span class="card__row-thru">VALID THRU</span></div>
+                    <div class="card__fields-wrap card__fields-wrap--term">
+                        <select autocomplete="off" class="card__select" id="exp_month" name="exp_month">
+                            <option>01</option><option>02</option><option>03</option><option>04</option><option>05</option><option>06</option>
+                            <option>07</option><option>08</option><option>09</option><option>10</option><option>11</option><option>12</option>
+                        </select>
+                        <select autocomplete="off" class="card__select" id="exp_year" name="exp_year">
+                            <option>16</option><option>17</option><option>18</option><option>19</option><option>20</option><option>21</option><option>22</option>
+                        </select>
+                    </div>
                 </div>
-            </div>
-            <div class="card__row">
-                <div class="card__row-name">Имя на карте</div>
-                <div class="card__fields-wrap">
-                    <input autocomplete="off" type="text" class="card__field card__field--big" id="card_name" />
-                    <div class="card__field-error-hint">Имя держателя латинскими буквами</div>
+                <div class="card__row">
+                    <div class="card__row-name">Имя на карте</div>
+                    <div class="card__fields-wrap">
+                        <input autocomplete="off" type="text" class="card__field card__field--big" id="card_name" placeholder="CARDHOLDER NAME" />
+                        <div class="card__field-error-hint">Имя держателя латинскими буквами</div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="processing__front-side card">
-        <div class="card__side-name">Задняя сторона</div>
-        <div class="card__surface">
-            <div class="card__row">
-                <div class="card__row-name">Код на задней стороне <span class="">CVV2 CVC2</span></div>
-                <div class="card__fields-wrap">
-                    <input autocomplete="off" type="password" class="card__field" id="sec_cvv2" maxlength="3" />
-                    <div class="card__field-error-hint">Номер указан неверно</div>
+        <div class="processing__back-side card">
+            <div class="card__side-name card__side-name--back">Задняя сторона</div>
+            <div class="card__surface card__surface--back">
+                <div class="card__row">
+                    <div class="card__row-name card__row-name--cvv">Код на задней стороне <span class="card__row-cvv">CVV2<span class="card__row-cvv-delimiter">/</span><span class="card__row-cvv-space"> </span>CVC2</span></div>
+                    <div class="card__fields-wrap card__fields-wrap--cvv">
+                        <input autocomplete="off" type="password" class="card__field" id="sec_cvv2" maxlength="3" placeholder="000" />
+                        <div class="card__field-error-hint">Номер указан неверно</div>
+                    </div>
                 </div>
             </div>
         </div>
