@@ -27,6 +27,10 @@ Route::get('/loan_overdue', function () {
     return view('lk.loan_overdue');
 });
 
+Route::get('/prolongation_wait', function () {
+    return view('lk.prolongation_wait');
+});
+
 Route::get('/restruct', function () {
     return view('lk.restruct');
 });
