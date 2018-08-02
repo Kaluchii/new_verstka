@@ -782,10 +782,6 @@ html {
 .row-list__item + .row-list__item {
   margin-top: 8px;
 }
-.iframe {
-  width: 100%;
-  max-width: 100%;
-}
 .iframe__area {
   height: 100%;
   width: 100%;
@@ -1293,7 +1289,7 @@ html {
   color: #333333;
 }
 .obtaining-method-tabs__iframe {
-  margin: 30px auto 0;
+  margin-top: 30px;
   height: 780px;
 }
 .data-list {

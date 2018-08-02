@@ -51,7 +51,7 @@
                 <div class="card__row">
                     <div class="card__row-name card__row-name--cvv">Код на задней стороне <span class="card__row-cvv">CVV2<span class="card__row-cvv-delimiter">/</span><span class="card__row-cvv-space"> </span>CVC2</span></div>
                     <div class="card__fields-wrap card__fields-wrap--cvv">
-                        <input autocomplete="off" type="password" class="card__field" id="sec_cvv2" maxlength="3" placeholder="000" />
+                        <input autocomplete="off" type="password" class="card__field card__field--cvv" id="sec_cvv2" maxlength="3" placeholder="000" />
                         <div class="card__field-error-hint">Номер указан неверно</div>
                     </div>
                 </div>

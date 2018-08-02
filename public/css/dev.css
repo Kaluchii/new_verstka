@@ -782,10 +782,6 @@ html {
 .row-list__item + .row-list__item {
   margin-top: 8px;
 }
-.iframe {
-  width: 100%;
-  max-width: 100%;
-}
 .iframe__area {
   height: 100%;
   width: 100%;
@@ -1293,7 +1289,7 @@ html {
   color: #333333;
 }
 .obtaining-method-tabs__iframe {
-  margin: 30px auto 0;
+  margin-top: 30px;
   height: 780px;
 }
 .data-list {
@@ -2161,6 +2157,51 @@ html {
     font-size: 14px;
   }
 }
+@media all and (max-width: 740px) {
+  .obtaining-method-tabs__iframe {
+    height: 770px;
+  }
+}
+@media all and (max-width: 720px) {
+  .obtaining-method-tabs__iframe {
+    height: 1069px;
+  }
+}
+@media all and (max-width: 633px) {
+  .obtaining-method-tabs__iframe {
+    height: 1093px;
+  }
+}
+@media all and (max-width: 600px) {
+  .obtaining-method-tabs__iframe {
+    height: 1125px;
+  }
+}
+@media all and (max-width: 495px) {
+  .obtaining-method-tabs__iframe {
+    height: 1149px;
+  }
+}
+@media all and (max-width: 480px) {
+  .obtaining-method-tabs__iframe {
+    height: 889px;
+  }
+}
+@media all and (max-width: 465px) {
+  .obtaining-method-tabs__iframe {
+    height: 853px;
+  }
+}
+@media all and (max-width: 440px) {
+  .obtaining-method-tabs__iframe {
+    height: 874px;
+  }
+}
+@media all and (max-width: 370px) {
+  .obtaining-method-tabs__iframe {
+    height: 895px;
+  }
+}
 @media all and (max-width: 425px) {
   .obtaining-method-tabs__title {
     text-align: left;
@@ -2195,6 +2236,11 @@ html {
   .obtaining-method-tabs__list-title {
     margin-top: 10px;
     font-size: 14px;
+  }
+}
+@media all and (max-width: 340px) {
+  .obtaining-method-tabs__iframe {
+    margin: 30px -10px 0 -10px;
   }
 }
 @media all and (max-width: 800px) {

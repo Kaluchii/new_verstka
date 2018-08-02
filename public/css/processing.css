@@ -382,20 +382,6 @@ ol {
       -ms-flex-align: center;
           align-items: center;
 }
-@media all and (max-width: 700px) {
-  .processing__logo-wrap {
-    padding-top: 30px;
-  }
-  .processing__protects-list {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-}
-@media all and (max-width: 425px) {
-  .processing__data-protect {
-    font-size: 14px;
-  }
-}
 .button {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -431,9 +417,9 @@ ol {
   margin: 0 auto;
   white-space: nowrap;
 }
-@media all and (max-width: 425px) {
+@media all and (max-width: 370px) {
   .button--big-in-small {
-    width: 425px;
+    width: 370px;
     max-width: 100%;
   }
 }
@@ -578,6 +564,146 @@ ol {
 .card__field-error-hint {
   display: none;
   position: absolute;
+}
+@media all and (max-width: 700px) {
+  .processing__logo-wrap {
+    padding-top: 30px;
+  }
+}
+@media all and (max-width: 680px) {
+  .processing__card-sides {
+    max-width: 440px;
+  }
+  .processing__back-side {
+    position: static;
+    margin-top: 30px;
+  }
+  .processing__btn-wrap {
+    margin-top: 40px;
+  }
+}
+@media all and (max-width: 560px) {
+  .processing__protects-list {
+    margin-top: 25px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .processing__protects-item {
+    width: 42%;
+    text-align: center;
+  }
+  .processing__protects-item:nth-child(n+3) {
+    margin-top: 15px;
+  }
+}
+@media all and (max-width: 440px) {
+  .processing__card-sides {
+    max-width: 300px;
+  }
+  .processing__back-side {
+    margin-top: 17px;
+  }
+  .processing__btn-wrap {
+    margin-top: 20px;
+    padding: 0 10px;
+  }
+  .processing__logo-wrap {
+    margin-top: 20px;
+    padding-top: 30px;
+  }
+  .processing__protects-item:nth-child(n+3) {
+    margin-top: 10px;
+  }
+  .processing__protect-logo {
+    max-width: 110px;
+    max-height: 34px;
+  }
+}
+@media all and (max-width: 425px) {
+  .processing__data-protect {
+    font-size: 14px;
+  }
+}
+@media all and (max-width: 710px) {
+  .card__side-name--back {
+    padding-right: 35px;
+  }
+}
+@media all and (max-width: 680px) {
+  .card__side-name {
+    padding-right: 0;
+    padding-left: 10px;
+    text-align: left;
+  }
+  .card__surface {
+    margin-top: 6px;
+    border-radius: 7px;
+  }
+}
+@media all and (max-width: 440px) {
+  .card {
+    width: 300px;
+  }
+  .card__surface {
+    height: 205px;
+    padding: 8px 20px 0 10px;
+    background: url("/img/card/payment_systems.png") no-repeat calc(100% - 20px) 77px / 50px 61px, #f6efdc;
+  }
+  .card__surface--back {
+    padding-top: 81px;
+    padding-right: 24px;
+    background: url("/img/card/signature.png") no-repeat 16px 119px / 160px 36px, linear-gradient(to bottom, #e8e1cc 0, #e8e1cc 27px, #d0c7ab 27px, #d0c7ab 69px, #e8e1cc 69px, #e8e1cc 100%);
+  }
+  .card__row + .card__row {
+    margin-top: 8px;
+  }
+  .card__row-name {
+    font-size: 14px;
+  }
+  .card__fields-wrap {
+    margin-top: 5px;
+    margin-left: 0;
+  }
+  .card__field {
+    height: 35px;
+    width: 60px;
+    font-size: 16px;
+  }
+  .card__field--big {
+    width: 100%;
+  }
+  .card__field--cvv {
+    width: 80px;
+  }
+  .card__row-thru {
+    position: static;
+    width: auto;
+    font-size: 12px;
+    line-height: 1;
+  }
+  .card__row-cvv {
+    position: static;
+    margin-top: 3px;
+    display: block;
+    width: auto;
+  }
+  .card__row-cvv-space {
+    display: none;
+  }
+  .card__row-cvv-delimiter {
+    display: inline;
+  }
+  .card__select {
+    height: 35px;
+    width: 60px;
+    font-size: 16px;
+  }
+  .card__select option {
+    font-size: 16px;
+  }
 }
 html {
   font-family: "Roboto", sans-serif;
