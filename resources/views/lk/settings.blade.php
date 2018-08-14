@@ -18,10 +18,10 @@
                 <li class="menu__item"><a href="/change_pass" class="menu__link link">Смена пароля</a></li>
             </ul>
         </div>
-        <div class="personal-area__title">Личные данные</div>
+        <div class="personal-area__title title-l1">Личные данные</div>
         <div class="personal-area__info-block info-block">
             <div class="info-block__top">
-                <p class="info-block__title">Паспортные данные</p>
+                <p class="info-block__title title-l2">Паспортные данные</p>
                 <div class="info-block__btn-wrap">
                     <a href="#" class="info-block__btn button button--grey"><span class="button__text">Изменить</span></a>
                 </div>
@@ -71,7 +71,7 @@
         </div>
         <div class="personal-area__info-block info-block">
             <div class="info-block__top">
-                <p class="info-block__title">Контактные данные</p>
+                <p class="info-block__title title-l2">Контактные данные</p>
                 <div class="info-block__btn-wrap">
                     <a href="#" class="info-block__btn button button--grey"><span class="button__text">Изменить</span></a>
                 </div>
@@ -89,7 +89,7 @@
         </div>
         <div class="personal-area__info-block info-block">
             <div class="info-block__top">
-                <p class="info-block__title">Адрес прописки</p>
+                <p class="info-block__title title-l2">Адрес прописки</p>
                 <div class="info-block__btn-wrap">
                     <a href="#" class="info-block__btn button button--grey"><span class="button__text">Изменить</span></a>
                 </div>
@@ -102,7 +102,7 @@
         </div>
         <div class="personal-area__info-block info-block">
             <div class="info-block__top">
-                <p class="info-block__title">Адрес проживания</p>
+                <p class="info-block__title title-l2">Адрес проживания</p>
                 <div class="info-block__btn-wrap">
                     <a href="#" class="info-block__btn button button--grey"><span class="button__text">Изменить</span></a>
                 </div>
@@ -115,7 +115,7 @@
         </div>
         <div class="personal-area__info-block info-block">
             <div class="info-block__top">
-                <p class="info-block__title">Доверенные лица</p>
+                <p class="info-block__title title-l2">Доверенные лица</p>
                 <div class="info-block__btn-wrap">
                     <a href="#" class="info-block__btn button button--grey"><span class="button__text">Изменить</span></a>
                 </div>
@@ -135,7 +135,7 @@
         </div>
         <div class="personal-area__info-block info-block">
             <div class="info-block__top">
-                <p class="info-block__title">Занятость и доходы</p>
+                <p class="info-block__title title-l2">Занятость и доходы</p>
                 <div class="info-block__btn-wrap">
                     <a href="#" class="info-block__btn button button--grey"><span class="button__text">Изменить</span></a>
                 </div>

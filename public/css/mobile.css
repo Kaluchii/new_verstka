@@ -23,6 +23,14 @@
   }
 }
 @media all and (max-width: 768px) {
+  .title-l1 {
+    font-size: 32px;
+  }
+  .title-l2 {
+    font-size: 24px;
+  }
+}
+@media all and (max-width: 768px) {
   .field__clarification {
     position: static;
     margin-top: 5px;
@@ -42,6 +50,11 @@
 @media all and (max-width: 425px) {
   .row-list--text {
     font-size: 14px;
+  }
+}
+@media all and (max-width: 840px) {
+  .info-plate {
+    padding: 15px;
   }
 }
 @media all and (max-width: 1024px) {
@@ -421,7 +434,7 @@
   .personal-area__btn-wrap {
     margin: 15px 20px 0;
   }
-  .personal-area__big-info {
+  .personal-area__info-plate {
     margin: 25px 20px 0;
   }
   .personal-area__btn-with-descr {
@@ -446,12 +459,6 @@
 @media all and (max-width: 768px) {
   .personal-area {
     padding-top: 0;
-  }
-  .personal-area__title {
-    font-size: 32px;
-  }
-  .personal-area__small-title {
-    font-size: 24px;
   }
   .personal-area__small-title--center {
     margin-top: 10px;
@@ -480,7 +487,7 @@
     margin-top: 15px;
     font-size: 14px;
   }
-  .personal-area__big-info {
+  .personal-area__info-plate {
     margin-top: 20px;
   }
   .personal-area__work-time {
@@ -571,11 +578,6 @@
     background-size: 124px 59px;
   }
 }
-@media all and (max-width: 840px) {
-  .big-info {
-    padding: 15px 15px 10px;
-  }
-}
 @media all and (max-width: 768px) {
   .big-info__item + .big-info__item {
     margin-left: 60px;
@@ -604,7 +606,6 @@
   .big-info {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    padding-bottom: 15px;
   }
   .big-info__item {
     width: 100%;
@@ -638,11 +639,6 @@
     padding: 40px 20px 30px;
   }
 }
-@media all and (max-width: 768px) {
-  .info-block__title {
-    font-size: 24px;
-  }
-}
 @media all and (max-width: 460px) {
   .info-block__top {
     -ms-flex-wrap: wrap;
@@ -659,9 +655,6 @@
 @media all and (max-width: 768px) {
   .obtaining-methods {
     padding: 15px 20px 20px;
-  }
-  .obtaining-methods__title {
-    font-size: 24px;
   }
   .obtaining-methods__list {
     margin-top: 15px;

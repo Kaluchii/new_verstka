@@ -2,7 +2,7 @@
 @section('content')
     <div class="personal-area">
         <div class="personal-area__container">
-            <div class="personal-area__title personal-area__title--loan-steps">Получить <span class="nowrap">35 000 тг</span> <span class="nowrap">до 12 августа</span></div>
+            <div class="personal-area__title personal-area__title--loan-steps title-l1">Получить <span class="nowrap">35 000 тг</span> <span class="nowrap">до 12 августа</span></div>
             <div class="personal-area__loan-steps loan-steps">
                 <div class="loan-steps__item">
                     <span class="loan-steps__item-num">1</span>
@@ -18,7 +18,7 @@
                 </div>
             </div>
             <div class="personal-area__obtaining-methods obtaining-methods">
-                <div class="obtaining-methods__title">Способ получения</div>
+                <div class="obtaining-methods__title title-l2">Способ получения</div>
                 <ul class="obtaining-methods__list">
                     <li class="obtaining-methods__item">
                         <button class="obtaining-methods__check-button check-button is-active"><span class="check-button__text">На банковскую карту</span></button>

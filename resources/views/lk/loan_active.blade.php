@@ -9,15 +9,17 @@
                     <li class="menu__item"><a href="/change_pass" class="menu__link link">Смена пароля</a></li>
                 </ul>
             </div>
-            <div class="personal-area__small-title">Ваш займ <span class="personal-area__title-select personal-area__title-select--active">активен</span></div>
-            <div class="personal-area__big-info big-info">
-                <div class="big-info__item">
-                    <div class="big-info__name">Задолженность</div>
-                    <div class="big-info__value">15 200 тг</div>
-                </div>
-                <div class="big-info__item">
-                    <div class="big-info__name">Дата возврата</div>
-                    <div class="big-info__value">до 15 августа</div>
+            <div class="personal-area__small-title title-l2">Ваш займ <span class="personal-area__title-select personal-area__title-select--active">активен</span></div>
+            <div class="personal-area__info-plate info-plate">
+                <div class="info-plate__big-info big-info">
+                    <div class="big-info__item">
+                        <div class="big-info__name">Задолженность</div>
+                        <div class="big-info__value">15 200 тг</div>
+                    </div>
+                    <div class="big-info__item">
+                        <div class="big-info__name">Дата возврата</div>
+                        <div class="big-info__value">до 15 августа</div>
+                    </div>
                 </div>
             </div>
             <div class="personal-area__btn-with-descr btn-with-descr">
@@ -34,7 +36,7 @@
             </div>
             <div class="personal-area__info-block info-block">
                 <div class="info-block__top">
-                    <p class="info-block__title">Информация по займу</p>
+                    <p class="info-block__title title-l2">Информация по займу</p>
                 </div>
                 <div class="info-block__data-list data-list">
                     <div class="data-list__item data-list__item--first-elements">
@@ -69,7 +71,7 @@
             </div>
             <div class="personal-area__info-block info-block">
                 <div class="info-block__top">
-                    <p class="info-block__title">Документация</p>
+                    <p class="info-block__title title-l2">Документация</p>
                 </div>
                 <ul class="info-block__row-list row-list">
                     <li class="row-list__item"><a href="#" class="row-list__link link">Договор займа</a></li>

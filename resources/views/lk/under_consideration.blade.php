@@ -9,16 +9,18 @@
                     <li class="menu__item"><a href="/change_pass" class="menu__link link">Смена пароля</a></li>
                 </ul>
             </div>
-            <div class="personal-area__small-title">Заявка на рассмотрении</div>
+            <div class="personal-area__small-title title-l2">Заявка на рассмотрении</div>
             <p class="personal-area__minor-text">Статус заявки обновлен в 10:40, 03.03.2018</p>
-            <div class="personal-area__big-info big-info">
-                <div class="big-info__item">
-                    <div class="big-info__name">Сумма займа</div>
-                    <div class="big-info__value">15 200 тг</div>
-                </div>
-                <div class="big-info__item">
-                    <div class="big-info__name">Срок займа</div>
-                    <div class="big-info__value">20 дней</div>
+            <div class="personal-area__info-plate info-plate">
+                <div class="info-plate__big-info big-info">
+                    <div class="big-info__item">
+                        <div class="big-info__name">Сумма займа</div>
+                        <div class="big-info__value">15 200 тг</div>
+                    </div>
+                    <div class="big-info__item">
+                        <div class="big-info__name">Срок займа</div>
+                        <div class="big-info__value">20 дней</div>
+                    </div>
                 </div>
             </div>
             <div class="personal-area__work-time">

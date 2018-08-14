@@ -9,7 +9,7 @@
                     <li class="menu__item is-active"><a href="/change_pass" class="menu__link link">Смена пароля</a></li>
                 </ul>
             </div>
-            <div class="personal-area__small-title">Смена пароля</div>
+            <div class="personal-area__small-title title-l2">Смена пароля</div>
             <div class="personal-area__form-with-info form-with-info">
                 <div class="form-with-info__form col-form">
                     <div class="col-form__row field">

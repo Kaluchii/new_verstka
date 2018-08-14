@@ -9,7 +9,7 @@
                     <li class="menu__item"><a href="/change_pass" class="menu__link link">Смена пароля</a></li>
                 </ul>
             </div>
-            <div class="personal-area__small-title">История займов</div>
+            <div class="personal-area__small-title title-l2">История займов</div>
             <div class="personal-area__history-loans history-loans">
                 <div class="history-loans__row">
                     <div class="history-loans__col">Дата <span class="history-loans__hide-on-small">заявки</span></div>

@@ -9,14 +9,14 @@
                     <li class="menu__item"><a href="/change_pass" class="menu__link link">Смена пароля</a></li>
                 </ul>
             </div>
-            <div class="personal-area__small-title">Ваш займ реструктуризирован</div>
+            <div class="personal-area__small-title title-l2">Ваш займ реструктуризирован</div>
             <p class="personal-area__text">Возникла просрочка, начисляется пеня. Сначала оплачивается пеня, затем задолженность.</p>
             <div class="personal-area__btn-wrap">
                 <a href="#" class="personal-area__btn button button--yellow button--big-in-small"><span class="button__text">Оплатить ежемесячный платеж</span></a>
             </div>
             <div class="personal-area__info-block info-block">
                 <div class="info-block__top">
-                    <p class="info-block__title">График платежей</p>
+                    <p class="info-block__title title-l2">График платежей</p>
                 </div>
                 <div class="info-block__payment-status payment-status">
                     <ul class="payment-status__list">
@@ -46,7 +46,7 @@
             </div>
             <div class="personal-area__info-block info-block">
                 <div class="info-block__top">
-                    <p class="info-block__title">Информация по займу</p>
+                    <p class="info-block__title title-l2">Информация по займу</p>
                 </div>
                 <div class="info-block__data-list data-list">
                     <div class="data-list__item data-list__item--first-elements">

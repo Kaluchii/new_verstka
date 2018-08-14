@@ -2,7 +2,7 @@
 @section('content')
     <div class="personal-area">
         <div class="personal-area__container">
-            <div class="personal-area__title personal-area__title--loan-steps">Получить <span class="nowrap">35 000 тг</span> <span class="nowrap">до 12 августа</span></div>
+            <div class="personal-area__title personal-area__title--loan-steps title-l1">Получить <span class="nowrap">35 000 тг</span> <span class="nowrap">до 12 августа</span></div>
             <div class="personal-area__loan-steps loan-steps">
                 <div class="loan-steps__item">
                     <span class="loan-steps__item-num">1</span>
@@ -19,7 +19,7 @@
             </div>
             <div class="personal-area__info-block info-block">
                 <div class="info-block__top">
-                    <p class="info-block__title">1. Паспортные данные</p>
+                    <p class="info-block__title title-l2">1. Паспортные данные</p>
                 </div>
                 <div class="info-block__fields-list fields-list">
                     <div class="fields-list__item-wrap">
@@ -150,7 +150,7 @@
             </div>
             <div class="personal-area__info-block info-block">
                 <div class="info-block__top">
-                    <p class="info-block__title">2. Адрес прописки (регистрации)</p>
+                    <p class="info-block__title title-l2">2. Адрес прописки (регистрации)</p>
                 </div>
                 <div class="info-block__fields-list fields-list">
                     <div class="fields-list__item-wrap">
@@ -191,7 +191,7 @@
             </div>
             <div class="personal-area__info-block info-block">
                 <div class="info-block__top">
-                    <p class="info-block__title">3. Адрес проживания</p>
+                    <p class="info-block__title title-l2">3. Адрес проживания</p>
                 </div>
                 <div class="info-block__fields-list fields-list">
                     <div class="fields-list__item-wrap">
@@ -232,7 +232,7 @@
             </div>
             <div class="personal-area__info-block info-block">
                 <div class="info-block__top">
-                    <p class="info-block__title">4. Доверенные лица</p>
+                    <p class="info-block__title title-l2">4. Доверенные лица</p>
                 </div>
                 <div class="info-block__fields-list fields-list">
                     <div class="fields-list__item-wrap">
@@ -319,7 +319,7 @@
             </div>
             <div class="personal-area__info-block info-block">
                 <div class="info-block__top">
-                    <p class="info-block__title">5. Занятость и доходы</p>
+                    <p class="info-block__title title-l2">5. Занятость и доходы</p>
                 </div>
                 <div class="info-block__fields-list fields-list">
                     <div class="fields-list__item-wrap">
@@ -371,7 +371,7 @@
             </div>
             <div class="personal-area__info-block info-block">
                 <div class="info-block__top">
-                    <p class="info-block__title">7. Согласия и обязательства</p>
+                    <p class="info-block__title title-l2">7. Согласия и обязательства</p>
                 </div>
                 <ul class="info-block__row-list row-list">
                     <li class="row-list__item">Я согласен с <a href="#" class="row-list__link link">Офертой на предоставление срочного денежного займа</a></li>

@@ -1,0 +1,26 @@
+.info-plate{
+  padding: 20px 25px;
+  border-radius: @border-radius-big;
+  background-color: @c-info-bg;
+
+  &__big-info{}
+
+  &__text{
+    font-size: 16px;
+    color: @c-text;
+  }
+
+  &__btns-wrap{
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__btn-wrap{
+    & + &{
+      margin-left: 20px;
+    }
+  }
+
+  &__btn{}
+}
