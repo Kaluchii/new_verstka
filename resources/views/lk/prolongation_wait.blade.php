@@ -22,16 +22,36 @@
                     </div>
                 </div>
             </div>
-            <div class="personal-area__info-plate info-plate">
-                <p class="info-plate__text">Вы заказали продление займа до 1 августа, услуга будет активированна после оплаты 5000 тг.
-                    <br>Платеж необходимо внести до 23:55, 31.07.18.
-                </p>
-                <div class="info-plate__btns-wrap">
-                    <div class="info-plate__btn-wrap">
-                        <a href="#" class="info-plate__btn button button--grey button--big-in-small"><span class="button__text">Отказаться от продления</span></a>
+            <div class="personal-area__common-block common-block">
+                <div class="common-block__title title-l3">Услуга продления займа ожидает оплаты</div>
+                <div class="common-block__info-plate info-plate">
+                    <p class="info-plate__text">Вы заказали продление займа до 1 августа, услуга будет активированна после оплаты 5000 тг.
+                        <br>Платеж необходимо внести до 23:55, 31.07.18.
+                    </p>
+                    <div class="info-plate__btns-wrap">
+                        <div class="info-plate__btn-wrap">
+                            <a href="#" class="info-plate__btn button button--grey button--big-in-small"><span class="button__text">Отказаться от продления</span></a>
+                        </div>
+                        <div class="info-plate__btn-wrap">
+                            <a href="#" class="info-plate__btn button button--yellow button--big-in-small"><span class="button__text">Оплатить продление</span></a>
+                        </div>
                     </div>
-                    <div class="info-plate__btn-wrap">
-                        <a href="#" class="info-plate__btn button button--yellow button--big-in-small"><span class="button__text">Оплатить продление</span></a>
+                </div>
+            </div>
+            <div class="personal-area__common-block common-block">
+                <div class="common-block__title title-l3">Выберите способ оплаты</div>
+                <div class="common-block__tabs tabs">
+                    <ul class="tabs__name-list">
+                        <li class="tabs__name-item"><a href="#" class="tabs__name-link">Банковской картой</a></li>
+                        <li class="tabs__name-item is-active"><a href="#" class="tabs__name-link">QIWI-терминал</a></li>
+                        <li class="tabs__name-item"><a href="#" class="tabs__name-link">QIWI-кошелек</a></li>
+                        <li class="tabs__name-item"><a href="#" class="tabs__name-link">Выставить QIWI-счет</a></li>
+                        <li class="tabs__name-item"><a href="#" class="tabs__name-link">Касса 24</a></li>
+                    </ul>
+                    <div class="tabs__list-wrap">
+                        <ul class="tabs__list">
+                            <li class="tabs__item"></li>
+                        </ul>
                     </div>
                 </div>
             </div>

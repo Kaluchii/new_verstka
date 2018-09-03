@@ -1,0 +1,46 @@
+.tabs{
+  &__name-list{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -8px;
+  }
+
+  &__name-item{
+    margin-top: 7px;
+    padding: 7px 8px;
+    line-height: 1;
+    border-radius: @border-radius;
+
+    &:nth-last-child(n+2){
+      margin-right: 30px;
+    }
+
+    &.is-active{
+      background-color: @c-active-bg;
+
+      .tabs{
+        &__name-link{
+          color: @c-main-black;
+        }
+      }
+    }
+  }
+
+  &__name-link{
+    font-weight: @fw-bold;
+    color: @c-main-green;
+
+    &:hover{
+      color: @c-main-orange;
+    }
+  }
+
+  &__list-wrap{
+    margin-top: 20px;
+    .dashed-upline(#cccccc);
+  }
+
+  &__list{}
+
+  &__item{}
+}
