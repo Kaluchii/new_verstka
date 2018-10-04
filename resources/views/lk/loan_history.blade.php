@@ -10,6 +10,9 @@
                 </ul>
             </div>
             <div class="personal-area__small-title title-l2">История займов</div>
+            <div class="personal-area__btn-wrap">
+                <a href="#" class="personal-area__btn button button--yellow button--big-in-small"><span class="button__text">Скачать справку</span></a>
+            </div>
             <div class="personal-area__history-loans history-loans">
                 <div class="history-loans__row">
                     <div class="history-loans__col">Дата <span class="history-loans__hide-on-small">заявки</span></div>
