@@ -12,6 +12,10 @@
 */
 
 Route::get('/', function () {
+    return view('all_pages');
+});
+
+Route::get('/settings', function () {
     return view('lk.settings');
 });
 
@@ -59,8 +63,3 @@ Route::get('/iframe', function () {
     return view('card.card_confirm');
 });
 
-
-
-Route::get('/test', function () {
-    return view('test');
-});
