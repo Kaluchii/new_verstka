@@ -21,6 +21,10 @@
     .field{
       &__alert{
         display: block;
+
+        &:empty{
+          display: none;
+        }
       }
     }
   }
@@ -79,5 +83,13 @@
     color: @c-text;
   }
 
-  &__show-pass{}
+  &__show-pass{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 50px;
+    background: url('/img/field_show-pass.png') no-repeat center;
+    cursor: pointer;
+  }
 }

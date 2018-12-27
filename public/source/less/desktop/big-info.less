@@ -1,5 +1,6 @@
 .big-info{
   display: flex;
+  flex-wrap: wrap;
 
   &__item{
     line-height: 1;
@@ -19,5 +20,17 @@
     font-size: @fz-1;
     font-weight: @fw-bold;
     color: @c-main-black;
+  }
+
+  &__early-repayment{
+    margin-top: 15px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: @c-main-black;
+  }
+
+  &__early-repayment-row{
+    padding: 3px;
+    background-color: @c-important;
   }
 }

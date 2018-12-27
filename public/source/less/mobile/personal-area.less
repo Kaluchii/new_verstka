@@ -9,7 +9,7 @@
     }
 
     &__small-title{
-      padding-top: 35px;
+      padding-top: 25px;
     }
   }
 }
@@ -21,7 +21,8 @@
     }
 
     &__small-title{
-      margin: 0 @hor-indent-s;
+      padding-left: @hor-indent-s;
+      padding-right: @hor-indent-s;
     }
 
     &__text{
@@ -54,14 +55,6 @@
 
     &__work-time-img{
       margin: 0;
-    }
-
-    &__info-block{
-      margin: 20px @hor-indent-s 0;
-    }
-
-    &__history-loans{
-      margin: 20px @hor-indent-s 0;
     }
 
     &__form-with-info{
@@ -129,6 +122,10 @@
 
 @media all and (max-width: 425px){
   .personal-area{
+    &__title{
+      padding-top: 20px;
+    }
+
     &__btn-with-descr{
       & + .personal-area__info-block{
         margin-top: 20px;

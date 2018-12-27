@@ -2,7 +2,7 @@
 @section('content')
     <div class="personal-area">
         <div class="personal-area__container">
-            <div class="personal-area__title personal-area__title--loan-steps title-l1">Получить <span class="nowrap">35 000 тг</span> <span class="nowrap">до 12 августа</span></div>
+            <div class="personal-area__title personal-area__title--loan-steps title-l2">Займ <span class="nowrap">35 000 тг</span> <span class="text-highlight nowrap">со скидкой 25%</span><br><span class="nowrap">до 12 августа</span></div>
             <div class="personal-area__loan-steps loan-steps">
                 <div class="loan-steps__item">
                     <span class="loan-steps__item-num">1</span>
@@ -44,7 +44,7 @@
                         <div class="fields-list__item field">
                             <div class="field__name">Отчество</div>
                             <div class="field__input-wrap">
-                                <input type="text" class="field__input input" tabindex="3">
+                                <input type="text" class="field__input input" tabindex="3" disabled>
                                 <div class="field__alert">Укажите отчество</div>
                                 <div class="field__action"><a href="#" class="link-local">Нет отчества</a></div>
                             </div>
@@ -78,7 +78,7 @@
                                         <span class="radio-switchers__button">Нет</span>
                                     </label>
                                     <label class="radio-switchers__item">
-                                        <input type="radio" class="radio-switchers__input" name="radio1" value="1" tabindex="5">
+                                        <input type="radio" class="radio-switchers__input" name="radio1" value="1" tabindex="5" checked>
                                         <span class="radio-switchers__button">1</span>
                                     </label>
                                     <label class="radio-switchers__item">
@@ -95,7 +95,7 @@
                         </div>
                     </div>
                     <div class="fields-list__item-wrap">
-                        <div class="fields-list__item field">
+                        <div class="fields-list__item field is-right">
                             <div class="field__name">ИИН</div>
                             <div class="field__input-wrap">
                                 <input type="text" class="field__input input" tabindex="6" placeholder="000 000 000 000">
@@ -154,7 +154,7 @@
                 </div>
                 <div class="info-block__fields-list fields-list">
                     <div class="fields-list__item-wrap">
-                        <div class="fields-list__item field">
+                        <div class="fields-list__item field has-error">
                             <div class="field__name">Город или населенный пункт</div>
                             <div class="field__input-wrap">
                                 <input type="text" class="field__input input" tabindex="1">

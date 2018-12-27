@@ -2,7 +2,7 @@
 @section('content')
     <div class="personal-area">
         <div class="personal-area__container">
-            <div class="personal-area__title personal-area__title--loan-steps title-l1">Получить <span class="nowrap">35 000 тг</span> <span class="nowrap">до 12 августа</span></div>
+            <div class="personal-area__title personal-area__title--loan-steps title-l2">Займ <span class="nowrap">35 000 тг</span> <span class="text-highlight nowrap">со скидкой 25%</span><br><span class="nowrap">до 12 августа</span></div>
             <div class="personal-area__loan-steps loan-steps">
                 <div class="loan-steps__item">
                     <span class="loan-steps__item-num">1</span>

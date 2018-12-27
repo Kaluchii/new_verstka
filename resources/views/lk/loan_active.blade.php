@@ -20,6 +20,10 @@
                         <div class="big-info__name">Дата возврата</div>
                         <div class="big-info__value">до 15 августа</div>
                     </div>
+                    <div class="big-info__early-repayment">
+                        <span class="big-info__early-repayment-row">15 200 тг к оплате, если погасить займ сегодня.</span><br>
+                        <span class="big-info__early-repayment-row">Экономия 10 600 тенге!</span>
+                    </div>
                 </div>
             </div>
             <div class="personal-area__btn-with-descr btn-with-descr">

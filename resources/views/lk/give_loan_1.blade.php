@@ -2,7 +2,7 @@
 @section('content')
     <div class="personal-area">
         <div class="personal-area__container">
-            <div class="personal-area__title personal-area__title--loan-steps title-l1">Получить <span class="nowrap">35 000 тг</span> <span class="nowrap">до 12 августа</span></div>
+            <div class="personal-area__title personal-area__title--loan-steps title-l2">Займ <span class="nowrap">35 000 тг</span> <span class="text-highlight nowrap">со скидкой 25%</span><br><span class="nowrap">до 12 августа</span></div>
             <div class="personal-area__loan-steps loan-steps">
                 <div class="loan-steps__item loan-steps__item--current">
                     <span class="loan-steps__item-num">1</span>
@@ -17,7 +17,7 @@
                     <span class="loan-steps__item-name">Способ получения</span>
                 </div>
             </div>
-            <div class="personal-area__small-title personal-area__small-title--border-top personal-area__small-title--center title-l2">Регистрация нового клиента</div>
+            <div class="personal-area__small-title personal-area__small-title--border-top personal-area__small-title--center title-l2">Регистрация</div>
             <div class="personal-area__form col-form">
                 <div class="col-form__row col-form__row--with-clarification field">
                     <div class="field__name">Эл. почта</div>
