@@ -1,0 +1,49 @@
+// Скорей всего некоторые из стилей нужно пристроить в другие более подходящие места
+
+html{
+  font-family: "Roboto", sans-serif;
+}
+
+.page-wrapper{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 320px;
+  background-color: @c-bg;
+
+  &__header-and-content{
+    margin-bottom: auto;
+  }
+}
+
+.stop-body-scroll{
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+}
+
+.text-highlight{
+  padding: 0 3px;
+  font-weight: @fw-bold;
+  background: @c-highlight;
+  color: @c-main-black;
+  border-radius: 3px;
+}
+
+.bold{
+  font-weight: 800;
+}
+
+.normal{
+  font-weight: 400;
+}
+
+.nowrap{
+  white-space: nowrap;
+}
+
+@media all and (max-width: 768px) {
+  .tablet-hide{
+    display: none;
+  }
+}
