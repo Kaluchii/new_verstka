@@ -1,0 +1,157 @@
+.personal-area{
+  padding-top: @outer-indent;
+
+  &__container{
+    max-width: @s-max-w;
+    margin: 0 auto;
+    padding-bottom: 40px;
+    background-color: #ffffff;
+  }
+
+  &__available-loan{}
+
+  &__menu{}
+
+  &__title{
+    margin: 0 @hor-indent;
+
+    &--loan-steps{
+      margin: 0 40px;
+      padding-top: 35px;
+      text-align: center;
+    }
+  }
+
+  &__loan-steps{
+    margin-top: 20px;
+  }
+
+  &__title-select{
+    margin-left: -5px;
+    display: inline-block;
+    padding: 0 4px 3px;
+    line-height: 1;
+    border-radius: @border-radius;
+    color: #ffffff;
+
+    &--active{
+      background-color: @c-main-green;
+    }
+
+    &--overdue{
+      background-color: @c-main-red;
+    }
+  }
+
+  &__small-title{
+    padding: 0 @hor-indent;
+
+    &--center{
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    &--border-top{
+      padding-top: 25px;
+      .dashed-upline(#cccccc);
+    }
+
+    & + .personal-area__text{
+      margin-top: 20px;
+    }
+  }
+
+  &__text{
+    margin: 10px @hor-indent 0;
+    font-size: 16px;
+    color: @c-text;
+  }
+
+  &__minor-text{
+    margin: 10px @hor-indent 0;
+    font-size: 16px;
+    color: @c-minor-text;
+  }
+
+  &__btn-wrap{
+    display: flex;
+    margin: 15px @hor-indent 0;
+
+    & + .personal-area__info-block{
+      margin-top: 30px;
+    }
+  }
+
+  &__btn{}
+
+  &__info-plate{
+    margin: 25px @hor-indent 0;
+  }
+
+  &__common-block{
+    margin: 35px @hor-indent 0;
+  }
+
+  &__btn-with-descr{
+    margin: 30px @hor-indent 0;
+
+    & + &{
+      margin-top: 20px;
+    }
+
+    & + .personal-area__info-block{
+      margin-top: 30px;
+    }
+  }
+
+  &__work-time{
+    margin: 30px @hor-indent 0;
+    display: flex;
+  }
+
+  &__work-time-img{
+    margin: 2px 0 0 25px;
+    height: 46px;
+    width: 27.5px;
+    flex-shrink: 0;
+  }
+
+  &__work-time-text{
+    margin-left: 25px;
+    max-width: 340px;
+    font-size: 16px;
+    letter-spacing: .02em;
+    font-weight: @fw-bold;
+    color: @c-main-black;
+  }
+
+  &__info-block{
+    margin-top: 20px;
+
+    & + &{
+      margin-top: 27px;
+    }
+  }
+
+  &__history-loans{
+    margin-top: 20px;
+  }
+
+  &__form-with-info{
+    margin: 20px @hor-indent 0;
+  }
+
+  &__form{
+    margin: 20px auto 0;
+    max-width: 280px;
+  }
+
+  &__clarification{
+    margin: 30px auto 0;
+    max-width: 520px;
+  }
+
+  &__obtaining-methods{
+    margin-top: 20px;
+  }
+}

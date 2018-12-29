@@ -1,0 +1,17 @@
+@media all and (max-width: 425px){
+  .col-form{
+    &__row{
+      & + &{
+        margin-top: 15px;
+      }
+
+      &--with-clarification{
+        & + .col-form{
+          &__row{
+            margin-top: 20px;
+          }
+        }
+      }
+    }
+  }
+}

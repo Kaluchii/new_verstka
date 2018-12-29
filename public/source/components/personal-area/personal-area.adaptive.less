@@ -1,0 +1,140 @@
+@media all and (max-width: 1024px){
+  .personal-area{
+    &__menu{
+      display: none;
+    }
+
+    &__title{
+      padding-top: 35px;
+    }
+
+    &__small-title{
+      padding-top: 25px;
+    }
+  }
+}
+
+@media all and (max-width: 840px){
+  .personal-area{
+    &__title{
+      margin: 0 @hor-indent-s;
+    }
+
+    &__small-title{
+      padding-left: @hor-indent-s;
+      padding-right: @hor-indent-s;
+    }
+
+    &__text{
+      margin: 10px @hor-indent-s 0;
+    }
+
+    &__minor-text{
+      margin: 10px @hor-indent-s 0;
+    }
+
+    &__btn-wrap{
+      margin: 15px @hor-indent-s 0;
+    }
+
+    &__info-plate{
+      margin: 25px @hor-indent-s 0;
+    }
+
+    &__common-block{
+      margin: 25px @hor-indent-s 0;
+    }
+
+    &__btn-with-descr{
+      margin: 30px @hor-indent-s 0;
+    }
+
+    &__work-time{
+      margin: 30px @hor-indent-s 0;
+    }
+
+    &__work-time-img{
+      margin: 0;
+    }
+
+    &__form-with-info{
+      margin: 20px @hor-indent-s 0;
+    }
+  }
+}
+
+@media all and (max-width: 768px){
+  .personal-area{
+    padding-top: 0;
+
+    &__small-title{
+      &--center{
+        margin-top: 10px;
+        padding-top: 20px;
+      }
+    }
+
+    &__title-select{
+      margin-left: -3px;
+      padding: 0 4px 1px;
+      line-height: 1;
+    }
+
+    &__btn-with-descr{
+      margin-top: 25px;
+    }
+
+    &__info-block{
+      margin-top: 10px;
+    }
+  }
+}
+
+@media all and (max-width: 560px){
+  .personal-area{
+    &__clarification{
+      margin: 20px 20px 0;
+      max-width: 520px;
+    }
+  }
+}
+
+@media all and (max-width: 540px){
+  .personal-area{
+    &__minor-text{
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    &__info-plate{
+      margin-top: 20px;
+    }
+
+    &__work-time{
+      margin-top: 25px;
+    }
+
+    &__work-time-img{
+      margin-top: 5px;
+    }
+  }
+}
+
+@media all and (max-width: 425px){
+  .personal-area{
+    &__title{
+      padding-top: 20px;
+    }
+
+    &__btn-with-descr{
+      & + .personal-area__info-block{
+        margin-top: 20px;
+      }
+    }
+
+    &__form{
+      margin: 20px 20px 0;
+      max-width: 385px;
+    }
+  }
+}

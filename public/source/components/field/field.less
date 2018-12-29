@@ -1,0 +1,95 @@
+.field{
+  width: 100%;
+
+  &__input-wrap{
+    position: relative;
+
+    &::after{
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 5px;
+      transform: translateY(-50%);
+    }
+
+    &--calendar{
+      &::after{}
+    }
+  }
+
+  &.has-error{
+    .field{
+      &__alert{
+        display: block;
+
+        &:empty{
+          display: none;
+        }
+      }
+    }
+  }
+
+  &.is-filled{
+    .field{
+      &__alert{
+        display: block;
+      }
+    }
+  }
+
+  &.is-right{}
+
+  &.is-disabled{}
+
+  &__name{
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: @fw-bold;
+    line-height: 1.2;
+    color: @c-main-black;
+  }
+
+  &__input{}
+
+  &__alert{
+    display: none;
+    position: absolute;
+    top: ~'calc(100% + 2px)';
+    right: 0;
+    z-index: 1;
+    padding: 0 3px;
+    font-size: 12px;
+    border: 1px solid @c-border;
+    border-radius: 2px;
+    text-align: right;
+    background-color: @c-alarm;
+    color: @c-main-black;
+  }
+
+  &__action{
+    position: absolute;
+    bottom: 47px;
+    right: 0;
+    font-size: 14px;
+    line-height: 1;
+  }
+
+  &__clarification{
+    position: absolute;
+    top: -3px;
+    left: ~'calc(100% + 20px)';
+    width: 200px;
+    font-size: 12px;
+    color: @c-text;
+  }
+
+  &__show-pass{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 50px;
+    background: url('/img/field_show-pass.png') no-repeat center;
+    cursor: pointer;
+  }
+}

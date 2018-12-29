@@ -1,0 +1,48 @@
+@media all and (max-width: 840px){
+  .history-loans{
+    &__row{
+      padding-left: @hor-indent-s;
+      padding-right: @hor-indent-s;
+    }
+  }
+}
+
+@media all and (max-width: 470px){
+  .history-loans{
+    &__row{
+      margin-top: 7px;
+
+      &:nth-child(2){
+        margin-top: 10px;
+      }
+    }
+
+    &__col{
+      width: 46.5%;
+
+      &:nth-child(2){
+        width: 28.5%;
+      }
+
+      &:nth-child(3){
+        width: 25%;
+      }
+    }
+
+    &__hide-on-small{
+      display: none;
+    }
+  }
+}
+
+@media all and (max-width: 425px){
+  .history-loans{
+    &__row{
+      font-size: 14px;
+
+      &:first-child{
+        font-size: 14px;
+      }
+    }
+  }
+}

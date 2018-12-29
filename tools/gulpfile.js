@@ -1,41 +1,55 @@
-var
-  gulp         = require('gulp'),
+var gulp         = require('gulp'),
+    autoprefixer = require('gulp-autoprefixer'),
+    less         = require('gulp-less'),
+    cssmin       = require('gulp-cssmin'),
+    csscomb      = require('gulp-csscomb'),
+    uglify       = require('gulp-uglify'),
+    postcss      = require('gulp-postcss'),
+    reporter     = require('postcss-reporter'),
+    htmllint     = require('gulp-htmllint'),
+    stylelint    = require('stylelint'),
 
-  autoprefixer = require('gulp-autoprefixer'),
-  less         = require('gulp-less'),
-  cssmin       = require('gulp-cssmin'),
-  csscomb      = require('gulp-csscomb'),
-  uglify       = require('gulp-uglify'),
-  postcss      = require('gulp-postcss'),
-  reporter     = require('postcss-reporter'),
-  htmllint     = require('gulp-htmllint'),
-  stylelint    = require('stylelint'),
+    svgmin       = require('gulp-svgmin'),
+    imagemin     = require('gulp-imagemin'),
+    browserSync  = require('browser-sync'),
 
-  svgmin       = require('gulp-svgmin'),
-  imagemin     = require('gulp-imagemin'),
-  browserSync  = require('browser-sync'),
+    changeCase   = require('change-case'),
+    concat       = require('gulp-concat'),
+    plumber      = require('gulp-plumber'),
+    rename       = require('gulp-rename'),
+    gutil        = require('gulp-util'),
+    sourcemaps   = require('gulp-sourcemaps'),
+    args         = require('yargs'),
 
-  changeCase   = require('change-case'),
-  concat       = require('gulp-concat'),
-  plumber      = require('gulp-plumber'),
-  rename       = require('gulp-rename'),
-  gutil        = require('gulp-util'),
-  sourcemaps   = require('gulp-sourcemaps'),
-  args         = require('yargs'),
-
-  jasmine     = require('gulp-jasmine');
+    jasmine     = require('gulp-jasmine');
 
 //======================================================================================================================
 // -- Переменные для настройки
 //======================================================================================================================
 // пути до файлов
-var devCss       = '../public/source/less/',
-  devImg         = '../public/source/img/',
-  devJs          = '../public/source/js/',
-  productionCss  = '../public/css/',
-  productionImg  = '../public/img/',
-  productionJs   = '../public/js/',
-  html           = '../resources/views/';
+var components     = '../public/source/components/',
+    vendor         = '../public/source/vendor/',
+    scripts        = '../public/source/scripts/',
+    styles         = '../public/source/styles/',
+    devCss         = '../public/source/less/',
+    devImg         = '../public/source/img/',
+    devJs          = '../public/source/js/',
+    productionCss  = '../public/css/',
+    productionImg  = '../public/img/',
+    productionJs   = '../public/js/',
+    html           = '../resources/views/',
+    styleCssComponents = [
+      styles     + '*.less',
+      vendor     + '**/*.css',
+      vendor     + '!d_*/*.css',
+      components + '**/*.less',
+      components + '!d_*/*.less',
+      components + '**/!*.adaptive.less'
+    ],
+    adaptiveCssComponents = [
+      components + '**/*.adaptive.less',
+      components + '!d_*/*.less'
+    ];
 // Параметры для галпа
 var arguments    = args.argv;
 var isProduction = arguments.production !== undefined;
@@ -48,11 +62,11 @@ var image_ext = '{png,Png,PNG,jpg,Jpg,JPG,jpeg,Jpeg,JPEG,gif,Gif,GIF,bmp,BMP,Bmp
 //======================================================================================================================
 //-- js Test --
 //======================================================================================================================
-gulp.task('js:test', function(){
+/*gulp.task('js:test', function(){
   gulp.src('./dev/test.js')
     .pipe(jasmine());
 // TODO: реализовать передачу параметра для тестов - имени файла. Если не передан то выполнить ВСЕ тесты
-});
+});*/
 //======================================================================================================================
 
 
@@ -60,17 +74,28 @@ gulp.task('js:test', function(){
 //Компиляция и обработка LESS
 //======================================================================================================================
 gulp.task('style', function () {
-  gulp.src(devCss + '*.less')
+  gulp.src(styleCssComponents)
     .pipe(plumber())
     .pipe(sourcemaps.init())
     .pipe(less())
+    .pipe(concat('style.css'))
+    .pipe(autoprefixer('last 20 version', 'safari 5', 'ie 8', 'ie9', 'opera 12.1', 'chrome', 'ff', 'ios'))
+    .pipe(csscomb('../public/source/config/.csscomb.json'))
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest(productionCss));
+
+  gulp.src(adaptiveCssComponents)
+    .pipe(plumber())
+    .pipe(sourcemaps.init())
+    .pipe(less())
+    .pipe(concat('adaptive.css'))
     .pipe(autoprefixer('last 20 version', 'safari 5', 'ie 8', 'ie9', 'opera 12.1', 'chrome', 'ff', 'ios'))
     .pipe(csscomb('../public/source/config/.csscomb.json'))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(productionCss))
     .pipe(browserSync.reload({
       stream: true
-    }))
+    }));
 });
 //======================================================================================================================
 
@@ -212,7 +237,7 @@ gulp.task('watch', function () {
   gulp.watch('*.*',{cwd: devImg}, ['image']);
   gulp.watch('*.less',{cwd: devCss}, ['style']);
   gulp.watch('**/*.less',{cwd: devCss}, ['style']);
-  gulp.watch( '*.js',{cwd: devJs}, ['js']);
+  gulp.watch('*.js',{cwd: devJs}, ['js']);
   gulp.watch('plugins/*.js',{cwd: devJs}, ['vendor-js']);
   gulp.watch('plugins/**/*.js',{cwd: devJs}, ['vendor-js']);
   gulp.watch('**/*.php',{cwd: html}, ['php']);

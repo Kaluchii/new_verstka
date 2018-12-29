@@ -1,0 +1,92 @@
+.obtaining-method-tabs{
+  &__tab{
+    display: none;
+    margin: 35px @hor-indent 0;
+
+    &.is-active{
+      display: block;
+    }
+  }
+
+  &__title{
+    font-size: @fz-3;
+    line-height: @lh-for-big;
+    font-weight: @fw-bold;
+    color: @c-main-black;
+    text-align: center;
+  }
+
+  &__clarification{
+    max-width: 620px;
+    margin: 20px auto 0;
+    font-size: 16px;
+    text-align: center;
+    color: @c-main-black;
+  }
+
+  &__2-cols{
+    margin-top: 30px;
+    display: flex;
+  }
+
+  &__col{
+    width: 50%;
+
+    & + &{
+      margin-left: 50px;
+    }
+  }
+
+  &__field{
+    max-width: 300px;
+
+    &--iban{
+      margin-left: auto;
+    }
+  }
+
+  &__info-title{
+    font-size: 16px;
+    color: @c-main-black;
+    font-weight: @fw-bold;
+  }
+
+  &__iban-info{
+    margin-top: 25px;
+  }
+
+  &__popup-link-wrap{
+    margin: 15px 20px 0 auto;
+    max-width: 280px;
+    font-size: 16px;
+  }
+
+  &__popup-link{}
+
+  &__btn-wrap{
+    margin-top: 30px;
+  }
+
+  &__btn{
+    margin: 0 auto;
+  }
+
+  &__list-title{
+    margin: 20px auto 0;
+    max-width: 745px;
+    font-size: 16px;
+    font-weight: @fw-bold;
+    color: @c-main-black;
+  }
+
+  &__card-requirements{
+    margin: 8px auto 0;
+    max-width: 745px;
+    color: @c-main-black;
+  }
+
+  &__iframe{
+    margin-top: 30px;
+    height: 780px;
+  }
+}
