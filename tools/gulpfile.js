@@ -27,28 +27,43 @@ var gulp         = require('gulp'),
 // -- Переменные для настройки
 //======================================================================================================================
 // пути до файлов
-var components     = '../public/source/components/',
-    vendor         = '../public/source/vendor/',
-    scripts        = '../public/source/scripts/',
-    styles         = '../public/source/styles/',
-    devCss         = '../public/source/less/',
-    devImg         = '../public/source/img/',
-    devJs          = '../public/source/js/',
-    productionCss  = '../public/css/',
-    productionImg  = '../public/img/',
-    productionJs   = '../public/js/',
-    html           = '../resources/views/',
-    styleCssComponents = [
-      styles     + '*.less',
-      vendor     + '**/*.css',
-      vendor     + '!d_*/*.css',
-      components + '**/*.less',
-      components + '!d_*/*.less',
-      components + '**/!*.adaptive.less'
+var components       = '../public/source/components/',
+    vendor           = '../public/source/vendor/',
+    scripts          = '../public/source/scripts/',
+    styles           = '../public/source/styles/',
+    commonCss        = '../public/source/styles/common',
+    plugins_overlay  = '../public/source/styles/plugins_overlay',
+    devImg           = '../public/source/img/',
+    productionCss    = '../public/css/',
+    productionImg    = '../public/img/',
+    productionJs     = '../public/js/',
+    html             = '../resources/views/',
+    styleComponents  = [
+      commonCss        + '*.less',
+      styles           + '*.less',
+      vendor           + '**/*.css',
+      // vendor           + '!d_*/*.css',
+      plugins_overlay  + '*.less',
+      plugins_overlay  + '**/*.less',
+      // plugins_overlay  + '!d_*/*.less',
+      components       + '**/*.less',
+      // components       + '!d_*/*.less',
+      components       + '**/!*.adaptive.less',
+      // '!d_*/*.css',
+      // '!d_*/*.less',
+      '!d_*'
     ],
-    adaptiveCssComponents = [
-      components + '**/*.adaptive.less',
-      components + '!d_*/*.less'
+    adaptiveStyleComponents = [
+      commonCss   + '*.less',
+      components  + '**/*.adaptive.less',
+      components  + '!d_'
+      // components  + '!d_*/*.less'
+    ],
+    scriptComponents = [
+      vendor      + '**/*.js',
+      scripts     + '**/*.js',
+      scripts     + '*.js',
+      components  + '**/*.js'
     ];
 // Параметры для галпа
 var arguments    = args.argv;
@@ -74,23 +89,25 @@ var image_ext = '{png,Png,PNG,jpg,Jpg,JPG,jpeg,Jpeg,JPEG,gif,Gif,GIF,bmp,BMP,Bmp
 //Компиляция и обработка LESS
 //======================================================================================================================
 gulp.task('style', function () {
-  gulp.src(styleCssComponents)
+  gulp.src(styleComponents)
     .pipe(plumber())
     .pipe(sourcemaps.init())
+    .pipe(concat('style.less'))
     .pipe(less())
-    .pipe(concat('style.css'))
-    .pipe(autoprefixer('last 20 version', 'safari 5', 'ie 8', 'ie9', 'opera 12.1', 'chrome', 'ff', 'ios'))
+    .pipe(autoprefixer('> 1%', 'last 3 versions', 'Firefox ESR'))
     .pipe(csscomb('../public/source/config/.csscomb.json'))
+    .pipe(rename('style.css'))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(productionCss));
 
-  gulp.src(adaptiveCssComponents)
+  gulp.src(adaptiveStyleComponents)
     .pipe(plumber())
     .pipe(sourcemaps.init())
+    .pipe(concat('adaptive.less'))
     .pipe(less())
-    .pipe(concat('adaptive.css'))
-    .pipe(autoprefixer('last 20 version', 'safari 5', 'ie 8', 'ie9', 'opera 12.1', 'chrome', 'ff', 'ios'))
+    .pipe(autoprefixer('> 1%', 'last 3 versions', 'Firefox ESR'))
     .pipe(csscomb('../public/source/config/.csscomb.json'))
+    .pipe(rename('adaptive.css'))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(productionCss))
     .pipe(browserSync.reload({
@@ -99,27 +116,11 @@ gulp.task('style', function () {
 });
 //======================================================================================================================
 
-gulp.task('vendor-js', function() {
-  gulp.src([
-    devJs + 'plugins/*.js',
-    devJs + 'plugins/**/*.js'
-  ])
-  // .pipe(sourcemaps.init())
-  // .pipe(concat('vendor.js'))
-  // .pipe(sourcemaps.write())
-    .pipe(gulp.dest(productionJs))
-    .pipe(browserSync.reload({
-      stream: true
-    }));
-});
-
 gulp.task('js', function() {
-  gulp.src([
-    devJs + '*.js'
-  ])
-  // .pipe(sourcemaps.init())
-  // .pipe(concat('scripts.js'))
-  // .pipe(sourcemaps.write())
+  gulp.src(scriptComponents)
+    .pipe(sourcemaps.init())
+    .pipe(concat('scripts.js'))
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest(productionJs))
     .pipe(browserSync.reload({
       stream: true
@@ -137,7 +138,7 @@ gulp.task('php', function() {
 //Валидация LESS и HTML
 //======================================================================================================================
 // Линтер лесс файлов
-gulp.task('lint:less', function () {
+/*gulp.task('lint:less', function () {
 
   var processors = [
     stylelint({
@@ -150,17 +151,17 @@ gulp.task('lint:less', function () {
     })
   ];
 
-  return gulp.src(devCss + '**/*.less')
+  return gulp.src(devCss + '**!/!*.less')
     .pipe(plumber())
     .pipe(postcss(processors, {syntax: syntax_less}));
 });
 // Линтер HTML файлов
 gulp.task('lint:html', function () {
-  return gulp.src(html + '**/*.blade.php')
+  return gulp.src(html + '**!/!*.blade.php')
     .pipe(htmllint({
       config: '../public/source/config/.htmllintrc'
     }, htmllintReporter));
-});
+});*/
 
 function htmllintReporter(filepath, issues) {
   if (issues.length > 0) {
@@ -234,55 +235,46 @@ gulp.task('watch', function () {
     ]
   });
 
-  gulp.watch('*.*',{cwd: devImg}, ['image']);
-  gulp.watch('*.less',{cwd: devCss}, ['style']);
-  gulp.watch('**/*.less',{cwd: devCss}, ['style']);
-  gulp.watch('*.js',{cwd: devJs}, ['js']);
-  gulp.watch('plugins/*.js',{cwd: devJs}, ['vendor-js']);
-  gulp.watch('plugins/**/*.js',{cwd: devJs}, ['vendor-js']);
-  gulp.watch('**/*.php',{cwd: html}, ['php']);
-  gulp.watch('*.php',{cwd: html}, ['php']);
+  gulp.watch('*.*',       {cwd: devImg},          ['image']);
+  gulp.watch('*.less',    {cwd: styles},          ['style']);
+  gulp.watch('**/*.css',  {cwd: vendor},          ['style']);
+  gulp.watch('*.less',    {cwd: plugins_overlay}, ['style']);
+  gulp.watch('**/*.less', {cwd: plugins_overlay}, ['style']);
+  gulp.watch('**/*.less', {cwd: components},      ['style']);
+  gulp.watch('**/*.js',   {cwd: vendor},          ['js']);
+  gulp.watch('**/*.js',   {cwd: scripts},         ['js']);
+  gulp.watch('*.js',      {cwd: scripts},         ['js']);
+  gulp.watch('**/*.js',   {cwd: components},      ['js']);
+  gulp.watch('**/*.php',  {cwd: html},            ['php']);
+  gulp.watch('*.php',     {cwd: html},            ['php']);
 });
 //======================================================================================================================
 
 
 gulp.task('production', function () {
-  gulp.src(devCss + '*.less')
+  gulp.src(styleComponents)
     .pipe(plumber())
     .pipe(less())
-    .pipe(autoprefixer('last 20 version', 'safari 5', 'ie 8', 'ie9', 'opera 12.1', 'chrome', 'ff', 'ios'))
+    .pipe(concat('style.css'))
+    .pipe(autoprefixer('> 1%', 'last 3 versions', 'Firefox ESR'))
     .pipe(csscomb('../public/source/config/.csscomb.json'))
-    .pipe(cssmin())
     .pipe(gulp.dest(productionCss));
 
 
-  gulp.src([
-    devJs + 'plugins/*.js',
-    devJs + 'plugins/**/*.js'
-  ])
-  // .pipe(concat('vendor.js'))
-    .pipe(uglify())
-    .pipe(gulp.dest(productionJs))
-    .pipe(browserSync.reload({
-      stream: true
-    }));
+  gulp.src(adaptiveStyleComponents)
+    .pipe(plumber())
+    .pipe(less())
+    .pipe(concat('adaptive.css'))
+    .pipe(autoprefixer('> 1%', 'last 3 versions', 'Firefox ESR'))
+    .pipe(csscomb('../public/source/config/.csscomb.json'))
+    .pipe(gulp.dest(productionCss));
 
 
-  gulp.src([
-    devJs + '*.js'
-  ])
-  // .pipe(concat('scripts.js'))
+  gulp.src(scriptComponents)
+    .pipe(concat('scripts.js'))
     .pipe(uglify())
-    .pipe(gulp.dest(productionJs))
-    .pipe(browserSync.reload({
-      stream: true
-    }));
+    .pipe(gulp.dest(productionJs));
 });
-
-
-
-
-
 
 
 
