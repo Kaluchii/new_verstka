@@ -20,31 +20,38 @@
                     <div class="history-loans__col">Статус</div>
                 </div>
                 <div class="history-loans__row">
-                    <div class="history-loans__col"><a href="#" class="history-loans__link link-local">11 июня 2017</a></div>
+                    <div class="history-loans__col"><a href="#history-popup" class="history-loans__link link-local js_open_history_popup">11 июня 2017</a></div>
                     <div class="history-loans__col">10 500</div>
                     <div class="history-loans__col">Выплачен</div>
                 </div>
                 <div class="history-loans__row">
-                    <div class="history-loans__col"><a href="#" class="history-loans__link link-local">10 июля 2017</a></div>
+                    <div class="history-loans__col"><a href="#history-popup" class="history-loans__link link-local js_open_history_popup">10 июля 2017</a></div>
                     <div class="history-loans__col">38 000</div>
                     <div class="history-loans__col">Отклонен</div>
                 </div>
                 <div class="history-loans__row">
-                    <div class="history-loans__col"><a href="#" class="history-loans__link link-local">31 августа 2017</a></div>
+                    <div class="history-loans__col"><a href="#history-popup" class="history-loans__link link-local js_open_history_popup">31 августа 2017</a></div>
                     <div class="history-loans__col">14 500</div>
                     <div class="history-loans__col">Отклонен</div>
                 </div>
                 <div class="history-loans__row">
-                    <div class="history-loans__col"><a href="#" class="history-loans__link link-local">12 февраля 2018</a></div>
+                    <div class="history-loans__col"><a href="#history-popup" class="history-loans__link link-local js_open_history_popup">12 февраля 2018</a></div>
                     <div class="history-loans__col">22 000</div>
                     <div class="history-loans__col">Отклонен</div>
                 </div>
                 <div class="history-loans__row">
-                    <div class="history-loans__col"><a href="#" class="history-loans__link link-local">6 мая 2018</a></div>
+                    <div class="history-loans__col"><a href="#history-popup" class="history-loans__link link-local js_open_history_popup">6 мая 2018</a></div>
                     <div class="history-loans__col">7 500</div>
                     <div class="history-loans__col">Отклонен</div>
                 </div>
             </div>
+        </div>
+    </div>
+
+
+
+    <div class="popup mfp-with-anim mfp-hide" id="history-popup">
+        <div class="popup__container">
         </div>
     </div>
 @endsection

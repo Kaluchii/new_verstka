@@ -26,13 +26,17 @@ var gulp         = require('gulp'),
 //======================================================================================================================
 // -- Переменные для настройки
 //======================================================================================================================
+
+// Расширения изображений
+var image_ext = '{png,Png,PNG,jpg,Jpg,JPG,jpeg,Jpeg,JPEG,gif,Gif,GIF,bmp,BMP,Bmp}';
+
 // пути до файлов
 var components       = '../public/source/components/',
     vendor           = '../public/source/vendor/',
     scripts          = '../public/source/scripts/',
     styles           = '../public/source/styles/',
-    commonCss        = '../public/source/styles/common',
-    plugins_overlay  = '../public/source/styles/plugins_overlay',
+    commonCss        = '../public/source/styles/common/',
+    plugins_overlay  = '../public/source/styles/plugins_overlay/',
     devImg           = '../public/source/img/',
     productionCss    = '../public/css/',
     productionImg    = '../public/img/',
@@ -42,6 +46,7 @@ var components       = '../public/source/components/',
       commonCss        + '*.less',
       styles           + '*.less',
       vendor           + '**/*.css',
+      vendor           + '**/*.less',
       // vendor           + '!d_*/*.css',
       plugins_overlay  + '*.less',
       plugins_overlay  + '**/*.less',
@@ -56,7 +61,7 @@ var components       = '../public/source/components/',
     adaptiveStyleComponents = [
       commonCss   + '*.less',
       components  + '**/*.adaptive.less',
-      components  + '!d_'
+      components  + '!d_*'
       // components  + '!d_*/*.less'
     ],
     scriptComponents = [
@@ -64,12 +69,12 @@ var components       = '../public/source/components/',
       scripts     + '**/*.js',
       scripts     + '*.js',
       components  + '**/*.js'
-    ];
+    ],
+    imageDirs = [];
+
 // Параметры для галпа
 var arguments    = args.argv;
 var isProduction = arguments.production !== undefined;
-// Расширения изображений
-var image_ext = '{png,Png,PNG,jpg,Jpg,JPG,jpeg,Jpeg,JPEG,gif,Gif,GIF,bmp,BMP,Bmp}';
 //======================================================================================================================
 
 
@@ -98,7 +103,10 @@ gulp.task('style', function () {
     .pipe(csscomb('../public/source/config/.csscomb.json'))
     .pipe(rename('style.css'))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest(productionCss));
+    .pipe(gulp.dest(productionCss))
+    .pipe(browserSync.reload({
+      stream: true
+    }));
 
   gulp.src(adaptiveStyleComponents)
     .pipe(plumber())
@@ -237,6 +245,7 @@ gulp.task('watch', function () {
 
   gulp.watch('*.*',       {cwd: devImg},          ['image']);
   gulp.watch('*.less',    {cwd: styles},          ['style']);
+  gulp.watch('**/*.less', {cwd: styles},          ['style']);
   gulp.watch('**/*.css',  {cwd: vendor},          ['style']);
   gulp.watch('*.less',    {cwd: plugins_overlay}, ['style']);
   gulp.watch('**/*.less', {cwd: plugins_overlay}, ['style']);
@@ -254,19 +263,23 @@ gulp.task('watch', function () {
 gulp.task('production', function () {
   gulp.src(styleComponents)
     .pipe(plumber())
+    .pipe(concat('style.less'))
     .pipe(less())
-    .pipe(concat('style.css'))
     .pipe(autoprefixer('> 1%', 'last 3 versions', 'Firefox ESR'))
     .pipe(csscomb('../public/source/config/.csscomb.json'))
+    .pipe(rename('style.css'))
+    .pipe(cssmin())
     .pipe(gulp.dest(productionCss));
 
 
   gulp.src(adaptiveStyleComponents)
     .pipe(plumber())
+    .pipe(concat('adaptive.less'))
     .pipe(less())
-    .pipe(concat('adaptive.css'))
     .pipe(autoprefixer('> 1%', 'last 3 versions', 'Firefox ESR'))
     .pipe(csscomb('../public/source/config/.csscomb.json'))
+    .pipe(rename('adaptive.css'))
+    .pipe(cssmin())
     .pipe(gulp.dest(productionCss));
 
 
