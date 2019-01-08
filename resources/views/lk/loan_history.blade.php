@@ -30,7 +30,7 @@
                     <div class="history-loans__col">Отклонен</div>
                 </div>
                 <div class="history-loans__row">
-                    <div class="history-loans__col"><a href="#history-popup" class="history-loans__link link-local js_open_history_popup">31 августа 2017</a></div>
+                    <div class="history-loans__col"><a href="#history-popup2" class="history-loans__link link-local js_open_history_popup">31 августа 2017</a></div>
                     <div class="history-loans__col">14 500</div>
                     <div class="history-loans__col">Отклонен</div>
                 </div>
@@ -52,6 +52,22 @@
 
     <div class="popup mfp-with-anim mfp-hide" id="history-popup">
         <div class="popup__container">
+            popup1<a href="#history-popup2" class="history-loans__link link-local js_open_history_popup">31 августа 2017</a>
+        </div>
+    </div>
+    <div class="popup mfp-with-anim mfp-hide" id="history-popup2">
+        <div class="popup__container">
+            <p>popup2</p>
+            <p>popup2</p>
+            <p>popup2</p>
+            <p>popup2</p>
+            <p>popup2</p>
+            <p>popup2</p>
+            <p>popup2</p>
+            <p>popup2</p>
+            <p>popup2</p>
+            <p>popup2</p>
+            <p>popup2</p>
         </div>
     </div>
 @endsection
