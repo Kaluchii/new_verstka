@@ -50,24 +50,9 @@
 
 
 
-    <div class="popup mfp-with-anim mfp-hide" id="history-popup">
-        <div class="popup__container">
-            popup1<a href="#history-popup2" class="history-loans__link link-local js_open_history_popup">31 августа 2017</a>
-        </div>
-    </div>
-    <div class="popup mfp-with-anim mfp-hide" id="history-popup2">
-        <div class="popup__container">
-            <p>popup2</p>
-            <p>popup2</p>
-            <p>popup2</p>
-            <p>popup2</p>
-            <p>popup2</p>
-            <p>popup2</p>
-            <p>popup2</p>
-            <p>popup2</p>
-            <p>popup2</p>
-            <p>popup2</p>
-            <p>popup2</p>
-        </div>
+
+    <div class="easy-popup">
+        <div class="easy-popup__bg"></div>
+        <div class="easy-popup__container"></div>
     </div>
 @endsection
