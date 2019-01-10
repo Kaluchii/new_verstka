@@ -14,26 +14,26 @@
                 <div class="form-with-info__form col-form">
                     <div class="col-form__row field js_field">
                         <div class="field__name">Текущий пароль</div>
-                        <div class="field__input-wrap js_field_wrapper">
+                        <label class="field__input-wrap js_field_wrapper">
                             <input type="text" class="field__input input js_field_input" placeholder="Введите текущий пароль" tabindex="1">
-                            <div class="field__alert js_field_alert">Пароль неверный</div>
-                        </div>
+                            <span class="field__alert js_field_alert">Пароль неверный</span>
+                        </label>
                     </div>
                     <div class="col-form__row field js_field">
                         <div class="field__name">Новый пароль</div>
-                        <div class="field__input-wrap js_field_wrapper">
-                            <input type="text" class="field__input input js_field_input" tabindex="2">
-                            <div class="field__alert js_field_alert">Пароль должен быть не короче 8 символов, содержать заглавные буквы и цифры</div>
-                            <div class="field__show-pass js_field_pass_toggle"></div>
-                        </div>
+                        <label class="field__input-wrap js_field_wrapper">
+                            <input type="text" class="field__input input input--pass js_field_input" tabindex="2">
+                            <span class="field__alert js_field_alert">Пароль должен быть не короче 8 символов, содержать заглавные буквы и цифры</span>
+                            <span class="field__show-pass js_field_pass_switch"></span>
+                        </label>
                     </div>
                     <div class="col-form__row field js_field">
                         <div class="field__name">Новый пароль еще раз</div>
-                        <div class="field__input-wrap js_field_wrapper">
-                            <input type="password" placeholder="Повторите пароль" class="field__input input js_field_input" tabindex="3">
-                            <div class="field__alert js_field_alert">Пароли не совпадают</div>
-                            <div class="field__show-pass js_field_pass_toggle"></div>
-                        </div>
+                        <label class="field__input-wrap js_field_wrapper">
+                            <input type="password" placeholder="Повторите пароль" class="field__input input input--pass js_field_input" tabindex="3">
+                            <span class="field__alert js_field_alert">Пароли не совпадают</span>
+                            <span class="field__show-pass js_field_pass_switch"></span>
+                        </label>
                     </div>
                     <div class="col-form__row">
                         <button class="col-form__btn button button--yellow button--big-in-small" tabindex="4"><span class="button__text">Сменить пароль</span></button>

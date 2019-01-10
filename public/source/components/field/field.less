@@ -3,6 +3,7 @@
 
   &__input-wrap{
     position: relative;
+    display: block;
 
     &::after{
       content: '';
@@ -91,5 +92,9 @@
     width: 50px;
     background: url('/img/field_show-pass.png') no-repeat center;
     cursor: pointer;
+
+    &.password-displayed{
+      background: url('/img/field_show-pass.png') no-repeat center;
+    }
   }
 }

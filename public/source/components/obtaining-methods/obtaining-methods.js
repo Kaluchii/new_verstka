@@ -1,4 +1,4 @@
-$(function() {
+$(function () {
 
   var $btns = $('.js_method_selection_btn'),
       $tabs = $('.js_method_item');
