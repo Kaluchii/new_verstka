@@ -12,27 +12,27 @@
             <div class="personal-area__small-title title-l2">Смена пароля</div>
             <div class="personal-area__form-with-info form-with-info">
                 <div class="form-with-info__form col-form">
-                    <div class="col-form__row field">
+                    <div class="col-form__row field js_field">
                         <div class="field__name">Текущий пароль</div>
-                        <div class="field__input-wrap">
-                            <input type="text" class="field__input input" placeholder="Введите текущий пароль" tabindex="1">
-                            <div class="field__alert">Пароль неверный</div>
+                        <div class="field__input-wrap js_field_wrapper">
+                            <input type="text" class="field__input input js_field_input" placeholder="Введите текущий пароль" tabindex="1">
+                            <div class="field__alert js_field_alert">Пароль неверный</div>
                         </div>
                     </div>
-                    <div class="col-form__row field">
+                    <div class="col-form__row field js_field">
                         <div class="field__name">Новый пароль</div>
-                        <div class="field__input-wrap">
-                            <input type="text" class="field__input input" tabindex="2">
-                            <div class="field__alert">Пароль должен быть не короче 8 символов, содержать заглавные буквы и цифры</div>
-                            <div class="field__show-pass"></div>
+                        <div class="field__input-wrap js_field_wrapper">
+                            <input type="text" class="field__input input js_field_input" tabindex="2">
+                            <div class="field__alert js_field_alert">Пароль должен быть не короче 8 символов, содержать заглавные буквы и цифры</div>
+                            <div class="field__show-pass js_field_pass_toggle"></div>
                         </div>
                     </div>
-                    <div class="col-form__row field">
+                    <div class="col-form__row field js_field">
                         <div class="field__name">Новый пароль еще раз</div>
-                        <div class="field__input-wrap">
-                            <input type="text" disabled placeholder="Повторите пароль" class="field__input input" tabindex="3">
-                            <div class="field__alert">Пароли не совпадают</div>
-                            <div class="field__show-pass"></div>
+                        <div class="field__input-wrap js_field_wrapper">
+                            <input type="password" placeholder="Повторите пароль" class="field__input input js_field_input" tabindex="3">
+                            <div class="field__alert js_field_alert">Пароли не совпадают</div>
+                            <div class="field__show-pass js_field_pass_toggle"></div>
                         </div>
                     </div>
                     <div class="col-form__row">

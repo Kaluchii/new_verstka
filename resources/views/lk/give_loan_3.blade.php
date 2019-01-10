@@ -21,21 +21,21 @@
                 <div class="obtaining-methods__title title-l2">Способ получения</div>
                 <ul class="obtaining-methods__list">
                     <li class="obtaining-methods__item">
-                        <button class="obtaining-methods__check-button check-button is-active"><span class="check-button__text">На банковскую карту</span></button>
+                        <button class="obtaining-methods__check-button check-button is-active js_method_selection_btn"><span class="check-button__text">На банковскую карту</span></button>
                         <div class="obtaining-methods__clarification">БЕЗ ВЫХОДНЫХ</div>
                     </li>
                     <li class="obtaining-methods__item">
-                        <button class="obtaining-methods__check-button check-button"><span class="check-button__text">На счет в банке</span></button>
+                        <button class="obtaining-methods__check-button check-button js_method_selection_btn"><span class="check-button__text">На счет в банке</span></button>
                         <div class="obtaining-methods__clarification">В РАБОЧЕЕ ВРЕМЯ</div>
                     </li>
                     <li class="obtaining-methods__item">
-                        <button class="obtaining-methods__check-button check-button"><span class="check-button__text">В отделении «Казпочты»</span></button>
+                        <button class="obtaining-methods__check-button check-button js_method_selection_btn"><span class="check-button__text">В отделении «Казпочты»</span></button>
                         <div class="obtaining-methods__clarification">В РАБОЧЕЕ ВРЕМЯ</div>
                     </li>
                 </ul>
             </div>
             <div class="personal-area__tabs obtaining-method-tabs">
-                <div class="obtaining-method-tabs__tab is-active">
+                <div class="obtaining-method-tabs__tab is-active js_method_item">
                     <div class="obtaining-method-tabs__title">На банковскую карту</div>
                     <p class="obtaining-method-tabs__list-title">Обратите внимание</p>
                     <ol class="obtaining-method-tabs__card-requirements row-list row-list--text row-list--ordered">
@@ -50,7 +50,7 @@
                     </div>
                 </div>
 
-                <div class="obtaining-method-tabs__tab">
+                <div class="obtaining-method-tabs__tab js_method_item">
                     <div class="obtaining-method-tabs__title">На счет в банке</div>
                     <p class="obtaining-method-tabs__clarification">Указанный счет должен быть открыт на имя заявителя. В случае одобрения, мы отправим деньги в течение 15 минут и сообщим по SMS.</p>
                     <div class="obtaining-method-tabs__2-cols">
@@ -90,7 +90,7 @@
                     </div>
                 </div>
 
-                <div class="obtaining-method-tabs__tab">
+                <div class="obtaining-method-tabs__tab js_method_item">
                     <div class="obtaining-method-tabs__title">В отделении «Казпочты»</div>
                     <p class="obtaining-method-tabs__clarification">Указанный счет должен быть открыт на имя заявителя. В случае одобрения, мы отправим деньги в течение 15 минут и сообщим по SMS. Получить займ можно в любом отделении «Казпочты» по всему Казахстану.</p>
                     <div class="obtaining-method-tabs__2-cols">

@@ -47,28 +47,26 @@ var components       = '../public/source/components/',
       styles           + '*.less',
       vendor           + '**/*.css',
       vendor           + '**/*.less',
-      // vendor           + '!d_*/*.css',
       plugins_overlay  + '*.less',
       plugins_overlay  + '**/*.less',
-      // plugins_overlay  + '!d_*/*.less',
       components       + '**/*.less',
-      // components       + '!d_*/*.less',
-      components       + '**/!*.adaptive.less',
-      // '!d_*/*.css',
-      // '!d_*/*.less',
-      '!d_*'
+      '!' + components + '**/*.adaptive.less',
+      '!/**/d_*/*.*',
+      '!/**/d_*.*'
     ],
     adaptiveStyleComponents = [
-      commonCss   + '*.less',
-      components  + '**/*.adaptive.less',
-      components  + '!d_*'
-      // components  + '!d_*/*.less'
+      commonCss  + '*.less',
+      components + '**/*.adaptive.less',
+      '!/**/d_*/*.*',
+      '!/**/d_*.*'
     ],
     scriptComponents = [
-      vendor      + '**/*.js',
-      scripts     + '**/*.js',
-      scripts     + '*.js',
-      components  + '**/*.js'
+      vendor     + '**/*.js',
+      scripts    + '**/*.js',
+      scripts    + '*.js',
+      components + '**/*.js',
+      '!/**/d_*/*.*',
+      '!/**/d_*.*'
     ],
     imageDirs = [];
 

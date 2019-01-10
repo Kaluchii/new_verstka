@@ -8,6 +8,10 @@
   color: @c-main-black;
   box-shadow: inset 1px 1px 3px -1px rgba(0, 0, 0, 0.35);
 
+  &[type=password]{
+    //letter-spacing: 0.125em;
+  }
+
   &:hover{
     border-color: @c-border;
   }
@@ -30,10 +34,8 @@
       color: @c-text;
     }
   }
-}
 
-.has-error{
-  .input{
+  .has-error &{
     border-color: @c-error;
     background-color: @c-error-bg;
 
@@ -42,10 +44,8 @@
       box-shadow: 0 0 7px rgba(153, 0, 0, 0.5);
     }
   }
-}
 
-.is-right{
-  .input{
+  .is-right &{
     border-color: @c-right;
     background-color: @c-right-bg;
 
@@ -54,8 +54,6 @@
       box-shadow: 0 0 7px rgba(0, 153, 51, 0.5);
     }
   }
-}
 
-.is-disabled{
-  .input{}
+  .is-disabled &{}
 }
