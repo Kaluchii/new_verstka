@@ -3,6 +3,7 @@ $(function () {
   var $btns = $('.js_method_selection_btn'),
       $tabs = $('.js_method_item');
 
+  /* Переключение вкладок "Способы получения" */
   $btns.on('click', function () {
     if ($(this).hasClass('is-active')) return false;
 
