@@ -60,6 +60,7 @@ Route::get('/give_loan_3', function () {
 });
 
 Route::get('/iframe', function () {
+//  sleep(3);
     return view('card.card_confirm');
 });
 

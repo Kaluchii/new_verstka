@@ -5,8 +5,9 @@
   &--ordered{
     counter-reset: list;
 
-    .row-list__item{
+    & > .row-list__item{
       &::before{
+        top: 0;
         counter-increment: list;
         content: counter(list) ".";
         font-size: inherit;
@@ -18,10 +19,13 @@
 
   &__item{
     position: relative;
+    padding-left: 18px;
 
     &::before{
       content: '\2022';
-      padding-right: 5px;
+      position: absolute;
+      top: 0.25em;
+      left: 0;
       font-size: 12px;
     }
 

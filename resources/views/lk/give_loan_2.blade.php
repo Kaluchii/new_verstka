@@ -326,6 +326,20 @@
                         <div class="fields-list__item field">
                             <div class="field__name">Занятость</div>
                             <div class="field__input-wrap">
+                                <select name="sel" class="field__select select">
+                                    <option value="-1">Не выбрано</option>
+                                    <option value="0">Работник бюджетной сферы</option>
+                                    <option value="1">Работник сферы услуг/продавец</option>
+                                    <option value="2">Работник производства/рабочий</option>
+                                    <option value="3">Владелец предприятия</option>
+                                    <option value="4">Служащий</option>
+                                    <option value="5">Высший руководитель компании</option>
+                                    <option value="6">Госслужащий / чиновник</option>
+                                    <option value="13">Студент</option>
+                                    <option value="14">Пенсионер</option>
+                                    <option value="17">Безработный</option>
+                                    <option value="7">Прочие</option>
+                                </select>
                                 <input type="text" class="field__input input" tabindex="1">
                                 <div class="field__alert"></div>
                             </div>

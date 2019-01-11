@@ -49,7 +49,13 @@
     </div>
 
 
-
+    <div class="popup mfp-with-anim mfp-hide" id="history-popup">
+        <div class="popup__container">
+            .popup__
+        </div>
+        <div class="popup__close">Закрыть окно</div>
+        <div class="popup__close-x"></div>
+    </div>
 
     <div class="easy-popup">
         <div class="easy-popup__bg"></div>
