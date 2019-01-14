@@ -97,4 +97,26 @@ $(function () {
     tLoading: '<div class="preloader"></div>',
     midClick: true
   });
+
+
+
+
+
+
+
+  /////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 });

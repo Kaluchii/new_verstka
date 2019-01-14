@@ -33,10 +33,11 @@ var image_ext = '{png,Png,PNG,jpg,Jpg,JPG,jpeg,Jpeg,JPEG,gif,Gif,GIF,bmp,BMP,Bmp
 // пути до файлов
 var components       = '../public/source/components/',
     vendor           = '../public/source/vendor/',
+    myPlugins        = '../public/source/my_plugins/',
     scripts          = '../public/source/scripts/',
     styles           = '../public/source/styles/',
     commonCss        = '../public/source/styles/common/',
-    plugins_overlay  = '../public/source/styles/plugins_overlay/',
+    pluginsOverlay   = '../public/source/styles/plugins_overlay/',
     devImg           = '../public/source/img/',
     productionCss    = '../public/css/',
     productionImg    = '../public/img/',
@@ -47,8 +48,9 @@ var components       = '../public/source/components/',
       styles           + '*.less',
       vendor           + '**/*.css',
       vendor           + '**/*.less',
-      plugins_overlay  + '*.less',
-      plugins_overlay  + '**/*.less',
+      myPlugins        + '**/*.less',
+      pluginsOverlay   + '*.less',
+      pluginsOverlay   + '**/*.less',
       components       + '**/*.less',
       '!' + components + '**/*.adaptive.less',
       '!/**/d_*/*.*',
@@ -56,12 +58,14 @@ var components       = '../public/source/components/',
     ],
     adaptiveStyleComponents = [
       commonCss  + '*.less',
+      myPlugins  + '**/*.adaptive.less',
       components + '**/*.adaptive.less',
       '!/**/d_*/*.*',
       '!/**/d_*.*'
     ],
     scriptComponents = [
       vendor     + '**/*.js',
+      myPlugins  + '**/*.js',
       scripts    + '**/*.js',
       scripts    + '*.js',
       components + '**/*.js',
@@ -245,10 +249,13 @@ gulp.task('watch', function () {
   gulp.watch('*.less',    {cwd: styles},          ['style']);
   gulp.watch('**/*.less', {cwd: styles},          ['style']);
   gulp.watch('**/*.css',  {cwd: vendor},          ['style']);
-  gulp.watch('*.less',    {cwd: plugins_overlay}, ['style']);
-  gulp.watch('**/*.less', {cwd: plugins_overlay}, ['style']);
+  gulp.watch('**/*.less', {cwd: vendor},          ['style']);
+  gulp.watch('**/*.less', {cwd: myPlugins},       ['style']);
+  gulp.watch('*.less',    {cwd: pluginsOverlay},  ['style']);
+  gulp.watch('**/*.less', {cwd: pluginsOverlay},  ['style']);
   gulp.watch('**/*.less', {cwd: components},      ['style']);
   gulp.watch('**/*.js',   {cwd: vendor},          ['js']);
+  gulp.watch('**/*.js',   {cwd: myPlugins},       ['js']);
   gulp.watch('**/*.js',   {cwd: scripts},         ['js']);
   gulp.watch('*.js',      {cwd: scripts},         ['js']);
   gulp.watch('**/*.js',   {cwd: components},      ['js']);
