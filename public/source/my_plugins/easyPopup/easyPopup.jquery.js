@@ -1,7 +1,8 @@
 ;(function ($) {
+  "use strict";
 
   window.easyPopup = function () {
-    var _this = this,
+    let _this = this,
         defaults = {
           animationClass: '', // Используется для задания класса анимации
           type: 'inline', // Тип источника контента. Возможные варианты: "inline", "ajax"
@@ -25,12 +26,8 @@
         popupStack = [];
 
 
-    this.addPopup = function (settings) {
-      if (!settings.id) {
-        throw new Error('"id" property is required');
-      }
-
-      popupsConfig[settings.id] = $.extend(defaults, settings);
+    this.addPopups = function (popupsList) {
+      addPopups(popupsList);
     };
 
 
@@ -44,49 +41,102 @@
     };
 
 
-    this.open = function () {
+    this.open = function (id) {
+      popupStack.push(id);
+
+      showPopup();
+
+      addHash(popupsConfig[id].id);
     };
 
 
-    this.close = function (id) { // Закрыть указанный попап. Либо закрыть последний открытый (Если параметр не передан).
-      var len = popupStack.length;
+    this.close = function () { // Закрыть последний открытый.
+      let len = popupStack.length;
 
-      if (len <= 0) {
+      if (len === 0) {
         return;
       }
 
-      var closePopupId = id || popupStack[popupStack.length - 1];
+      closePopup(); // Закрыть
 
-      // if (id === undefined) {}
+      if (len === 1) {
+        removeHash();
+      }
 
-      close(id); // Закрыть
-      removeFromStack(id);
+      removeItemFromStack();
     };
 
 
     this.closeAll = function () { // Подумать как правильно закрывать сразу все (по сути очищать стэк,
-      var len = popupStack.length; //  а анимированно скрывать только последний)
+      let len = popupStack.length; //  а анимированно скрывать только открытый)
 
-      for (var i = 0; i <= len-1; i++) {
-        removeFromStack(i);
-      }
-    };
+      removeHash();
 
-
-    this.hide = function (id) { // Скрыть указанный попап.
-    };
-
-
-    this.show = function (id) { // Отобразить открытый указанный попап.
+      removeAllFromStack();
     };
 
 
     this.isOpen = function (id) { // Открыт ли указанный попап. (Необходимо потому что попап может быть открыт но скрыт)
+      let isOpen;
+
+      isOpen = popupStack.some(function (item) {
+        return (id === item);
+      });
+
+      return isOpen;
     }; // По сути проверка наличия попапа в стеке.
 
 
     this.openId = function () { // Идентификатор отображаемого попапа.
+      return popupStack[popupStack.length-1].id;
     };
+
+
+    function addPopups (popupsList) {
+      let item;
+
+      for (let i = 0; i < popupsList.length; i++) {
+        item = popupsList[i];
+
+        if (!item.id) {
+          throw new Error('"id" property is required');
+        }
+
+        popupsConfig[item.id] = $.extend(defaults, item);
+      }
+    }
+
+
+    function showPopup () { // Отобразить последний в стеке попап
+      let popup = popupStack[popupStack.length-1]; // Попап для отображения
+    }
+
+
+    function hidePopup () {}
+
+
+    function closePopup () {}
+
+
+    function removeItemFromStack () {
+      popupStack.pop();
+    }
+
+
+    function removeAllFromStack () {
+      popupStack = [];
+    }
+
+
+    // Добавить хэш
+    function addHash(hash) {
+    }
+
+
+    // Удалить хэш
+    // Хэш удаляется только при закрытии попапа и при нажатии кнопки "назад" (удаляется автоматически)
+    function removeHash() {
+    }
 
 
     return _this;
@@ -111,29 +161,6 @@
 // Показать уведомление
 // обертка над функцией open с предопределенными параметрами
   function showNotification() {
-  }
-
-
-// Открыть новый попап в цепочке
-// Параметры
-// src - контент попапа
-  function open() {
-  }
-
-
-// Закрыть последний открытый попап
-  function close() {
-  }
-
-
-// Добавить хэш
-  function addHash() {
-  }
-
-
-// Удалить хэш
-// Хэш удаляется только при закрытии попапа и при нажатии кнопки "назад" (удаляется автоматически)
-  function removeHash() {
   }
 
 
