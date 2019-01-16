@@ -1,5 +1,5 @@
 ;(function ($) {
-  "use strict";
+  // "use strict";
 
   window.easyPopup = function () {
     let _this = this,
@@ -26,12 +26,19 @@
         popupStack = [];
 
 
+     // COMPLETE
     this.addPopups = function (popupsList) {
-      addPopups(popupsList);
+      addPopupsList(popupsList);
     };
 
 
     this.updatePopupSettings = function (id, settings) {
+      if (!id) {
+        throw new Error('"ID" property is required');
+      }
+      if (!popupsConfig[id]) {
+        throw new Error('No item found with this "ID"');
+      }
       popupsConfig[id] = $.extend(popupsConfig[id], settings);
     };
 
@@ -42,11 +49,13 @@
 
 
     this.open = function (id) {
+      if (!popupStack.length) { // Хэш добавляется только первому попапу в стеке
+        addHash(popupsConfig[id].id);
+      }
+
       popupStack.push(id);
 
       showPopup();
-
-      addHash(popupsConfig[id].id);
     };
 
 
@@ -72,7 +81,7 @@
 
       removeHash();
 
-      removeAllFromStack();
+      closeAll();
     };
 
 
@@ -92,14 +101,15 @@
     };
 
 
-    function addPopups (popupsList) {
+    // COMPLETE
+    function addPopupsList (popupsList) {
       let item;
 
       for (let i = 0; i < popupsList.length; i++) {
         item = popupsList[i];
 
         if (!item.id) {
-          throw new Error('"id" property is required');
+          throw new Error('"ID" property is required');
         }
 
         popupsConfig[item.id] = $.extend(defaults, item);
@@ -118,6 +128,11 @@
     function closePopup () {}
 
 
+    function closeAll () {
+      removeAllFromStack();
+    }
+
+
     function removeItemFromStack () {
       popupStack.pop();
     }
@@ -130,12 +145,47 @@
 
     // Добавить хэш
     function addHash(hash) {
+      window.location.hash = hash;
     }
 
 
     // Удалить хэш
-    // Хэш удаляется только при закрытии попапа и при нажатии кнопки "назад" (удаляется автоматически)
+    // Функция вызывается только при закрытии попапа на крестик, а при нажатии кнопку "назад" удаляется автоматически
     function removeHash() {
+      let previousPageHostname = extractHostname(document.referrer);
+
+      if (document.location.hostname === previousPageHostname) {
+        window.history.back();
+      } else {
+        history.replaceState("", document.title, window.location.pathname + window.location.search);
+      }
+    }
+
+
+    $(window).on('hashchange', function () {
+      alert('change');
+      closeAll();
+      // Надо закрыть попапы. Надо
+    });
+
+
+    function extractHostname(url) {
+      let hostname;
+      //find & remove protocol (http, ftp, etc.) and get hostname
+
+      if (url.indexOf("//") > -1) {
+        hostname = url.split('/')[2];
+      }
+      else {
+        hostname = url.split('/')[0];
+      }
+
+      //find & remove port number
+      hostname = hostname.split(':')[0];
+      //find & remove "?"
+      hostname = hostname.split('?')[0];
+
+      return hostname;
     }
 
 
