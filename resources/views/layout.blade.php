@@ -11,14 +11,12 @@
 
     {{-- TODO: Прописать инлайн скрипт предотвращающий переход по ссылкам осуществляющим js-действия --}}
 </head>
-<body>
+<body class="page-wrapper">
 @include('header')
 
-<div class="page-wrapper">
-    <div class="page-wrapper__header-and-content">
-        @yield('header')
-        @yield('content')
-    </div>
+<div class="page-wrapper__header-and-content">
+    @yield('header')
+    @yield('content')
 </div>
 
 @include('scripts')

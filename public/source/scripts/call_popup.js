@@ -108,6 +108,18 @@ $(function () {
 
 
 
+  let popups = [
+    {
+      'id': 'test_popup',
+      'src': '.js_test_popup'
+    },
+    {
+      'id': 'test_popup2',
+      'src': '<div class="tat">ffffffffffffffffgggggggggggg gggggggggh hhhhhhhhhhhhh</div>'
+    },
+  ];
+
+  easyPopup.addPopups(popups);
 
 
 

@@ -4,13 +4,14 @@
   window.easyPopup = function () {
     let _this = this,
         defaults = {
-          animationClass: '', // Используется для задания класса анимации
-          type: 'inline', // Тип источника контента. Возможные варианты: "inline", "ajax"
+          animationClass: 'ep-move-from-top', // Используется для задания класса анимации
+          type: 'inline', // Тип источника контента. Возможные варианты: "inline", "ajax", "from-dom"
+          src: '', // Контент для вставки
           id: '', // Идентификатор попапа. Используется в том числе как хэш в адресной строке при открытии.
-          openByHash: false, // Открывать попап при наличиии хэша в момент загрузки страницы.
+          // openByHash: false, // Открывать попап при наличиии хэша в момент загрузки страницы.
           closePrevious: false, // Закрыть предыдущий попап.
           hidePrevious: false, // Скрыть предыдущий попап.
-          removalDelay: 0, // Отсрочка закрытия. Нужна при добавлении анимации закрытия.
+          removalDelay: 300, // Отсрочка закрытия. Нужна при добавлении анимации закрытия.
           tLoading: '', // Прелоадер
           // callbacks
           beforeOpen: null,
@@ -24,6 +25,11 @@
         },
         popupsConfig = {},
         popupStack = [];
+
+    // Удалить
+    this.popupStack = popupStack;
+    this.popupsConfig = popupsConfig;
+    //
 
 
      // COMPLETE
@@ -49,31 +55,21 @@
 
 
     this.open = function (id) {
+      if (alreadyOpen(id)) {
+        return;
+      }
+
       if (!popupStack.length) { // Хэш добавляется только первому попапу в стеке
         addHash(popupsConfig[id].id);
       }
 
       popupStack.push(id);
 
-      showPopup();
+      openPopup();
     };
 
 
-    this.close = function () { // Закрыть последний открытый.
-      let len = popupStack.length;
-
-      if (len === 0) {
-        return;
-      }
-
-      closePopup(); // Закрыть
-
-      if (len === 1) {
-        removeHash();
-      }
-
-      removeItemFromStack();
-    };
+    this.close = closePopup; // Закрыть последний открытый.
 
 
     this.closeAll = function () { // Подумать как правильно закрывать сразу все (по сути очищать стэк,
@@ -97,7 +93,7 @@
 
 
     this.openId = function () { // Идентификатор отображаемого попапа.
-      return popupStack[popupStack.length-1].id;
+      return popupStack[popupStack.length-1];
     };
 
 
@@ -112,20 +108,85 @@
           throw new Error('"ID" property is required');
         }
 
-        popupsConfig[item.id] = $.extend(defaults, item);
+        popupsConfig[item.id] = $.extend({}, defaults, item);
       }
     }
 
 
-    function showPopup () { // Отобразить последний в стеке попап
-      let popup = popupStack[popupStack.length-1]; // Попап для отображения
+    function openPopup () { // Отобразить последний в стеке попап
+      let popupId = popupStack[popupStack.length-1],
+          $popup,
+          $popupSource = popupSource(popupId);
+
+      $popup =
+        $('<div class="easy-popup" id="' + popupId + '">' +
+          '<div class="easy-popup__bg"></div>' +
+          '<div class="easy-popup__container"></div>' +
+          '</div>');
+
+      $popup.find('.easy-popup__bg').on('click', closePopup);
+
+      $popup.find('.easy-popup__container').append($popupSource);
+      $('body').append($popup).addClass('stop-body-scroll');
+      $popup.addClass('easy-popup--ready');
     }
 
 
-    function hidePopup () {}
+    function closePopup () {
+      let len = popupStack.length;
+
+      if (len === 0) {
+        return;
+      }
+
+      removePopup(); // Закрыть
+
+      if (len === 1) {
+        removeHash();
+      }
+
+      removeItemFromStack();
+    }
 
 
-    function closePopup () {}
+    function removePopup () {
+      let len = popupStack.length,
+          closePopupId = popupStack[len-1],
+          $popupPl = $('.ep-pl-' + closePopupId),
+          removalDelay = popupsConfig[closePopupId].removalDelay,
+          $popup = $('body').find($(popupsConfig[closePopupId].src)),
+          $easyPopup = $('#' + closePopupId);
+
+      $popup.removeClass('easy-popup--ready');
+      setTimeout(function () {
+        if ($popupPl.length) {
+          $popupPl.after($popup);
+          $popupPl.remove();
+          $easyPopup.remove();
+        } else {
+          $easyPopup.remove();
+        }
+        if (len === 1) {
+          $('body').removeClass('stop-body-scroll');
+        }
+      }, removalDelay);
+    }
+
+
+    function showPreviousPopup () {
+      let popupId = popupStack[popupStack.length-1],
+          $popup = $('#' + popupId);
+
+      $popup.addClass('easy-popup--ready');
+    }
+
+
+    function hidePreviousPopup () {
+      let popupId = popupStack[popupStack.length-1],
+          $popup = $('#' + popupId);
+
+      $popup.removeClass('easy-popup--ready');
+    }
 
 
     function closeAll () {
@@ -133,24 +194,48 @@
     }
 
 
+    // COMPLETE
     function removeItemFromStack () {
       popupStack.pop();
     }
 
 
+    // COMPLETE
     function removeAllFromStack () {
       popupStack = [];
     }
 
 
-    // Добавить хэш
+    function popupSource (popupId) {
+      let source = $(popupsConfig[popupId].src),
+          $popupSource;
+
+      // if ($('body').find(source).length) { // Если не работает эта строка, то нижняя точно работает
+      if (source.context === document) {
+        source.after($('<div class="ep-pl-' + popupId + '"></div>'));
+        $popupSource = source.detach();
+      } else {
+        $popupSource = $(source);
+      }
+
+      return $popupSource;
+    }
+
+
+    function alreadyOpen (id) {
+      return popupStack.some(function (item) {
+        return (id === item);
+      });
+    }
+
+
+    // COMPLETE
     function addHash(hash) {
       window.location.hash = hash;
     }
 
 
-    // Удалить хэш
-    // Функция вызывается только при закрытии попапа на крестик, а при нажатии кнопку "назад" удаляется автоматически
+    // COMPLETE
     function removeHash() {
       let previousPageHostname = extractHostname(document.referrer);
 
@@ -163,7 +248,7 @@
 
 
     $(window).on('hashchange', function () {
-      alert('change');
+      // alert('change');
       closeAll();
       // Надо закрыть попапы. Надо
     });
