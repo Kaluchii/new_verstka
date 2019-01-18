@@ -1,12 +1,11 @@
 .easy-popup{
-  //display: none;
+  display: none;
   position: fixed;
   z-index: 100001;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  display: flex;
   justify-content: center;
   align-items: center;
 
@@ -44,15 +43,18 @@
   display: none;
 }
 
-.stop-body-scroll{
+.ep-stop-body-scroll{
   overflow: hidden;
   position: relative;
   height: 100%;
-  padding-right: 15px;
 }
 
+//.ep-body-indent{
+//  padding-right: 15px;
+//}
+
 @media all and (max-width: 1024px){
-  .stop-body-scroll{
+  .ep-stop-body-scroll{
     padding-right: 0;
   }
 }

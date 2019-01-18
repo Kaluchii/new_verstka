@@ -87,7 +87,7 @@ $(function () {
   }
 
   // $.magnificPopup.open({
-  $('.js_open_history_popup').magnificPopup({
+  /*$('.js_open_history_popup').magnificPopup({
     type: 'inline',
     src: '', // can be a HTML string, jQuery object, or CSS selector
     mainClass: 'mfp-move-from-top',
@@ -96,7 +96,7 @@ $(function () {
     closeMarkup: '<button title="%title%" type="button" class="popup__close mfp-close">&#215;</button>',
     tLoading: '<div class="preloader"></div>',
     midClick: true
-  });
+  });*/
 
 
 
@@ -121,6 +121,10 @@ $(function () {
 
   easyPopup.addPopups(popups);
 
+  $('.js_open_history_popup').on('click', function (e) {
+    e.preventDefault();
+    easyPopup.open('test_popup');
+  });
 
 
 

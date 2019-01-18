@@ -23,6 +23,7 @@
           ajaxContentLoaded: null, // Аякс контент загружен
           ajaxContentAdded: null // Аякс контент вставлен в попап (Может быть реализуется колбэком "open")
         },
+        hashBeforeOpening = '',
         popupsConfig = {},
         popupStack = [];
 
@@ -60,6 +61,7 @@
       }
 
       if (!popupStack.length) { // Хэш добавляется только первому попапу в стеке
+        hashBeforeOpening = document.location.hash;
         addHash(popupsConfig[id].id);
       }
 
@@ -69,14 +71,12 @@
     };
 
 
-    this.close = closePopup; // Закрыть последний открытый.
+    this.close = function () { // Закрыть последний открытый.
+      closePopup();
+    };
 
 
-    this.closeAll = function () { // Подумать как правильно закрывать сразу все (по сути очищать стэк,
-      let len = popupStack.length; //  а анимированно скрывать только открытый)
-
-      removeHash();
-
+    this.closeAll = function () {
       closeAll();
     };
 
@@ -124,15 +124,22 @@
           '<div class="easy-popup__container"></div>' +
           '</div>');
 
-      $popup.find('.easy-popup__bg').on('click', closePopup);
+      $popup.find('.easy-popup__bg').on('click', function () {
+        closePopup();
+      });
 
       $popup.find('.easy-popup__container').append($popupSource);
-      $('body').append($popup).addClass('stop-body-scroll');
+      $('body').append($popup);
+      blockBodyScroll();
       $popup.addClass('easy-popup--ready');
     }
 
 
-    function closePopup () {
+    function closePopup (canRemoveHash) {
+      if (canRemoveHash === undefined) {
+        canRemoveHash = true;
+      }
+
       let len = popupStack.length;
 
       if (len === 0) {
@@ -141,11 +148,25 @@
 
       removePopup(); // Закрыть
 
-      if (len === 1) {
+      if (canRemoveHash && len === 1) {
         removeHash();
+        hashBeforeOpening = '';
       }
 
       removeItemFromStack();
+    }
+
+
+    function closeAll (canRemoveHash) {
+      if (canRemoveHash === undefined) {
+        canRemoveHash = true;
+      }
+
+      let len = popupStack.length;
+
+      for (let i = 0; i < len; i++) {
+        closePopup(canRemoveHash);
+      }
     }
 
 
@@ -157,7 +178,7 @@
           $popup = $('body').find($(popupsConfig[closePopupId].src)),
           $easyPopup = $('#' + closePopupId);
 
-      $popup.removeClass('easy-popup--ready');
+      $easyPopup.removeClass('easy-popup--ready');
       setTimeout(function () {
         if ($popupPl.length) {
           $popupPl.after($popup);
@@ -167,7 +188,7 @@
           $easyPopup.remove();
         }
         if (len === 1) {
-          $('body').removeClass('stop-body-scroll');
+          unblockBodyScroll();
         }
       }, removalDelay);
     }
@@ -189,20 +210,9 @@
     }
 
 
-    function closeAll () {
-      removeAllFromStack();
-    }
-
-
     // COMPLETE
     function removeItemFromStack () {
       popupStack.pop();
-    }
-
-
-    // COMPLETE
-    function removeAllFromStack () {
-      popupStack = [];
     }
 
 
@@ -248,9 +258,11 @@
 
 
     $(window).on('hashchange', function () {
-      // alert('change');
-      closeAll();
-      // Надо закрыть попапы. Надо
+      let len = popupStack.length;
+
+      if (len && (hashBeforeOpening === document.location.hash)) {
+        closeAll(false);
+      }
     });
 
 
@@ -271,6 +283,27 @@
       hostname = hostname.split('?')[0];
 
       return hostname;
+    }
+
+
+    function blockBodyScroll () {
+      $('body').addClass(function () {
+        if (hasVerticalScroll()) {
+          $(this).css('padding-right', ($(this).prop('offsetWidth') - $(this).prop('clientWidth')) + 'px');
+        }
+
+        return 'ep-stop-body-scroll';
+      });
+    }
+
+
+    function unblockBodyScroll () {
+      $('body').removeClass('ep-stop-body-scroll').css('padding-right', '');
+    }
+    
+    
+    function hasVerticalScroll () {
+      return (document.body.clientHeight - document.documentElement.clientHeight > 0);
     }
 
 
