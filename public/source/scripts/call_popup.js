@@ -115,6 +115,15 @@ $(function () {
     },
     {
       'id': 'test_popup2',
+      'src': '.js_test_popup2'
+    },
+    {
+      'id': 'test_popup3',
+      'src': '.js_test_popup3'
+    },
+    {
+      'id': 'test_popup4',
+      'hidePrevious': true,
       'src': '<div class="tat">ffffffffffffffffgggggggggggg gggggggggh hhhhhhhhhhhhh</div>'
     },
   ];

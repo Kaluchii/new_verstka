@@ -1,27 +1,27 @@
 var gulp         = require('gulp'),
-    autoprefixer = require('gulp-autoprefixer'),
-    less         = require('gulp-less'),
-    cssmin       = require('gulp-cssmin'),
-    csscomb      = require('gulp-csscomb'),
-    uglify       = require('gulp-uglify'),
-    postcss      = require('gulp-postcss'),
-    reporter     = require('postcss-reporter'),
-    htmllint     = require('gulp-htmllint'),
-    stylelint    = require('stylelint'),
+  autoprefixer = require('gulp-autoprefixer'),
+  less         = require('gulp-less'),
+  cssmin       = require('gulp-cssmin'),
+  csscomb      = require('gulp-csscomb'),
+  uglify       = require('gulp-uglify'),
+  postcss      = require('gulp-postcss'),
+  reporter     = require('postcss-reporter'),
+  htmllint     = require('gulp-htmllint'),
+  stylelint    = require('stylelint'),
 
-    svgmin       = require('gulp-svgmin'),
-    imagemin     = require('gulp-imagemin'),
-    browserSync  = require('browser-sync'),
+  svgmin       = require('gulp-svgmin'),
+  imagemin     = require('gulp-imagemin'),
+  browserSync  = require('browser-sync'),
 
-    changeCase   = require('change-case'),
-    concat       = require('gulp-concat'),
-    plumber      = require('gulp-plumber'),
-    rename       = require('gulp-rename'),
-    gutil        = require('gulp-util'),
-    sourcemaps   = require('gulp-sourcemaps'),
-    args         = require('yargs'),
+  changeCase   = require('change-case'),
+  concat       = require('gulp-concat'),
+  plumber      = require('gulp-plumber'),
+  rename       = require('gulp-rename'),
+  gutil        = require('gulp-util'),
+  sourcemaps   = require('gulp-sourcemaps'),
+  args         = require('yargs'),
 
-    jasmine     = require('gulp-jasmine');
+  jasmine     = require('gulp-jasmine');
 
 //======================================================================================================================
 // -- Переменные для настройки
@@ -32,47 +32,55 @@ var image_ext = '{png,Png,PNG,jpg,Jpg,JPG,jpeg,Jpeg,JPEG,gif,Gif,GIF,bmp,BMP,Bmp
 
 // пути до файлов
 var components       = '../public/source/components/',
-    vendor           = '../public/source/vendor/',
-    myPlugins        = '../public/source/my_plugins/',
-    scripts          = '../public/source/scripts/',
-    styles           = '../public/source/styles/',
-    commonCss        = '../public/source/styles/common/',
-    pluginsOverlay   = '../public/source/styles/plugins_overlay/',
-    devImg           = '../public/source/img/',
-    productionCss    = '../public/css/',
-    productionImg    = '../public/img/',
-    productionJs     = '../public/js/',
-    html             = '../resources/views/',
-    styleComponents  = [
-      commonCss        + '*.less',
-      styles           + '*.less',
-      vendor           + '**/*.css',
-      vendor           + '**/*.less',
-      myPlugins        + '**/*.less',
-      pluginsOverlay   + '*.less',
-      pluginsOverlay   + '**/*.less',
-      components       + '**/*.less',
-      '!' + components + '**/*.adaptive.less',
-      '!/**/d_*/*.*',
-      '!/**/d_*.*'
-    ],
-    adaptiveStyleComponents = [
-      commonCss  + '*.less',
-      myPlugins  + '**/*.adaptive.less',
-      components + '**/*.adaptive.less',
-      '!/**/d_*/*.*',
-      '!/**/d_*.*'
-    ],
-    scriptComponents = [
-      vendor     + '**/*.js',
-      myPlugins  + '**/*.js',
-      scripts    + '**/*.js',
-      scripts    + '*.js',
-      components + '**/*.js',
-      '!/**/d_*/*.*',
-      '!/**/d_*.*'
-    ],
-    imageDirs = [];
+  vendor           = '../public/source/vendor/',
+  myPlugins        = '../public/source/my_plugins/',
+  scripts          = '../public/source/scripts/',
+  styles           = '../public/source/styles/',
+  images           = '../public/source/img/',
+  commonCss        = '../public/source/styles/common/',
+  pluginsOverlay   = '../public/source/styles/plugins_overlay/',
+  productionCss    = '../public/css/',
+  productionImg    = '../public/img/',
+  productionJs     = '../public/js/',
+  html             = '../resources/views/',
+  devImg           = [
+    images + '*.' + image_ext,
+    images + '**/*.' + image_ext
+  ],
+  devImgSvg        = [
+    images + '*.svg',
+    images + '**/*.svg'
+  ],
+  styleComponents  = [
+    commonCss        + '*.less',
+    styles           + '*.less',
+    vendor           + '**/*.css',
+    vendor           + '**/*.less',
+    myPlugins        + '**/*.less',
+    pluginsOverlay   + '*.less',
+    pluginsOverlay   + '**/*.less',
+    components       + '**/*.less',
+    '!' + components + '**/*.adaptive.less',
+    '!/**/d_*/*.*',
+    '!/**/d_*.*'
+  ],
+  adaptiveStyleComponents = [
+    commonCss  + '*.less',
+    myPlugins  + '**/*.adaptive.less',
+    components + '**/*.adaptive.less',
+    '!/**/d_*/*.*',
+    '!/**/d_*.*'
+  ],
+  scriptComponents = [
+    vendor     + '**/*.js',
+    myPlugins  + '**/*.js',
+    scripts    + '**/*.js',
+    scripts    + '*.js',
+    components + '**/*.js',
+    '!/**/d_*/*.*',
+    '!/**/d_*.*'
+  ],
+  imageDirs = [];
 
 // Параметры для галпа
 var arguments    = args.argv;
@@ -191,7 +199,7 @@ function htmllintReporter(filepath, issues) {
 //======================================================================================================================
 gulp.task('image', function () {
   // Оптимизация всех файлов кроме векторных
-  gulp.src(devImg + '**.' + image_ext)
+  gulp.src(devImg)
     .pipe(plumber())
     .pipe(imagemin({
       progressive      : true,
@@ -207,7 +215,7 @@ gulp.task('image', function () {
       stream: true
     }));
   // Оптимизация векторных файлов ( пока только SVG )
-  gulp.src(devImg + '*.svg')
+  gulp.src(devImgSvg)
     .pipe(plumber())
     .pipe(svgmin())
     .pipe(rename(function (path) {
@@ -245,7 +253,8 @@ gulp.task('watch', function () {
     ]
   });
 
-  gulp.watch('*.*',       {cwd: devImg},          ['image']);
+  gulp.watch('*.*',       {cwd: images},          ['image']);
+  gulp.watch('**/*.*',    {cwd: images},          ['image']);
   gulp.watch('*.less',    {cwd: styles},          ['style']);
   gulp.watch('**/*.less', {cwd: styles},          ['style']);
   gulp.watch('**/*.css',  {cwd: vendor},          ['style']);

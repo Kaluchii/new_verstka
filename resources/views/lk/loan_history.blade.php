@@ -59,6 +59,20 @@
             <div class="popup__close">Закрыть окно</div>
             <div class="popup__close-x"></div>
         </div>
+        <div class="popup js_test_popup2">
+            <div class="popup__container">
+                AAAAAAAAAA
+            </div>
+            <div class="popup__close">Закрыть окно</div>
+            <div class="popup__close-x"></div>
+        </div>
+        <div class="popup js_test_popup3">
+            <div class="popup__container">
+                BBBBBBBBBB
+            </div>
+            <div class="popup__close">Закрыть окно</div>
+            <div class="popup__close-x"></div>
+        </div>
     </div>
 
 @endsection

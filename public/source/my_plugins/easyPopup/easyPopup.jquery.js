@@ -8,8 +8,6 @@
           type: 'inline', // Тип источника контента. Возможные варианты: "inline", "ajax", "from-dom"
           src: '', // Контент для вставки
           id: '', // Идентификатор попапа. Используется в том числе как хэш в адресной строке при открытии.
-          // openByHash: false, // Открывать попап при наличиии хэша в момент загрузки страницы.
-          closePrevious: false, // Закрыть предыдущий попап.
           hidePrevious: false, // Скрыть предыдущий попап.
           removalDelay: 300, // Отсрочка закрытия. Нужна при добавлении анимации закрытия.
           tLoading: '', // Прелоадер
@@ -55,19 +53,10 @@
     };
 
 
-    this.open = function (id) {
-      if (alreadyOpen(id)) {
-        return;
+    this.open = function (id, options) {
+      if (!alreadyOpen(id)) {
+        openPopup(id);
       }
-
-      if (!popupStack.length) { // Хэш добавляется только первому попапу в стеке
-        hashBeforeOpening = document.location.hash;
-        addHash(popupsConfig[id].id);
-      }
-
-      popupStack.push(id);
-
-      openPopup();
     };
 
 
@@ -81,7 +70,7 @@
     };
 
 
-    this.isOpen = function (id) { // Открыт ли указанный попап. (Необходимо потому что попап может быть открыт но скрыт)
+    this.isOpen = function (id) {
       let isOpen;
 
       isOpen = popupStack.some(function (item) {
@@ -89,7 +78,7 @@
       });
 
       return isOpen;
-    }; // По сути проверка наличия попапа в стеке.
+    };
 
 
     this.openId = function () { // Идентификатор отображаемого попапа.
@@ -97,7 +86,6 @@
     };
 
 
-    // COMPLETE
     function addPopupsList (popupsList) {
       let item;
 
@@ -113,13 +101,67 @@
     }
 
 
-    function openPopup () { // Отобразить последний в стеке попап
+    function openPopup (popupId) {
+      let stackLen = popupStack.length;
+
+      if (!stackLen) { // Хэш добавляется только первому попапу в стеке
+        hashBeforeOpening = document.location.hash;
+        addHash(popupsConfig[popupId].id);
+      }
+
+      popupStack.push(popupId);
+
+      createPopupDOM();
+
+      hidePreviousPopup();
+    }
+
+
+    function closePopup (canRemoveHash) {
+      if (canRemoveHash === undefined) {
+        canRemoveHash = true;
+      }
+
+      let stackLen = popupStack.length;
+
+      if (stackLen === 0) {
+        return;
+      }
+
+      removePopupDOM();
+
+      if (canRemoveHash && stackLen === 1) {
+        removeHash();
+        hashBeforeOpening = '';
+      }
+
+      showPreviousPopup();
+
+      removeItemFromStack();
+    }
+
+
+    function closeAll (canRemoveHash) {
+      if (canRemoveHash === undefined) {
+        canRemoveHash = true;
+      }
+
+      let stackLen = popupStack.length;
+
+      for (let i = 0; i < stackLen; i++) {
+        closePopup(canRemoveHash);
+      }
+    }
+
+
+    function createPopupDOM () {
       let popupId = popupStack[popupStack.length-1],
+          popupConfig = popupsConfig[popupId],
           $popup,
-          $popupSource = popupSource(popupId);
+          $popupSource = popupSource(popupConfig.id);
 
       $popup =
-        $('<div class="easy-popup" id="' + popupId + '">' +
+        $('<div class="easy-popup ' + popupConfig.animationClass + '" id="' + popupId + '">' +
           '<div class="easy-popup__bg"></div>' +
           '<div class="easy-popup__container"></div>' +
           '</div>');
@@ -135,44 +177,9 @@
     }
 
 
-    function closePopup (canRemoveHash) {
-      if (canRemoveHash === undefined) {
-        canRemoveHash = true;
-      }
-
-      let len = popupStack.length;
-
-      if (len === 0) {
-        return;
-      }
-
-      removePopup(); // Закрыть
-
-      if (canRemoveHash && len === 1) {
-        removeHash();
-        hashBeforeOpening = '';
-      }
-
-      removeItemFromStack();
-    }
-
-
-    function closeAll (canRemoveHash) {
-      if (canRemoveHash === undefined) {
-        canRemoveHash = true;
-      }
-
-      let len = popupStack.length;
-
-      for (let i = 0; i < len; i++) {
-        closePopup(canRemoveHash);
-      }
-    }
-
-
-    function removePopup () {
-      let len = popupStack.length,
-          closePopupId = popupStack[len-1],
+    function removePopupDOM () {
+      let stackLen = popupStack.length,
+          closePopupId = popupStack[stackLen-1],
           $popupPl = $('.ep-pl-' + closePopupId),
           removalDelay = popupsConfig[closePopupId].removalDelay,
           $popup = $('body').find($(popupsConfig[closePopupId].src)),
@@ -187,7 +194,7 @@
         } else {
           $easyPopup.remove();
         }
-        if (len === 1) {
+        if (stackLen === 1) {
           unblockBodyScroll();
         }
       }, removalDelay);
@@ -195,22 +202,31 @@
 
 
     function showPreviousPopup () {
-      let popupId = popupStack[popupStack.length-1],
+      let popupId = popupStack[popupStack.length-2],
           $popup = $('#' + popupId);
 
-      $popup.addClass('easy-popup--ready');
+      if (popupId !== undefined) {
+        $popup.addClass('easy-popup--ready');
+      }
     }
 
 
     function hidePreviousPopup () {
-      let popupId = popupStack[popupStack.length-1],
-          $popup = $('#' + popupId);
+      if (popupStack.length <= 1) {
+        return;
+      }
 
-      $popup.removeClass('easy-popup--ready');
+      let popupId = popupStack[popupStack.length-1],
+          previousPopupId = popupStack[popupStack.length-2],
+          popupConfig = popupsConfig[popupId],
+          $popup = $('#' + previousPopupId);
+
+      if (popupConfig.hidePrevious) {
+        $popup.removeClass('easy-popup--ready');
+      }
     }
 
 
-    // COMPLETE
     function removeItemFromStack () {
       popupStack.pop();
     }
@@ -220,7 +236,6 @@
       let source = $(popupsConfig[popupId].src),
           $popupSource;
 
-      // if ($('body').find(source).length) { // Если не работает эта строка, то нижняя точно работает
       if (source.context === document) {
         source.after($('<div class="ep-pl-' + popupId + '"></div>'));
         $popupSource = source.detach();
@@ -239,13 +254,11 @@
     }
 
 
-    // COMPLETE
     function addHash(hash) {
       window.location.hash = hash;
     }
 
 
-    // COMPLETE
     function removeHash() {
       let previousPageHostname = extractHostname(document.referrer);
 
@@ -258,9 +271,9 @@
 
 
     $(window).on('hashchange', function () {
-      let len = popupStack.length;
+      let stackLen = popupStack.length;
 
-      if (len && (hashBeforeOpening === document.location.hash)) {
+      if (stackLen && (hashBeforeOpening === document.location.hash)) {
         closeAll(false);
       }
     });
@@ -289,7 +302,7 @@
     function blockBodyScroll () {
       $('body').addClass(function () {
         if (hasVerticalScroll()) {
-          $(this).css('padding-right', ($(this).prop('offsetWidth') - $(this).prop('clientWidth')) + 'px');
+          $(this).css('padding-right', (window.screen.width - $(window).width()) + 'px');
         }
 
         return 'ep-stop-body-scroll';
