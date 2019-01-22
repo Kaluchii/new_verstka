@@ -12,22 +12,24 @@ let easyPopup = (function ($) {
       removalDelay: 300, // Отсрочка закрытия. Нужна при добавлении анимации закрытия.
       tLoading: '', // Прелоадер
       // callbacks
-      beforeOpen: null,
-      open: null, // Полная отрисовка
-      afterOverlay: null, // Попап перекрыт новым попапом
-      afterHidden: null, // Попап скрыт открывшимся поверх попапом
-      beforeClose: null, // Инициация события закрытия
-      close: null, // Полное закрытие, DOM-элемент удален
-      ajaxContentLoaded: null, // Аякс контент загружен
-      ajaxContentAdded: null // Аякс контент вставлен в попап (Может быть реализуется колбэком "open")
+      beforeOpen: function () {},
+      open: function () {}, // Полная отрисовка
+      afterOverlay: function () {}, // Попап перекрыт новым попапом
+      afterHidden: function () {}, // Попап скрыт открывшимся поверх попапом
+      beforeClose: function () {}, // Инициация события закрытия
+      close: function () {}, // Полное закрытие, DOM-элемент удален
+      ajaxContentLoaded: function () {}, // Аякс контент загружен
+      ajaxContentAdded: function () {} // Аякс контент вставлен в попап (Может быть реализуется колбэком "open")
     },
     hashBeforeOpening = '',
-    popupsConfig = {},
+    staticPopupsConfig = {},
+    dynPopupsConfig = {},
     popupStack = [];
 
   // Удалить
   this.popupStack = popupStack;
-  this.popupsConfig = popupsConfig;
+  this.dynPopupsConfig = dynPopupsConfig;
+  this.staticPopupsConfig = staticPopupsConfig;
   //
 
 
@@ -40,21 +42,21 @@ let easyPopup = (function ($) {
     if (!id) {
       throw new Error('"ID" property is required');
     }
-    if (!popupsConfig[id]) {
+    if (!staticPopupsConfig[id]) {
       throw new Error('No item found with this "ID"');
     }
-    popupsConfig[id] = $.extend(popupsConfig[id], settings);
+    staticPopupsConfig[id] = $.extend(staticPopupsConfig[id], settings);
   };
 
 
   this.removePopup = function (id) { // Может пригодится
-    delete popupsConfig[id];
+    delete staticPopupsConfig[id];
   };
 
 
   this.open = function (id, options) {
     if (!alreadyOpen(id)) {
-      openPopup(id);
+      openPopup(id, options);
     }
   };
 
@@ -95,20 +97,22 @@ let easyPopup = (function ($) {
         throw new Error('"ID" property is required');
       }
 
-      popupsConfig[item.id] = $.extend({}, defaults, item);
+      staticPopupsConfig[item.id] = $.extend({}, defaults, item);
     }
   }
 
 
-  function openPopup (popupId) {
+  function openPopup (popupId, options) {
     let stackLen = popupStack.length;
+
+    popupStack.push(popupId);
+
+    addToDynConfig(options);
 
     if (!stackLen) { // Хэш добавляется только первому попапу в стеке
       hashBeforeOpening = document.location.hash;
-      addHash(popupsConfig[popupId].id);
+      addHash(dynPopupsConfig[popupId].id);
     }
-
-    popupStack.push(popupId);
 
     createPopupDOM();
 
@@ -136,6 +140,8 @@ let easyPopup = (function ($) {
 
     showPreviousPopup();
 
+    removeFromDynConfig();
+
     removeItemFromStack();
   }
 
@@ -153,9 +159,29 @@ let easyPopup = (function ($) {
   }
 
 
+  function addToDynConfig (options) {
+    if (options === undefined) {
+      options = {};
+    }
+
+    let stackLen = popupStack.length,
+      openPopupId = popupStack[stackLen - 1];
+
+    dynPopupsConfig[openPopupId] = $.extend({}, defaults, staticPopupsConfig[openPopupId], options);
+  }
+
+
+  function removeFromDynConfig () {
+    let stackLen = popupStack.length,
+      closePopupId = popupStack[stackLen - 1];
+
+    delete dynPopupsConfig[closePopupId];
+  }
+
+
   function createPopupDOM () {
     let popupId = popupStack[popupStack.length - 1],
-      popupConfig = popupsConfig[popupId],
+      popupConfig = dynPopupsConfig[popupId],
       $popup,
       $popupSource = popupSource(popupConfig.id);
 
@@ -180,8 +206,8 @@ let easyPopup = (function ($) {
     let stackLen = popupStack.length,
       closePopupId = popupStack[stackLen - 1],
       $popupPl = $('.ep-pl-' + closePopupId),
-      removalDelay = popupsConfig[closePopupId].removalDelay,
-      $popup = $('body').find($(popupsConfig[closePopupId].src)),
+      removalDelay = dynPopupsConfig[closePopupId].removalDelay,
+      $popup = $('body').find($(dynPopupsConfig[closePopupId].src)),
       $easyPopup = $('#' + closePopupId);
 
     $easyPopup.removeClass('easy-popup--ready');
@@ -217,7 +243,7 @@ let easyPopup = (function ($) {
 
     let popupId = popupStack[popupStack.length - 1],
       previousPopupId = popupStack[popupStack.length - 2],
-      popupConfig = popupsConfig[popupId],
+      popupConfig = dynPopupsConfig[popupId],
       $popup = $('#' + previousPopupId);
 
     if (popupConfig.hidePrevious) {
@@ -232,7 +258,7 @@ let easyPopup = (function ($) {
 
 
   function popupSource (popupId) {
-    let source = $(popupsConfig[popupId].src),
+    let source = $(dynPopupsConfig[popupId].src),
       $popupSource;
 
     if (source.context === document) {
