@@ -18,11 +18,11 @@
                 </div>
             </div>
             <div class="personal-area__small-title personal-area__small-title--border-top personal-area__small-title--center title-l2">Регистрация</div>
-            <div class="personal-area__form col-form">
+            <form class="personal-area__form col-form">
                 <div class="col-form__row col-form__row--with-clarification field">
                     <div class="field__name">Эл. почта</div>
                     <div class="field__input-wrap">
-                        <input type="text" class="field__input input" tabindex="1">
+                        <input type="email" class="field__input input">
                         <div class="field__clarification">Впишите адрес внимательно. На почту вы получите документы по оформлению займа.</div>
                         <div class="field__alert"></div>
                     </div>
@@ -30,16 +30,16 @@
                 <div class="col-form__row col-form__row--with-clarification field">
                     <div class="field__name">Номер мобильного</div>
                     <div class="field__input-wrap">
-                        <input type="text" class="field__input input" tabindex="2">
+                        <input type="text" class="field__input input">
                         <div class="field__clarification">Только личный номер. На него вы получите SMS-подтверждение.</div>
                         <div class="field__alert"></div>
                     </div>
                 </div>
                 <div class="col-form__row col-form__row--btn-text">
                     <p class="col-form__text">Уже зарегистрированы? <br> <a href="#" class="link">Войдите в кабинет</a></p>
-                    <button class="col-form__btn button button--yellow" tabindex="3"><span class="button__text">Дальше</span></button>
+                    <button class="col-form__btn button button--yellow"><span class="button__text">Дальше</span></button>
                 </div>
-            </div>
+            </form>
             <div class="personal-area__clarification clarification">
                 <p class="clarification__text">Пароль от личного кабинета будет выслан на почту, а так же уведомления о зачислении денег, напоминания и скидки.</p>
             </div>
