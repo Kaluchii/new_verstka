@@ -6,12 +6,20 @@ let easyPopup = (function ($) {
     defaults = {
       animationClass: 'ep-move-from-top', // Используется для задания класса анимации
       type: 'inline', // Тип источника контента. Возможные варианты: "inline", "ajax", "from-dom"
+      modal: false, // Может модальность вовсе не нужна???????!!!!!!!!!!!!!??!
+      ajax: {
+        url: '',
+        dataToSend: {},
+        templateInField: '',
+        headers: {}
+      },
       src: '', // Контент для вставки
       id: '', // Идентификатор попапа. Используется в том числе как хэш в адресной строке при открытии.
       hidePrevious: false, // Скрыть предыдущий попап.
       removalDelay: 300, // Отсрочка закрытия. Нужна при добавлении анимации закрытия.
       tLoading: '', // Прелоадер
       // callbacks
+      // Заместо колбэков попробовать генерировать события на window с уникальными названиями состоящими из id эл-та и названия события
       beforeOpen: function () {},
       open: function () {}, // Полная отрисовка
       afterOverlay: function () {}, // Попап перекрыт новым попапом
@@ -153,6 +161,8 @@ let easyPopup = (function ($) {
 
     let stackLen = popupStack.length;
 
+    removePreloader();
+
     for (let i = 0; i < stackLen; i++) {
       closePopup(canRemoveHash);
     }
@@ -182,8 +192,7 @@ let easyPopup = (function ($) {
   function createPopupDOM () {
     let popupId = popupStack[popupStack.length - 1],
       popupConfig = dynPopupsConfig[popupId],
-      $popup,
-      $popupSource = popupSource(popupConfig.id);
+      $popup;
 
     $popup =
       $('<div class="easy-popup ' + popupConfig.animationClass + '" id="' + popupId + '">' +
@@ -191,10 +200,22 @@ let easyPopup = (function ($) {
         '<div class="easy-popup__container"></div>' +
         '</div>');
 
-    $popup.find('.easy-popup__bg').on('click', function () {
-      closePopup();
-    });
+    if (!popupConfig.modal) {
+      $popup.find('.easy-popup__bg').one('click', function () {
+        closePopup();
+      });
+    }
 
+    if (popupConfig.type === 'ajax') {
+      getPopupFromAjax($popup, popupConfig);
+    } else {
+      let $popupSource = popupSource(popupConfig.id);
+      insertPopup($popup, $popupSource);
+    }
+  }
+
+
+  function insertPopup ($popup, $popupSource) {
     $popup.find('.easy-popup__container').append($popupSource);
     $('body').append($popup);
     blockBodyScroll();
@@ -269,6 +290,54 @@ let easyPopup = (function ($) {
     }
 
     return $popupSource;
+  }
+
+
+  function getPopupFromAjax ($popup, popupConfig) {
+    addPreloader();
+
+    $.ajax({
+      type: "GET",
+      url: popupConfig.ajax.url,
+      data: popupConfig.ajax.dataToSend,
+      dataType: "json",
+      headers: popupConfig.ajax.headers
+    })
+      .fail(function (data, textStatus) {
+        // Вывести в попапе текст: Произошла ошибка. Попробуйте повторить действия. В случае повторения ошибки пожалуйста свяжитесь с тех.поддержкой
+        // Либо просто сгенерировать событие. Но наверно так себе идея
+        // console.log(data.error_text);
+
+        // closePopup();
+      })
+      .done(function (data) {
+        if (!alreadyOpen(popupConfig.id)) {
+          return;
+        }
+
+        let $popupSource;
+
+        if (popupConfig.ajax.templateInField) {
+          $popupSource = $(popupConfig.ajax.templateInField);
+        } else {
+          $popupSource = $(data.responseText);
+        }
+
+        insertPopup($popup, $popupSource);
+      })
+      .always(function () {
+        removePreloader();
+      });
+  }
+
+
+  function addPreloader () {
+    $('body').append($('<div class="easy-popup__preloader"></div>'));
+  }
+
+
+  function removePreloader () {
+    $('.easy-popup__preloader').remove();
   }
 
 

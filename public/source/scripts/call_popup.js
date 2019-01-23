@@ -110,16 +110,25 @@ $(function () {
 
   let popups = [
     {
-      'id': 'test_popup',
-      'src': '.js_test_popup'
+      id: 'test_popup',
+      src: '.js_test_popup',
     },
     {
       'id': 'test_popup2',
-      'src': '.js_test_popup2'
+      'src': '.js_test_popup2',
+      modal: true
     },
     {
       'id': 'test_popup3',
       'src': '.js_test_popup3'
+    },
+    {
+      'id': 'test_ajax',
+      type: 'ajax',
+      ajax: {
+        url: '/ajax-test',
+        headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')}
+      }
     },
     {
       'id': 'test_popup4',
@@ -132,7 +141,7 @@ $(function () {
 
   $('.js_open_history_popup').on('click', function (e) {
     e.preventDefault();
-    easyPopup.open('test_popup');
+    easyPopup.open('test_ajax');
   });
 
 

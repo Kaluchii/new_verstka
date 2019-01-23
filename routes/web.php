@@ -64,3 +64,8 @@ Route::get('/iframe', function () {
     return view('card.card_confirm');
 });
 
+
+
+
+Route::get('/ajax-test',    'FrontController@getPopup');
+
