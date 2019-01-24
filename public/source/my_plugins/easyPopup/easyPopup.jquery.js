@@ -4,20 +4,22 @@
 let easyPopup = (function ($) {
   let _this = this,
     defaults = {
-      animationClass: 'ep-move-from-top', // Используется для задания класса анимации
-      type: 'inline', // Тип источника контента. Возможные варианты: "inline", "ajax", "from-dom"
+      animationClass: '', // Используется для задания класса анимации
+      type: 'inline', // Тип источника контента. Возможные варианты: "inline", "ajax"
       modal: false, // Может модальность вовсе не нужна???????!!!!!!!!!!!!!??!
       ajax: {
         url: '',
         dataToSend: {},
         templateInField: '',
-        headers: {}
+        headers: {},
+        requestErrorTemplate: '',
+        preloaderRemovalDelay: 0,
+        timeout: 10000
       },
       src: '', // Контент для вставки
       id: '', // Идентификатор попапа. Используется в том числе как хэш в адресной строке при открытии.
       hidePrevious: false, // Скрыть предыдущий попап.
-      removalDelay: 300, // Отсрочка закрытия. Нужна при добавлении анимации закрытия.
-      tLoading: '', // Прелоадер
+      removalDelay: 0, // Отсрочка закрытия. Нужна при добавлении анимации закрытия.
       // callbacks
       // Заместо колбэков попробовать генерировать события на window с уникальными названиями состоящими из id эл-та и названия события
       beforeOpen: function () {},
@@ -32,13 +34,19 @@ let easyPopup = (function ($) {
     hashBeforeOpening = '',
     staticPopupsConfig = {},
     dynPopupsConfig = {},
-    popupStack = [];
+    popupStack = [],
+    ajax;
 
   // Удалить
   this.popupStack = popupStack;
   this.dynPopupsConfig = dynPopupsConfig;
   this.staticPopupsConfig = staticPopupsConfig;
   //
+
+
+  this.setDefaultConfig = function (config) {
+    $.extend(true, defaults, config);
+  };
 
 
   this.addPopups = function (popupsList) {
@@ -53,7 +61,7 @@ let easyPopup = (function ($) {
     if (!staticPopupsConfig[id]) {
       throw new Error('No item found with this "ID"');
     }
-    staticPopupsConfig[id] = $.extend(staticPopupsConfig[id], settings);
+    staticPopupsConfig[id] = $.extend(true, staticPopupsConfig[id], settings);
   };
 
 
@@ -105,7 +113,7 @@ let easyPopup = (function ($) {
         throw new Error('"ID" property is required');
       }
 
-      staticPopupsConfig[item.id] = $.extend({}, defaults, item);
+      staticPopupsConfig[item.id] = $.extend(true, {}, defaults, item);
     }
   }
 
@@ -177,7 +185,7 @@ let easyPopup = (function ($) {
     let stackLen = popupStack.length,
       openPopupId = popupStack[stackLen - 1];
 
-    dynPopupsConfig[openPopupId] = $.extend({}, defaults, staticPopupsConfig[openPopupId], options);
+    dynPopupsConfig[openPopupId] = $.extend(true, {}, defaults, staticPopupsConfig[openPopupId], options);
   }
 
 
@@ -283,7 +291,7 @@ let easyPopup = (function ($) {
       $popupSource;
 
     if (source.context === document) {
-      source.after($('<div class="ep-pl-' + popupId + '"></div>'));
+      source.after($(`<div class="ep-pl-${popupId}"></div>`));
       $popupSource = source.detach();
     } else {
       $popupSource = $(source);
@@ -296,20 +304,14 @@ let easyPopup = (function ($) {
   function getPopupFromAjax ($popup, popupConfig) {
     addPreloader();
 
-    $.ajax({
+    ajax = $.ajax({
       type: "GET",
       url: popupConfig.ajax.url,
       data: popupConfig.ajax.dataToSend,
       dataType: "json",
-      headers: popupConfig.ajax.headers
+      headers: popupConfig.ajax.headers,
+      timeout: popupConfig.ajax.timeout
     })
-      .fail(function (data, textStatus) {
-        // Вывести в попапе текст: Произошла ошибка. Попробуйте повторить действия. В случае повторения ошибки пожалуйста свяжитесь с тех.поддержкой
-        // Либо просто сгенерировать событие. Но наверно так себе идея
-        // console.log(data.error_text);
-
-        // closePopup();
-      })
       .done(function (data) {
         if (!alreadyOpen(popupConfig.id)) {
           return;
@@ -325,6 +327,24 @@ let easyPopup = (function ($) {
 
         insertPopup($popup, $popupSource);
       })
+      .fail(function (data, textStatus) {
+        if (textStatus === 'abort') {
+          return;
+        }
+
+        let $popupSource;
+
+        $popupSource = popupConfig.ajax.requestErrorTemplate;
+        insertPopup($popup, $popupSource);
+
+        if (popupConfig.modal) {
+          $popup.find('.easy-popup__bg').one('click', function () {
+            closePopup();
+          });
+        }
+
+        console.log(`Request error: "${textStatus}"`);
+      })
       .always(function () {
         removePreloader();
       });
@@ -332,12 +352,22 @@ let easyPopup = (function ($) {
 
 
   function addPreloader () {
-    $('body').append($('<div class="easy-popup__preloader"></div>'));
+    let $preloader = $('<div class="ep-preloader"></div>');
+
+    $('body').append($preloader);
+    setTimeout(function () {
+      $preloader.addClass('ep-preloader--show');
+    })
   }
 
 
   function removePreloader () {
-    $('.easy-popup__preloader').remove();
+    let $preloader = $('.ep-preloader');
+
+    $preloader.removeClass('ep-preloader--show');
+    setTimeout(function () {
+      $preloader.remove();
+    }, defaults.ajax.preloaderRemovalDelay);
   }
 
 
@@ -369,6 +399,10 @@ let easyPopup = (function ($) {
 
     if (stackLen && (hashBeforeOpening === document.location.hash)) {
       closeAll(false);
+      // ajax   Отменить обработку ответа с сервера
+      if (ajax.state() === 'pending') {
+        ajax.abort();
+      }
     }
   });
 

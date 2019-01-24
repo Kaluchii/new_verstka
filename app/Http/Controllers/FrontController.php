@@ -14,7 +14,7 @@ class FrontController extends Controller
     public function getPopup()
     {
 //        abort(404);
-        sleep(1);
+        sleep(2);
         return view('ajax-popup');
     }
 }

@@ -125,9 +125,9 @@ $(function () {
     {
       'id': 'test_ajax',
       type: 'ajax',
+      // modal: true,
       ajax: {
-        url: '/ajax-test',
-        headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')}
+        url: '/ajax-test'
       }
     },
     {
@@ -136,6 +136,25 @@ $(function () {
       'src': '<div class="tat">ffffffffffffffffgggggggggggg gggggggggh hhhhhhhhhhhhh</div>'
     },
   ];
+
+  let requestErrorTemplate = `
+    <div class="popup js_test_popup_error">
+        <div class="popup__container">
+            Произошла ошибка.<br>Попробуйте повторить действия. В случае повторения ошибки пожалуйста свяжитесь с тех.поддержкой.
+        </div>
+        <div class="popup__close">Закрыть окно</div>
+        <div class="popup__close-x"></div>
+    </div>`;
+
+  easyPopup.setDefaultConfig({
+    animationClass: 'ep-move-from-top',
+    removalDelay: 300,
+    ajax: {
+      headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+      requestErrorTemplate: requestErrorTemplate,
+      preloaderRemovalDelay: 300
+    }
+  });
 
   easyPopup.addPopups(popups);
 
