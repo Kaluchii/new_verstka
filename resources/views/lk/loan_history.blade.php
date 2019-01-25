@@ -25,17 +25,17 @@
                     <div class="history-loans__col">Выплачен</div>
                 </div>
                 <div class="history-loans__row">
-                    <div class="history-loans__col"><a href="#history-popup" class="history-loans__link link-local js_open_history_popup">10 июля 2017</a></div>
+                    <div class="history-loans__col"><a href="#history-popup" class="history-loans__link link-local js_open_history_popup2">10 июля 2017</a></div>
                     <div class="history-loans__col">38 000</div>
                     <div class="history-loans__col">Отклонен</div>
                 </div>
                 <div class="history-loans__row">
-                    <div class="history-loans__col"><a href="#history-popup2" class="history-loans__link link-local js_open_history_popup">31 августа 2017</a></div>
+                    <div class="history-loans__col"><a href="#history-popup2" class="history-loans__link link-local js_open_history_popup3">31 августа 2017</a></div>
                     <div class="history-loans__col">14 500</div>
                     <div class="history-loans__col">Отклонен</div>
                 </div>
                 <div class="history-loans__row">
-                    <div class="history-loans__col"><a href="#history-popup" class="history-loans__link link-local js_open_history_popup">12 февраля 2018</a></div>
+                    <div class="history-loans__col"><a href="#history-popup" class="history-loans__link link-local js_open_history_popup4">12 февраля 2018</a></div>
                     <div class="history-loans__col">22 000</div>
                     <div class="history-loans__col">Отклонен</div>
                 </div>
@@ -59,13 +59,148 @@
             <div class="popup__close">Закрыть окно</div>
             <div class="popup__close-x"></div>
         </div>
+
+
         <div class="popup js_test_popup2">
             <div class="popup__container">
-                AAAAAAAAAA
+                <div class="popup__info-plate info-plate">
+                    <div class="info-plate__loan-sum-date loan-sum-date">
+                        <div class="loan-sum-date__item">
+                            <div class="loan-sum-date__value">29 000 тг</div>
+                            <div class="loan-sum-date__name">Сумма к возврату</div>
+                        </div>
+                        <div class="loan-sum-date__item">
+                            <div class="loan-sum-date__value">16 декабря</div>
+                            <div class="loan-sum-date__name">Дата возврата</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup__info-plate info-plate">
+                    <div class="info-plate__loan-sum-date loan-sum-date">
+                        <div class="loan-sum-date__item">
+                            <div class="loan-sum-date__value">29 000 тг</div>
+                            <div class="loan-sum-date__name">Сумма к возврату</div>
+                        </div>
+                        <div class="loan-sum-date__item">
+                            <div class="loan-sum-date__value">16 декабря</div>
+                            <div class="loan-sum-date__name">Дата возврата</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup__info-plate info-plate">
+                    <div class="info-plate__loan-sum-date loan-sum-date">
+                        <div class="loan-sum-date__item">
+                            <div class="loan-sum-date__value">29 000 тг</div>
+                            <div class="loan-sum-date__name">Сумма к возврату</div>
+                        </div>
+                        <div class="loan-sum-date__item">
+                            <div class="loan-sum-date__value">16 декабря</div>
+                            <div class="loan-sum-date__name">Дата возврата</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup__info-plate info-plate">
+                    <div class="info-plate__loan-sum-date loan-sum-date">
+                        <div class="loan-sum-date__item">
+                            <div class="loan-sum-date__value">29 000 тг</div>
+                            <div class="loan-sum-date__name">Сумма к возврату</div>
+                        </div>
+                        <div class="loan-sum-date__item">
+                            <div class="loan-sum-date__value">16 декабря</div>
+                            <div class="loan-sum-date__name">Дата возврата</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup__info-plate info-plate">
+                    <div class="info-plate__loan-sum-date loan-sum-date">
+                        <div class="loan-sum-date__item">
+                            <div class="loan-sum-date__value">29 000 тг</div>
+                            <div class="loan-sum-date__name">Сумма к возврату</div>
+                        </div>
+                        <div class="loan-sum-date__item">
+                            <div class="loan-sum-date__value">16 декабря</div>
+                            <div class="loan-sum-date__name">Дата возврата</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup__info-plate info-plate">
+                    <div class="info-plate__loan-sum-date loan-sum-date">
+                        <div class="loan-sum-date__item">
+                            <div class="loan-sum-date__value">29 000 тг</div>
+                            <div class="loan-sum-date__name">Сумма к возврату</div>
+                        </div>
+                        <div class="loan-sum-date__item">
+                            <div class="loan-sum-date__value">16 декабря</div>
+                            <div class="loan-sum-date__name">Дата возврата</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup__info-plate info-plate">
+                    <div class="info-plate__loan-sum-date loan-sum-date">
+                        <div class="loan-sum-date__item">
+                            <div class="loan-sum-date__value">29 000 тг</div>
+                            <div class="loan-sum-date__name">Сумма к возврату</div>
+                        </div>
+                        <div class="loan-sum-date__item">
+                            <div class="loan-sum-date__value">16 декабря</div>
+                            <div class="loan-sum-date__name">Дата возврата</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup__info-plate info-plate">
+                    <div class="info-plate__loan-sum-date loan-sum-date">
+                        <div class="loan-sum-date__item">
+                            <div class="loan-sum-date__value">29 000 тг</div>
+                            <div class="loan-sum-date__name">Сумма к возврату</div>
+                        </div>
+                        <div class="loan-sum-date__item">
+                            <div class="loan-sum-date__value">16 декабря</div>
+                            <div class="loan-sum-date__name">Дата возврата</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup__info-plate info-plate">
+                    <div class="info-plate__loan-sum-date loan-sum-date">
+                        <div class="loan-sum-date__item">
+                            <div class="loan-sum-date__value">29 000 тг</div>
+                            <div class="loan-sum-date__name">Сумма к возврату</div>
+                        </div>
+                        <div class="loan-sum-date__item">
+                            <div class="loan-sum-date__value">16 декабря</div>
+                            <div class="loan-sum-date__name">Дата возврата</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup__info-plate info-plate">
+                    <div class="info-plate__loan-sum-date loan-sum-date">
+                        <div class="loan-sum-date__item">
+                            <div class="loan-sum-date__value">29 000 тг</div>
+                            <div class="loan-sum-date__name">Сумма к возврату</div>
+                        </div>
+                        <div class="loan-sum-date__item">
+                            <div class="loan-sum-date__value">16 декабря</div>
+                            <div class="loan-sum-date__name">Дата возврата</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup__info-plate info-plate">
+                    <div class="info-plate__loan-sum-date loan-sum-date">
+                        <div class="loan-sum-date__item">
+                            <div class="loan-sum-date__value">29 000 тг</div>
+                            <div class="loan-sum-date__name">Сумма к возврату</div>
+                        </div>
+                        <div class="loan-sum-date__item">
+                            <div class="loan-sum-date__value">16 декабря</div>
+                            <div class="loan-sum-date__name">Дата возврата</div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="popup__close">Закрыть окно</div>
             <div class="popup__close-x"></div>
         </div>
+
+
         <div class="popup js_test_popup3">
             <div class="popup__container">
                 BBBBBBBBBB

@@ -126,7 +126,6 @@ let easyPopup = (function ($) {
     addToDynConfig(options);
 
     if (!stackLen) { // Хэш добавляется только первому попапу в стеке
-      hashBeforeOpening = document.location.hash;
       addHash(dynPopupsConfig[popupId].id);
     }
 
@@ -205,14 +204,24 @@ let easyPopup = (function ($) {
     $popup =
       $('<div class="easy-popup ' + popupConfig.animationClass + '" id="' + popupId + '">' +
         '<div class="easy-popup__bg"></div>' +
-        '<div class="easy-popup__container"></div>' +
+        '<div class="easy-popup__container"><div class="easy-popup__content"></div></div>' +
         '</div>');
 
     if (!popupConfig.modal) {
+      let $userContent = $popup.find('.easy-popup__content').children();
+      $popup.one('click', function () {
+        closePopup();
+      });
+      $userContent.on('click', function (e) {
+        e.stopPropagation();
+      });
+    }
+
+    /*if (!popupConfig.modal) {
       $popup.find('.easy-popup__bg').one('click', function () {
         closePopup();
       });
-    }
+    }*/
 
     if (popupConfig.type === 'ajax') {
       getPopupFromAjax($popup, popupConfig);
@@ -224,7 +233,7 @@ let easyPopup = (function ($) {
 
 
   function insertPopup ($popup, $popupSource) {
-    $popup.find('.easy-popup__container').append($popupSource);
+    $popup.find('.easy-popup__content').append($popupSource);
     $('body').append($popup);
     blockBodyScroll();
     $popup.addClass('easy-popup--ready');
@@ -379,7 +388,11 @@ let easyPopup = (function ($) {
 
 
   function addHash (hash) {
-    window.location.hash = hash;
+    if (document.location.hash === '#'+hash) {
+      window.history.back();
+    }
+    hashBeforeOpening = document.location.hash;
+    document.location.hash = hash;
   }
 
 
@@ -399,8 +412,7 @@ let easyPopup = (function ($) {
 
     if (stackLen && (hashBeforeOpening === document.location.hash)) {
       closeAll(false);
-      // ajax   Отменить обработку ответа с сервера
-      if (ajax.state() === 'pending') {
+      if (ajax && ajax.state() === 'pending') {
         ajax.abort();
       }
     }

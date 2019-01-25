@@ -1,11 +1,24 @@
 .popup{
   position: relative;
   margin: 0 auto;
-  max-width: 400px;
-  min-height: 200px;
-  width: 340px;
-  padding: 25px;
+  padding: 30px 25px 25px;
   background-color: #fff;
 
-  &__close{}
+  &__container{}
+
+  &__close{
+    //position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0 7px;
+    font-size: 12px;
+    line-height: 1;
+    text-align: center;
+    color: @c-minor-text;
+    border-bottom: 1px solid #e5e5e5;
+    user-select: none;
+  }
+
+  &__close-x{}
 }
