@@ -46,7 +46,7 @@ $(function () {
     {
       'id': 'test_ajax',
       type: 'ajax',
-      // modal: true,
+      modal: true,
       ajax: {
         url: '/ajax-test'
       }

@@ -38,9 +38,9 @@ let easyPopup = (function ($) {
     ajax;
 
   // Удалить
-  this.popupStack = popupStack;
-  this.dynPopupsConfig = dynPopupsConfig;
-  this.staticPopupsConfig = staticPopupsConfig;
+  // this.popupStack = popupStack;
+  // this.dynPopupsConfig = dynPopupsConfig;
+  // this.staticPopupsConfig = staticPopupsConfig;
   //
 
 
@@ -150,7 +150,6 @@ let easyPopup = (function ($) {
 
     if (canRemoveHash && stackLen === 1) {
       removeHash();
-      hashBeforeOpening = '';
     }
 
     showPreviousPopup();
@@ -199,15 +198,34 @@ let easyPopup = (function ($) {
   function createPopupDOM () {
     let popupId = popupStack[popupStack.length - 1],
       popupConfig = dynPopupsConfig[popupId],
-      $popup;
+      $popupFrame;
 
-    $popup =
+    $popupFrame =
       $('<div class="easy-popup ' + popupConfig.animationClass + '" id="' + popupId + '">' +
         '<div class="easy-popup__bg"></div>' +
         '<div class="easy-popup__container"><div class="easy-popup__content"></div></div>' +
         '</div>');
 
-    if (!popupConfig.modal) {
+    if (popupConfig.type === 'ajax') {
+      getPopupFromAjax($popupFrame, popupConfig);
+    } else {
+      let $popupSource = popupSource(popupConfig.id);
+      insertPopup($popupFrame, $popupSource);
+      addCloseEvent($popupFrame, popupConfig);
+    }
+  }
+
+
+  function insertPopup ($popupFrame, $popupSource) {
+    $popupFrame.find('.easy-popup__content').append($popupSource);
+    $('body').append($popupFrame);
+    blockBodyScroll();
+    $popupFrame.addClass('easy-popup--ready');
+  }
+
+
+  function addCloseEvent ($popup, popupConfig, ignoreModal) {
+    if (!popupConfig.modal || ignoreModal) {
       let $userContent = $popup.find('.easy-popup__content').children();
       $popup.one('click', function () {
         closePopup();
@@ -216,27 +234,6 @@ let easyPopup = (function ($) {
         e.stopPropagation();
       });
     }
-
-    /*if (!popupConfig.modal) {
-      $popup.find('.easy-popup__bg').one('click', function () {
-        closePopup();
-      });
-    }*/
-
-    if (popupConfig.type === 'ajax') {
-      getPopupFromAjax($popup, popupConfig);
-    } else {
-      let $popupSource = popupSource(popupConfig.id);
-      insertPopup($popup, $popupSource);
-    }
-  }
-
-
-  function insertPopup ($popup, $popupSource) {
-    $popup.find('.easy-popup__content').append($popupSource);
-    $('body').append($popup);
-    blockBodyScroll();
-    $popup.addClass('easy-popup--ready');
   }
 
 
@@ -310,7 +307,7 @@ let easyPopup = (function ($) {
   }
 
 
-  function getPopupFromAjax ($popup, popupConfig) {
+  function getPopupFromAjax ($popupFrame, popupConfig) {
     addPreloader();
 
     ajax = $.ajax({
@@ -334,7 +331,8 @@ let easyPopup = (function ($) {
           $popupSource = $(data.responseText);
         }
 
-        insertPopup($popup, $popupSource);
+        insertPopup($popupFrame, $popupSource);
+        addCloseEvent($popupFrame, popupConfig);
       })
       .fail(function (data, textStatus) {
         if (textStatus === 'abort') {
@@ -344,15 +342,8 @@ let easyPopup = (function ($) {
         let $popupSource;
 
         $popupSource = popupConfig.ajax.requestErrorTemplate;
-        insertPopup($popup, $popupSource);
-
-        if (popupConfig.modal) {
-          $popup.find('.easy-popup__bg').one('click', function () {
-            closePopup();
-          });
-        }
-
-        console.log(`Request error: "${textStatus}"`);
+        insertPopup($popupFrame, $popupSource);
+        addCloseEvent($popupFrame, popupConfig, true);
       })
       .always(function () {
         removePreloader();
@@ -389,21 +380,23 @@ let easyPopup = (function ($) {
 
   function addHash (hash) {
     if (document.location.hash === '#'+hash) {
-      window.history.back();
+      let previousPageHostname = extractHostname(document.referrer);
+
+      if (document.location.hostname === previousPageHostname) {
+        history.back();
+      } else {
+        history.replaceState("", document.title, document.location.pathname + document.location.search);
+      }
     }
-    hashBeforeOpening = document.location.hash;
-    document.location.hash = hash;
+    setTimeout(function () {
+      hashBeforeOpening = document.location.hash;
+      document.location.hash = hash;
+    })
   }
 
 
   function removeHash () {
-    let previousPageHostname = extractHostname(document.referrer);
-
-    if (document.location.hostname === previousPageHostname) {
-      window.history.back();
-    } else {
-      history.replaceState("", document.title, window.location.pathname + window.location.search);
-    }
+    history.back();
   }
 
 

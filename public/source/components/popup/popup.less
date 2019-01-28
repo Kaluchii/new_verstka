@@ -1,13 +1,16 @@
 .popup{
   position: relative;
   margin: 0 auto;
+  max-width: 500px;
+  width: 100%;
   padding: 30px 25px 25px;
   background-color: #fff;
 
   &__container{}
 
   &__close{
-    //position: fixed;
+    display: none;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -17,8 +20,51 @@
     text-align: center;
     color: @c-minor-text;
     border-bottom: 1px solid #e5e5e5;
+    background-color: #fff;
     user-select: none;
   }
 
-  &__close-x{}
+  &__close-x{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 45px;
+    width: 45px;
+    cursor: pointer;
+
+    &:hover{
+      &::before, &::after{
+        background-color: #333333;
+      }
+    }
+
+    &::before, &::after{
+      content: '';
+      position: absolute;
+      top: 7px;
+      right: 21px;
+      height: 30px;
+      width: 2px;
+      border-radius: 5px;
+      background-color: #cccccc;
+      transition: .1s;
+    }
+
+    &::before{
+      transform: rotateZ(45deg);
+    }
+
+    &::after{
+      transform: rotateZ(-45deg);
+    }
+  }
+
+
+  &__info-plate{
+    margin: 10px 15px;
+  }
+
+  &__loan-info{
+    margin: 15px 15px 0;
+  }
 }
