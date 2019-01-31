@@ -226,12 +226,12 @@ let easyPopup = (function ($) {
 
   function addCloseEvent ($popup, popupConfig, ignoreModal) {
     if (!popupConfig.modal || ignoreModal) {
-      let $userContent = $popup.find('.easy-popup__content').children();
-      $popup.one('click', function () {
-        closePopup();
-      });
-      $userContent.on('click', function (e) {
-        e.stopPropagation();
+      $popup.on('click', function (e) {
+        let $contentBlock = $popup.find('.easy-popup__content'),
+            $targetEl = $popup.find('.'+e.target.className);
+        if ($contentBlock.is($targetEl)) {
+          closePopup();
+        }
       });
     }
   }

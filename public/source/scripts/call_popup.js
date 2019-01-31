@@ -31,30 +31,13 @@ $(function () {
 
   let popups = [
     {
-      id: 'test_popup',
-      src: '.js_test_popup',
+      id: 'history_popup',
+      src: '.js_history_popup',
     },
     {
-      'id': 'test_popup2',
-      'src': '.js_test_popup2',
+      'id': 'authorization_popup',
+      'src': '.js_authorization_popup',
       // modal: true
-    },
-    {
-      'id': 'test_popup3',
-      'src': '.js_test_popup3'
-    },
-    {
-      'id': 'test_ajax',
-      type: 'ajax',
-      modal: true,
-      ajax: {
-        url: '/ajax-test'
-      }
-    },
-    {
-      'id': 'test_popup4',
-      'hidePrevious': true,
-      'src': '<div class="tat">ffffffffffffffffgggggggggggg gggggggggh hhhhhhhhhhhhh</div>'
     },
   ];
 
@@ -63,8 +46,8 @@ $(function () {
         <div class="popup__container">
             Произошла ошибка.<br>Попробуйте повторить действия. В случае повторения ошибки пожалуйста свяжитесь с тех.поддержкой.
         </div>
-        <div class="popup__close">Закрыть окно</div>
-        <div class="popup__close-x"></div>
+        <div class="popup__close js_close_popup">Закрыть окно</div>
+        <div class="popup__close-x js_close_popup"></div>
     </div>`;
 
   easyPopup.setDefaultConfig({
@@ -79,14 +62,21 @@ $(function () {
 
   easyPopup.addPopups(popups);
 
+
   $('.js_open_history_popup').on('click', function (e) {
     e.preventDefault();
-    easyPopup.open('test_ajax');
+    easyPopup.open('history_popup');
   });
 
-  $('.js_open_history_popup2').on('click', function (e) {
+
+  $('.js_open_authorization_popup').on('click', function (e) {
     e.preventDefault();
-    easyPopup.open('test_popup2');
+    easyPopup.open('authorization_popup');
+  });
+
+
+  $('body').on('click', '.js_close_popup', function () {
+    easyPopup.close();
   });
 
 

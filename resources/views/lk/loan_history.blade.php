@@ -25,7 +25,7 @@
                     <div class="history-loans__col">Выплачен</div>
                 </div>
                 <div class="history-loans__row">
-                    <div class="history-loans__col"><a href="#history-popup" class="history-loans__link link-local js_open_history_popup2">10 июля 2017</a></div>
+                    <div class="history-loans__col"><a href="#history-popup" class="history-loans__link link-local js_open_authorization_popup">10 июля 2017</a></div>
                     <div class="history-loans__col">38 000</div>
                     <div class="history-loans__col">Отклонен</div>
                 </div>
@@ -50,18 +50,7 @@
 
 
     <div class="hide">
-        <div class="popup js_test_popup">
-            <div class="popup__container">
-                .popup__
-                gasgasga
-                GASghajh aha
-            </div>
-            <div class="popup__close">Закрыть окно</div>
-            <div class="popup__close-x"></div>
-        </div>
-
-
-        <div class="popup js_test_popup2">
+        <div class="popup js_history_popup">
             <div class="popup__container">
                 <div class="popup__info-plate info-plate">
                     <div class="info-plate__loan-sum-date loan-sum-date">
@@ -98,17 +87,17 @@
                     </div>
                 </div>
             </div>
-            <div class="popup__close">Закрыть окно</div>
-            <div class="popup__close-x"></div>
+            <div class="popup__close js_close_popup">Закрыть окно</div>
+            <div class="popup__close-x js_close_popup"></div>
         </div>
 
 
-        <div class="popup js_test_popup3">
+        <div class="popup js_authorization_popup">
             <div class="popup__container">
                 BBBBBBBBBB
             </div>
-            <div class="popup__close">Закрыть окно</div>
-            <div class="popup__close-x"></div>
+            <div class="popup__close js_close_popup">Закрыть окно</div>
+            <div class="popup__close-x js_close_popup"></div>
         </div>
     </div>
 
