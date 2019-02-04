@@ -37,7 +37,7 @@
                 </div>
                 <div class="col-form__row col-form__row--btn-text">
                     <p class="col-form__text">Уже зарегистрированы? <br> <a href="#" class="link">Войдите в кабинет</a></p>
-                    <button class="col-form__btn button button--yellow"><span class="button__text">Дальше</span></button>
+                    <button class="col-form__btn button button--t-yellow"><span class="button__text">Дальше</span></button>
                 </div>
             </form>
             <div class="personal-area__clarification clarification">

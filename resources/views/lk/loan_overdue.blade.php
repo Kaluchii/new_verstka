@@ -24,7 +24,7 @@
             </div>
             <div class="personal-area__btn-with-descr btn-with-descr">
                 <div class="btn-with-descr__btn-wrap">
-                    <a href="#" class="btn-with-descr__btn button button--yellow button--big-in-small"><span class="button__text">Погасить займ</span></a>
+                    <a href="#" class="btn-with-descr__btn button button--t-yellow button--s-full-on-small"><span class="button__text">Погасить займ</span></a>
                 </div>
                 <p class="btn-with-descr__text">Оплата банковской картой или через терминалы оплат</p>
             </div>

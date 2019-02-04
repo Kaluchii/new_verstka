@@ -12,7 +12,7 @@
   user-select: none;
   cursor: pointer;
 
-  &--yellow{
+  &--t-yellow{
     border: 1px solid @c-border;
     background-color: @c-yellow;
 
@@ -21,7 +21,7 @@
     }
   }
 
-  &--grey{
+  &--t-grey{
     border: 1px solid #999999;
     background: #ffffff;
     box-shadow: @inner-gradient, @default-shadow;
@@ -31,14 +31,23 @@
     }
   }
 
+  &--s-medium{
+    padding: 0 50px;
+  }
+
+  &--s-full{
+    width: 100%;
+    max-width: 100%;
+  }
+
+  &--s-full-on-small{}
+
   &.is-disabled, &:disabled{
     font-weight: @fw-norm;
     background-color: #999999;
     border-color: #656565;
     cursor: not-allowed;
   }
-
-  &--big-in-small{}
 
   &__text{
     margin: 0 auto;

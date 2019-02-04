@@ -30,10 +30,10 @@
                     </p>
                     <div class="info-plate__btns-wrap">
                         <div class="info-plate__btn-wrap">
-                            <a href="#" class="info-plate__btn button button--yellow button--big-in-small"><span class="button__text">Оплатить продление</span></a>
+                            <a href="#" class="info-plate__btn button button--t-yellow button--s-full-on-small"><span class="button__text">Оплатить продление</span></a>
                         </div>
                         <div class="info-plate__btn-wrap">
-                            <a href="#" class="info-plate__btn button button--grey button--big-in-small"><span class="button__text">Отказаться от продления</span></a>
+                            <a href="#" class="info-plate__btn button button--t-grey button--s-full-on-small"><span class="button__text">Отказаться от продления</span></a>
                         </div>
                     </div>
                 </div>

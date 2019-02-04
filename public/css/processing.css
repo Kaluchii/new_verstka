@@ -424,7 +424,7 @@ ol {
 	white-space : nowrap;
 }
 @media all and (max-width: 370px) {
-	.button--big-in-small {
+	.button--s-full-on-small {
 		width : 370px;
 		max-width : 100%;
 	}

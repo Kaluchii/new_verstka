@@ -12,7 +12,7 @@
             <div class="personal-area__small-title title-l2">Ваш займ реструктуризирован</div>
             <p class="personal-area__text">Возникла просрочка, начисляется пеня. Сначала оплачивается пеня, затем задолженность.</p>
             <div class="personal-area__btn-wrap">
-                <a href="#" class="personal-area__btn button button--yellow button--big-in-small"><span class="button__text">Оплатить ежемесячный платеж</span></a>
+                <a href="#" class="personal-area__btn button button--t-yellow button--s-full-on-small"><span class="button__text">Оплатить ежемесячный платеж</span></a>
             </div>
             <div class="personal-area__info-block info-block">
                 <div class="info-block__top">

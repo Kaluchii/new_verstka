@@ -1,33 +1,19 @@
 .button{
-  //display: inline-flex;
   display: flex;
   align-items: center;
   height: 40px;
   padding: 0 15px;
   font-size: 16px;
   line-height: 1;
+  border: 1px solid @c-border;
   border-radius: @border-radius;
+  background-color: @c-yellow;
   color: @c-main-black;
   user-select: none;
   cursor: pointer;
 
-  &--yellow{
-    border: 1px solid @c-border;
-    background-color: @c-yellow;
-
-    &:hover, &:focus{
-      background-color: #ffd77c;
-    }
-  }
-
-  &--grey{
-    border: 1px solid #999999;
-    background: #ffffff;
-    box-shadow: @inner-gradient, @default-shadow;
-
-    &:hover, &:focus{
-      border-color: @c-border;
-    }
+  &:hover, &:focus{
+    background-color: #ffd77c;
   }
 
   &.is-disabled, &:disabled{
@@ -36,10 +22,20 @@
     cursor: not-allowed;
   }
 
-  &--big-in-small{}
+  &--s-full-on-small{}
 
   &__text{
     margin: 0 auto;
     white-space: nowrap;
+  }
+}
+
+
+@media all and (max-width: 370px){
+  .button{
+    &--s-full-on-small{
+      width: 370px;
+      max-width: 100%;
+    }
   }
 }

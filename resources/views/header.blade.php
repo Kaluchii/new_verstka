@@ -20,7 +20,7 @@
                     <li class="header__menu-item"><a href="#" class="header__menu-link link-black">Как продлить займ</a></li>
                 </ul>
                 <div class="header__pa-link-wrap">
-                    <a href="#" class="header__pa-link link-black-local">Личный кабинет</a>
+                    <a href="#" class="header__pa-link link-black js_open_authorization_popup">Личный кабинет</a>
                 </div>
             </nav>
         </div>
@@ -41,7 +41,7 @@
                 {{--<a class="header-mobile__lk" href="/member/" rel="nofollow"></a>--}}
                 <!--{/if}-->
                 <!--{else}-->
-                <a class="header-mobile__login-button" href="javascript:;" rel="nofollow" onclick="createLoginWindow();">ВОЙТИ</a>
+                <a class="header-mobile__login-button js_open_authorization_popup" href="#" rel="nofollow">ВОЙТИ</a>
                 <!--{/if}-->
             </div>
             <div class="header-mobile__fade-block js-menu-fade"></div>
@@ -59,12 +59,12 @@
                     <!--{if !$ban_credit.date && !$is_open_credit}-->
                     <div class="mobile-menu__available-amount">Вам доступна сумма <span class="mobile-menu__available-amount-bold">до <!--{$max_sum_loan|number_format:0:"":" "}--> тг</span></div>
                     <div class="mobile-menu__issue-wrap">
-                        <a href="/member/getmoney/" class="mobile-menu__issue-btn button button--yellow"><span class="button__text">Оформить займ</span></a>
+                        <a href="/member/getmoney/" class="mobile-menu__issue-btn button button--t-yellow"><span class="button__text">Оформить займ</span></a>
                     </div>
                     <!--{/if}-->
                     <!--{else}-->
                     {{--<div class="mobile-menu__issue-wrap">--}}
-                        {{--<a href="/" class="mobile-menu__issue-btn button button--yellow"><span class="button__text">Оформить займ</span></a>--}}
+                        {{--<a href="/" class="mobile-menu__issue-btn button button--t-yellow"><span class="button__text">Оформить займ</span></a>--}}
                     {{--</div>--}}
                     <!--{/if}-->
                 </div>

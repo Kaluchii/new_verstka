@@ -4,7 +4,7 @@
   display: inline-block;
   vertical-align: middle;
   width: 100%;
-  padding: 40px 40px 25px;
+  padding: 40px 40px 35px;
   background-color: #fff;
   text-align: left;
 
@@ -62,6 +62,35 @@
   }
 
 
+  &__title{
+    text-align: center;
+  }
+
+  &__text{
+    margin-top: 10px;
+    font-size: @fz-5;
+    line-height: @lh-for-small;
+    color: @c-text;
+    text-align: center;
+  }
+
+  &__input-btn-row{
+    margin-top: 20px;
+  }
+
+  &__form{
+    margin: 20px auto 0;
+    max-width: 280px;
+  }
+
+  &__2-col{
+    margin-top: 21px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__link-wrap{}
+
   &__info-plate{
     margin-bottom: 10px;
   }
@@ -69,4 +98,20 @@
   &__loan-info{
     margin-top: 15px;
   }
+
+  &__hr{
+    margin: 25px -40px 0;
+    border: none;
+    height: 1px;
+
+    .dashed-upline(#cccccc);
+  }
+
+  &__close-btn-wrap{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__close-btn{}
 }

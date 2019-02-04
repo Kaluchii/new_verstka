@@ -60,7 +60,7 @@
     </div>
 
     <div class="processing__btn-wrap">
-        <button class="processing__btn button button--big-in-small"><span
+        <button class="processing__btn button button--s-full-on-small"><span
                     class="button__text">Завершить оформление</span></button>
     </div>
     <div class="processing__logo-wrap">

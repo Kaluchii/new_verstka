@@ -1598,7 +1598,7 @@ html {
 	max-width : 490px;
 }
 @media all and (max-width: 425px) {
-	.button--big-in-small {
+	.button--s-full-on-small {
 		width : 425px;
 		max-width : 100%;
 	}

@@ -46,7 +46,7 @@
                             <div class="field__input-wrap">
                                 <input type="text" class="field__input input" tabindex="3" disabled>
                                 <div class="field__alert">Укажите отчество</div>
-                                <div class="field__action"><a href="#" class="link-local">Нет отчества</a></div>
+                                <div class="field__action"><a href="#" class="link">Нет отчества</a></div>
                             </div>
                         </div>
                     </div>

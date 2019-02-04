@@ -36,7 +36,7 @@
                         </label>
                     </div>
                     <div class="col-form__row">
-                        <button class="col-form__btn button button--yellow button--big-in-small" tabindex="4"><span class="button__text">Сменить пароль</span></button>
+                        <button class="col-form__btn button button--t-yellow button--s-full-on-small" tabindex="4"><span class="button__text">Сменить пароль</span></button>
                     </div>
                 </div>
                 <div class="form-with-info__info alarm-info">

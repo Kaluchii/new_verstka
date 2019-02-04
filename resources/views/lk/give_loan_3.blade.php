@@ -86,7 +86,7 @@
                         </div>
                     </div>
                     <div class="obtaining-method-tabs__btn-wrap">
-                        <button class="obtaining-method-tabs__btn button button--yellow button--big-in-small"><span class="button__text">Завершить оформление</span></button>
+                        <button class="obtaining-method-tabs__btn button button--t-yellow button--s-full-on-small"><span class="button__text">Завершить оформление</span></button>
                     </div>
                 </div>
 
@@ -103,7 +103,7 @@
                                 </div>
                             </div>
                             <div class="obtaining-method-tabs__popup-link-wrap">
-                                <a href="#" class="obtaining-method-tabs__popup-link link-local">КАК ОТКРЫТЬ СЧЕТ В «КАЗПОЧТЕ»</a>
+                                <a href="#" class="obtaining-method-tabs__popup-link link">КАК ОТКРЫТЬ СЧЕТ В «КАЗПОЧТЕ»</a>
                             </div>
                         </div>
                         <div class="obtaining-method-tabs__col">
@@ -120,7 +120,7 @@
                         </div>
                     </div>
                     <div class="obtaining-method-tabs__btn-wrap">
-                        <button class="obtaining-method-tabs__btn button button--yellow button--big-in-small"><span class="button__text">Завершить оформление</span></button>
+                        <button class="obtaining-method-tabs__btn button button--t-yellow button--s-full-on-small"><span class="button__text">Завершить оформление</span></button>
                     </div>
                 </div>
             </div>

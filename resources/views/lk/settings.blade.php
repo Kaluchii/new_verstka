@@ -8,7 +8,7 @@
                 <div class="available-loan__sum">Вам доступен займ до 150 000 тг</div>
             </div>
             <div class="available-loan__btn-wrap">
-                <a href="#" class="available-loan__btn button button--yellow"><span class="button__text">Получить деньги</span></a>
+                <a href="#" class="available-loan__btn button button--t-yellow"><span class="button__text">Получить деньги</span></a>
             </div>
         </div>
         <div class="personal-area__menu menu">
@@ -23,7 +23,7 @@
             <div class="info-block__top">
                 <p class="info-block__title title-l2">Паспортные данные</p>
                 <div class="info-block__btn-wrap">
-                    <a href="#" class="info-block__btn button button--grey"><span class="button__text">Изменить</span></a>
+                    <a href="#" class="info-block__btn button button--t-grey"><span class="button__text">Изменить</span></a>
                 </div>
             </div>
             <div class="info-block__data-list data-list">
@@ -73,7 +73,7 @@
             <div class="info-block__top">
                 <p class="info-block__title title-l2">Контактные данные</p>
                 <div class="info-block__btn-wrap">
-                    <a href="#" class="info-block__btn button button--grey"><span class="button__text">Изменить</span></a>
+                    <a href="#" class="info-block__btn button button--t-grey"><span class="button__text">Изменить</span></a>
                 </div>
             </div>
             <div class="info-block__data-list data-list">
@@ -91,7 +91,7 @@
             <div class="info-block__top">
                 <p class="info-block__title title-l2">Адрес прописки</p>
                 <div class="info-block__btn-wrap">
-                    <a href="#" class="info-block__btn button button--grey"><span class="button__text">Изменить</span></a>
+                    <a href="#" class="info-block__btn button button--t-grey"><span class="button__text">Изменить</span></a>
                 </div>
             </div>
             <div class="info-block__data-list data-list">
@@ -104,7 +104,7 @@
             <div class="info-block__top">
                 <p class="info-block__title title-l2">Адрес проживания</p>
                 <div class="info-block__btn-wrap">
-                    <a href="#" class="info-block__btn button button--grey"><span class="button__text">Изменить</span></a>
+                    <a href="#" class="info-block__btn button button--t-grey"><span class="button__text">Изменить</span></a>
                 </div>
             </div>
             <div class="info-block__data-list data-list">
@@ -117,7 +117,7 @@
             <div class="info-block__top">
                 <p class="info-block__title title-l2">Доверенные лица</p>
                 <div class="info-block__btn-wrap">
-                    <a href="#" class="info-block__btn button button--grey"><span class="button__text">Изменить</span></a>
+                    <a href="#" class="info-block__btn button button--t-grey"><span class="button__text">Изменить</span></a>
                 </div>
             </div>
             <div class="info-block__data-list data-list">
@@ -137,7 +137,7 @@
             <div class="info-block__top">
                 <p class="info-block__title title-l2">Занятость и доходы</p>
                 <div class="info-block__btn-wrap">
-                    <a href="#" class="info-block__btn button button--grey"><span class="button__text">Изменить</span></a>
+                    <a href="#" class="info-block__btn button button--t-grey"><span class="button__text">Изменить</span></a>
                 </div>
             </div>
             <div class="info-block__data-list data-list">

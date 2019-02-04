@@ -35,9 +35,20 @@ $(function () {
       src: '.js_history_popup',
     },
     {
-      'id': 'authorization_popup',
-      'src': '.js_authorization_popup',
-      // modal: true
+      id: 'authorization_popup',
+      src: '.js_authorization_popup'
+    },
+    {
+      id: 'forgot_popup_step',
+      src: '.js_forgot_popup_step_1'
+    },
+    {
+      id: 'forgot_popup_step_2',
+      src: '.js_forgot_popup_step_2'
+    },
+    {
+      id: 'alert_popup',
+      src: '.js_alert_popup'
     },
   ];
 
@@ -72,6 +83,24 @@ $(function () {
   $('.js_open_authorization_popup').on('click', function (e) {
     e.preventDefault();
     easyPopup.open('authorization_popup');
+  });
+
+
+  $('.js_open_forgot_popup_step_1').on('click', function (e) {
+    e.preventDefault();
+    easyPopup.open('forgot_popup_step');
+  });
+
+
+  $('.js_open_forgot_popup_step_2').on('click', function (e) {
+    e.preventDefault();
+    easyPopup.open('forgot_popup_step_2');
+  });
+
+
+  $('.js_open_alert_popup').on('click', function (e) {
+    e.preventDefault();
+    easyPopup.open('alert_popup');
   });
 
 
