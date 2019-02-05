@@ -1,0 +1,60 @@
+.checkbox{
+  cursor: pointer;
+  user-select: none;
+
+  &:hover{
+    .checkbox{
+      &__visual-square{
+        border-color: @c-border;
+      }
+    }
+  }
+
+  &__input{
+    opacity: 0;
+    width: 0;
+    height: 0;
+
+    &:focus{
+      & ~ .checkbox{
+        &__visual-square{
+          border-color: @c-border;
+        }
+      }
+    }
+
+    &:checked{
+      & + .checkbox{
+        &__visual-square{
+          &::after{
+            background: url("/img/checkbox.svg") no-repeat center / ~'90%';
+          }
+        }
+      }
+    }
+  }
+
+  &__visual-square{
+    position: relative;
+    bottom: -0.15em;
+    display: inline-block;
+    height: 1em;
+    width: 1em;
+    border: 1px solid #999999;
+    border-radius: 3px;
+    transition: 0.1s;
+
+    &::after{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &__text{
+    color: inherit;
+  }
+}

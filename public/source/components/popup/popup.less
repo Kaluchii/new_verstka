@@ -7,6 +7,7 @@
   padding: 40px 40px 35px;
   background-color: #fff;
   text-align: left;
+  border-radius: @border-radius-big;
 
   &__container{}
 
@@ -106,6 +107,24 @@
 
     .dashed-upline(#cccccc);
   }
+
+  &__row-list{
+    margin-top: 15px;
+  }
+
+  &__checkbox-wrap{
+    margin-top: 20px;
+    color: @c-text;
+    text-align: center;
+
+    & + .popup{
+      &__close-btn-wrap{
+        margin-top: 25px;
+      }
+    }
+  }
+
+  &__checkbox{}
 
   &__close-btn-wrap{
     margin-top: 30px;
