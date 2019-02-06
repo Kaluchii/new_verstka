@@ -54,6 +54,14 @@ $(function () {
             id: 'agreement_popup',
             src: '.js_agreement_popup'
         },
+        {
+            id: 'prolongation_popup',
+            src: '.js_prolongation_popup'
+        },
+        {
+            id: 'restructuring_popup',
+            src: '.js_restructuring_popup'
+        },
     ];
 
     let requestErrorTemplate = `
@@ -114,7 +122,20 @@ $(function () {
     });
 
 
-    $('body').on('click', '.js_close_popup', function () {
+    $('.js_open_prolongation_popup').on('click', function (e) {
+        e.preventDefault();
+        easyPopup.open('prolongation_popup');
+    });
+
+
+    $('.js_open_restructuring_popup').on('click', function (e) {
+        e.preventDefault();
+        easyPopup.open('restructuring_popup');
+    });
+
+
+    $('body').on('click', '.js_close_popup', function (e) {
+        e.preventDefault();
         easyPopup.close();
     });
 

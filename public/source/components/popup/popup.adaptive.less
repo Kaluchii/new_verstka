@@ -1,4 +1,13 @@
-@media all and (max-width: 540px){
+@media all and (max-width: @mq-popup-mobile+100){
+  .popup{
+    &--long{
+      max-width: 500px;
+    }
+  }
+}
+
+
+@media all and (max-width: @mq-popup-mobile){
   .popup{
     max-width: none;
     min-height: 100%;
@@ -29,7 +38,7 @@
       margin-top: 15px;
     }
 
-    &__close-btn-wrap{
+    &__btn-wrap{
       margin-top: 20px;
     }
   }

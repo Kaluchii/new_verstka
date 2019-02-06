@@ -1,6 +1,6 @@
 @extends('layout')
 @section('content')
-    <div class="personal-area">
+    <main class="personal-area">
         <div class="personal-area__container">
             <div class="personal-area__menu menu">
                 <ul class="menu__list">
@@ -75,5 +75,5 @@
                 </ul>
             </div>
         </div>
-    </div>
+    </main>
 @endsection

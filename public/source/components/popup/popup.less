@@ -9,6 +9,10 @@
   text-align: left;
   border-radius: @border-radius-big;
 
+  &--long{
+    max-width: 600px;
+  }
+
   &__container{}
 
   &__close{
@@ -25,6 +29,10 @@
     border-bottom: 1px solid #e5e5e5;
     background-color: #fff;
     user-select: none;
+
+    &:focus{
+      color: @c-text;
+    }
   }
 
   &__close-x{
@@ -35,7 +43,7 @@
     width: 45px;
     cursor: pointer;
 
-    &:hover{
+    &:hover, &:focus{
       &::before, &::after{
         background-color: #333333;
       }
@@ -67,6 +75,11 @@
     text-align: center;
   }
 
+  &__middle-title{
+    margin-top: 25px;
+    text-align: center;
+  }
+
   &__text{
     margin-top: 10px;
     font-size: @fz-5;
@@ -90,10 +103,16 @@
     justify-content: space-between;
   }
 
+  &__restruct-3-col{
+    margin: 25px 25px 0;
+  }
+
   &__link-wrap{}
 
   &__info-plate{
-    margin-bottom: 10px;
+    &--loan-action{
+      margin-top: 25px;
+    }
   }
 
   &__loan-info{
@@ -118,7 +137,7 @@
     text-align: center;
 
     & + .popup{
-      &__close-btn-wrap{
+      &__btn-wrap{
         margin-top: 25px;
       }
     }
@@ -126,11 +145,17 @@
 
   &__checkbox{}
 
-  &__close-btn-wrap{
+  &__btn-wrap{
     margin-top: 30px;
     display: flex;
     justify-content: center;
+
+    & + .popup{
+      &__text{
+        margin-top: 20px;
+      }
+    }
   }
 
-  &__close-btn{}
+  &__btn{}
 }

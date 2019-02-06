@@ -36,7 +36,7 @@
                 </div>
             </div>
         </div>
-        <div class="popup__close js_close_popup">Закрыть окно</div>
-        <div class="popup__close-x js_close_popup"></div>
+        <a href="#close" class="popup__close js_close_popup">Закрыть окно</a>
+        <a href="#close" class="popup__close-x js_close_popup"></a>
     </div>
 @endsection

@@ -1,3 +1,4 @@
+/*
 $(function () {
 
     if ($('select').length) {
@@ -34,4 +35,4 @@ $(function () {
         }
     }
 
-});
+});*/

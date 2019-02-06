@@ -18,11 +18,11 @@
                     <span class="checkbox__text">Я ознакомлен(а) с документами и&nbsp;принимаю&nbsp;условия</span>
                 </label>
             </div>
-            <div class="popup__close-btn-wrap">
-                <a href="#" class="popup__close-btn button button--t-yellow button--s-medium button--s-full-on-small"><span class="button__text">Продолжить</span></a>
+            <div class="popup__btn-wrap">
+                <a href="#" class="popup__btn button button--t-yellow button--s-medium button--s-full-on-small"><span class="button__text">Продолжить</span></a>
             </div>
         </div>
-        <div class="popup__close js_close_popup">Закрыть окно</div>
-        <div class="popup__close-x js_close_popup"></div>
+        <a href="#close" class="popup__close js_close_popup">Закрыть окно</a>
+        <a href="#close" class="popup__close-x js_close_popup"></a>
     </div>
 @endsection
