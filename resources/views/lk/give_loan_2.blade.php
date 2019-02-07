@@ -340,7 +340,6 @@
                                     <option value="17">Безработный</option>
                                     <option value="7">Прочие</option>
                                 </select>
-                                <input type="text" class="field__input input" tabindex="1">
                                 <div class="field__alert"></div>
                             </div>
                         </div>

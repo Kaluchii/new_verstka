@@ -3,7 +3,7 @@
         <div class="popup__container">
             <div class="popup__title title-l2">Реструктуризация займа</div>
             <div class="popup__text">
-                Начисление процентов и пени по займу останавливается. Задолженость оплачивается по частям.
+                Начисление процентов и пени по&nbsp;займу останавливается. Задолженость оплачивается по&nbsp;частям.
             </div>
             <div class="popup__info-plate popup__info-plate--loan-action info-plate">
                 <div class="info-plate__select-wth-label select-wth-label">

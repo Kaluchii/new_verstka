@@ -15,6 +15,6 @@ class FrontController extends Controller
     {
 //        abort(404);
         sleep(2);
-        return view('ajax-popup');
+        return view('popups.history');
     }
 }

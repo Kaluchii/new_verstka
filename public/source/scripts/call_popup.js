@@ -1,38 +1,43 @@
 $(function () {
 
-    function showAlert (text, title, text_btn, width, callback) {
-        callback = (callback ? callback : "");
-        title = (title ? title : "Внимание");
-        text_btn = (text_btn ? text_btn : "OK");
-        width = (width ? width : 400);
-        removePopup('inform');
-        var html = '<div class="title">' + title + '</div>' +
-            '<div class="content">' + text + '</div>' +
-            '<div class="btns">' +
-            '<a class="enter-btn square krayola" href="javascript:;" onclick="removePopup(\'inform\', \'' + callback + '\');">' + text_btn + '</a>' +
-            '</div>';
-        showPopup(html, width, 0, "inform", callback);
-    }
+    let requestErrorTemplate =
+        `<div class="popup js_fail_popup">
+            <div class="popup__container">
+                <div class="popup__title title-l2">Произошла ошибка</div>
+                <div class="popup__text">
+                    При запросе на сервер произошла ошибка. Попробуйте повторить действия. В случае повторения ошибки пожалуйста свяжитесь с тех.поддержкой.
+                </div>
+                <hr class="popup__hr">
+                <div class="popup__btn-wrap">
+                    <a href="#close" class="popup__btn button button--t-yellow button--s-medium button--s-full-on-small js_close_popup"><span class="button__text">Закрыть</span></a>
+                </div>
+            </div>
+            <a href="#close" class="popup__close js_close_popup">Закрыть окно</a>
+            <a href="#close" class="popup__close-x js_close_popup"></a>
+        </div>`;
 
-
-    function showConfirm (text, title, callback) {
-        title = (title ? title : "Внимание");
-        removePopup('confirm');
-        var html = '<div class="title">' + title + '</div>' +
-            '<div class="content">' + text + '</div>' +
-            '<div class="btns">' +
-            '<a class="enter-btn square krayola" href="javascript:;" onclick="' + (callback ? callback : '') + '">Да</a>' +
-            '<a class="enter-btn square krayola" href="javascript:;" onclick="removePopup();">Нет</a>' +
-            '</div>';
-
-        showPopup(html, 450, 0, "confirm");
-    }
-
+    easyPopup.setDefaultConfig({
+        animationClass: 'ep-move-from-top',
+        removalDelay: 300,
+        ajax: {
+            headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+            requestErrorTemplate: requestErrorTemplate,
+            preloaderRemovalDelay: 300
+        }
+    });
 
     let popups = [
         {
+            id: 'alert_popup',
+            src: '.js_alert_popup'
+        },
+        {
             id: 'history_popup',
             src: '.js_history_popup',
+            type: 'ajax',
+            ajax: {
+                url: '/ajax-test'
+            }
         },
         {
             id: 'authorization_popup',
@@ -45,10 +50,6 @@ $(function () {
         {
             id: 'forgot_popup_step_2',
             src: '.js_forgot_popup_step_2'
-        },
-        {
-            id: 'alert_popup',
-            src: '.js_alert_popup'
         },
         {
             id: 'agreement_popup',
@@ -64,26 +65,31 @@ $(function () {
         },
     ];
 
-    let requestErrorTemplate = `
-    <div class="popup js_test_popup_error">
-        <div class="popup__container">
-            Произошла ошибка.<br>Попробуйте повторить действия. В случае повторения ошибки пожалуйста свяжитесь с тех.поддержкой.
-        </div>
-        <div class="popup__close js_close_popup">Закрыть окно</div>
-        <div class="popup__close-x js_close_popup"></div>
-    </div>`;
-
-    easyPopup.setDefaultConfig({
-        animationClass: 'ep-move-from-top',
-        removalDelay: 300,
-        ajax: {
-            headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
-            requestErrorTemplate: requestErrorTemplate,
-            preloaderRemovalDelay: 300
-        }
-    });
-
     easyPopup.addPopups(popups);
+
+
+    window.showAlert = function (text, title, btnText) {
+        title = (title ? title : "Внимание");
+        btnText = (btnText ? btnText : "Закрыть");
+
+        let html =
+            `<div class="popup js_alert_popup">
+                <div class="popup__container">
+                    <div class="popup__title title-l2">${title}</div>
+                    <div class="popup__text">${text}</div>
+                    <hr class="popup__hr">
+                    <div class="popup__btn-wrap">
+                        <a href="#close" class="popup__btn button button--t-yellow button--s-medium button--s-full-on-small js_close_popup"><span class="button__text">${btnText}</span></a>
+                    </div>
+                </div>
+                <a href="#close" class="popup__close js_close_popup">Закрыть окно</a>
+                <a href="#close" class="popup__close-x js_close_popup"></a>
+            </div>`;
+
+        easyPopup.open('alert_popup', {
+            src: html
+        });
+    };
 
 
     $('.js_open_history_popup').on('click', function (e) {
@@ -132,6 +138,9 @@ $(function () {
         e.preventDefault();
         easyPopup.open('restructuring_popup');
     });
+
+
+
 
 
     $('body').on('click', '.js_close_popup', function (e) {
