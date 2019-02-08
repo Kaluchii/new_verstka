@@ -1,5 +1,6 @@
 .field{
   width: 100%;
+  font-size: @fz-5;
 
   &__input-wrap{
     position: relative;
@@ -44,7 +45,6 @@
 
   &__name{
     margin-bottom: 5px;
-    font-size: 16px;
     font-weight: @fw-bold;
     line-height: 1.2;
     color: @c-main-black;
@@ -57,11 +57,11 @@
   &__alert{
     display: none;
     position: absolute;
-    top: ~'calc(100% + 2px)';
+    top: 42px;
     right: 0;
     z-index: 1;
     padding: 0 3px;
-    font-size: 12px;
+    font-size: @fz-7;
     border: 1px solid @c-border;
     border-radius: 2px;
     text-align: right;
@@ -73,7 +73,7 @@
     position: absolute;
     bottom: 47px;
     right: 0;
-    font-size: 14px;
+    font-size: @fz-6;
     line-height: 1;
   }
 
@@ -82,7 +82,7 @@
     top: -3px;
     left: ~'calc(100% + 20px)';
     width: 200px;
-    font-size: 12px;
+    font-size: @fz-7;
     color: @c-text;
   }
 
@@ -98,5 +98,11 @@
     &.password-displayed{
       background: url('/img/field_show-pass.png') no-repeat center;
     }
+  }
+
+  &__under-input{
+    margin-top: 5px;
+    line-height: @lh-for-small;
+    color: @c-text;
   }
 }

@@ -54,6 +54,11 @@
                     <div class="history-loans__col">7 500</div>
                     <div class="history-loans__col">Отклонен</div>
                 </div>
+                <div class="history-loans__row">
+                    <div class="history-loans__col"><a href="#" class="history-loans__link link js_open_offer_confirmation_popup">6 мая 2018</a></div>
+                    <div class="history-loans__col">7 500</div>
+                    <div class="history-loans__col">Отклонен</div>
+                </div>
             </div>
         </div>
     </main>

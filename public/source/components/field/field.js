@@ -8,6 +8,8 @@ $(function () {
 
     /* Отображение/скрытие пароля */
     $('body').on('click', passSwitch, function (e) {
+        e.preventDefault();
+
         let _this = $(e.target),
             $field = $(field),
             $input = $(input),

@@ -19,7 +19,7 @@
                 </label>
             </div>
             <div class="popup__btn-wrap">
-                <a href="#" class="popup__btn button button--t-yellow button--s-medium button--s-full-on-small"><span class="button__text">Продолжить</span></a>
+                <a href="#" class="popup__btn button button--t-yellow button--s-medium button--s-full-on-small js_open_offer_confirmation_popup"><span class="button__text">Продолжить</span></a>
             </div>
         </div>
         <a href="#close" class="popup__close js_close_popup">Закрыть окно</a>

@@ -6,6 +6,7 @@
 @include('popups.history')
 @include('popups.prolongation')
 @include('popups.restructuring')
+@include('popups.offer_confirmation')
 <div class="hide">
     @yield('popup_agreement')
     @yield('popup_authorization')
@@ -15,4 +16,5 @@
     @yield('popup_history')
     @yield('popup_prolongation')
     @yield('popup_restructuring')
+    @yield('popup_offer_confirmation')
 </div>

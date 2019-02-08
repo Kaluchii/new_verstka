@@ -11,34 +11,34 @@
             </div>
             <div class="personal-area__small-title title-l2">Смена пароля</div>
             <div class="personal-area__form-with-info form-with-info">
-                <div class="form-with-info__form col-form">
+                <form class="form-with-info__form col-form">
                     <div class="col-form__row field js_field">
                         <div class="field__name">Текущий пароль</div>
                         <label class="field__input-wrap js_field_wrapper">
-                            <input type="text" class="field__input input js_field_input" placeholder="Введите текущий пароль" tabindex="1">
+                            <input type="text" class="field__input input js_field_input" placeholder="Введите текущий пароль">
                             <span class="field__alert js_field_alert">Пароль неверный</span>
                         </label>
                     </div>
                     <div class="col-form__row field js_field">
                         <div class="field__name">Новый пароль</div>
                         <label class="field__input-wrap js_field_wrapper">
-                            <input type="text" class="field__input input input--pass js_field_input" tabindex="2">
+                            <input type="text" class="field__input input input--pass js_field_input">
                             <span class="field__alert js_field_alert">Пароль должен быть не короче 8 символов, содержать заглавные буквы и цифры</span>
-                            <span class="field__show-pass js_field_pass_switch"></span>
+                            <a href="#display-pass" class="field__show-pass js_field_pass_switch"></a>
                         </label>
                     </div>
                     <div class="col-form__row field js_field">
                         <div class="field__name">Новый пароль еще раз</div>
                         <label class="field__input-wrap js_field_wrapper">
-                            <input type="password" placeholder="Повторите пароль" class="field__input input input--pass js_field_input" tabindex="3">
+                            <input type="password" placeholder="Повторите пароль" class="field__input input input--pass js_field_input">
                             <span class="field__alert js_field_alert">Пароли не совпадают</span>
-                            <span class="field__show-pass js_field_pass_switch"></span>
+                            <a href="#display-pass" class="field__show-pass js_field_pass_switch"></a>
                         </label>
                     </div>
                     <div class="col-form__row">
-                        <button class="col-form__btn button button--t-yellow button--s-full-on-small" tabindex="4"><span class="button__text">Сменить пароль</span></button>
+                        <button class="col-form__btn button button--t-yellow button--s-full-on-small"><span class="button__text">Сменить пароль</span></button>
                     </div>
-                </div>
+                </form>
                 <div class="form-with-info__info alarm-info">
                     <p class="alarm-info__text">
                         <span class="bold">Важно!</span> <br>

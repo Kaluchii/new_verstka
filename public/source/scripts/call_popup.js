@@ -63,6 +63,11 @@ $(function () {
             id: 'restructuring_popup',
             src: '.js_restructuring_popup'
         },
+        {
+            id: 'offer_confirmation_popup',
+            src: '.js_offer_confirmation_popup',
+            hidePrevious: true
+        },
     ];
 
     easyPopup.addPopups(popups);
@@ -137,6 +142,12 @@ $(function () {
     $('.js_open_restructuring_popup').on('click', function (e) {
         e.preventDefault();
         easyPopup.open('restructuring_popup');
+    });
+
+
+    $('.js_open_offer_confirmation_popup').on('click', function (e) {
+        e.preventDefault();
+        easyPopup.open('offer_confirmation_popup');
     });
 
 
