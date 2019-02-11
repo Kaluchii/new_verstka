@@ -16,7 +16,7 @@
                     </div>
                 </div>
                 <div class="input-btn-row__btn-wrap">
-                    <button class="input-btn-row__btn button button--t-yellow button--s-full"><span class="button__text">Восстановить</span></button>
+                    <button class="input-btn-row__btn button button--t-yellow button--s-full js_open_forgot_popup_step_2"><span class="button__text">Восстановить</span></button>
                 </div>
             </form>
         </div>

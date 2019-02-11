@@ -26,7 +26,7 @@
                         <div class="fields-list__item field">
                             <div class="field__name">Фамилия</div>
                             <div class="field__input-wrap">
-                                <input type="text" class="field__input input" tabindex="1">
+                                <input type="text" class="field__input input">
                                 <div class="field__alert">Укажите фамилию</div>
                             </div>
                         </div>
@@ -35,7 +35,7 @@
                         <div class="fields-list__item field">
                             <div class="field__name">Имя</div>
                             <div class="field__input-wrap">
-                                <input type="text" class="field__input input" tabindex="2">
+                                <input type="text" class="field__input input">
                                 <div class="field__alert">Укажите имя</div>
                             </div>
                         </div>
@@ -44,7 +44,7 @@
                         <div class="fields-list__item field">
                             <div class="field__name">Отчество</div>
                             <div class="field__input-wrap">
-                                <input type="text" class="field__input input" tabindex="3" disabled>
+                                <input type="text" class="field__input input" disabled>
                                 <div class="field__alert">Укажите отчество</div>
                                 <div class="field__action"><a href="#" class="link">Нет отчества</a></div>
                             </div>
@@ -56,11 +56,11 @@
                             <div class="field__input-wrap">
                                 <div class="field__radio-switchers radio-switchers">
                                     <label class="radio-switchers__item">
-                                        <input type="radio" class="radio-switchers__input" name="radio" value="0" tabindex="4">
+                                        <input type="radio" class="radio-switchers__input" name="radio" value="0">
                                         <span class="radio-switchers__button">В браке</span>
                                     </label>
                                     <label class="radio-switchers__item">
-                                        <input type="radio" class="radio-switchers__input" name="radio" value="1" tabindex="4">
+                                        <input type="radio" class="radio-switchers__input" name="radio" value="1">
                                         <span class="radio-switchers__button">Не в браке</span>
                                     </label>
                                 </div>
@@ -74,19 +74,19 @@
                             <div class="field__input-wrap">
                                 <div class="field__radio-switchers radio-switchers">
                                     <label class="radio-switchers__item">
-                                        <input type="radio" class="radio-switchers__input" name="radio1" value="0" tabindex="5">
+                                        <input type="radio" class="radio-switchers__input" name="radio1" value="0">
                                         <span class="radio-switchers__button">Нет</span>
                                     </label>
                                     <label class="radio-switchers__item">
-                                        <input type="radio" class="radio-switchers__input" name="radio1" value="1" tabindex="5" checked>
+                                        <input type="radio" class="radio-switchers__input" name="radio1" value="1" checked>
                                         <span class="radio-switchers__button">1</span>
                                     </label>
                                     <label class="radio-switchers__item">
-                                        <input type="radio" class="radio-switchers__input" name="radio1" value="2" tabindex="5">
+                                        <input type="radio" class="radio-switchers__input" name="radio1" value="2">
                                         <span class="radio-switchers__button">2</span>
                                     </label>
                                     <label class="radio-switchers__item">
-                                        <input type="radio" class="radio-switchers__input" name="radio1" value="3" tabindex="5">
+                                        <input type="radio" class="radio-switchers__input" name="radio1" value="3">
                                         <span class="radio-switchers__button">3+</span>
                                     </label>
                                 </div>
@@ -98,7 +98,7 @@
                         <div class="fields-list__item field is-right">
                             <div class="field__name">ИИН</div>
                             <div class="field__input-wrap">
-                                <input type="text" class="field__input input" tabindex="6" placeholder="000 000 000 000">
+                                <input type="text" class="field__input input" placeholder="000 000 000 000">
                                 <div class="field__alert"></div>
                             </div>
                         </div>
@@ -107,7 +107,7 @@
                         <div class="fields-list__item field">
                             <div class="field__name">№ удостоверение личности</div>
                             <div class="field__input-wrap">
-                                <input type="text" class="field__input input" tabindex="7" placeholder="000 000 000">
+                                <input type="text" class="field__input input" placeholder="000 000 000">
                                 <div class="field__alert"></div>
                             </div>
                         </div>
@@ -118,11 +118,11 @@
                             <div class="field__input-wrap">
                                 <div class="field__radio-switchers radio-switchers">
                                     <label class="radio-switchers__item">
-                                        <input type="radio" class="radio-switchers__input" name="radio3" value="0" tabindex="8">
+                                        <input type="radio" class="radio-switchers__input" name="radio3" value="0">
                                         <span class="radio-switchers__button">МВД РК</span>
                                     </label>
                                     <label class="radio-switchers__item">
-                                        <input type="radio" class="radio-switchers__input" name="radio3" value="1" tabindex="8">
+                                        <input type="radio" class="radio-switchers__input" name="radio3" value="1">
                                         <span class="radio-switchers__button">МЮ РК</span>
                                     </label>
                                 </div>
@@ -134,14 +134,14 @@
                         <div class="fields-list__item fields-list__item--small field">
                             <div class="field__name">Дата выдачи</div>
                             <div class="field__input-wrap">
-                                <input type="text" class="field__input input" tabindex="9">
+                                <input type="text" class="field__input input">
                                 <div class="field__alert"></div>
                             </div>
                         </div>
                         <div class="fields-list__item fields-list__item--small field">
                             <div class="field__name">Срок действия</div>
                             <div class="field__input-wrap">
-                                <input type="text" class="field__input input" tabindex="10">
+                                <input type="text" class="field__input input">
                                 <div class="field__alert"></div>
                             </div>
                         </div>
@@ -157,7 +157,7 @@
                         <div class="fields-list__item field has-error">
                             <div class="field__name">Город или населенный пункт</div>
                             <div class="field__input-wrap">
-                                <input type="text" class="field__input input" tabindex="1">
+                                <input type="text" class="field__input input">
                                 <div class="field__alert"></div>
                             </div>
                         </div>
@@ -166,7 +166,7 @@
                         <div class="fields-list__item field">
                             <div class="field__name">Улица</div>
                             <div class="field__input-wrap">
-                                <input type="text" class="field__input input" tabindex="2">
+                                <input type="text" class="field__input input">
                                 <div class="field__alert">Укажите имя</div>
                             </div>
                         </div>
@@ -175,14 +175,14 @@
                         <div class="fields-list__item fields-list__item--small field">
                             <div class="field__name">Дом</div>
                             <div class="field__input-wrap">
-                                <input type="text" class="field__input input" tabindex="9">
+                                <input type="text" class="field__input input">
                                 <div class="field__alert"></div>
                             </div>
                         </div>
                         <div class="fields-list__item fields-list__item--small field">
                             <div class="field__name">Квартира</div>
                             <div class="field__input-wrap">
-                                <input type="text" class="field__input input" tabindex="10">
+                                <input type="text" class="field__input input">
                                 <div class="field__alert"></div>
                             </div>
                         </div>
@@ -198,7 +198,7 @@
                         <div class="fields-list__item field">
                             <div class="field__name">Город или населенный пункт</div>
                             <div class="field__input-wrap">
-                                <input type="text" class="field__input input" tabindex="1">
+                                <input type="text" class="field__input input">
                                 <div class="field__alert"></div>
                             </div>
                         </div>
@@ -207,7 +207,7 @@
                         <div class="fields-list__item field">
                             <div class="field__name">Улица</div>
                             <div class="field__input-wrap">
-                                <input type="text" class="field__input input" tabindex="2">
+                                <input type="text" class="field__input input">
                                 <div class="field__alert">Укажите имя</div>
                             </div>
                         </div>
@@ -216,14 +216,14 @@
                         <div class="fields-list__item fields-list__item--small field">
                             <div class="field__name">Дом</div>
                             <div class="field__input-wrap">
-                                <input type="text" class="field__input input" tabindex="9">
+                                <input type="text" class="field__input input">
                                 <div class="field__alert"></div>
                             </div>
                         </div>
                         <div class="fields-list__item fields-list__item--small field">
                             <div class="field__name">Квартира</div>
                             <div class="field__input-wrap">
-                                <input type="text" class="field__input input" tabindex="10">
+                                <input type="text" class="field__input input">
                                 <div class="field__alert"></div>
                             </div>
                         </div>
@@ -239,7 +239,7 @@
                         <div class="fields-list__item field">
                             <div class="field__name">Контактное лицо №1, имя</div>
                             <div class="field__input-wrap">
-                                <input type="text" class="field__input input" tabindex="1">
+                                <input type="text" class="field__input input">
                                 <div class="field__alert"></div>
                             </div>
                         </div>
@@ -248,7 +248,7 @@
                         <div class="fields-list__item field">
                             <div class="field__name">Мобильный телефон</div>
                             <div class="field__input-wrap">
-                                <input type="text" class="field__input input" tabindex="2">
+                                <input type="text" class="field__input input">
                                 <div class="field__alert"></div>
                             </div>
                         </div>
@@ -259,15 +259,15 @@
                             <div class="field__input-wrap">
                                 <div class="field__radio-switchers radio-switchers">
                                     <label class="radio-switchers__item">
-                                        <input type="radio" class="radio-switchers__input" name="radio6" value="0" tabindex="8">
+                                        <input type="radio" class="radio-switchers__input" name="radio6" value="0">
                                         <span class="radio-switchers__button">Родственник</span>
                                     </label>
                                     <label class="radio-switchers__item">
-                                        <input type="radio" class="radio-switchers__input" name="radio6" value="1" tabindex="8">
+                                        <input type="radio" class="radio-switchers__input" name="radio6" value="1">
                                         <span class="radio-switchers__button">Друг</span>
                                     </label>
                                     <label class="radio-switchers__item">
-                                        <input type="radio" class="radio-switchers__input" name="radio6" value="2" tabindex="8">
+                                        <input type="radio" class="radio-switchers__input" name="radio6" value="2">
                                         <span class="radio-switchers__button">Коллега</span>
                                     </label>
                                 </div>
@@ -279,7 +279,7 @@
                         <div class="fields-list__item field">
                             <div class="field__name">Контактное лицо №2, имя</div>
                             <div class="field__input-wrap">
-                                <input type="text" class="field__input input" tabindex="1">
+                                <input type="text" class="field__input input">
                                 <div class="field__alert"></div>
                             </div>
                         </div>
@@ -288,7 +288,7 @@
                         <div class="fields-list__item field">
                             <div class="field__name">Мобильный телефон</div>
                             <div class="field__input-wrap">
-                                <input type="text" class="field__input input" tabindex="2">
+                                <input type="text" class="field__input input">
                                 <div class="field__alert"></div>
                             </div>
                         </div>
@@ -299,15 +299,15 @@
                             <div class="field__input-wrap">
                                 <div class="field__radio-switchers radio-switchers">
                                     <label class="radio-switchers__item">
-                                        <input type="radio" class="radio-switchers__input" name="radio7" value="0" tabindex="8">
+                                        <input type="radio" class="radio-switchers__input" name="radio7" value="0">
                                         <span class="radio-switchers__button">Родственник</span>
                                     </label>
                                     <label class="radio-switchers__item">
-                                        <input type="radio" class="radio-switchers__input" name="radio7" value="1" tabindex="8">
+                                        <input type="radio" class="radio-switchers__input" name="radio7" value="1">
                                         <span class="radio-switchers__button">Друг</span>
                                     </label>
                                     <label class="radio-switchers__item">
-                                        <input type="radio" class="radio-switchers__input" name="radio7" value="2" tabindex="8">
+                                        <input type="radio" class="radio-switchers__input" name="radio7" value="2">
                                         <span class="radio-switchers__button">Коллега</span>
                                     </label>
                                 </div>
@@ -348,7 +348,7 @@
                         <div class="fields-list__item field">
                             <div class="field__name">Место работы</div>
                             <div class="field__input-wrap">
-                                <input type="text" class="field__input input" tabindex="2">
+                                <input type="text" class="field__input input">
                                 <div class="field__alert"></div>
                             </div>
                         </div>
@@ -357,7 +357,7 @@
                         <div class="fields-list__item field">
                             <div class="field__name">Должность</div>
                             <div class="field__input-wrap">
-                                <input type="text" class="field__input input" tabindex="2">
+                                <input type="text" class="field__input input">
                                 <div class="field__alert"></div>
                             </div>
                         </div>
@@ -366,7 +366,7 @@
                         <div class="fields-list__item field">
                             <div class="field__name">Ежемесячный доход, тенге</div>
                             <div class="field__input-wrap">
-                                <input type="text" class="field__input input" tabindex="2">
+                                <input type="text" class="field__input input">
                                 <div class="field__alert"></div>
                             </div>
                         </div>
@@ -375,7 +375,7 @@
                         <div class="fields-list__item field">
                             <div class="field__name">Рабочий телефон</div>
                             <div class="field__input-wrap">
-                                <input type="text" class="field__input input" tabindex="2">
+                                <input type="text" class="field__input input">
                                 <div class="field__alert"></div>
                             </div>
                         </div>

@@ -23,6 +23,8 @@ $(function () {
             $currentInput.attr('type', 'password');
             _this.removeClass('password-displayed');
         }
+
+        $currentInput.focus();
     });
 
 });

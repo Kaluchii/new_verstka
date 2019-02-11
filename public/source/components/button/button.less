@@ -2,7 +2,7 @@
   //display: inline-flex;
   display: flex;
   align-items: center;
-  height: 40px;
+  height: @btn-input-height;
   padding: 0 15px;
   font-size: 16px;
   line-height: 1;
@@ -10,6 +10,7 @@
   border-radius: @border-radius;
   color: @c-main-black;
   user-select: none;
+  outline: none;
   cursor: pointer;
 
   &--t-yellow{
@@ -23,8 +24,8 @@
 
   &--t-grey{
     border: 1px solid #999999;
-    background: #ffffff;
-    box-shadow: @inner-gradient, @default-shadow;
+    background: @btn-grey-gradient;
+    box-shadow: @default-shadow;
 
     &:hover, &:focus{
       border-color: @c-border;
