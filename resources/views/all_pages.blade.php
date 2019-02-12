@@ -17,6 +17,7 @@
     <li><a href="/give_loan_1">Заявка шаг 1</a></li>
     <li><a href="/give_loan_2">Заявка шаг 2</a></li>
     <li><a href="/give_loan_3">Заявка шаг 3</a></li>
+    <li><a href="/calculate">Калькулятор</a></li>
     <li><a href="/iframe">Карта</a></li>
   </ul>
 </body>
