@@ -1,51 +1,142 @@
 .calculator{
-  &__advantages{}
+  &__advantages-wrap{
+    padding-bottom: 15px;
+    background-color: @c-bg;
+  }
 
-  &__advantages-item{}
+  &__advantages{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    max-width: 700px;
+    font-size: @fz-6;
+    color: @c-text;
+  }
 
-  &__container{}
+  &__advantages-item{
+    & + &{
+      margin-left: 20px;
+    }
+  }
 
-  &__title{}
+  &__container{
+  }
 
-  &__sliders-list{}
+  &__title{
+    margin: auto;
+    max-width: 700px;
+    padding: 20px 10px 0;
+    text-align: center;
+  }
 
-  &__sliders-list-item{}
+  &__sliders-list{
+    margin: 50px auto 0;
+    max-width: 700px;
+  }
 
-  &__btns-list{}
+  &__sliders-list-item{
+    & + &{
+      margin-top: 50px;
+    }
+  }
 
-  &__btns-list-item{}
+  &__btns-list{
+    display: none;
+    margin: 20px auto 0;
+    max-width: 700px;
+  }
 
-  &__btn-name{}
+  &__btns-list-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    padding: 0 10px;
+    font-size: @fz-3;
+    line-height: 1;
+    border: 1px solid #999999;
+    border-radius: @border-radius;
 
-  &__btn-value{}
+    & + &{
+      margin-top: 20px;
+    }
+  }
 
-  &__result-row{}
+  &__btn-name{
+    font-weight: @fw-bold;
+    color: @c-main-black;
+  }
 
-  &__info{}
+  &__btn-value{
+    color: @c-text;
+  }
 
-  &__info-col{}
+  &__result-row{
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 700px;
+    padding: 25px 0;
+  }
 
-  &__info-col-title{}
+  &__info{
+    display: flex;
+  }
 
-  &__info-col-value{}
+  &__info-col{
+    & + &{
+      margin-left: 30px;
+    }
+  }
 
-  &__info-col-old-value{}
+  &__info-col-title{
+    font-size: @fz-6;
+    color: @c-text;
+  }
+
+  &__info-col-value{
+    font-size: @fz-3;
+    color: @c-main-black;
+  }
+
+  &__info-col-old-value{
+    position: absolute;
+    font-size: @fz-6;
+    color: @c-main-red;
+    background: linear-gradient(to right, @c-main-red, @c-main-red 100%) repeat-x ~'0 50% / 1px 1px';
+  }
 
   &__give-btn-wrap{}
 
   &__give-btn{}
 
-  &__promocode{}
+  &__promocode{
+    margin: auto;
+  }
 
-  &__stock{}
+  &__stock{
+  }
 
   &__stock-img-wrap{}
 
-  &__stock-img{}
+  &__stock-img{
+    display: block;
+  }
 
   &__stock-link{}
 
-  &__loan-detail{}
+  &__loan-detail{
+    padding: 20px;
+    background-color: @c-info-bg;
+  }
 
-  &__loan-detail-text{}
+  &__loan-detail-text{
+    margin: auto;
+    max-width: 570px;
+    font-size: @fz-6;
+    line-height: @lh-for-small;
+    color: @c-text;
+    text-align: center;
+  }
 }

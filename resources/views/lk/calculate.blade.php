@@ -3,18 +3,20 @@
     <main class="personal-area">
         <div class="personal-area__container">
             <div class="personal-area__calculator calculator">
-                <div class="calculator__advantages">
-                    <div class="calculator__advantages-item">Без справок и залога</div>
-                    <div class="calculator__advantages-item">Досрочное погашение без штрафа</div>
-                    <div class="calculator__advantages-item">Перевод денег за 10 минут</div>
+                <div class="calculator__advantages-wrap">
+                    <ul class="calculator__advantages">
+                        <li class="calculator__advantages-item">Без справок и залога</li>
+                        <li class="calculator__advantages-item">Досрочное погашение без штрафа</li>
+                        <li class="calculator__advantages-item">Перевод денег за 10 минут</li>
+                    </ul>
                 </div>
                 <div class="calculator__container">
-                    <div class="calculator__title">
+                    <div class="calculator__title title-l2">
                         Первый займ до 20&nbsp;000&nbsp;тг <span class="text-highlight nowrap">со скидкой 50%</span>
                     </div>
                     <div class="calculator__sliders-list">
                         <div class="calculator__sliders-list-item row-slider">
-                            <div class="row-slider__title">Сумма</div>
+                            <div class="row-slider__title">СУММА</div>
                             <div class="row-slider__slider-wrap">
                                 <div class="row-slider__lower-value">7000&nbsp;тг</div>
                                 <div class="row-slider__upper-value">50&nbsp;000&nbsp;тг</div>
@@ -22,6 +24,17 @@
                             <div class="row-slider__value-wrap">
                                 <input type="text" class="row-slider__input input" value="20 000">
                                 <span class="row-slider__value-unit">тг</span>
+                            </div>
+                        </div>
+                        <div class="calculator__sliders-list-item row-slider">
+                            <div class="row-slider__title">СРОК</div>
+                            <div class="row-slider__slider-wrap">
+                                <div class="row-slider__lower-value">5&nbsp;дней</div>
+                                <div class="row-slider__upper-value">30&nbsp;дней</div>
+                            </div>
+                            <div class="row-slider__value-wrap">
+                                <input type="text" class="row-slider__input input" value="15">
+                                <span class="row-slider__value-unit">дней</span>
                             </div>
                         </div>
                     </div>
@@ -52,7 +65,7 @@
                             </div>
                         </div>
                         <div class="calculator__give-btn-wrap">
-                            <a href="#" class="calculator__give-btn button button--yellow button--s-full-on-small">
+                            <a href="#" class="calculator__give-btn button button--t-yellow button--s-full-on-small">
                                 <span class="button__text">Получить деньги</span>
                             </a>
                         </div>
@@ -65,7 +78,7 @@
                                 <span class="promocode__status">Код устарел</span>
                             </div>
                             <div class="promocode__activate-btn-wrap">
-                                <button type="button" class="promocode__activate-btn">Применить</button>
+                                <button type="button" class="promocode__activate-btn button button--t-yellow">Применить</button>
                             </div>
                         </div>
                         <div class="promocode__activated">
