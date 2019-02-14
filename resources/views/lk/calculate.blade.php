@@ -18,6 +18,7 @@
                         <div class="calculator__sliders-list-item row-slider">
                             <div class="row-slider__title">СУММА</div>
                             <div class="row-slider__slider-wrap">
+                                <div class="row-slider__slider js_amount_slider"></div>
                                 <div class="row-slider__lower-value">7000&nbsp;тг</div>
                                 <div class="row-slider__upper-value">50&nbsp;000&nbsp;тг</div>
                             </div>
@@ -29,6 +30,7 @@
                         <div class="calculator__sliders-list-item row-slider">
                             <div class="row-slider__title">СРОК</div>
                             <div class="row-slider__slider-wrap">
+                                <div class="row-slider__slider js_term_slider"></div>
                                 <div class="row-slider__lower-value">5&nbsp;дней</div>
                                 <div class="row-slider__upper-value">30&nbsp;дней</div>
                             </div>

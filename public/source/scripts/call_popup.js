@@ -1,6 +1,6 @@
 $(function () {
 
-    let requestErrorTemplate =
+    const requestErrorTemplate =
         `<div class="popup js_fail_popup">
             <div class="popup__container">
                 <div class="popup__title title-l2">Произошла ошибка</div>
@@ -9,11 +9,11 @@ $(function () {
                 </div>
                 <hr class="popup__hr">
                 <div class="popup__btn-wrap">
-                    <a href="#close" class="popup__btn button button--t-yellow button--s-medium button--s-full-on-small js_close_popup"><span class="button__text">Закрыть</span></a>
+                    <button type="button" class="popup__btn button button--t-yellow button--s-medium button--s-full-on-small js_close_popup"><span class="button__text">Закрыть</span></button>
                 </div>
             </div>
-            <a href="#close" class="popup__close js_close_popup">Закрыть окно</a>
-            <a href="#close" class="popup__close-x js_close_popup"></a>
+            <button type="button" class="popup__close js_close_popup" aria-label="Закрыть окно">Закрыть окно</button>
+            <button type="button" class="popup__close-x js_close_popup" aria-label="Закрыть окно"></button>
         </div>`;
 
     easyPopup.setDefaultConfig({
@@ -26,7 +26,7 @@ $(function () {
         }
     });
 
-    let popups = [
+    const popups = [
         {
             id: 'alert_popup',
             src: '.js_alert_popup'

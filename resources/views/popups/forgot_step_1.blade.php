@@ -20,7 +20,7 @@
                 </div>
             </form>
         </div>
-        <a href="#close" class="popup__close js_close_popup">Закрыть окно</a>
-        <a href="#close" class="popup__close-x js_close_popup"></a>
+        <button type="button" class="popup__close js_close_popup" aria-label="Закрыть окно">Закрыть окно</button>
+        <button type="button" class="popup__close-x js_close_popup" aria-label="Закрыть окно"></button>
     </div>
 @endsection

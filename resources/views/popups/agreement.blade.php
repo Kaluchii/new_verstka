@@ -19,10 +19,10 @@
                 </label>
             </div>
             <div class="popup__btn-wrap">
-                <a href="#" class="popup__btn button button--t-yellow button--s-medium button--s-full-on-small js_open_offer_confirmation_popup"><span class="button__text">Продолжить</span></a>
+                <button class="popup__btn button button--t-yellow button--s-medium button--s-full-on-small js_open_offer_confirmation_popup"><span class="button__text">Продолжить</span></button>
             </div>
         </div>
-        <a href="#close" class="popup__close js_close_popup">Закрыть окно</a>
-        <a href="#close" class="popup__close-x js_close_popup"></a>
+        <button type="button" class="popup__close js_close_popup" aria-label="Закрыть окно">Закрыть окно</button>
+        <button type="button" class="popup__close-x js_close_popup" aria-label="Закрыть окно"></button>
     </div>
 @endsection

@@ -1,6 +1,6 @@
 @section('popup_restructuring')
     <div class="popup popup--long js_restructuring_popup">
-        <div class="popup__container">
+        <form class="popup__container">
             <div class="popup__title title-l2">Реструктуризация займа</div>
             <div class="popup__text">
                 Начисление процентов и пени по&nbsp;займу останавливается. Задолженость оплачивается по&nbsp;частям.
@@ -44,10 +44,10 @@
                 </label>
             </div>
             <div class="popup__btn-wrap">
-                <a href="#" class="popup__btn button button--t-yellow button--s-full-on-small"><span class="button__text">Реструктуризовать займ</span></a>
+                <button class="popup__btn button button--t-yellow button--s-full-on-small"><span class="button__text">Реструктуризовать займ</span></button>
             </div>
-        </div>
-        <a href="#close" class="popup__close js_close_popup">Закрыть окно</a>
-        <a href="#close" class="popup__close-x js_close_popup"></a>
+        </form>
+        <button type="button" class="popup__close js_close_popup" aria-label="Закрыть окно">Закрыть окно</button>
+        <button type="button" class="popup__close-x js_close_popup" aria-label="Закрыть окно"></button>
     </div>
 @endsection
