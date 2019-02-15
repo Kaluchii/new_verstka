@@ -72,12 +72,17 @@
   }
 
   &__result-row{
+    margin-top: 40px;
+    padding: 15px 0 25px;
+    background: @dashed-upline-gr;
+  }
+
+  &__result-row-container{
     margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     max-width: 700px;
-    padding: 25px 0;
   }
 
   &__info{
@@ -96,7 +101,7 @@
   }
 
   &__info-col-value{
-    font-size: @fz-3;
+    font-size: 22px;
     color: @c-main-black;
   }
 
@@ -107,13 +112,21 @@
     background: linear-gradient(to right, @c-main-red, @c-main-red 100%) repeat-x ~'0 50% / 1px 1px';
   }
 
-  &__give-btn-wrap{}
+  &__give-btn-wrap{
+    width: 185px;
+  }
 
   &__give-btn{}
 
   &__promocode{
     margin: auto;
+
+    & + .calculator__discounts{
+      background: @dashed-upline-gr, #f6efdc;
+    }
   }
+
+  &__discounts{}
 
   &__stock{
   }

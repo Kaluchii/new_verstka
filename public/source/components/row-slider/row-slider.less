@@ -1,7 +1,9 @@
 .row-slider{
   display: flex;
+  align-items: center;
 
   &__title{
+    width: 120px;
     font-size: @fz-5;
     font-weight: @fw-bold;
     line-height: 1;
@@ -10,10 +12,13 @@
 
   &__slider-wrap{
     position: relative;
+    padding: 0 25px;
     flex-grow: 1;
   }
 
-  &__slider{}
+  &__slider{
+    height: 10px;
+  }
 
   &__lower-value, &__upper-value{
     position: absolute;
@@ -21,6 +26,7 @@
     font-size: @fz-7;
     line-height: 1;
     color: @c-minor-text;
+    user-select: none;
   }
 
   &__lower-value{
@@ -32,6 +38,7 @@
   }
 
   &__value-wrap{
+    margin-left: 30px;
     width: 185px;
   }
 

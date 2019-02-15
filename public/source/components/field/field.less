@@ -31,6 +31,14 @@
     }
   }
 
+  &.show-alert{
+    .field{
+      &__alert{
+        display: block;
+      }
+    }
+  }
+
   &.is-filled{
     .field{
       &__alert{
@@ -67,6 +75,12 @@
     text-align: right;
     background-color: @c-alarm;
     color: @c-main-black;
+
+    &--in-field{
+      top: 10px;
+      right: 10px;
+      pointer-events: none;
+    }
   }
 
   &__action{
