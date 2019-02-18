@@ -75,4 +75,14 @@ $(function () {
         $('.js_discount_about').slideDown(300);
     });
 
+    $('.js_discount_cancel').on('click', function () {
+        discountCancel();
+    });
+
+    function discountCancel() {
+        $('.js_discount_item').removeClass('is-active');
+        $('.js_discount_cancel').parent().addClass('hide');
+        $('.js_discount_about').slideUp(300);
+    }
+
 });

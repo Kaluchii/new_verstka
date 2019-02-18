@@ -1,5 +1,5 @@
 .where-promocode{
-  font-size: 16px;
+  font-size: @fz-5;
   text-align: center;
 
   &__container{
@@ -11,13 +11,15 @@
     display: none;
   }
 
-  &__text{}
+  &__text{
+  }
 
   &__link{
-    font-size: 14px;
+    margin: 10px 0 9px;
     display: inline-block;
-    margin: 10px 0;
+    font-size: @fz-6;
     letter-spacing: .01em;
+    white-space: nowrap;
 
     &:hover{
       cursor: pointer;
@@ -54,39 +56,38 @@
     .where-promocode{
       &__text-wrap{
         display: block;
-        background: #f5eedb;
         position: absolute;
+        top: -161px;
+        left: ~'calc(50% - 160px)';
         margin: 0 10px;
         padding: 15px 20px;
         z-index: 1000000;
-        top: -161px;
         width: 300px;
-        left: ~'calc(50% - 160px)';
         box-sizing: border-box;
+        border-radius: @border-radius;
         text-align: center;
-        border-radius: 3px;
+        background: #f5eedb;
       }
 
       &__text{
         margin: 0;
-        color: #333333;
-        line-height: 1.5;
+        color: @c-main-black;
+
+        &::after{
+          content: '';
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          margin-left: -10px;
+          width: 0;
+          height: 0;
+          border-top: solid 10px #f5eedb;
+          border-left: solid 10px transparent;
+          border-right: solid 10px transparent;
+        }
       }
 
-      &__text:after {
-        content: '';
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        margin-left: -10px;
-        width: 0;
-        height: 0;
-        border-top: solid 10px #f5eedb;
-        border-left: solid 10px transparent;
-        border-right: solid 10px transparent;
-      }
-
-      &__link {
+      &__link{
         z-index: 1000000;
         background: none;
         color: #ffffff;

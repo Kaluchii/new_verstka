@@ -68,7 +68,7 @@
                                 </div>
                             </div>
                             <div class="calculator__give-btn-wrap">
-                                <a href="#" class="calculator__give-btn button button--t-yellow button--calculate button--s-full-on-small">
+                                <a href="#" class="calculator__give-btn button button--t-yellow button--s-full-on-small">
                                     <span class="button__text">Получить деньги</span>
                                 </a>
                             </div>
@@ -87,7 +87,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <p class="where-promocode__link link">Где узнать промо-код?</p>
+                                <a href="#" class="where-promocode__link link">Где узнать промо-код?</a>
                             </div>
                             <div class="promocode__input-wrap field js_field">
                                 <label class="field__input-wrap js_field_wrapper">
@@ -137,10 +137,10 @@
                                     <p class="discounts__info-title">Займ <span class="js_loan_sum">20 000 тг</span>
                                         на <span class="js_loan_term">25 дней</span> <span class="no-wrap">со скидкой <span class="js_loan_discount">15</span>%</span>
                                     </p>
-                                    <ul class="discounts__info-list check-list">
-                                        <li class="check-list__item">Скидка действует только для повторных клиентов;</li>
-                                        <li class="check-list__item">Скидка доступна только для займа сроком на <span class="js_loan_term">25 дней</span>;</li>
-                                        <li class="check-list__item">Сумма переплаты <span class="js_overpayment"></span> рассчитывается единовременно и не снижается при досрочном погашении.</li>
+                                    <ul class="discounts__info-list row-list row-list--check">
+                                        <li class="row-list__item">Скидка действует только для повторных клиентов;</li>
+                                        <li class="row-list__item">Скидка доступна только для займа сроком на <span class="js_loan_term">25 дней</span>;</li>
+                                        <li class="row-list__item">Сумма переплаты <span class="js_overpayment"></span> рассчитывается единовременно и не снижается при досрочном погашении.</li>
                                     </ul>
                                 </div>
                             </div>

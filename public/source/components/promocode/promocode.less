@@ -1,6 +1,20 @@
 .promocode{
+  display: flex;
+  justify-content: center;
   padding: 20px;
   background-color: @c-info-bg;
+
+  &.is-activated{
+    .promocode{
+      &__field-wrap{
+        display: none;
+      }
+
+      &__activated{
+        display: block;
+      }
+    }
+  }
 
   &__field-wrap{
     position: relative;
@@ -8,6 +22,7 @@
 
   &__where-get{
     position: absolute;
+    right: calc(100% + 20px);
     bottom: 0;
   }
 
@@ -24,13 +39,16 @@
   &__activate-btn-wrap{
     position: absolute;
     bottom: 0;
-    margin-left: 20px;
+    left: calc(100% + 20px);
   }
 
   &__activate-btn{}
 
   &__activated{
     display: none;
+    font-weight: @fw-bold;
+    color: @c-main-black;
+    text-align: center;
   }
 
   &__info{}

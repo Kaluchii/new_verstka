@@ -8,14 +8,24 @@
     display: flex;
     justify-content: center;
     margin: auto;
-    max-width: 700px;
+    max-width: 620px;
     font-size: @fz-6;
     color: @c-text;
   }
 
   &__advantages-item{
     & + &{
-      margin-left: 20px;
+      position: relative;
+      padding-left: 12.5px;
+      margin-left: 7.5px;
+      //margin-left: 20px;
+
+      &::before{
+        content: '\2022';
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
     }
   }
 
@@ -30,20 +40,20 @@
   }
 
   &__sliders-list{
-    margin: 50px auto 0;
-    max-width: 700px;
+    margin: 45px auto 0;
+    max-width: 620px;
   }
 
   &__sliders-list-item{
     & + &{
-      margin-top: 50px;
+      margin-top: 45px;
     }
   }
 
   &__btns-list{
     display: none;
     margin: 20px auto 0;
-    max-width: 700px;
+    max-width: 620px;
   }
 
   &__btns-list-item{
@@ -56,6 +66,7 @@
     line-height: 1;
     border: 1px solid #999999;
     border-radius: @border-radius;
+    box-shadow: @default-shadow;
 
     & + &{
       margin-top: 20px;
@@ -82,7 +93,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 700px;
+    max-width: 620px;
   }
 
   &__info{
@@ -90,6 +101,9 @@
   }
 
   &__info-col{
+    position: relative;
+    line-height: 1;
+
     & + &{
       margin-left: 30px;
     }
@@ -101,19 +115,21 @@
   }
 
   &__info-col-value{
+    margin-top: 7px;
     font-size: 22px;
     color: @c-main-black;
   }
 
   &__info-col-old-value{
     position: absolute;
+    top: calc(100% + 5px);
     font-size: @fz-6;
     color: @c-main-red;
     background: linear-gradient(to right, @c-main-red, @c-main-red 100%) repeat-x ~'0 50% / 1px 1px';
   }
 
   &__give-btn-wrap{
-    width: 185px;
+    width: 180px;
   }
 
   &__give-btn{}
@@ -129,15 +145,23 @@
   &__discounts{}
 
   &__stock{
+    position: relative;
   }
 
   &__stock-img-wrap{}
 
   &__stock-img{
     display: block;
+    margin: auto;
   }
 
-  &__stock-link{}
+  &__stock-link{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
 
   &__loan-detail{
     padding: 20px;
