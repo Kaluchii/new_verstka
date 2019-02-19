@@ -34,7 +34,7 @@
             </div>
             <div class="personal-area__btn-with-descr btn-with-descr">
                 <div class="btn-with-descr__btn-wrap">
-                    <a href="#" class="btn-with-descr__btn button button--t-yellow button--s-full-on-small"><span class="button__text">Продлить займ</span></a>
+                    <a href="#" class="btn-with-descr__btn button button--t-yellow button--s-full-on-small js_open_prolongation_popup"><span class="button__text">Продлить займ</span></a>
                 </div>
                 <p class="btn-with-descr__text">Продление до 30 дней доступно, пока займ не просрочен.</p>
             </div>

@@ -1,4 +1,6 @@
 .calculator{
+  &--btns{}
+
   &__advantages-wrap{
     padding-bottom: 15px;
     background-color: @c-bg;
@@ -16,9 +18,8 @@
   &__advantages-item{
     & + &{
       position: relative;
-      padding-left: 12.5px;
       margin-left: 7.5px;
-      //margin-left: 20px;
+      padding-left: 12.5px;
 
       &::before{
         content: '\2022';
@@ -52,7 +53,7 @@
 
   &__btns-list{
     display: none;
-    margin: 20px auto 0;
+    margin: 25px auto 0;
     max-width: 620px;
   }
 
@@ -67,6 +68,7 @@
     border: 1px solid #999999;
     border-radius: @border-radius;
     box-shadow: @default-shadow;
+    user-select: none;
 
     & + &{
       margin-top: 20px;
@@ -102,11 +104,8 @@
 
   &__info-col{
     position: relative;
+    width: 140px;
     line-height: 1;
-
-    & + &{
-      margin-left: 30px;
-    }
   }
 
   &__info-col-title{

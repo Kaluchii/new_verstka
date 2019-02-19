@@ -64,4 +64,27 @@
   &__select-wrap{
     display: none;
   }
+
+  &__select{
+    position: relative;
+    width: 115px;
+    padding: 0 10px;
+    font-size: @fz-5;
+    line-height: 34px;
+    font-weight: @fw-bold;
+    border: 1px solid #999999;
+    border-radius: @border-radius;
+    color: @c-main-black;
+    box-shadow: @default-shadow;
+    user-select: none;
+
+    &::after{
+      content: '';
+      position: absolute;
+      top: 12px;
+      right: 10px;
+      border: 5px solid transparent;
+      border-top: 10px solid @c-main-black;
+    }
+  }
 }

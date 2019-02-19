@@ -72,7 +72,7 @@ $(function () {
         // $('.js_loan_discount').text(currentDiscount.percent * 100);
         // $('.js_loan_term').text(term + ' ' + declension(term, ['день', 'дня', 'дней']));
         // $('.js_loan_sum').html(formatPrice(amount, 's', true));
-        $('.js_discount_about').slideDown(300);
+        $('.js_discount_about').addClass('is-open').slideDown(300);
     });
 
     $('.js_discount_cancel').on('click', function () {
@@ -82,7 +82,7 @@ $(function () {
     function discountCancel() {
         $('.js_discount_item').removeClass('is-active');
         $('.js_discount_cancel').parent().addClass('hide');
-        $('.js_discount_about').slideUp(300);
+        $('.js_discount_about').removeClass('is-open').slideUp(300);
     }
 
 });

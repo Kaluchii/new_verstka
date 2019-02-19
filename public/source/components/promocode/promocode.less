@@ -18,6 +18,14 @@
 
   &__field-wrap{
     position: relative;
+
+    &.is-filled{
+      .promocode{
+        &__activate-btn-wrap{
+          display: block;
+        }
+      }
+    }
   }
 
   &__where-get{
@@ -37,8 +45,9 @@
   &__status{}
 
   &__activate-btn-wrap{
+    display: none;
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: calc(100% + 20px);
   }
 

@@ -31,7 +31,7 @@
                     </label>
                 </div>
                 <div class="col-form__row">
-                    <button class="col-form__btn button button--t-yellow button--s-full-on-small"><span class="button__text">Подтвердить</span></button>
+                    <button class="col-form__btn button button--t-yellow button--s-full"><span class="button__text">Подтвердить</span></button>
                 </div>
             </form>
         </div>

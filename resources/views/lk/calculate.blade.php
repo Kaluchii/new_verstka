@@ -26,6 +26,9 @@
                                 <input type="text" class="row-slider__input input" value="20 000">
                                 <span class="row-slider__value-unit">ТГ</span>
                             </div>
+                            <div class="row-slider__select-wrap">
+                                <div class="row-slider__select">20&nbsp;000&nbsp;тг</div>
+                            </div>
                         </div>
                         <div class="calculator__sliders-list-item row-slider">
                             <div class="row-slider__title">СРОК</div>
@@ -37,6 +40,9 @@
                             <div class="row-slider__value-wrap">
                                 <input type="text" class="row-slider__input input" value="15">
                                 <span class="row-slider__value-unit">ДНЕЙ</span>
+                            </div>
+                            <div class="row-slider__select-wrap">
+                                <div class="row-slider__select">30&nbsp;дней</div>
                             </div>
                         </div>
                     </div>
@@ -76,6 +82,15 @@
                     </div>
                     <div class="calculator__promocode promocode">
                         <div class="promocode__field-wrap">
+                            <div class="promocode__input-wrap field js_field">
+                                <label class="field__input-wrap js_field_wrapper">
+                                    <input type="text" class="field__input input js_field_input" placeholder="Есть промо-код?">
+                                    <span class="field__alert field__alert--in-field js_field_alert">Код устарел</span>
+                                </label>
+                            </div>
+                            <div class="promocode__activate-btn-wrap">
+                                <button type="button" class="promocode__activate-btn button button--t-yellow">Применить</button>
+                            </div>
                             <div class="promocode__where-get where-promocode">
                                 <div class="where-promocode__container">
                                     <div class="where-promocode__text-wrap">
@@ -89,15 +104,6 @@
                                 </div>
                                 <a href="#" class="where-promocode__link link">Где узнать промо-код?</a>
                             </div>
-                            <div class="promocode__input-wrap field js_field">
-                                <label class="field__input-wrap js_field_wrapper">
-                                    <input type="text" class="field__input input js_field_input" placeholder="Есть промо-код?">
-                                    <span class="field__alert field__alert--in-field js_field_alert">Код устарел</span>
-                                </label>
-                            </div>
-                            <div class="promocode__activate-btn-wrap">
-                                <button type="button" class="promocode__activate-btn button button--t-yellow">Применить</button>
-                            </div>
                         </div>
                         <div class="promocode__activated">
                             <div class="promocode__info">Промо-код применен, скидка 21%</div>
@@ -108,7 +114,7 @@
                     </div>
                     <div class="calculator__discounts discounts">
                         <div class="discounts__container">
-                            <p class="discounts__title">Постоянные скидки <span class="no-wrap">для займа <span class="js_loan_sum">20 000 тг</span></span></p>
+                            <p class="discounts__title">Постоянные скидки <span class="no-wrap">для займа <span class="js_loan_sum">20&nbsp;000&nbsp;тг</span></span></p>
                             <ul class="discounts__list">
                                 <li class="discounts__item js_discount_item" data-discount-index="DISC1">
                                     <div class="discounts__item-container">
@@ -134,7 +140,7 @@
                             </div>
                             <div class="discounts__info-wrap js_discount_about" style="display: none;">
                                 <div class="discounts__info">
-                                    <p class="discounts__info-title">Займ <span class="js_loan_sum">20 000 тг</span>
+                                    <p class="discounts__info-title">Займ <span class="js_loan_sum">20&nbsp;000&nbsp;тг</span>
                                         на <span class="js_loan_term">25 дней</span> <span class="no-wrap">со скидкой <span class="js_loan_discount">15</span>%</span>
                                     </p>
                                     <ul class="discounts__info-list row-list row-list--check">
