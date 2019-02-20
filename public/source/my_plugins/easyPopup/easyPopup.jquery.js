@@ -1,4 +1,4 @@
-let easyPopup = (function ($) {
+const easyPopup = (function ($) {
     let defaults = {
             animationClass: '', // Используется для задания класса анимации
             type: 'inline', // Тип источника контента. Возможные варианты: "inline", "ajax"
@@ -429,6 +429,8 @@ let easyPopup = (function ($) {
 
 
     function blockBodyScroll () {
+        unblockBodyScroll();
+
         $('body').addClass(function () {
             if (hasVerticalScroll()) {
                 $(this).css('padding-right', (window.screen.width - $(window).width()) + 'px');

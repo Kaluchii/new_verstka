@@ -1,4 +1,4 @@
-let preloader = function () {
+const preloader = function () {
 
     this.show = ($parent, classes) => {
         classes = classes || '';
