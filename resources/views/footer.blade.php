@@ -7,6 +7,10 @@
 @include('popups.prolongation')
 @include('popups.restructuring')
 @include('popups.offer_confirmation')
+
+<footer class="page-wrapper__footer footer">
+</footer>
+
 <div class="hide">
     @yield('popup_agreement')
     @yield('popup_authorization')

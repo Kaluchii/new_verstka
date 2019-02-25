@@ -1,5 +1,5 @@
 @section('header')
-    <header class="header">
+    <header class="page-wrapper__header header">
         <div class="header__desktop">
             <div class="header__top">
                 <a href="/" class="header__home-link">
