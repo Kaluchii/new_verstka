@@ -64,23 +64,23 @@
                     class="button__text">Завершить оформление</span></button>
     </div>
     <div class="processing__logo-wrap">
-        <img src="/img/card/processing.png" alt="" class="processing__logo">
+        <img src="/images_new/card/processing.png" alt="" class="processing__logo">
     </div>
     <p class="processing__data-protect"> Реквизиты Вашей карты используются только во время операции и передаются в
         Visa/MasterCard по защищенному каналу. Данные Вашей карты хранятся в зашифрованном виде и не могут быть переданы
         третьему лицу.</p>
     <ul class="processing__protects-list">
         <li class="processing__protects-item">
-            <img src="/img/card/logo-pci.png" alt="" class="processing__protect-logo">
+            <img src="/images_new/card/logo-pci.png" alt="" class="processing__protect-logo">
         </li>
         <li class="processing__protects-item">
-            <img src="/img/card/logo-mastercard.png" alt="" class="processing__protect-logo">
+            <img src="/images_new/card/logo-mastercard.png" alt="" class="processing__protect-logo">
         </li>
         <li class="processing__protects-item">
-            <img src="/img/card/logo-visa.png" alt="" class="processing__protect-logo">
+            <img src="/images_new/card/logo-visa.png" alt="" class="processing__protect-logo">
         </li>
         <li class="processing__protects-item">
-            <img src="/img/card/logo-trustwave.png" alt="" class="processing__protect-logo">
+            <img src="/images_new/card/logo-trustwave.png" alt="" class="processing__protect-logo">
         </li>
     </ul>
 </div>

@@ -24,7 +24,7 @@
                 </div>
             </div>
             <div class="personal-area__work-time">
-                <img src="/img/personal-area_time.png" alt="" class="personal-area__work-time-img">
+                <img src="/images_new/personal-area_time.png" alt="" class="personal-area__work-time-img">
                 <p class="personal-area__work-time-text">
                     Заявки рассматриваются в рабочее время с 9:00 до 18:00 в порядке очереди.
                 </p>

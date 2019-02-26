@@ -154,7 +154,7 @@
                     </div>
                     <div class="calculator__stock">
                         <div class="calculator__stock-img-wrap">
-                            <img src="/img/stock.jpg" alt="Акция на Dopo.kz" class="calculator__stock-img">
+                            <img src="/images_new/stock.jpg" alt="Акция на Dopo.kz" class="calculator__stock-img">
                         </div>
                         <a href="#" class="calculator__stock-link"></a>
                     </div>

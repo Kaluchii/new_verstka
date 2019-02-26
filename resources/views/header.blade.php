@@ -3,7 +3,7 @@
         <div class="header__desktop">
             <div class="header__top">
                 <a href="/" class="header__home-link">
-                    <img src="/img/logo.svg" title="займы алматы, в казахстане" alt="Займы онлайн - ДоПолучки" class="header__logo">
+                    <img src="/images_new/logo.svg" title="займы алматы, в казахстане" alt="Займы онлайн - ДоПолучки" class="header__logo">
                 </a>
                 <div class="header__tag-wrap">
                     <span class="header__tag">Казахстанский сервис онлайн-займов</span>
@@ -33,7 +33,7 @@
                 </div>
             </div>
             <a href="/" class="header-mobile__logo-wrap">
-                <img class="header-mobile__logo" src="/img/logo.svg" title="займы алматы, в казахстане" alt="Займы онлайн - ДоПолучки" />
+                <img class="header-mobile__logo" src="/images_new/logo.svg" title="займы алматы, в казахстане" alt="Займы онлайн - ДоПолучки" />
             </a>
             <div class="header-mobile__login-wrap">
                 <!--{if $logined}-->
@@ -121,7 +121,7 @@
                 <div class="mobile-menu__sale-in-app">
                     <p class="mobile-menu__sale-text">Через приложение со <span class="text-highlight">скидкой <!--{$discount_percent}--></span></p>
                     <a href="https://play.google.com/store/apps/details?id=kz.mint.dopoandroidapp&referrer=utm_source%3Ddopokz%26utm_medium%3Dbanner%26utm_campaign%3Dapp-promo-20" rel="nofollow" class="mobile-menu__app-link">
-                        <img src="/img/googleplay.png" class="mobile-menu__sale-img" alt="Google Play Dopo App link">
+                        <img src="/images_new/googleplay.png" class="mobile-menu__sale-img" alt="Google Play Dopo App link">
                     </a>
                 </div>
                 <!--{/if}-->
