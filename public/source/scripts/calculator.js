@@ -1,4 +1,5 @@
 $(function () {
+
     const amountSlider = $('.js_amount_slider'),
         termSlider = $('.js_term_slider');
 

@@ -36,7 +36,7 @@ const easyPopup = (function ($) {
     // Удалить
     // this.popupStack = popupStack;
     // this.dynPopupsConfig = dynPopupsConfig;
-    // this.staticPopupsConfig = staticPopupsConfig;
+    this.popupsList = staticPopupsConfig;
     //
 
 

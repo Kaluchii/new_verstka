@@ -9,11 +9,10 @@
     max-width: 350px;
     height: 100vh;
     max-height: 100%;
-    box-sizing: border-box;
     padding-bottom: 70px;
     overflow-y: auto;
     background: #333333;
-    transition: 0.3s ease;
+    transition: transform 0.3s ease;
 
     &__header{
       padding-bottom: 25px;
@@ -34,7 +33,7 @@
     }
 
     &--show{
-      transform: translateX(0px);
+      transform: translateX(0);
 
       .mobile-menu__hamburger{
         opacity: 1;
@@ -54,38 +53,32 @@
         border-top: 1px solid #006d35;
       }
 
-      &.mobile-menu__item--active{
-        border-top: 1px solid #004b21;
+      &--relative{
+        position: relative;
       }
 
-      &--active{
+      &.is-active{
+        border-top: 1px solid #004b21;
         background: #004b21;
 
         & + .mobile-menu__item{
           border-top: 1px solid #004b21;
         }
       }
-
-      &--relative{
-        position: relative;
-      }
     }
 
     &__link{
       display: block;
       padding: 8px 0 8px 15px;
-      font-size: 16px;
+      font-size: @fz-5;
       line-height: 1.5;
       color: #ffffff;
 
-      &--bold{
-        font-weight: bold;
-      }
-
-      &--icon{
-      }
-
-      &--icon-face{
+      &--name{
+        max-width: 240px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
       }
     }
 
@@ -100,9 +93,8 @@
       display: inline-block;
       max-width: 45%;
       padding-top: 5px;
-      box-sizing: border-box;
       vertical-align: top;
-      font-size: 14px;
+      font-size: @fz-6;
       line-height: 1.5;
       color: #ffffff;
 
@@ -126,14 +118,13 @@
     &__call-center-wrap{
       width: 100%;
       padding: 20px 30px;
-      box-sizing: border-box;
       text-align: center;
     }
 
     &__call-center-title{
-      display: inline-block;
       margin-bottom: 5px;
-      font-size: 14px;
+      display: inline-block;
+      font-size: @fz-6;
       text-transform: uppercase;
       color: #ffffff;
     }
@@ -141,11 +132,10 @@
     &__call-center-button{
       position: relative;
       display: block;
-      box-sizing: border-box;
       padding: 15px 5px 15px 30px;
-      background: #009247;
       font-size: 20px;
       line-height: 1;
+      background: #009247;
       border-radius: @border-radius-medium;
       color: #ffffff;
 
@@ -156,7 +146,7 @@
         left: 10px;
         width: 30px;
         height: 30px;
-        background: #006d35 url(/images_new/mobile-header_phone-white.svg) no-repeat center center;
+        background: #006d35 url('/images_new/mobile-header_phone-white.svg') no-repeat center center;
         background-size: 20px 20px;
         border-radius: 50%;
       }
@@ -164,13 +154,8 @@
 
     &__available-amount{
       margin: 10px 0 0 15px;
-      font-size: 16px;
+      font-size: @fz-5;
       color: #ffffff;
-    }
-
-    &__available-amount-bold{
-      color: #ffffff;
-      font-weight: bold;
     }
 
     &__logout-btn{
@@ -178,27 +163,21 @@
       top: 0;
       right: 0;
       padding: 14px 15px;
-      font-size: 12px;
+      font-size: @fz-7;
       line-height: 1;
       color: #66cc66;
       text-transform: uppercase;
     }
 
     &__issue-wrap{
-      display: flex;
       margin: 10px 0 0 15px;
+      display: flex;
     }
 
-    &__issue-btn{
-      &.enter-btn{
-        display: inline-block;
-        padding-top: 11px;
-        padding-bottom: 11px;
-      }
-    }
+    &__issue-btn{}
 
     &__right-protection{
-      font-size: 16px;
+      font-size: @fz-5;
       text-align: center;
     }
   }
@@ -206,7 +185,12 @@
 
 @media all and (max-width: 768px){
   .mobile-menu{
+    transform: translateX(-310px);
     max-width: 310px;
+
+    &--show{
+      transform: translateX(0);
+    }
 
     &__sale-in-app{
       padding: 10px;
