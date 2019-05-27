@@ -15,6 +15,14 @@ Route::get('/', function () {
     return view('all_pages');
 });
 
+Route::get('/index', function () {
+    return view('pages.index');
+});
+
+Route::get('/answer', function () {
+    return view('pages.answer');
+});
+
 Route::get('/settings', function () {
     return view('lk.settings');
 });

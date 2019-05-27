@@ -239,7 +239,7 @@ gulp.task('image', function () {
 gulp.task('watch', function () {
   browserSync.init({
     browser: ["google-chrome"/*, "firefox"*/],
-    proxy: 'http://dopoverstka/',
+    proxy: 'http://dopo.verst.loc/',
     notify: false,
     reloadDelay: 100,
     serveStatic: [productionCss],

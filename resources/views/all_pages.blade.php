@@ -6,6 +6,8 @@
 </head>
 <body>
   <ul>
+    <li><a href="/index">Главная</a></li>
+    <li><a href="/answer">Answer</a></li>
     <li><a href="/settings">Настройки</a></li>
     <li><a href="/under_consideration">На рассмотрении</a></li>
     <li><a href="/loan_active">Активный займ</a></li>

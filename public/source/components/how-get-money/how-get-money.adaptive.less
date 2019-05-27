@@ -1,0 +1,45 @@
+@media all and (max-width: 840px) {
+  .how-get-money {
+    &__container {
+      padding: 50px @hor-indent-s 30px;
+    }
+
+    &__items {
+      margin-top: 30px;
+    }
+  }
+}
+
+@media all and (max-width: 730px) {
+  .how-get-money {
+    &__items {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    &__item {
+      max-width: 450px;
+
+      & + & {
+        margin-top: 30px;
+      }
+    }
+
+    &__subtitle {
+      margin-top: 10px;
+    }
+
+    &__warning {
+      max-width: 100%;
+      padding: 15px;
+    }
+  }
+}
+
+@media all and (max-width: 550px) {
+  .how-get-money {
+    &__item {
+      max-width: 400px;
+    }
+  }
+}
