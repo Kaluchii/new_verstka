@@ -6,10 +6,10 @@
             <ol class="answer__question-list answer__question-list--first-level">
                 <li class="answer__question-list-item">
                     <h2 class="answer__question-list-title link">Кто может получить займ</h2>
-                    <ol class="answer__question-list">
+                    <ol class="answer__question-list hidden">
                         <li class="answer__question-list-item">
                             <h3 class="answer__question-list-subtitle link">Требования к заемщику</h3>
-                            <div class="answer__question-item-text text-block">
+                            <div class="answer__question-item-text text-block hidden">
                                 Онлайн-займ в сервисе Dopo.kz могут получить
                                 граждане Республики Казахстан и лица, имеющие вид
                                 на жительство, старше 18 лет. Займ доступен в любом
@@ -19,7 +19,7 @@
                         </li>
                         <li class="answer__question-list-item">
                             <h3 class="answer__question-list-subtitle link">Можно ли получить займ на другое лицо?</h3>
-                            <div class="answer__question-item-text text-block">
+                            <div class="answer__question-item-text text-block hidden">
                                 Нельзя.
                             </div>
                         </li>
@@ -27,22 +27,22 @@
                 </li>
                 <li class="answer__question-list-item">
                     <h2 class="answer__question-list-title link">Оформление займа</h2>
-                    <ol class="answer__question-list">
+                    <ol class="answer__question-list hidden">
                         <li class="answer__question-list-item">
                             <h3 class="answer__question-list-subtitle link">На какую сумму можно оформить займ?</h3>
-                            <div class="answer__question-item-text text-block">
+                            <div class="answer__question-item-text text-block hidden">
                                 От 7 000 до 150 000 тенге.
                             </div>
                         </li>
                         <li class="answer__question-list-item">
                             <h3 class="answer__question-list-subtitle link">На какой срок оформляется займ?</h3>
-                            <div class="answer__question-item-text text-block">
+                            <div class="answer__question-item-text text-block hidden">
                                 Займ оформляется на срок от 5 до 30 дней.
                             </div>
                         </li>
                         <li class="answer__question-list-item">
                             <h3 class="answer__question-list-subtitle link">Как оформляется договор займа?</h3>
-                            <div class="answer__question-item-text text-block">
+                            <div class="answer__question-item-text text-block hidden">
                                 Займ оформляется по типовому договору,
                                 который составлен согласно требованиям
                                 Законодательства РК. Скрытые штрафы и комиссии
@@ -54,7 +54,7 @@
                         </li>
                         <li class="answer__question-list-item">
                             <h3 class="answer__question-list-subtitle link">Как оформляется займ</h3>
-                            <div class="answer__question-item-text text-block">
+                            <div class="answer__question-item-text text-block hidden">
                                 Оформление займет около 10 минут.
                                 Займ оформляется только онлайн (на сайте и в приложении).
                                 Выберите сумму и срок, на который вам необходимы деньги,
@@ -69,7 +69,7 @@
                         </li>
                         <li class="answer__question-list-item">
                             <h3 class="answer__question-list-subtitle link">Можно ли получить займ в праздники и выходные?</h3>
-                            <div class="answer__question-item-text text-block">
+                            <div class="answer__question-item-text text-block hidden">
                                 В выходные не работает большинство банков.
                                 Перевод на счет является банковской операцией
                                 и требует участия банка. Если деньги потребуются
@@ -77,14 +77,15 @@
                             </div>
                         </li>
                         <li class="answer__question-list-item">
-                            <h3 class="answer__question-list-subtitle link">Можно ли получить займ на счет или карту другого человека?</h3>
-                            <div class="answer__question-item-text text-block">
+                            <h3 class="answer__question-list-subtitle link">Можно ли получить займ на счет или карту другого
+                                {{--<span class="answer__question-list-subtitle--indent"></span>--}} человека?</h3>
+                            <div class="answer__question-item-text text-block hidden">
                                 Нельзя. Счет или карта должны быть оформлены на имя заемщика.
                             </div>
                         </li>
                         <li class="answer__question-list-item">
                             <h3 class="answer__question-list-subtitle link">Почему мою заявку долго рассматривают?</h3>
-                            <div class="answer__question-item-text text-block">
+                            <div class="answer__question-item-text text-block hidden">
                                 Чтобы защитить клиентов от мошенничества,
                                 мы проверяем указанные данные и связываемся
                                 с контактными лицами. Если вы оставили заявку
@@ -93,7 +94,7 @@
                         </li>
                         <li class="answer__question-list-item">
                             <h3 class="answer__question-list-subtitle link">Почему могут отказать в займе?</h3>
-                            <div class="answer__question-item-text text-block">
+                            <div class="answer__question-item-text text-block hidden">
                                 На решение влияют многие факторы, среди которых:
                                 <br>
                                 • Предоставленная информация недостоверна или не соответствует действительности;
@@ -107,7 +108,7 @@
                         </li>
                         <li class="answer__question-list-item">
                             <h3 class="answer__question-list-subtitle link">Почему не пришло SMS?</h3>
-                            <div class="answer__question-item-text text-block">
+                            <div class="answer__question-item-text text-block hidden">
                                 Проверьте правильность номера и если
                                 номер указан верно, перезагрузите телефон
                                 и получите SMS повторно. Если сообщение не
@@ -116,7 +117,7 @@
                         </li>
                         <li class="answer__question-list-item">
                             <h3 class="answer__question-list-subtitle link">Почему не приходят письма?</h3>
-                            <div class="answer__question-item-text text-block">
+                            <div class="answer__question-item-text text-block hidden">
                                 Проверьте правильность указанного
                                 адреса электронной почты. Если адрес указан верно,
                                 проверьте папку «Спам». Если нашли письма в спаме,
@@ -125,7 +126,7 @@
                         </li>
                         <li class="answer__question-list-item">
                             <h3 class="answer__question-list-subtitle link">Мой населенный пункт отсутствует в системе</h3>
-                            <div class="answer__question-item-text text-block">
+                            <div class="answer__question-item-text text-block hidden">
                                 Проверьте правильность написания названия
                                 своего населенного пункта. Нужно ввести только
                                 название, вводить наименование области или района не нужно.
@@ -135,7 +136,7 @@
                         </li>
                         <li class="answer__question-list-item">
                             <h3 class="answer__question-list-subtitle link">Когда можно оформить повторную заявку?</h3>
-                            <div class="answer__question-item-text text-block">
+                            <div class="answer__question-item-text text-block hidden">
                                 Вы можете оформить повторную заявку
                                 сразу после погашения предыдущего займа.
                                 При этом в нашем сервисе у вас может быть активен только один займ.
@@ -145,10 +146,10 @@
                 </li>
                 <li class="answer__question-list-item">
                     <h2 class="answer__question-list-title link">Как получить займ</h2>
-                    <ol class="answer__question-list">
+                    <ol class="answer__question-list hidden">
                         <li class="answer__question-list-item">
                             <h3 class="answer__question-list-subtitle link">Когда поступят деньги?</h3>
-                            <div class="answer__question-item-text text-block">
+                            <div class="answer__question-item-text text-block hidden">
                                 Данные владельца банковского счета или карты,
                                 должны совпадать с данными, указанными в профиле сайта.
                                 При несовпадении данных ваша заявка будет отклонена.
@@ -160,7 +161,7 @@
                         </li>
                         <li class="answer__question-list-item">
                             <h3 class="answer__question-list-subtitle link">Когда поступят деньги?</h3>
-                            <div class="answer__question-item-text text-block">
+                            <div class="answer__question-item-text text-block hidden">
                                 Для получения займа используются банковские карты с вашим именем.
                                 Карта должна быть доступна для онлайн-платежей. Нельзя использовать
                                 карты для получения стипендий, пенсий и пособий. На них запрещены
@@ -169,7 +170,7 @@
                         </li>
                         <li class="answer__question-list-item">
                             <h3 class="answer__question-list-subtitle link">Как получить займ на счет «Казпочты»?</h3>
-                            <div class="answer__question-item-text text-block">
+                            <div class="answer__question-item-text text-block hidden">
                                 Для получения денег на счет «Казпочты»,
                                 вам нужно указать 20-тизначный IBAN номер вашего счета.
                                 Указанный счет должен быть открыт на имя заявителя.
@@ -187,7 +188,7 @@
                         </li>
                         <li class="answer__question-list-item">
                             <h3 class="answer__question-list-subtitle link">Деньги не зачислились на счет, в чём ошибка?</h3>
-                            <div class="answer__question-item-text text-block">
+                            <div class="answer__question-item-text text-block hidden">
                                 Перечисление денег на банковский
                                 счет осуществляется в течение дня.
                                 Все данные по займу мы отправляем в предложении
@@ -199,17 +200,17 @@
                 </li>
                 <li class="answer__question-list-item">
                     <h2 class="answer__question-list-title link">Как погасить займ</h2>
-                    <ol class="answer__question-list">
+                    <ol class="answer__question-list hidden">
                         <li class="answer__question-list-item">
                             <h3 class="answer__question-list-subtitle link">Как погасить займ</h3>
-                            <div class="answer__question-item-text text-block">
+                            <div class="answer__question-item-text text-block hidden">
                                 Войдите в личный кабинет, нажмите кнопку «Погасить займ»
                                 и выберите ниже подходящий способ оплаты.
                             </div>
                         </li>
                         <li class="answer__question-list-item">
                             <h3 class="answer__question-list-subtitle link">Какие способы оплаты доступны при погашении займа</h3>
-                            <div class="answer__question-item-text text-block">При погашении займа, вы можете оплатить банковской картой или через терминалы моментальной оплаты QIWI и Касса24.
+                            <div class="answer__question-item-text text-block hidden">При погашении займа, вы можете оплатить банковской картой или через терминалы моментальной оплаты QIWI и Касса24.
                                 <br>
                                 <br>
                                 <span class="bold">Банковская карта</span>
@@ -285,7 +286,7 @@
                         </li>
                         <li class="answer__question-list-item">
                             <h3 class="answer__question-list-subtitle link">Можно ли погасить займ досрочно</h3>
-                            <div class="answer__question-item-text text-block">
+                            <div class="answer__question-item-text text-block hidden">
                                 У вас появилась возможность погасить займ досрочно?
                                 Прекрасно! Вы оплатите только те дни, в которые числился займ.
                                 Если погасить требуется раньше минимального срока, вы оплатите
@@ -294,7 +295,7 @@
                         </li>
                         <li class="answer__question-list-item">
                             <h3 class="answer__question-list-subtitle link">Я внес платеж, но задолженность не изменилась</h3>
-                            <div class="answer__question-item-text text-block">
+                            <div class="answer__question-item-text text-block hidden">
                                 Пришлите квитанцию об оплате и укажите ваши Ф.И.О.
                                 в письме в службу поддержки <a href="mailto:info@dopo.kz">info@dopo.kz</a>.
                                 Мы свяжемся с вами и постараемся решить проблему.
@@ -302,7 +303,7 @@
                         </li>
                         <li class="answer__question-list-item">
                             <h3 class="answer__question-list-subtitle link">Можно ли погашать займ частями?</h3>
-                            <div class="answer__question-item-text text-block">
+                            <div class="answer__question-item-text text-block hidden">
                                 Да, можно. По правилам предоставления займа, оплата производится в следующем порядке:
                                 1. Задолженность по вознаграждению, т.е. проценты от суммы займа.
                                 2. Задолженность по основному долгу, т.е. по сумме займа.
@@ -312,10 +313,10 @@
                 </li>
                 <li class="answer__question-list-item">
                     <h2 class="answer__question-list-title link">Как продлить займ</h2>
-                    <ol class="answer__question-list">
+                    <ol class="answer__question-list hidden">
                         <li class="answer__question-list-item">
                             <h3 class="answer__question-list-subtitle link">Можно ли отсрочить выплату займа</h3>
-                            <div class="answer__question-item-text text-block">
+                            <div class="answer__question-item-text text-block hidden">
                                 Если возникли обстоятельства, по которым вы вынуждены оплатить займ позднее, мы предлагаем функцию пролонгации.
                                 <br>
                                 • В личном кабинете нажмите кнопку «Продлить Займ», выберите продление на срок от 5 до 30 дней.
@@ -335,32 +336,32 @@
                         </li>
                         <li class="answer__question-list-item">
                             <h3 class="answer__question-list-subtitle link">Какой займ можно продлить?</h3>
-                            <div class="answer__question-item-text text-block">
+                            <div class="answer__question-item-text text-block hidden">
                                 Продление возможно, если займ не просрочен.
                             </div>
                         </li>
                         <li class="answer__question-list-item">
                             <h3 class="answer__question-list-subtitle link">На какой срок можно продлить займ?</h3>
-                            <div class="answer__question-item-text text-block">
+                            <div class="answer__question-item-text text-block hidden">
                                 Продлить займ можно на срок от 5 до 30 дней.
                             </div>
                         </li>
                         <li class="answer__question-list-item">
                             <h3 class="answer__question-list-subtitle link">Сколько стоит услуга продления?</h3>
-                            <div class="answer__question-item-text text-block">
+                            <div class="answer__question-item-text text-block hidden">
                                 Стоимость услуги продления займа зависит от срока продления.
                             </div>
                         </li>
                         <li class="answer__question-list-item">
                             <h3 class="answer__question-list-subtitle link">Как оплачивается продление?</h3>
-                            <div class="answer__question-item-text text-block">
+                            <div class="answer__question-item-text text-block hidden">
                                 ВУслуга продления займа оплачивается банковской картой,
                                 QIWI-кошельком, через терминалы QIWI и Касса24.
                             </div>
                         </li>
                         <li class="answer__question-list-item">
                             <h3 class="answer__question-list-subtitle link">Что выгодней, просрочить займ или оформить продление?</h3>
-                            <div class="answer__question-item-text text-block">
+                            <div class="answer__question-item-text text-block hidden">
                                 Выгоднее продлить займ. После того как займ просрочен,
                                 это отображается в вашей кредитной истории и снижает шансы
                                 на получение последующего займа.
@@ -368,7 +369,7 @@
                         </li>
                         <li class="answer__question-list-item">
                             <h3 class="answer__question-list-subtitle link">Что нужно, чтобы активация услуги сработала?</h3>
-                            <div class="answer__question-item-text text-block">
+                            <div class="answer__question-item-text text-block hidden">
                                 Чтобы продление активировалось,
                                 го нужно оформить на сайте и оплатить услугу в течение суток.
                             </div>
@@ -399,7 +400,9 @@
                 <p class="answer__consultant-text">
                     Напишите консультанту, если не нашли ответа.
                 </p>
-                <a class="answer__consultant-link" href="mailto:">info@dopo.kz</a>
+                <div class="answer__consultant-link-wrap">
+                    <a class="answer__consultant-link link" href="mailto:info@dopo.kz">info@dopo.kz</a>
+                </div>
             </div>
         </div>
     </div>

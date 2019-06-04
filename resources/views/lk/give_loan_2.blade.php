@@ -17,7 +17,15 @@
                     <span class="loan-steps__item-name">Способ получения</span>
                 </div>
             </div>
-            <div class="personal-area__info-block info-block">
+            <div class="personal-area__info-block info-block js_personal-area__info-block">
+                <ul class="info-block__scale">
+                    <li class="info-block__scale-item">10%</li>
+                    <li class="info-block__scale-item">10%</li>
+                    <li class="info-block__scale-item">10%</li>
+                    <li class="info-block__scale-item">10%</li>
+                    <li class="info-block__scale-item">10%</li>
+                    <li class="info-block__scale-item">10%</li>
+                </ul>
                 <div class="info-block__top">
                     <p class="info-block__title title-l2">1. Паспортные данные</p>
                 </div>
